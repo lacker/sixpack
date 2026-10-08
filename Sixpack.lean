@@ -4,3 +4,6 @@ import Sixpack.Construction
 import Sixpack.Coverage
 import Sixpack.LocalImplication
 import Sixpack.Hulls
+import Sixpack.FiniteSearch
+import Sixpack.Quadratic13
+import Sixpack.Endpoint

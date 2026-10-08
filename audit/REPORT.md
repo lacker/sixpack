@@ -54,7 +54,7 @@ compiled C++ checkers and the pinned Python dependencies.
   rotation jets. The pivot comparison holds symbolically for arbitrary `C,S`
   subject to `C²+3S²=1`, not merely at the three coefficient-extraction samples.
   The original derivative routines are used only as outputs to compare against.
-- Lean build passed. The 33 printed theorem dependency checks contain only
+- Lean build passed. The 44 printed theorem dependency checks contain only
   `propext`, `Classical.choice`, and `Quot.sound` (or subsets thereof).
 
 See the adjacent logs and JSON files for actual fresh outputs.
@@ -79,6 +79,7 @@ have positive denominator and remain within the required monotonic range.
 The inner-triangle shrink follows by applying each supporting half-plane to
 the relative rotation. Closed angle and spatial children retain shared
 endpoints, and the rational intersection check retains nonempty lines/points.
+The exact quadratic-field sign comparison is also now a Lean theorem.
 These universal geometric implications have been inspected, but most of them
 are not yet Lean lemmas.
 
@@ -121,7 +122,9 @@ The complete tree still must be freshly checked before a global replay claim is
 made. The endpoint-to-lower-bound argument is sound conditional on endpoint
 classification: concentric embedding of a smaller container makes every vertex
 margin strictly positive, contradicting a forced boundary vertex. The exact
-margin identities and this conditional contradiction are proved in Lean.
+margin identities, preservation of translated packings, and this conditional
+contradiction are proved in Lean. The only missing hypothesis of the specialized
+lower-bound theorem is endpoint boundary classification.
 
 ## Gaps and limitations
 

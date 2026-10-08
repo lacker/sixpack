@@ -28,18 +28,24 @@ future lemmas. The audit's axiom listing records their logical dependencies.
 | `Construction` | All 18 unit-side identities, 54 vertex margins, six orientations, and 15 separating-edge witnesses; a candidate boundary vertex | Global lower bound or equality classification |
 | `Hulls` | Vertex containment implies hull containment; nonconstant separating projections imply disjoint topological interiors; candidate is a `Packing` | Global lower bound, uniqueness, or the rattler's entire translation interval |
 | `Coverage` | An uncovered selection omits a piece in every fixed theorem/isometry channel; strictly negative conservative projection slack excludes separation | The actual finite graph computations, exhaustive clique search, or whole-region labels |
+| `FiniteSearch` | Arc deletion, exhaustive vertex branching, and all-domain channel omission preserve every admissible selection in a set-based specification | A bitset refinement, termination, a certificate acceptance checker, or any concrete graph closure |
+| `Quadratic13` | Exact rational coefficient addition, negation, multiplication agree with their real interpretation; the computable nonnegativity test is sound and complete | Division, a full field instance, matrix bounds, or acceptance of any imported geometric certificate |
 | `LocalImplication` | Positive scalar coefficients plus the explicitly stated motion/objective inequalities force zero pivot and normal motion | Derivatives, Taylor bounds, coefficient certificates, or geometric local rigidity |
+| `Endpoint` | Centering is an affine homeomorphism; hulls transform correctly; centered smaller packings remain packings; a forced endpoint boundary vertex implies the lower bound | The endpoint boundary-classification hypothesis itself |
 
 `lower_bound_from_boundary_classification` is deliberately a **conditional**
 theorem: its containment, translation, and boundary-classification hypotheses are
 visible arguments. It does not certify those hypotheses for packings. It proves
 the last contradiction step once the missing prerequisites are supplied.
+`lower_bound_of_endpoint_boundary` specializes this to actual `Packing` and
+proves the containment and translation prerequisites. Its only remaining
+mathematical hypothesis is endpoint boundary classification, stated explicitly.
 
 ## Remaining modules, in dependency order
 
-1. **Exact algebra and geometric primitives.** Define a decidable rational
-   quadratic extension and its interpretation in ℝ. Prove the sign rule, field
-   operations, and outward rational enclosures. Connect all three squared unit
+1. **Exact algebra and geometric primitives.** Extend the proved rational
+   quadratic-coefficient algebra with division and outward rational enclosures.
+   Connect all three squared unit
    lengths to congruence with the upright triangle. Prove the triangle supporting
    half-planes, inscribed disk, and separating-axis necessity. Extend the current
    hull lemmas rather than assuming polygon geometry.
@@ -71,8 +77,7 @@ the last contradiction step once the missing prerequisites are supplied.
    subproblems in a DAG. Bind every certificate index to its actual region data.
 7. **Global endpoint and lower bound.** Combine root coverage and finite-tree
    preservation with the local theorems to obtain endpoint core classification.
-   Prove translated smaller packings remain packings, and prove all container
-   symmetries preserve boundary vertices. Instantiate the conditional centering
+   Prove all container symmetries preserve boundary vertices. Instantiate the conditional centering
    theorem and combine the lower bound with `candidate_isPacking`.
 
 ## Computation strategy and acceptance criteria

@@ -33,3 +33,14 @@ import Sixpack
 #print axioms Sixpack.candidate_feasible
 #print axioms Sixpack.candidate_isPacking
 #print axioms Sixpack.candidate_upper_bound
+#print axioms Sixpack.arc_deletion_preserves_selection
+#print axioms Sixpack.vertex_branch_preserves_selection
+#print axioms Sixpack.omission_domains_preserve_uncovered_selection
+#print axioms Sixpack.Quadratic13.value_add
+#print axioms Sixpack.Quadratic13.value_neg
+#print axioms Sixpack.Quadratic13.value_mul
+#print axioms Sixpack.Quadratic13.nonnegative_iff
+#print axioms Sixpack.hull_centerEmbed
+#print axioms Sixpack.packing_vertices_contained
+#print axioms Sixpack.packing_centerEmbed
+#print axioms Sixpack.lower_bound_of_endpoint_boundary
