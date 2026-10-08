@@ -44,3 +44,7 @@ import Sixpack
 #print axioms Sixpack.packing_vertices_contained
 #print axioms Sixpack.packing_centerEmbed
 #print axioms Sixpack.lower_bound_of_endpoint_boundary
+#print axioms Sixpack.outerTriangle_sides
+#print axioms Sixpack.outerTriangle_vertices_contained
+#print axioms Sixpack.outerTriangle_hull_eq
+#print axioms Sixpack.candidate_in_equilateral_container

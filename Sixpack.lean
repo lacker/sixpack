@@ -7,3 +7,4 @@ import Sixpack.Hulls
 import Sixpack.FiniteSearch
 import Sixpack.Quadratic13
 import Sixpack.Endpoint
+import Sixpack.Container

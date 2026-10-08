@@ -42,3 +42,7 @@
 'Sixpack.packing_vertices_contained' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Sixpack.packing_centerEmbed' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Sixpack.lower_bound_of_endpoint_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sixpack.outerTriangle_sides' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sixpack.outerTriangle_vertices_contained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sixpack.outerTriangle_hull_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sixpack.candidate_in_equilateral_container' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -27,6 +27,7 @@ future lemmas. The audit's axiom listing records their logical dependencies.
 | `Geometry` | Scaled metric agrees with Cartesian squared length under `(x,z) ↦ (x,√3 z)`; half-angle rotation identity; rotations preserve that metric; exact centering margins and strict containment of embedded smaller-container points | Representation of every congruent placement by the half-angle chart |
 | `Construction` | All 18 unit-side identities, 54 vertex margins, six orientations, and 15 separating-edge witnesses; a candidate boundary vertex | Global lower bound or equality classification |
 | `Hulls` | Vertex containment implies hull containment; nonconstant separating projections imply disjoint topological interiors; candidate is a `Packing` | Global lower bound, uniqueness, or the rattler's entire translation interval |
+| `Container` | The containment half-planes equal the convex hull of `(0,0)`, `(L,0)`, `(L/2,L/2)` for `L > 0`; all three outer sides have squared length `L²`; candidate hulls lie in this equilateral hull | Normalization of a container in arbitrary Cartesian position |
 | `Coverage` | An uncovered selection omits a piece in every fixed theorem/isometry channel; strictly negative conservative projection slack excludes separation | The actual finite graph computations, exhaustive clique search, or whole-region labels |
 | `FiniteSearch` | Arc deletion, exhaustive vertex branching, and all-domain channel omission preserve every admissible selection in a set-based specification | A bitset refinement, termination, a certificate acceptance checker, or any concrete graph closure |
 | `Quadratic13` | Exact rational coefficient addition, negation, multiplication agree with their real interpretation; the computable nonnegativity test is sound and complete | Division, a full field instance, matrix bounds, or acceptance of any imported geometric certificate |
@@ -46,7 +47,9 @@ mathematical hypothesis is endpoint boundary classification, stated explicitly.
 1. **Exact algebra and geometric primitives.** Extend the proved rational
    quadratic-coefficient algebra with division and outward rational enclosures.
    Connect all three squared unit
-   lengths to congruence with the upright triangle. Prove the triangle supporting
+   lengths to congruence with the upright triangle and normalize an arbitrary
+   equilateral outer container into this coordinate chart by a Euclidean isometry.
+   Prove the triangle supporting
    half-planes, inscribed disk, and separating-axis necessity. Extend the current
    hull lemmas rather than assuming polygon geometry.
 2. **Orientation and region cover.** Prove the half-angle chart covers shapes

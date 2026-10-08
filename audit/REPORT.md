@@ -54,7 +54,7 @@ compiled C++ checkers and the pinned Python dependencies.
   rotation jets. The pivot comparison holds symbolically for arbitrary `C,S`
   subject to `C²+3S²=1`, not merely at the three coefficient-extraction samples.
   The original derivative routines are used only as outputs to compare against.
-- Lean build passed. The 44 printed theorem dependency checks contain only
+- Lean build passed. The 48 printed theorem dependency checks contain only
   `propext`, `Classical.choice`, and `Quot.sound` (or subsets thereof).
 
 See the adjacent logs and JSON files for actual fresh outputs.
@@ -67,7 +67,8 @@ opposite coefficient signs by rational square comparisons. The feasibility
 argument requires hull containment and interior separation, not just vertex
 inequalities; these bridges and all construction inequalities are now proved
 in Lean. This is an independently verified upper bound, not evidence of a
-global lower bound.
+global lower bound. The containing half-planes are proved equal to the closed
+equilateral hull, whose three squared side lengths are also verified.
 
 **Coarse cover and rotations.** The inscribed disks give the centroid offset
 and separation requirements used in the written cover. The exact strict
