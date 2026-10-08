@@ -5,8 +5,10 @@ unit equilateral triangles in an equilateral triangle, with candidate side
 `(13 + 3√13)/8`.
 
 **The global optimality theorem has not been verified in Lean.** The original
-research claims a complete computer-assisted proof. That claim is being checked
-independently; original success logs are not treated as evidence of a fresh run.
+research claims a complete computer-assisted proof. The fresh full replay passed
+all 108 graphs and the final tree audit; all rebuilt graph hashes match. The
+written analytic lemmas were audited, with no defect found, but remain outside
+Lean. Original success logs are retained as reference material.
 
 - `six_triangle_packing/`: the 730 original research files, preserved byte for
   byte from the archive. Its historical claims are reference material.

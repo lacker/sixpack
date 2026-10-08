@@ -2,10 +2,13 @@
 
 ## Current conclusion
 
-The fresh full endpoint replay is running. No checker failure or mathematical
-contradiction has been found so far. A partial replay must not be described as a
-reproduction of the global theorem. The completion record and aggregate counts
-will be added after the full runner finishes.
+The fresh full endpoint replay **passed all 108 graphs and the final tree
+audit**, using the unmodified `run_endpoint_checks.py`, in 2,729.43 seconds
+(about 45 minutes 29 seconds). All 108 rebuilt graph hashes match the original
+records. No checker failure, mathematical counterexample, or invalid analytic
+implication was found in this audit. The computer-assisted conclusion remains
+conditional on the written geometric and analytic lemmas; it is not a Lean
+verification of the global theorem.
 
 The **upper-bound construction is now formally verified in Lean**, using closed
 convex hulls and disjoint topological interiors. The claimed global lower bound
@@ -31,6 +34,13 @@ compiled C++ checkers and the pinned Python dependencies.
 
 ## Fresh completed checks
 
+- Full endpoint replay: 108 geometry checks and 108 exhaustive node checks,
+  covering 1,948,929 placement regions and closing all 1,396 symmetry classes.
+  The replay verified 207,880 fixed-vertex refutations, 3,027,404,412 coordinate
+  projection bounds, 17,457,330 separating thresholds, and 16,490,667,855 missing
+  graph pairs. Every aggregate matches the original claim. There is no unproved
+  frontier in the checked tree. See `replay-summary.json`, `endpoint-replay.log`,
+  and `results/` for the complete fresh reports.
 - Exact Python construction: 18 unit sides, 54 vertex margins, six orientations,
   15 separating-edge witnesses, and the movable piece interval passed.
 - Local radius: eight branches, exact derivative identities and outward bounds,
@@ -57,7 +67,10 @@ compiled C++ checkers and the pinned Python dependencies.
 - Lean build passed. The 48 printed theorem dependency checks contain only
   `propext`, `Classical.choice`, and `Quot.sound` (or subsets thereof).
 
-See the adjacent logs and JSON files for actual fresh outputs.
+The collector `finalize_replay.py` checks that the completed full runner visited
+each of the 108 graph names once, then preserves 222 fresh result files. It is
+bookkeeping, not a substitute for the checker execution. See the adjacent logs
+and JSON files for actual fresh outputs.
 
 ## Analytic argument audit
 
@@ -119,8 +132,8 @@ channel stays separate during coverage and omission branching.
 successive parent omissions preserve every uncovered clique. An uncovered
 selection omits one piece of any fixed channel; the independent Python search
 enumerates that disjunction. This logical omission step is now proved in Lean.
-The complete tree still must be freshly checked before a global replay claim is
-made. The endpoint-to-lower-bound argument is sound conditional on endpoint
+The complete tree has now been freshly checked. The endpoint-to-lower-bound
+argument is sound conditional on endpoint
 classification: concentric embedding of a smaller container makes every vertex
 margin strictly positive, contradicting a forced boundary vertex. The exact
 margin identities, preservation of translated packings, and this conditional
@@ -133,19 +146,19 @@ No mathematical counterexample or invalid analytic implication has been found
 in this audit. This does not replace external mathematical review or a complete
 formal proof. In particular:
 
-1. The full fresh global replay is not complete at this checkpoint.
-2. The local analytic estimates and their connection to the actual geometric
+1. The local analytic estimates and their connection to the actual geometric
    constraint functions remain written mathematics supported by exact external
    arithmetic, not Lean-verified local theorems.
-3. The global cover, separating-axis necessity, whole-region labels, checker
+2. The global cover, separating-axis necessity, whole-region labels, checker
    soundness, and all 108 finite exclusions have not been formalized.
-4. Successful Python/C++ runs rely on the code, exact arithmetic libraries,
+3. Successful Python/C++ runs rely on the code, exact arithmetic libraries,
    compiler/runtime, and hardware. Lean currently does not import or certify
    their success statuses.
-5. The source's historical construction failure for an intermediate `r7` graph
+4. The source's historical construction failure for an intermediate `r7` graph
    is a saved build-history event, not an exclusion. The actual proof tree uses
-   `r8`; the complete replay must check that tree rather than infer closure from
-   the abandoned attempt.
+   `r8`; the fresh replay checked that actual tree and did not infer closure from
+   the abandoned attempt. This historical event is not a failed proof check in
+   the new run.
 
 The implementation plan in `FORMALIZATION_PLAN.md` identifies the remaining
 proof boundaries and a certificate-checking strategy. No placeholder theorem

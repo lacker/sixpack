@@ -1,0 +1,18 @@
+{
+  "status": "full unmodified runner replay passed",
+  "seconds": 2729.4251867923886,
+  "totals": {
+    "graphs": 108,
+    "placement_regions": 1948929,
+    "cases_closed": 1396,
+    "fixed_vertex_refutations": 207880,
+    "coordinate_projection_bounds": 3027404412,
+    "separation_thresholds": 17457330,
+    "missing_pairs_checked": 16490667855
+  },
+  "log_sha256": "4a95fe5c90f248d43fcaafe557dcea273bb6b694440d7bf4ff9f470d0cc6d3c3",
+  "scope": "Fresh Python/C++ arithmetic and combinatorial replay; written analytic lemmas still outside Lean.",
+  "copied_results": 222,
+  "original_graph_hashes_matching": 108,
+  "graph_hash_mismatches": []
+}
