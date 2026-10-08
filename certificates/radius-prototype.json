@@ -1,0 +1,8 @@
+{
+  "source": "six_triangle_packing/local_radius_bounds.json",
+  "source_sha256": "a02675b0f3ae345e100141eac48b20d8159f674e6b4419b2f67d666499cfafed",
+  "branch": 0,
+  "radius": "1/300",
+  "checked": "All rational radius inequalities recomputed by Lean",
+  "not_checked": "Bounds enclose the actual geometric derivatives and matrices"
+}

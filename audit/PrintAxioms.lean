@@ -48,3 +48,21 @@ import Sixpack
 #print axioms Sixpack.outerTriangle_vertices_contained
 #print axioms Sixpack.outerTriangle_hull_eq
 #print axioms Sixpack.candidate_in_equilateral_container
+
+#print axioms Sixpack.checkSearch_sound
+#print axioms Sixpack.prototype_accepts
+#print axioms Sixpack.prototype_no_selection
+#print axioms Sixpack.prototype_false_closure_rejected
+#print axioms Sixpack.prototype_corrupt_graph_rejected
+#print axioms Sixpack.intervalAdj_conservative
+#print axioms Sixpack.interval_certificate_sound
+#print axioms Sixpack.interval_prototype_accepts
+#print axioms Sixpack.three_unit_intervals_do_not_fit
+#print axioms Sixpack.radius_estimates_force_zero
+#print axioms Sixpack.radius_uniform_gap
+#print axioms Sixpack.corner_fixed_centroid_rigid
+#print axioms Sixpack.corner_fixed_centroid_vertices
+#print axioms Sixpack.checked_radius_estimates_force_zero
+#print axioms Sixpack.radius_branch_zero_accepts
+#print axioms Sixpack.radius_branch_zero_estimates_force_zero
+#print axioms Sixpack.radius_truncated_input_rejected

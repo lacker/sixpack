@@ -34,6 +34,21 @@ future lemmas. The audit's axiom listing records their logical dependencies.
 | `LocalImplication` | Positive scalar coefficients plus the explicitly stated motion/objective inequalities force zero pivot and normal motion | Derivatives, Taylor bounds, coefficient certificates, or geometric local rigidity |
 | `Endpoint` | Centering is an affine homeomorphism; hulls transform correctly; centered smaller packings remain packings; a forced endpoint boundary vertex implies the lower bound | The endpoint boundary-classification hypothesis itself |
 
+### Lower-bound feasibility prototypes
+
+The following modules now build as part of the default target:
+
+| Module | Formally checked | Remaining boundary |
+|---|---|---|
+| `SearchCertificate` | Recursive empty-domain, incompatible-domain and exhaustive subset/complement certificates; acceptance soundness; a three-group refutation; forged closure and changed-graph rejection | Adjacency is input, not certified triangle geometry; no local-label rules, DAG or bitsets |
+| `IntervalCertificate` | A rational interval-region compatibility test, its real soundness, closed continuous cover, and a complete certificate proof that three mutually separated unit-interval endpoints cannot lie in `[0,1]` | A one-dimensional example, not any of the 108 triangle graphs |
+| `RadiusRigidity` | The radius contradiction from explicit motion/energy estimates; exact uniform rational gap; actual corner-triangle rigidity under fixed-centroid rotations with nonnegative cosine | The five-piece core allows moving centroids; its Taylor and matrix estimates remain unproved |
+| `RadiusCertificate` | A dimension-checked rational checker recomputing all component inequalities, `T`, `beta`, `C0`, `eta`, and the decisive gap; accepted arithmetic implies the radius criterion over the reals | Input bounds have not been proved to enclose the actual derivatives and inverse matrices |
+| `RadiusFixture` | Kernel acceptance of all rational radius inequalities for original branch 0 at `1/300`; conditional rigidity from the two analytic estimates; rejection of a truncated input | Neither the exporter nor the bounds file establishes the geometric bridge |
+
+The fixture uses `decide +kernel`, not native evaluation as proof evidence.
+See [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md) for measurements and precise scope.
+
 `lower_bound_from_boundary_classification` is deliberately a **conditional**
 theorem: its containment, translation, and boundary-classification hypotheses are
 visible arguments. It does not certify those hypotheses for packings. It proves

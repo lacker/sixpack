@@ -19,6 +19,8 @@ Lean. Original success logs are retained as reference material.
 - [FORMALIZATION_PLAN.md](FORMALIZATION_PLAN.md): theorem boundaries, current
   formal status, and remaining work.
 - [audit/REPORT.md](audit/REPORT.md): audit findings and replay status.
+- [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md): lower-bound certificate experiments
+  and local-proof progress, including their remaining hypotheses.
 
 ## Lean
 
@@ -33,7 +35,9 @@ lake env lean audit/PrintAxioms.lean
 ```
 
 The formal results cover exact construction checks, the scaled metric, conservative
-projection logic, local-omission logic, and centering. Consult the plan for exact
+projection logic, local-omission logic, centering, and small sound certificate
+checkers. The radius branch prototype checks rational arithmetic, while its
+geometric derivative bounds remain external. Consult the plan for exact
 theorem names and limitations. Passing this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference

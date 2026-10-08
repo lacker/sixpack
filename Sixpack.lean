@@ -8,3 +8,8 @@ import Sixpack.FiniteSearch
 import Sixpack.Quadratic13
 import Sixpack.Endpoint
 import Sixpack.Container
+import Sixpack.SearchCertificate
+import Sixpack.IntervalCertificate
+import Sixpack.RadiusRigidity
+import Sixpack.RadiusCertificate
+import Sixpack.RadiusFixture

@@ -20,3 +20,7 @@ jobs:
           python3 audit/check_axioms.py audit/lean-axioms.log
       - name: Check reference preservation
         run: python3 audit/check_original_integrity.py
+      - name: Check generated prototype data
+        run: |
+          python3 audit/export_radius_prototype.py
+          git diff --exit-code -- Sixpack/RadiusFixture.lean certificates/radius-prototype.json

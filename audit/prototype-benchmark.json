@@ -1,0 +1,33 @@
+{
+  "platform": "macOS-14.7.4-arm64-arm-64bit-Mach-O",
+  "architecture": "arm64",
+  "scope": "Small prototypes, including kernel certificate checking; not a large-graph benchmark",
+  "runs": [
+    {
+      "source": "Sixpack/SearchCertificate.lean",
+      "exit_code": 0,
+      "seconds": 8.930745040997863,
+      "maximum_rss": 2543190016
+    },
+    {
+      "source": "Sixpack/IntervalCertificate.lean",
+      "exit_code": 0,
+      "seconds": 3.35511558316648,
+      "maximum_rss": 2559819776
+    },
+    {
+      "source": "Sixpack/RadiusRigidity.lean",
+      "exit_code": 0,
+      "seconds": 7.962408791296184,
+      "maximum_rss": 2592423936
+    },
+    {
+      "source": "Sixpack/RadiusFixture.lean",
+      "exit_code": 0,
+      "seconds": 3.706121874973178,
+      "maximum_rss": 2750791680
+    }
+  ],
+  "maximum_child_rss": 2750791680,
+  "maximum_child_rss_unit": "bytes on macOS, KiB on Linux"
+}
