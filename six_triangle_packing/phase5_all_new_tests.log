@@ -1,0 +1,16 @@
+test_bad_search_bruteforce (test_phase5.Phase5Tests.test_bad_search_bruteforce) ... ok
+test_candidate_all_symmetries (test_phase5.Phase5Tests.test_candidate_all_symmetries) ... ok
+test_children (test_phase5.Phase5Tests.test_children) ... ok
+test_mixed_core_containment (test_phase5.Phase5Tests.test_mixed_core_containment) ... ok
+test_affine_derivatives (test_phase5_tube.TubeTests.test_affine_derivatives) ... ok
+test_candidate_tubes_all_isometries (test_phase5_tube.TubeTests.test_candidate_tubes_all_isometries) ... ok
+test_cpp_and_python_multicertificate (test_phase5_tube.TubeTests.test_cpp_and_python_multicertificate) ... ok
+test_offset_enclosure (test_phase5_tube.TubeTests.test_offset_enclosure) ... ok
+test_pivot_chart_not_centroid_box (test_phase5_tube.TubeTests.test_pivot_chart_not_centroid_box) ... ok
+test_profiles_never_mix (test_phase5_tube.TubeTests.test_profiles_never_mix) ... ok
+test_selected_certificates (test_phase5_tube.TubeTests.test_selected_certificates) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.281s
+
+OK

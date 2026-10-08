@@ -1,0 +1,7 @@
+{
+  "status": "verified whole-region local labels",
+  "positive_labels": 740,
+  "regions": 31777,
+  "radius": "1/300",
+  "centering": "rational outer container centered on exact L_star container"
+}

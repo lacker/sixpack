@@ -1,0 +1,5 @@
+PASS: 18 unit-side checks, 54 containment inequalities,
+      6 positive orientations, 15 exact separating-edge witnesses.
+PASS: |EB|^2 = 3/4; B is midpoint of FG; 16L^2 - 52L + 13 = 0.
+PASS: triangle 2 can move continuously by (-3t,sqrt(3)*t), 0<=t<=1/100.
+This is an exact upper-bound certificate, NOT an optimality proof.

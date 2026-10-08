@@ -1,0 +1,89 @@
+{
+  "status": "complete endpoint tree; all recorded checks and available input hashes validated",
+  "meaning": "Transcript/structure audit. Full arithmetic verification is run_endpoint_checks.py.",
+  "rational_outer_container": "29770817283/10000000000",
+  "exact_optimum_candidate": {
+    "rational": "13/8",
+    "sqrt13": "3/8"
+  },
+  "totals": {
+    "graphs": 108,
+    "placement_regions": 1948929,
+    "cases_closed": 1396,
+    "fixed_vertex_refutations": 207880,
+    "missing_pairs_checked": 16490667855,
+    "search_calls": 209815,
+    "search_removed": 286952100,
+    "search_local_prunes": 1432,
+    "search_local_splits": 510
+  },
+  "layers": {
+    "0": {
+      "graphs": 1,
+      "regions": 34660,
+      "cases_closed": 1109,
+      "cases_refined": 287
+    },
+    "1": {
+      "graphs": 32,
+      "regions": 424009,
+      "cases_closed": 201,
+      "cases_refined": 86
+    },
+    "2": {
+      "graphs": 45,
+      "regions": 656772,
+      "cases_closed": 76,
+      "cases_refined": 10
+    },
+    "3": {
+      "graphs": 10,
+      "regions": 276556,
+      "cases_closed": 3,
+      "cases_refined": 7
+    },
+    "4": {
+      "graphs": 7,
+      "regions": 162847,
+      "cases_closed": 2,
+      "cases_refined": 5
+    },
+    "5": {
+      "graphs": 5,
+      "regions": 103374,
+      "cases_closed": 2,
+      "cases_refined": 3
+    },
+    "6": {
+      "graphs": 3,
+      "regions": 109478,
+      "cases_closed": 1,
+      "cases_refined": 2
+    },
+    "7": {
+      "graphs": 2,
+      "regions": 74509,
+      "cases_closed": 1,
+      "cases_refined": 1
+    },
+    "8": {
+      "graphs": 1,
+      "regions": 38458,
+      "cases_closed": 0,
+      "cases_refined": 1
+    },
+    "9": {
+      "graphs": 1,
+      "regions": 40259,
+      "cases_closed": 0,
+      "cases_refined": 1
+    },
+    "10": {
+      "graphs": 1,
+      "regions": 28007,
+      "cases_closed": 1,
+      "cases_refined": 0
+    }
+  },
+  "tree_sha256": "3dfdb8e1279670a59f2e2e603c6186457652403b10f99f317e5be93283c101f6"
+}

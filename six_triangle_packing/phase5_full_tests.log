@@ -1,0 +1,53 @@
+test_exact_induced_graph_and_search (test_adaptive.TestCompact.test_exact_induced_graph_and_search) ... ok
+test_invalid_grid_labels_rejected (test_adaptive.TestRefinedCover.test_invalid_grid_labels_rejected) ... ok
+test_midsegment_partition_and_index (test_adaptive.TestRefinedCover.test_midsegment_partition_and_index) ... ok
+test_actual_clique_is_not_excluded (test_adaptive.TestTree.test_actual_clique_is_not_excluded) ... ok
+test_all_empty_cases_pass (test_adaptive.TestTree.test_all_empty_cases_pass) ... ok
+test_cyclic_manifest_is_rejected (test_adaptive.TestTree.test_cyclic_manifest_is_rejected) ... ok
+test_nontrivial_fixed_vertex_refutations (test_adaptive.TestTree.test_nontrivial_fixed_vertex_refutations) ... ok
+test_omitted_essential_parent_is_rejected (test_adaptive.TestTree.test_omitted_essential_parent_is_rejected) ... ok
+test_corrupted_multiplier_rejected (test_local_radius.LocalRadiusTests.test_corrupted_multiplier_rejected) ... ok
+test_independent_derivative_finite_differences (test_local_radius.LocalRadiusTests.test_independent_derivative_finite_differences) ... ok
+test_larger_unsupported_radius_not_accepted (test_local_radius.LocalRadiusTests.test_larger_unsupported_radius_not_accepted) ... ok
+test_outward_bounds_exact (test_local_radius.LocalRadiusTests.test_outward_bounds_exact) ... ok
+test_anchored_outer_relaxation_contains_candidate (test_new.NewTests.test_anchored_outer_relaxation_contains_candidate) ... ok
+test_exact_core_containment_samples (test_new.NewTests.test_exact_core_containment_samples) ... ok
+test_exact_local_certificate (test_new.NewTests.test_exact_local_certificate) ... ok
+test_independent_first_derivatives (test_new.NewTests.test_independent_first_derivatives) ... ok
+test_independent_second_derivatives (test_new.NewTests.test_independent_second_derivatives) ... ok
+test_logarithmic_encoding_contains_candidate (test_new.NewTests.test_logarithmic_encoding_contains_candidate) ... ok
+test_quantitative_neighborhood (test_new.NewTests.test_quantitative_neighborhood) ... ok
+test_true_packings_map_to_global_relaxation (test_new.NewTests.test_true_packings_map_to_global_relaxation) ... ok
+test_certificate (test_packing.ExactTests.test_certificate) ... ok
+test_field (test_packing.ExactTests.test_field) ... ok
+test_candidate (test_packing.NumericTests.test_candidate) ... ok
+test_jacobian (test_packing.NumericTests.test_jacobian) ... ok
+test_sat_against_polygon_intersections (test_packing.NumericTests.test_sat_against_polygon_intersections) ... ok
+test_simplified_support_formulas (test_packing.NumericTests.test_simplified_support_formulas) ... ok
+test_bad_search_bruteforce (test_phase5.Phase5Tests.test_bad_search_bruteforce) ... ok
+test_candidate_all_symmetries (test_phase5.Phase5Tests.test_candidate_all_symmetries) ... ok
+test_children (test_phase5.Phase5Tests.test_children) ... ok
+test_mixed_core_containment (test_phase5.Phase5Tests.test_mixed_core_containment) ... ok
+test_affine_derivatives (test_phase5_tube.TubeTests.test_affine_derivatives) ... ok
+test_candidate_tubes_all_isometries (test_phase5_tube.TubeTests.test_candidate_tubes_all_isometries) ... ok
+test_cpp_and_python_multicertificate (test_phase5_tube.TubeTests.test_cpp_and_python_multicertificate) ... ok
+test_offset_enclosure (test_phase5_tube.TubeTests.test_offset_enclosure) ... ok
+test_pivot_chart_not_centroid_box (test_phase5_tube.TubeTests.test_pivot_chart_not_centroid_box) ... ok
+test_profiles_never_mix (test_phase5_tube.TubeTests.test_profiles_never_mix) ... ok
+test_selected_certificates (test_phase5_tube.TubeTests.test_selected_certificates) ... ok
+test_1396_orbits (test_spatial.SpatialTests.test_1396_orbits) ... ok
+test_exact_six_upright_packing_survives (test_spatial.SpatialTests.test_exact_six_upright_packing_survives) ... ok
+test_independent_intersections (test_spatial.SpatialTests.test_independent_intersections) ... ok
+test_independent_symmetry_cases (test_spatial.SpatialTests.test_independent_symmetry_cases) ... ok
+test_inner_triangles (test_spatial.SpatialTests.test_inner_triangles) ... ok
+test_known_morandi_packing_survives (test_spatial.SpatialTests.test_known_morandi_packing_survives) ... ok
+test_nested_tiling (test_spatial.SpatialTests.test_nested_tiling) ... ok
+test_optimized_exact_tables_match_fraction_tables (test_spatial.SpatialTests.test_optimized_exact_tables_match_fraction_tables) ... ok
+test_queue_arc_consistency (test_spatial.SpatialTests.test_queue_arc_consistency) ... ok
+test_refined_parent_cells (test_spatial.SpatialTests.test_refined_parent_cells) ... ok
+test_search_against_bruteforce (test_spatial.SpatialTests.test_search_against_bruteforce) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 7.091s
+
+OK

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "unique_constraints": 62,
+  "symbolic_entries_checked": {
+    "centroid": 16926,
+    "pivot": 14942
+  },
+  "seconds": 11.783276707865298,
+  "scope": "Polynomial jets checked independently; uniform analytic bounds and global optimality are not established by this script."
+}

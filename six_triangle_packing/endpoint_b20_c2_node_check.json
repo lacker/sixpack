@@ -1,0 +1,22 @@
+{
+  "status": "verified node transfer and closures",
+  "prefix": "endpoint_b20_c2",
+  "L": "29770817283/10000000000",
+  "cases_entering": 3,
+  "cases_closed": 3,
+  "cases_refined": 0,
+  "fixed_vertex_refutations": 0,
+  "children": [],
+  "stats": {
+    "calls": 3,
+    "removed": 2949,
+    "local_prunes": 0
+  },
+  "input_sha256": {
+    "endpoint_b20_c2.json": "e4584d4ac47326d9b168cb23b71ec2a17410293951c68f7d32170a36bc656f70",
+    "endpoint_b20_c2_nodes.json": "62c35b3adc400b48d69fca4094a67cd58e9ed784de533fee50c00cc9cdac7b82",
+    "endpoint_b20_c2.groups": "755a7eb7cd1f9912ad15da6ab1c47bba4ad47aa111382fca51759ad195d29d17",
+    "endpoint_b20_c2.graph": "752dedc8e6bd78004fc67dfbf64158d07b0afbc568e53b829b144ef8491251ae"
+  },
+  "seconds": 0.09560578499997519
+}

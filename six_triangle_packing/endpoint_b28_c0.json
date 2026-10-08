@@ -1,0 +1,1587 @@
+{
+  "version": 5,
+  "L": "29770817283/10000000000",
+  "scale": 68719476736,
+  "vertices": 1510,
+  "edges": 472789,
+  "used_bins": [
+    [
+      256,
+      8
+    ],
+    [
+      256,
+      9
+    ],
+    [
+      256,
+      40
+    ],
+    [
+      256,
+      41
+    ],
+    [
+      256,
+      42
+    ],
+    [
+      256,
+      43
+    ],
+    [
+      256,
+      44
+    ],
+    [
+      256,
+      45
+    ],
+    [
+      256,
+      46
+    ],
+    [
+      256,
+      47
+    ],
+    [
+      256,
+      48
+    ],
+    [
+      256,
+      49
+    ],
+    [
+      256,
+      114
+    ],
+    [
+      256,
+      115
+    ],
+    [
+      256,
+      116
+    ],
+    [
+      256,
+      117
+    ],
+    [
+      256,
+      118
+    ],
+    [
+      256,
+      119
+    ],
+    [
+      256,
+      120
+    ],
+    [
+      256,
+      121
+    ],
+    [
+      256,
+      122
+    ],
+    [
+      256,
+      123
+    ],
+    [
+      256,
+      124
+    ],
+    [
+      256,
+      125
+    ],
+    [
+      256,
+      126
+    ],
+    [
+      256,
+      127
+    ],
+    [
+      256,
+      128
+    ],
+    [
+      256,
+      129
+    ],
+    [
+      256,
+      130
+    ],
+    [
+      256,
+      131
+    ],
+    [
+      256,
+      132
+    ],
+    [
+      256,
+      133
+    ],
+    [
+      256,
+      134
+    ],
+    [
+      256,
+      135
+    ],
+    [
+      256,
+      136
+    ],
+    [
+      256,
+      137
+    ],
+    [
+      256,
+      160
+    ],
+    [
+      256,
+      161
+    ],
+    [
+      256,
+      162
+    ],
+    [
+      256,
+      163
+    ],
+    [
+      256,
+      164
+    ],
+    [
+      256,
+      165
+    ],
+    [
+      256,
+      166
+    ],
+    [
+      256,
+      167
+    ],
+    [
+      256,
+      168
+    ],
+    [
+      256,
+      169
+    ],
+    [
+      256,
+      174
+    ],
+    [
+      256,
+      175
+    ],
+    [
+      256,
+      240
+    ],
+    [
+      256,
+      241
+    ],
+    [
+      256,
+      246
+    ],
+    [
+      256,
+      247
+    ]
+  ],
+  "build_seconds": 0.4889899319999813,
+  "cases": [
+    388,
+    820
+  ],
+  "refinement": {
+    "parent_prefix": "endpoint_b28",
+    "allowed_parent_nodes": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      27,
+      253,
+      255,
+      256,
+      321,
+      322,
+      323,
+      324,
+      325,
+      333,
+      342,
+      654,
+      659,
+      661,
+      1034,
+      1036,
+      2590,
+      2591,
+      2592,
+      2593,
+      2594,
+      2608,
+      2609,
+      2610,
+      3290,
+      3293,
+      3680,
+      4361,
+      4362,
+      4369,
+      4370,
+      4533,
+      4534,
+      4541,
+      4542,
+      4713,
+      4714,
+      5747,
+      5748,
+      5755,
+      5756,
+      5920,
+      5921,
+      5928,
+      5929,
+      6092,
+      6093,
+      6094,
+      6100,
+      6101,
+      6102,
+      6252,
+      6253,
+      6254,
+      6255,
+      6260,
+      6261,
+      6262,
+      6263,
+      6374,
+      6375,
+      6376,
+      6377,
+      6378,
+      6382,
+      6383,
+      6384,
+      6385,
+      6670,
+      6671,
+      6672,
+      6678,
+      6679,
+      6680,
+      6681,
+      6815,
+      6816,
+      6817,
+      6818,
+      6826,
+      6827,
+      6954,
+      6955,
+      6967,
+      6968,
+      6969,
+      6978,
+      6979,
+      6980,
+      6989,
+      6990,
+      6991,
+      6992,
+      6993,
+      6994,
+      7006,
+      7007,
+      7008,
+      7009,
+      7010,
+      7011,
+      7026,
+      7027,
+      7028,
+      7029,
+      7030,
+      7031,
+      7048,
+      7049,
+      7050,
+      7051,
+      7052,
+      7071,
+      7072,
+      7073,
+      7074,
+      7075,
+      7096,
+      7097,
+      7098,
+      7099,
+      7120,
+      7121,
+      7122,
+      7123,
+      7623,
+      7624,
+      7661,
+      7662,
+      7699,
+      7700,
+      7701,
+      7702,
+      7737,
+      7738,
+      7739,
+      7740,
+      8534,
+      8535,
+      8572,
+      8573,
+      8847,
+      12513,
+      12514,
+      12521,
+      12522,
+      12587,
+      12588,
+      12595,
+      12596,
+      12602,
+      12603,
+      12604,
+      12605,
+      12606,
+      12608,
+      12609,
+      12610,
+      12611,
+      12612,
+      12613,
+      12614,
+      12615,
+      12617,
+      12618,
+      12619,
+      12620,
+      12621,
+      12622,
+      12623,
+      12624,
+      12625,
+      12626,
+      12627,
+      12628,
+      12629,
+      12630,
+      12631,
+      12632,
+      12633,
+      12637,
+      12638,
+      12642,
+      12643,
+      12644,
+      12645,
+      12646,
+      12647,
+      12648,
+      12649,
+      12650,
+      12651,
+      12652,
+      12653,
+      12654,
+      12655,
+      12656,
+      12657,
+      12658,
+      12659,
+      12660,
+      12661,
+      12662,
+      12663,
+      12664,
+      12665,
+      12666,
+      12667,
+      12668,
+      12669
+    ],
+    "plan": [
+      {
+        "parent": 0,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 5,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 8,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 9,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 10,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 11,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 15,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 16,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 17,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 18,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 19,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 27,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 253,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 255,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 256,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 321,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 322,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 323,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 324,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 325,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 333,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 342,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 654,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 659,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 661,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1034,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1036,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2590,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2591,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2592,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2593,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2594,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2608,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2609,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2610,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3290,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3293,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3680,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4361,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4362,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4369,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4370,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4533,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4534,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4541,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4542,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4713,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4714,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 5747,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 5748,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 5755,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 5756,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 5920,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 5921,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 5928,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 5929,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6092,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6093,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6094,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6100,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6101,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6102,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6252,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6253,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6254,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6255,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6260,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6261,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6262,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6263,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6374,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6375,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6376,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6377,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6378,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6382,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6383,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6384,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6385,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6670,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6671,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6672,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6678,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6679,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6680,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6681,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6815,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6816,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6817,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6818,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6826,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6827,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6954,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6955,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6967,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6968,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6969,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6978,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6979,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6980,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6989,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6990,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6991,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6992,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6993,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6994,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7006,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7007,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7008,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7009,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7010,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7011,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7026,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7027,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7028,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7029,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7030,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7031,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7048,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7049,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7050,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7051,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7052,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7071,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7072,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7073,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7074,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7075,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7096,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7097,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7098,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7099,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7120,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7121,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7122,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7123,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7623,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7624,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7661,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7662,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7699,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7700,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7701,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7702,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7737,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7738,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7739,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7740,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 8534,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 8535,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 8572,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 8573,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 8847,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12513,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12514,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12521,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12522,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12587,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12588,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12595,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12596,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12602,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12603,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12604,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12605,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12606,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12608,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12609,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12610,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12611,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12612,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12613,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12614,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12615,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12617,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12618,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12619,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12620,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12621,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12622,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12623,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12624,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12625,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12626,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12627,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12628,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12629,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12630,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12631,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12632,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12633,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12637,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12638,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12642,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12643,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12644,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12645,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12646,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12647,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12648,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12649,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12650,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12651,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12652,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12653,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12654,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12655,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12656,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12657,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12658,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12659,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12660,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12661,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12662,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12663,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12664,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12665,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12666,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12667,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12668,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 12669,
+        "space": true,
+        "angle": true
+      }
+    ],
+    "selection_rule": "clique_support",
+    "support_file": "endpoint_b28_support.jsonl"
+  }
+}

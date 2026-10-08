@@ -1,0 +1,8 @@
+.venv/
+.tools/
+.lake/
+audit/replay/
+audit/controls/
+__pycache__/
+*.pyc
+.DS_Store

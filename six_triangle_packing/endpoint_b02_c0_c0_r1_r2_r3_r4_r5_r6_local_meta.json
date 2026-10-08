@@ -1,0 +1,19 @@
+{
+  "local_theorems": [
+    "centroid_box_1/300",
+    {
+      "critical_angle": "1/60",
+      "normal_radius": "1/300"
+    },
+    {
+      "critical_angle": "1/40",
+      "normal_radius": "1/500"
+    },
+    {
+      "critical_angle": "1/25",
+      "normal_radius": "1/2000"
+    }
+  ],
+  "columns": 24,
+  "critical_coordinates": "vertex E translations; angle/sqrt(3)"
+}

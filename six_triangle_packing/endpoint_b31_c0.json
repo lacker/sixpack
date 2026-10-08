@@ -1,0 +1,327 @@
+{
+  "version": 5,
+  "L": "29770817283/10000000000",
+  "scale": 68719476736,
+  "vertices": 254,
+  "edges": 12027,
+  "used_bins": [
+    [
+      256,
+      0
+    ],
+    [
+      256,
+      1
+    ],
+    [
+      256,
+      2
+    ],
+    [
+      256,
+      3
+    ],
+    [
+      256,
+      4
+    ],
+    [
+      256,
+      5
+    ],
+    [
+      256,
+      6
+    ],
+    [
+      256,
+      7
+    ],
+    [
+      256,
+      120
+    ],
+    [
+      256,
+      121
+    ],
+    [
+      256,
+      122
+    ],
+    [
+      256,
+      123
+    ],
+    [
+      256,
+      124
+    ],
+    [
+      256,
+      125
+    ],
+    [
+      256,
+      126
+    ],
+    [
+      256,
+      127
+    ],
+    [
+      256,
+      128
+    ],
+    [
+      256,
+      129
+    ],
+    [
+      256,
+      130
+    ],
+    [
+      256,
+      131
+    ],
+    [
+      256,
+      132
+    ],
+    [
+      256,
+      133
+    ]
+  ],
+  "build_seconds": 0.25133000199991784,
+  "cases": [
+    928,
+    929
+  ],
+  "refinement": {
+    "parent_prefix": "endpoint_b31",
+    "allowed_parent_nodes": [
+      1,
+      2,
+      7,
+      8,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      207,
+      208,
+      209,
+      210,
+      211,
+      477,
+      478,
+      485,
+      486,
+      711,
+      712,
+      724,
+      725,
+      3259,
+      3260,
+      3261,
+      4274,
+      4275,
+      4276,
+      4277,
+      4756,
+      6476,
+      6477,
+      6482,
+      6483
+    ],
+    "plan": [
+      {
+        "parent": 1,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 7,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 8,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 198,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 199,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 200,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 201,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 202,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 203,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 204,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 207,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 208,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 209,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 210,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 211,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 477,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 478,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 485,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 486,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 711,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 712,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 724,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 725,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3259,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3260,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3261,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4274,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4275,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4276,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4277,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4756,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6476,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6477,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6482,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 6483,
+        "space": true,
+        "angle": true
+      }
+    ],
+    "selection_rule": "clique_support",
+    "support_file": "endpoint_b31_support.jsonl"
+  }
+}

@@ -1,0 +1,143 @@
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_root", "regions": 34660, "used_bins": 64, "edges": 159935781, "seconds": 16.01811166666448}
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02", "regions": 15199, "used_bins": 128, "edges": 57328079, "seconds": 3.433054749853909}
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02_c0", "regions": 21753, "used_bins": 194, "edges": 132283408, "seconds": 6.061248375102878}
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02_c0_c0", "regions": 18399, "used_bins": 215, "edges": 100719777, "seconds": 3.594084999524057}
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02_c0_c0_r1", "regions": 28959, "used_bins": 326, "edges": 236586033, "seconds": 7.93721045833081}
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02_c0_c0_r1_r2", "regions": 31777, "used_bins": 315, "edges": 292597491, "seconds": 11.487875415943563}
+[
+  {
+    "rattler_translation_parameter": "0",
+    "status": "passed",
+    "steps": [
+      {
+        "prefix": "endpoint_root",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0_c0",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0_c0_r1",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0_c0_r1_r2",
+        "possible_region_choices": 8,
+        "local_stop": true
+      }
+    ],
+    "stop_vertices": [
+      9673,
+      0,
+      31774,
+      21213,
+      27310,
+      13794
+    ],
+    "stop_local_column": 4
+  },
+  {
+    "rattler_translation_parameter": "1/200",
+    "status": "passed",
+    "steps": [
+      {
+        "prefix": "endpoint_root",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0_c0",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0_c0_r1",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0_c0_r1_r2",
+        "possible_region_choices": 8,
+        "local_stop": true
+      }
+    ],
+    "stop_vertices": [
+      9673,
+      480,
+      31774,
+      21213,
+      27310,
+      13794
+    ],
+    "stop_local_column": 4
+  },
+  {
+    "rattler_translation_parameter": "1/100",
+    "status": "passed",
+    "steps": [
+      {
+        "prefix": "endpoint_root",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0_c0",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0_c0_r1",
+        "possible_region_choices": 8,
+        "local_stop": false
+      },
+      {
+        "prefix": "endpoint_b02_c0_c0_r1_r2",
+        "possible_region_choices": 8,
+        "local_stop": true
+      }
+    ],
+    "stop_vertices": [
+      9673,
+      1960,
+      31774,
+      21213,
+      27310,
+      13794
+    ],
+    "stop_local_column": 4
+  }
+]

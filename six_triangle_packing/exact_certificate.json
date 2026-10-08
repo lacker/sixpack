@@ -1,0 +1,367 @@
+{
+  "claim": "Exact feasibility certificate, not global optimality",
+  "arithmetic": "Q(sqrt(13)), exact Fraction arithmetic",
+  "coordinate_convention": "(x,z) means Cartesian (x,sqrt(3)*z)",
+  "side_length": {
+    "rational": "13/8",
+    "sqrt13": "3/8"
+  },
+  "squared_side_checks": 18,
+  "containment_inequalities": 54,
+  "ccw_checks": 6,
+  "pairwise_separations": 15,
+  "separators": [
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "edge_owner": 1,
+      "edge": 2,
+      "other": 2,
+      "cross_values": [
+        {
+          "rational": "3/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "-5/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "-5/16",
+          "sqrt13": "-3/16"
+        }
+      ]
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "edge_owner": 1,
+      "edge": 2,
+      "other": 3,
+      "cross_values": [
+        {
+          "rational": "3/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "-5/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "-5/16",
+          "sqrt13": "-3/16"
+        }
+      ]
+    },
+    {
+      "pair": [
+        1,
+        4
+      ],
+      "edge_owner": 1,
+      "edge": 2,
+      "other": 4,
+      "cross_values": [
+        {
+          "rational": "0",
+          "sqrt13": "0"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "-1/8"
+        },
+        {
+          "rational": "-1/8",
+          "sqrt13": "-1/8"
+        }
+      ]
+    },
+    {
+      "pair": [
+        1,
+        5
+      ],
+      "edge_owner": 1,
+      "edge": 2,
+      "other": 5,
+      "cross_values": [
+        {
+          "rational": "0",
+          "sqrt13": "-1/8"
+        },
+        {
+          "rational": "0",
+          "sqrt13": "-1/4"
+        },
+        {
+          "rational": "-5/16",
+          "sqrt13": "-3/16"
+        }
+      ]
+    },
+    {
+      "pair": [
+        1,
+        6
+      ],
+      "edge_owner": 1,
+      "edge": 2,
+      "other": 6,
+      "cross_values": [
+        {
+          "rational": "0",
+          "sqrt13": "-1/8"
+        },
+        {
+          "rational": "5/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "0",
+          "sqrt13": "-1/4"
+        }
+      ]
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "edge_owner": 2,
+      "edge": 3,
+      "other": 3,
+      "cross_values": [
+        {
+          "rational": "-5/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "3/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "-5/16",
+          "sqrt13": "-3/16"
+        }
+      ]
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "edge_owner": 2,
+      "edge": 3,
+      "other": 4,
+      "cross_values": [
+        {
+          "rational": "-5/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "-3/16",
+          "sqrt13": "-1/16"
+        },
+        {
+          "rational": "-1/16",
+          "sqrt13": "-3/16"
+        }
+      ]
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "edge_owner": 2,
+      "edge": 3,
+      "other": 5,
+      "cross_values": [
+        {
+          "rational": "-1/8",
+          "sqrt13": "-1/8"
+        },
+        {
+          "rational": "3/16",
+          "sqrt13": "-1/16"
+        },
+        {
+          "rational": "3/16",
+          "sqrt13": "-3/16"
+        }
+      ]
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "edge_owner": 2,
+      "edge": 3,
+      "other": 6,
+      "cross_values": [
+        {
+          "rational": "-1/8",
+          "sqrt13": "-1/8"
+        },
+        {
+          "rational": "-1/8",
+          "sqrt13": "0"
+        },
+        {
+          "rational": "3/16",
+          "sqrt13": "-1/16"
+        }
+      ]
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "edge_owner": 3,
+      "edge": 1,
+      "other": 4,
+      "cross_values": [
+        {
+          "rational": "3/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "-1/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "1/16",
+          "sqrt13": "-1/16"
+        }
+      ]
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "edge_owner": 3,
+      "edge": 1,
+      "other": 5,
+      "cross_values": [
+        {
+          "rational": "0",
+          "sqrt13": "-1/8"
+        },
+        {
+          "rational": "-5/16",
+          "sqrt13": "-1/16"
+        },
+        {
+          "rational": "0",
+          "sqrt13": "0"
+        }
+      ]
+    },
+    {
+      "pair": [
+        3,
+        6
+      ],
+      "edge_owner": 3,
+      "edge": 1,
+      "other": 6,
+      "cross_values": [
+        {
+          "rational": "0",
+          "sqrt13": "-1/8"
+        },
+        {
+          "rational": "-5/16",
+          "sqrt13": "-3/16"
+        },
+        {
+          "rational": "-5/16",
+          "sqrt13": "-1/16"
+        }
+      ]
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "edge_owner": 4,
+      "edge": 2,
+      "other": 5,
+      "cross_values": [
+        {
+          "rational": "0",
+          "sqrt13": "0"
+        },
+        {
+          "rational": "-9/16",
+          "sqrt13": "0"
+        },
+        {
+          "rational": "-9/32",
+          "sqrt13": "-1/32"
+        }
+      ]
+    },
+    {
+      "pair": [
+        4,
+        6
+      ],
+      "edge_owner": 4,
+      "edge": 2,
+      "other": 6,
+      "cross_values": [
+        {
+          "rational": "0",
+          "sqrt13": "0"
+        },
+        {
+          "rational": "-9/32",
+          "sqrt13": "1/32"
+        },
+        {
+          "rational": "-9/16",
+          "sqrt13": "0"
+        }
+      ]
+    },
+    {
+      "pair": [
+        5,
+        6
+      ],
+      "edge_owner": 5,
+      "edge": 1,
+      "other": 6,
+      "cross_values": [
+        {
+          "rational": "0",
+          "sqrt13": "0"
+        },
+        {
+          "rational": "-1/2",
+          "sqrt13": "0"
+        },
+        {
+          "rational": "0",
+          "sqrt13": "0"
+        }
+      ]
+    }
+  ],
+  "movable_triangle": {
+    "triangle": 2,
+    "translation": "(-3t, sqrt(3)*t)",
+    "parameter_interval": "0 <= t <= 1/100",
+    "same_separator_endpoint_checks": "passed",
+    "strict_clearance_at_t_1_over_100": "passed"
+  }
+}

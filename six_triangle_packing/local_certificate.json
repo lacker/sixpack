@@ -1,0 +1,2845 @@
+{
+  "claim": "unrestricted strict local minimum for cluster; local minimum for six pieces; NOT global",
+  "arithmetic": "Q(sqrt(13)), exact Fraction operations",
+  "pieces_zero_indexed": [
+    0,
+    2,
+    3,
+    4,
+    5
+  ],
+  "variables": 16,
+  "boundary_count": 11,
+  "contact_pair_option_counts": [
+    2,
+    2,
+    1,
+    1,
+    2
+  ],
+  "strictly_separated_pairs": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "excluded_axes_at_candidate": [
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "owner": 0,
+      "edge": 0,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "owner": 0,
+      "edge": 2,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "owner": 2,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "owner": 2,
+      "edge": 2,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "owner": 0,
+      "edge": 0,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "owner": 0,
+      "edge": 2,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "owner": 3,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "owner": 3,
+      "edge": 2,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "owner": 0,
+      "edge": 0,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "owner": 0,
+      "edge": 2,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "owner": 4,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "owner": 4,
+      "edge": 2,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "owner": 0,
+      "edge": 0,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "owner": 0,
+      "edge": 2,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "owner": 5,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "owner": 5,
+      "edge": 2,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "owner": 2,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "owner": 2,
+      "edge": 2,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "owner": 3,
+      "edge": 0,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "owner": 3,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "owner": 3,
+      "edge": 2,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "owner": 2,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "owner": 2,
+      "edge": 2,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "owner": 4,
+      "edge": 0,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "owner": 4,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "owner": 2,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "owner": 2,
+      "edge": 2,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "owner": 5,
+      "edge": 0,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "owner": 5,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "owner": 3,
+      "edge": 0,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "owner": 3,
+      "edge": 2,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "owner": 4,
+      "edge": 0,
+      "negative_vertex": 2
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "owner": 4,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "owner": 4,
+      "edge": 2,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "owner": 3,
+      "edge": 0,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "owner": 3,
+      "edge": 2,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "owner": 5,
+      "edge": 0,
+      "negative_vertex": 2
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "owner": 5,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "owner": 5,
+      "edge": 2,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "owner": 4,
+      "edge": 1,
+      "negative_vertex": 0
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "owner": 4,
+      "edge": 2,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "owner": 5,
+      "edge": 0,
+      "negative_vertex": 1
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "owner": 5,
+      "edge": 1,
+      "negative_vertex": 0
+    }
+  ],
+  "kernel_vector": [
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "3/8",
+      "sqrt13": "-1/8"
+    },
+    {
+      "rational": "1/8",
+      "sqrt13": "1/8"
+    },
+    {
+      "rational": "1",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    },
+    {
+      "rational": "0",
+      "sqrt13": "0"
+    }
+  ],
+  "excluded_axis_negative_margin_lower_bound": "1/16",
+  "branches": [
+    {
+      "branch": 0,
+      "all_active_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          "pair",
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          2
+        ]
+      ],
+      "positive_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          "pair",
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          2
+        ]
+      ],
+      "multipliers": [
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "1/4",
+          "sqrt13": "3/26"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "-3/8",
+          "sqrt13": "15/104"
+        },
+        {
+          "rational": "3/4",
+          "sqrt13": "-3/26"
+        },
+        {
+          "rational": "-1/4",
+          "sqrt13": "27/52"
+        },
+        {
+          "rational": "9/4",
+          "sqrt13": "-27/52"
+        },
+        {
+          "rational": "1/2",
+          "sqrt13": "3/13"
+        },
+        {
+          "rational": "-11/18",
+          "sqrt13": "61/234"
+        },
+        {
+          "rational": "-8/9",
+          "sqrt13": "37/117"
+        },
+        {
+          "rational": "29/288",
+          "sqrt13": "1007/3744"
+        },
+        {
+          "rational": "43/32",
+          "sqrt13": "-87/416"
+        }
+      ],
+      "rank": 15,
+      "rank_minor_determinant": {
+        "rational": "0",
+        "sqrt13": "-9/32"
+      },
+      "critical_kernel_dimension": 1,
+      "lagrangian_second_derivative": {
+        "rational": "-9/4",
+        "sqrt13": "45/52"
+      },
+      "quantitative_neighborhood": {
+        "radius_sup_norm": "1/1000000000",
+        "gradient_minor_inverse_infinity_norm_upper": 16,
+        "multiplier_sum_upper": 8,
+        "multiplier_min_lower": "1/8",
+        "normal_displacement_quadratic_bound": "51200",
+        "lagrangian_hessian_bilinear_bound": 800,
+        "third_order_error_bound": "184321000/3",
+        "curvature_lower": "4/5"
+      }
+    },
+    {
+      "branch": 1,
+      "all_active_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          "pair",
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          1
+        ]
+      ],
+      "positive_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          "pair",
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          1
+        ]
+      ],
+      "multipliers": [
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "1/4",
+          "sqrt13": "3/26"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "-3/8",
+          "sqrt13": "15/104"
+        },
+        {
+          "rational": "3/4",
+          "sqrt13": "-3/26"
+        },
+        {
+          "rational": "-1/4",
+          "sqrt13": "27/52"
+        },
+        {
+          "rational": "9/4",
+          "sqrt13": "-27/52"
+        },
+        {
+          "rational": "1/2",
+          "sqrt13": "3/13"
+        },
+        {
+          "rational": "-11/18",
+          "sqrt13": "61/234"
+        },
+        {
+          "rational": "-8/9",
+          "sqrt13": "37/117"
+        },
+        {
+          "rational": "29/288",
+          "sqrt13": "1007/3744"
+        },
+        {
+          "rational": "43/32",
+          "sqrt13": "-87/416"
+        }
+      ],
+      "rank": 15,
+      "rank_minor_determinant": {
+        "rational": "0",
+        "sqrt13": "-9/32"
+      },
+      "critical_kernel_dimension": 1,
+      "lagrangian_second_derivative": {
+        "rational": "-9/4",
+        "sqrt13": "45/52"
+      },
+      "quantitative_neighborhood": {
+        "radius_sup_norm": "1/1000000000",
+        "gradient_minor_inverse_infinity_norm_upper": 16,
+        "multiplier_sum_upper": 8,
+        "multiplier_min_lower": "1/8",
+        "normal_displacement_quadratic_bound": "51200",
+        "lagrangian_hessian_bilinear_bound": 800,
+        "third_order_error_bound": "184321000/3",
+        "curvature_lower": "4/5"
+      }
+    },
+    {
+      "branch": 2,
+      "all_active_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          2,
+          2,
+          1
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          2
+        ]
+      ],
+      "positive_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          2,
+          2,
+          1
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          2
+        ]
+      ],
+      "multipliers": [
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "-11/24",
+          "sqrt13": "49/312"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "-3/8",
+          "sqrt13": "15/104"
+        },
+        {
+          "rational": "35/24",
+          "sqrt13": "-49/312"
+        },
+        {
+          "rational": "-1/4",
+          "sqrt13": "27/52"
+        },
+        {
+          "rational": "9/4",
+          "sqrt13": "-27/52"
+        },
+        {
+          "rational": "-1/3",
+          "sqrt13": "17/39"
+        },
+        {
+          "rational": "-11/18",
+          "sqrt13": "61/234"
+        },
+        {
+          "rational": "-8/9",
+          "sqrt13": "37/117"
+        },
+        {
+          "rational": "29/288",
+          "sqrt13": "1007/3744"
+        },
+        {
+          "rational": "43/32",
+          "sqrt13": "-87/416"
+        }
+      ],
+      "rank": 15,
+      "rank_minor_determinant": {
+        "rational": "-117/256",
+        "sqrt13": "-45/256"
+      },
+      "critical_kernel_dimension": 1,
+      "lagrangian_second_derivative": {
+        "rational": "-9/4",
+        "sqrt13": "45/52"
+      },
+      "quantitative_neighborhood": {
+        "radius_sup_norm": "1/10000000000",
+        "gradient_minor_inverse_infinity_norm_upper": 16,
+        "multiplier_sum_upper": 8,
+        "multiplier_min_lower": "1/16",
+        "normal_displacement_quadratic_bound": "102400",
+        "lagrangian_hessian_bilinear_bound": 800,
+        "third_order_error_bound": "368641000/3",
+        "curvature_lower": "4/5"
+      }
+    },
+    {
+      "branch": 3,
+      "all_active_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          2,
+          2,
+          1
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          1
+        ]
+      ],
+      "positive_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          2,
+          2,
+          1
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          1
+        ]
+      ],
+      "multipliers": [
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "-11/24",
+          "sqrt13": "49/312"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "-3/8",
+          "sqrt13": "15/104"
+        },
+        {
+          "rational": "35/24",
+          "sqrt13": "-49/312"
+        },
+        {
+          "rational": "-1/4",
+          "sqrt13": "27/52"
+        },
+        {
+          "rational": "9/4",
+          "sqrt13": "-27/52"
+        },
+        {
+          "rational": "-1/3",
+          "sqrt13": "17/39"
+        },
+        {
+          "rational": "-11/18",
+          "sqrt13": "61/234"
+        },
+        {
+          "rational": "-8/9",
+          "sqrt13": "37/117"
+        },
+        {
+          "rational": "29/288",
+          "sqrt13": "1007/3744"
+        },
+        {
+          "rational": "43/32",
+          "sqrt13": "-87/416"
+        }
+      ],
+      "rank": 15,
+      "rank_minor_determinant": {
+        "rational": "-117/256",
+        "sqrt13": "-45/256"
+      },
+      "critical_kernel_dimension": 1,
+      "lagrangian_second_derivative": {
+        "rational": "-9/4",
+        "sqrt13": "45/52"
+      },
+      "quantitative_neighborhood": {
+        "radius_sup_norm": "1/10000000000",
+        "gradient_minor_inverse_infinity_norm_upper": 16,
+        "multiplier_sum_upper": 8,
+        "multiplier_min_lower": "1/16",
+        "normal_displacement_quadratic_bound": "102400",
+        "lagrangian_hessian_bilinear_bound": 800,
+        "third_order_error_bound": "368641000/3",
+        "curvature_lower": "4/5"
+      }
+    },
+    {
+      "branch": 4,
+      "all_active_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          "pair",
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          2
+        ]
+      ],
+      "positive_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          "pair",
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          2
+        ]
+      ],
+      "multipliers": [
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "-3/4",
+          "sqrt13": "3/13"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "1/4",
+          "sqrt13": "3/26"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "3/2",
+          "sqrt13": "-9/26"
+        },
+        {
+          "rational": "3/4",
+          "sqrt13": "-3/26"
+        },
+        {
+          "rational": "-1/4",
+          "sqrt13": "27/52"
+        },
+        {
+          "rational": "-3",
+          "sqrt13": "12/13"
+        },
+        {
+          "rational": "1/2",
+          "sqrt13": "3/13"
+        },
+        {
+          "rational": "-11/18",
+          "sqrt13": "61/234"
+        },
+        {
+          "rational": "-8/9",
+          "sqrt13": "37/117"
+        },
+        {
+          "rational": "29/288",
+          "sqrt13": "1007/3744"
+        },
+        {
+          "rational": "43/32",
+          "sqrt13": "-87/416"
+        }
+      ],
+      "rank": 15,
+      "rank_minor_determinant": {
+        "rational": "-117/128",
+        "sqrt13": "-9/128"
+      },
+      "critical_kernel_dimension": 1,
+      "lagrangian_second_derivative": {
+        "rational": "-9/4",
+        "sqrt13": "45/52"
+      },
+      "quantitative_neighborhood": {
+        "radius_sup_norm": "1/10000000000",
+        "gradient_minor_inverse_infinity_norm_upper": 16,
+        "multiplier_sum_upper": 8,
+        "multiplier_min_lower": "1/16",
+        "normal_displacement_quadratic_bound": "102400",
+        "lagrangian_hessian_bilinear_bound": 800,
+        "third_order_error_bound": "368641000/3",
+        "curvature_lower": "4/5"
+      }
+    },
+    {
+      "branch": 5,
+      "all_active_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          "pair",
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          1
+        ]
+      ],
+      "positive_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          "pair",
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          1
+        ]
+      ],
+      "multipliers": [
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "-3/4",
+          "sqrt13": "3/13"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "1/4",
+          "sqrt13": "3/26"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "3/2",
+          "sqrt13": "-9/26"
+        },
+        {
+          "rational": "3/4",
+          "sqrt13": "-3/26"
+        },
+        {
+          "rational": "-1/4",
+          "sqrt13": "27/52"
+        },
+        {
+          "rational": "-3",
+          "sqrt13": "12/13"
+        },
+        {
+          "rational": "1/2",
+          "sqrt13": "3/13"
+        },
+        {
+          "rational": "-11/18",
+          "sqrt13": "61/234"
+        },
+        {
+          "rational": "-8/9",
+          "sqrt13": "37/117"
+        },
+        {
+          "rational": "29/288",
+          "sqrt13": "1007/3744"
+        },
+        {
+          "rational": "43/32",
+          "sqrt13": "-87/416"
+        }
+      ],
+      "rank": 15,
+      "rank_minor_determinant": {
+        "rational": "-117/128",
+        "sqrt13": "-9/128"
+      },
+      "critical_kernel_dimension": 1,
+      "lagrangian_second_derivative": {
+        "rational": "-9/4",
+        "sqrt13": "45/52"
+      },
+      "quantitative_neighborhood": {
+        "radius_sup_norm": "1/10000000000",
+        "gradient_minor_inverse_infinity_norm_upper": 16,
+        "multiplier_sum_upper": 8,
+        "multiplier_min_lower": "1/16",
+        "normal_displacement_quadratic_bound": "102400",
+        "lagrangian_hessian_bilinear_bound": 800,
+        "third_order_error_bound": "368641000/3",
+        "curvature_lower": "4/5"
+      }
+    },
+    {
+      "branch": 6,
+      "all_active_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          "pair",
+          4,
+          2,
+          2,
+          1
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          2
+        ]
+      ],
+      "positive_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          "pair",
+          4,
+          2,
+          2,
+          1
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          "pair",
+          4,
+          5,
+          0,
+          2
+        ]
+      ],
+      "multipliers": [
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "-3/4",
+          "sqrt13": "3/13"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "-11/24",
+          "sqrt13": "49/312"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "3/2",
+          "sqrt13": "-9/26"
+        },
+        {
+          "rational": "35/24",
+          "sqrt13": "-49/312"
+        },
+        {
+          "rational": "-1/4",
+          "sqrt13": "27/52"
+        },
+        {
+          "rational": "-3",
+          "sqrt13": "12/13"
+        },
+        {
+          "rational": "-1/3",
+          "sqrt13": "17/39"
+        },
+        {
+          "rational": "-11/18",
+          "sqrt13": "61/234"
+        },
+        {
+          "rational": "-8/9",
+          "sqrt13": "37/117"
+        },
+        {
+          "rational": "29/288",
+          "sqrt13": "1007/3744"
+        },
+        {
+          "rational": "43/32",
+          "sqrt13": "-87/416"
+        }
+      ],
+      "rank": 15,
+      "rank_minor_determinant": {
+        "rational": "-351/512",
+        "sqrt13": "-81/512"
+      },
+      "critical_kernel_dimension": 1,
+      "lagrangian_second_derivative": {
+        "rational": "-9/4",
+        "sqrt13": "45/52"
+      },
+      "quantitative_neighborhood": {
+        "radius_sup_norm": "1/10000000000",
+        "gradient_minor_inverse_infinity_norm_upper": 16,
+        "multiplier_sum_upper": 8,
+        "multiplier_min_lower": "1/16",
+        "normal_displacement_quadratic_bound": "102400",
+        "lagrangian_hessian_bilinear_bound": 800,
+        "third_order_error_bound": "368641000/3",
+        "curvature_lower": "4/5"
+      }
+    },
+    {
+      "branch": 7,
+      "all_active_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          "pair",
+          4,
+          2,
+          2,
+          1
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          1
+        ]
+      ],
+      "positive_constraints": [
+        [
+          "boundary",
+          0,
+          0,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          1,
+          0
+        ],
+        [
+          "boundary",
+          0,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          2,
+          1,
+          2
+        ],
+        [
+          "boundary",
+          2,
+          2,
+          1
+        ],
+        [
+          "boundary",
+          3,
+          0,
+          1
+        ],
+        [
+          "boundary",
+          4,
+          2,
+          2
+        ],
+        [
+          "boundary",
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          "pair",
+          4,
+          2,
+          2,
+          1
+        ],
+        [
+          "pair",
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          "pair",
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          0
+        ],
+        [
+          "pair",
+          5,
+          4,
+          2,
+          1
+        ]
+      ],
+      "multipliers": [
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "9/8",
+          "sqrt13": "-27/104"
+        },
+        {
+          "rational": "-3/4",
+          "sqrt13": "3/13"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "-11/24",
+          "sqrt13": "49/312"
+        },
+        {
+          "rational": "1/8",
+          "sqrt13": "3/52"
+        },
+        {
+          "rational": "3/2",
+          "sqrt13": "-9/26"
+        },
+        {
+          "rational": "35/24",
+          "sqrt13": "-49/312"
+        },
+        {
+          "rational": "-1/4",
+          "sqrt13": "27/52"
+        },
+        {
+          "rational": "-3",
+          "sqrt13": "12/13"
+        },
+        {
+          "rational": "-1/3",
+          "sqrt13": "17/39"
+        },
+        {
+          "rational": "-11/18",
+          "sqrt13": "61/234"
+        },
+        {
+          "rational": "-8/9",
+          "sqrt13": "37/117"
+        },
+        {
+          "rational": "29/288",
+          "sqrt13": "1007/3744"
+        },
+        {
+          "rational": "43/32",
+          "sqrt13": "-87/416"
+        }
+      ],
+      "rank": 15,
+      "rank_minor_determinant": {
+        "rational": "-351/512",
+        "sqrt13": "-81/512"
+      },
+      "critical_kernel_dimension": 1,
+      "lagrangian_second_derivative": {
+        "rational": "-9/4",
+        "sqrt13": "45/52"
+      },
+      "quantitative_neighborhood": {
+        "radius_sup_norm": "1/10000000000",
+        "gradient_minor_inverse_infinity_norm_upper": 16,
+        "multiplier_sum_upper": 8,
+        "multiplier_min_lower": "1/16",
+        "normal_displacement_quadratic_bound": "102400",
+        "lagrangian_hessian_bilinear_bound": 800,
+        "third_order_error_bound": "368641000/3",
+        "curvature_lower": "4/5"
+      }
+    }
+  ],
+  "certified_neighborhood_radius_sup_norm": "1/10000000000"
+}

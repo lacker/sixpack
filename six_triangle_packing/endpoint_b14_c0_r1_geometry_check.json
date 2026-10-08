@@ -1,0 +1,21 @@
+{
+  "status": "verified geometry and graph",
+  "prefix": "endpoint_b14_c0_r1",
+  "L": "29770817283/10000000000",
+  "regions": 31058,
+  "used_bins": 319,
+  "rational": {
+    "status": "verified",
+    "regions": 31058,
+    "coordinate_projection_bounds": 59445012,
+    "separation_thresholds": 305283
+  },
+  "graph": {
+    "status": "verified",
+    "vertices": 31058,
+    "edges": 217788955,
+    "excluded_pairs": 264495198
+  },
+  "seconds": 17.25542530000007,
+  "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."
+}

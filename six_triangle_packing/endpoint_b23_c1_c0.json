@@ -1,0 +1,178 @@
+{
+  "version": 5,
+  "L": "29770817283/10000000000",
+  "scale": 68719476736,
+  "vertices": 114,
+  "edges": 3366,
+  "used_bins": [
+    [
+      512,
+      8
+    ],
+    [
+      512,
+      9
+    ],
+    [
+      512,
+      16
+    ],
+    [
+      512,
+      17
+    ],
+    [
+      512,
+      254
+    ],
+    [
+      512,
+      255
+    ],
+    [
+      512,
+      256
+    ],
+    [
+      512,
+      257
+    ],
+    [
+      512,
+      494
+    ],
+    [
+      512,
+      495
+    ],
+    [
+      512,
+      502
+    ],
+    [
+      512,
+      503
+    ]
+  ],
+  "build_seconds": 0.21023087900005066,
+  "cases": [
+    459
+  ],
+  "refinement": {
+    "parent_prefix": "endpoint_b23_c1",
+    "allowed_parent_nodes": [
+      1,
+      2,
+      125,
+      126,
+      726,
+      733,
+      762,
+      1209,
+      1238,
+      1245,
+      1289,
+      1794,
+      4198,
+      4277,
+      4338,
+      4345,
+      4713,
+      4714
+    ],
+    "plan": [
+      {
+        "parent": 1,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 125,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 126,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 726,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 733,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 762,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1209,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1238,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1245,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1289,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1794,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4198,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4277,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4338,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4345,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4713,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 4714,
+        "space": true,
+        "angle": true
+      }
+    ],
+    "selection_rule": "clique_support",
+    "support_file": "endpoint_b23_c1_support.jsonl"
+  }
+}

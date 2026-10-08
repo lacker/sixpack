@@ -1,0 +1,31 @@
+PASS branch 0: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 1: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 2: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 3: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 4: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 5: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 6: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 7: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+Certified sup-norm neighborhood radius: 1/10000000000
+BRANCH 0 prepared 3.058901144000174
+BRANCH 1 prepared 4.662313789000109
+BRANCH 2 prepared 6.154680784999982
+BRANCH 3 prepared 7.560273694999978
+BRANCH 4 prepared 9.052307455000118
+BRANCH 5 prepared 10.446737968999969
+BRANCH 6 prepared 11.836343025000133
+BRANCH 7 prepared 13.227579235000121
+A 1/10 valid W []
+A 1/15 valid W []
+A 1/20 valid W []
+A 1/25 valid W ['1/2000', '1/5000', '1/10000']
+A 1/30 valid W ['1/1000', '1/2000', '1/5000', '1/10000']
+A 1/40 valid W ['1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/50 valid W ['1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/60 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/80 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/100 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/150 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/200 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/300 valid W ['1/200', '1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+SUCCESS local tubes 54 seconds 15.482467987000291

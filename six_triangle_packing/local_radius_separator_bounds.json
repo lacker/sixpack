@@ -1,0 +1,217 @@
+[
+  {
+    "margin_lower": "64785/65536",
+    "gradient_norm": "3133713/1048576",
+    "hessian_norm": "8352561/1048576"
+  },
+  {
+    "margin_lower": "1/2",
+    "gradient_norm": "4170273/1048576",
+    "hessian_norm": "12"
+  },
+  {
+    "margin_lower": "97553/65536",
+    "gradient_norm": "3133713/1048576",
+    "hessian_norm": "15692593/1048576"
+  },
+  {
+    "margin_lower": "1/2",
+    "gradient_norm": "4170273/1048576",
+    "hessian_norm": "12"
+  },
+  {
+    "margin_lower": "1/2",
+    "gradient_norm": "2700811/1048576",
+    "hessian_norm": "5480993/1048576"
+  },
+  {
+    "margin_lower": "301829/524288",
+    "gradient_norm": "2962955/1048576",
+    "hessian_norm": "6255409/524288"
+  },
+  {
+    "margin_lower": "432901/524288",
+    "gradient_norm": "2494007/1048576",
+    "hessian_norm": "12470031/1048576"
+  },
+  {
+    "margin_lower": "1/4",
+    "gradient_norm": "1121939/262144",
+    "hessian_norm": "4030823/524288"
+  },
+  {
+    "margin_lower": "563973/1048576",
+    "gradient_norm": "1783307/524288",
+    "hessian_norm": "6505537/1048576"
+  },
+  {
+    "margin_lower": "432901/1048576",
+    "gradient_norm": "901575/262144",
+    "hessian_norm": "11129105/1048576"
+  },
+  {
+    "margin_lower": "374579/262144",
+    "gradient_norm": "1185973/524288",
+    "hessian_norm": "15372823/1048576"
+  },
+  {
+    "margin_lower": "90339/524288",
+    "gradient_norm": "3872357/1048576",
+    "hessian_norm": "11419911/1048576"
+  },
+  {
+    "margin_lower": "563973/1048576",
+    "gradient_norm": "868807/262144",
+    "hessian_norm": "7328017/1048576"
+  },
+  {
+    "margin_lower": "432901/1048576",
+    "gradient_norm": "3225099/1048576",
+    "hessian_norm": "12272705/1048576"
+  },
+  {
+    "margin_lower": "204049/262144",
+    "gradient_norm": "279751/65536",
+    "hessian_norm": "11360383/1048576"
+  },
+  {
+    "margin_lower": "85265/131072",
+    "gradient_norm": "4518705/1048576",
+    "hessian_norm": "8731033/1048576"
+  },
+  {
+    "margin_lower": "64785/65536",
+    "gradient_norm": "2871569/1048576",
+    "hessian_norm": "6904761/524288"
+  },
+  {
+    "margin_lower": "301829/524288",
+    "gradient_norm": "1914379/524288",
+    "hessian_norm": "6255409/524288"
+  },
+  {
+    "margin_lower": "9/16",
+    "gradient_norm": "3202887/1048576",
+    "hessian_norm": "10769015/1048576"
+  },
+  {
+    "margin_lower": "23825/131072",
+    "gradient_norm": "618541/262144",
+    "hessian_norm": "10444423/1048576"
+  },
+  {
+    "margin_lower": "42689/524288",
+    "gradient_norm": "1970903/524288",
+    "hessian_norm": "5332531/524288"
+  },
+  {
+    "margin_lower": "563973/1048576",
+    "gradient_norm": "3094027/1048576",
+    "hessian_norm": "12665921/1048576"
+  },
+  {
+    "margin_lower": "432901/1048576",
+    "gradient_norm": "901575/262144",
+    "hessian_norm": "11129105/1048576"
+  },
+  {
+    "margin_lower": "432901/1048576",
+    "gradient_norm": "3765041/1048576",
+    "hessian_norm": "7983377/1048576"
+  },
+  {
+    "margin_lower": "563973/1048576",
+    "gradient_norm": "2887223/1048576",
+    "hessian_norm": "12569795/1048576"
+  },
+  {
+    "margin_lower": "563973/1048576",
+    "gradient_norm": "1783307/524288",
+    "hessian_norm": "10699841/1048576"
+  },
+  {
+    "margin_lower": "432901/1048576",
+    "gradient_norm": "3225099/1048576",
+    "hessian_norm": "12272705/1048576"
+  },
+  {
+    "margin_lower": "1/2",
+    "gradient_norm": "3411511/1048576",
+    "hessian_norm": "5653569/524288"
+  },
+  {
+    "margin_lower": "498437/524288",
+    "gradient_norm": "803271/262144",
+    "hessian_norm": "11902419/1048576"
+  },
+  {
+    "margin_lower": "1/4",
+    "gradient_norm": "1544919/524288",
+    "hessian_norm": "9488335/1048576"
+  },
+  {
+    "margin_lower": "1/4",
+    "gradient_norm": "816651/262144",
+    "hessian_norm": "4266207/524288"
+  },
+  {
+    "margin_lower": "9/32",
+    "gradient_norm": "1537547/524288",
+    "hessian_norm": "8611977/1048576"
+  },
+  {
+    "margin_lower": "1025729/1048576",
+    "gradient_norm": "2332261/1048576",
+    "hessian_norm": "6927015/524288"
+  },
+  {
+    "margin_lower": "206529/1048576",
+    "gradient_norm": "1670121/524288",
+    "hessian_norm": "5698215/524288"
+  },
+  {
+    "margin_lower": "1/4",
+    "gradient_norm": "816651/262144",
+    "hessian_norm": "7897447/1048576"
+  },
+  {
+    "margin_lower": "1/4",
+    "gradient_norm": "2853545/1048576",
+    "hessian_norm": "5416091/524288"
+  },
+  {
+    "margin_lower": "44191/524288",
+    "gradient_norm": "208071/65536",
+    "hessian_norm": "5425695/524288"
+  },
+  {
+    "margin_lower": "453791/524288",
+    "gradient_norm": "3288541/1048576",
+    "hessian_norm": "6395355/524288"
+  },
+  {
+    "margin_lower": "59073/524288",
+    "gradient_norm": "2127371/524288",
+    "hessian_norm": "6121609/1048576"
+  },
+  {
+    "margin_lower": "1/2",
+    "gradient_norm": "603659/262144",
+    "hessian_norm": "5456961/524288"
+  },
+  {
+    "margin_lower": "1/2",
+    "gradient_norm": "1914379/524288",
+    "hessian_norm": "5456961/524288"
+  },
+  {
+    "margin_lower": "1/2",
+    "gradient_norm": "603659/262144",
+    "hessian_norm": "5456961/524288"
+  },
+  {
+    "margin_lower": "1/2",
+    "gradient_norm": "1390091/524288",
+    "hessian_norm": "5456961/524288"
+  }
+]

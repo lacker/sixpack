@@ -1,0 +1,36 @@
+[
+  {
+    "test": "missing continuous child region",
+    "status": "rejected as required",
+    "returncode": 1,
+    "diagnostic": "Traceback (most recent call last):\n  File \"/Users/lacker/sixpack/audit/controls/phase5_verify_geometry.py\", line 112, in <module>\n    p=argparse.ArgumentParser();p.add_argument('prefix');a=p.parse_args();verify(a.prefix)\n                                                                          ~~~~~~^^^^^^^^^^\n  File \"/Users/lacker/sixpack/audit/controls/phase5_verify_geometry.py\", line 69, in verify\n    assert set(actual)==set(expected),'Missing or invalid nonempty region in continuous cover'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Missing or invalid nonempty region in continuous cover\n"
+  },
+  {
+    "test": "missing orientation-index entry",
+    "status": "rejected as required",
+    "returncode": 1,
+    "diagnostic": "Traceback (most recent call last):\n  File \"/Users/lacker/sixpack/audit/controls/phase5_verify_geometry.py\", line 112, in <module>\n    p=argparse.ArgumentParser();p.add_argument('prefix');a=p.parse_args();verify(a.prefix)\n                                                                          ~~~~~~^^^^^^^^^^\n  File \"/Users/lacker/sixpack/audit/controls/phase5_verify_geometry.py\", line 70, in verify\n    used=sorted({(r[4],r[5]) for r in actual});assert info['used_bins']==list(map(list,used))\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+  },
+  {
+    "test": "uncorrupted control",
+    "status": "accepted"
+  },
+  {
+    "test": "nonconservative projection lower bound",
+    "status": "rejected as required",
+    "returncode": 1,
+    "diagnostic": "nonconservative position projection\n"
+  },
+  {
+    "test": "deleted compatible edge",
+    "status": "rejected as required",
+    "returncode": 1,
+    "diagnostic": "missing edge not justified by conservative bounds\n"
+  },
+  {
+    "test": "false whole-region local label",
+    "status": "rejected as required",
+    "returncode": 1,
+    "diagnostic": "Traceback (most recent call last):\n  File \"/Users/lacker/sixpack/audit/controls/phase5_tube_local.py\", line 100, in <module>\n    if len(sys.argv)>2 and sys.argv[2]=='--verify':verify(sys.argv[1])\n                                                   ~~~~~~^^^^^^^^^^^^^\n  File \"/Users/lacker/sixpack/audit/controls/phase5_tube_local.py\", line 95, in verify\n    assert (box_good(poly,L,K,b,iso,piece) if pr==0 else good_tube(poly,L,K,b,iso,piece,*PROFILES[pr-1])),(r,col,piece)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ({'m': 1024, 'i': 0, 'j': 0, 'd': 0, 'K': 2048, 'bin': 1022}, 0, 3)\n"
+  }
+]

@@ -1,0 +1,257 @@
++ g++ -O2 -std=c++17 verify_spatial_rationals.cpp -o _verify_spatial_rationals
++ g++ -O2 -std=c++17 verify_spatial_graph.cpp -o _verify_spatial_graph
++ /Users/lacker/sixpack/.venv/bin/python verify_exact.py
+PASS: 18 unit-side checks, 54 containment inequalities,
+      6 positive orientations, 15 exact separating-edge witnesses.
+PASS: |EB|^2 = 3/4; B is midpoint of FG; 16L^2 - 52L + 13 = 0.
+PASS: triangle 2 can move continuously by (-3t,sqrt(3)*t), 0<=t<=1/100.
+This is an exact upper-bound certificate, NOT an optimality proof.
++ /Users/lacker/sixpack/.venv/bin/python verify_local_radius.py
+PASS branch 0: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 1: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 2: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 3: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 4: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 5: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 6: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 7: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+Certified sup-norm neighborhood radius: 1/10000000000
+EXACT DERIVATIVES CHECKED 0
+EXACT DERIVATIVES CHECKED 1
+EXACT DERIVATIVES CHECKED 2
+EXACT DERIVATIVES CHECKED 3
+EXACT DERIVATIVES CHECKED 4
+EXACT DERIVATIVES CHECKED 5
+EXACT DERIVATIVES CHECKED 6
+EXACT DERIVATIVES CHECKED 7
+{
+  "claim": "UNRESTRICTED LOCAL optimality only; no global claim",
+  "certified_radius_sup_norm": "1/300",
+  "old_radius_sup_norm": "1/10000000000",
+  "branches": [
+    {
+      "radius": "1/300",
+      "T": "417339529580464523364093331/7782220156096217088000000",
+      "beta": "1572864/198121",
+      "C0": "780315514260529/24739011624960",
+      "eta": "5055246229604772503634093331/44111859499338301440000000000",
+      "Q_lower": "456229/524288",
+      "maximum_consumed_multiplier_fraction": "4403541481098044731/4880472735744000000"
+    },
+    {
+      "radius": "1/300",
+      "T": "416952830303706021283581331/7782220156096217088000000",
+      "beta": "1572864/198121",
+      "C0": "780315514260529/24739011624960",
+      "eta": "5054859530328014001553581331/44111859499338301440000000000",
+      "Q_lower": "456229/524288",
+      "maximum_consumed_multiplier_fraction": "1451898924163097489/1865278291968000000"
+    },
+    {
+      "radius": "1/300",
+      "T": "3798660802396165054095954881/70039981404865953792000000",
+      "beta": "1572864/198121",
+      "C0": "16065123178340801/494780232499200",
+      "eta": "46766977436812945825529454881/397006735494044712960000000000",
+      "Q_lower": "456229/524288",
+      "maximum_consumed_multiplier_fraction": "499544294652450413/610059091968000000"
+    },
+    {
+      "radius": "1/300",
+      "T": "3795180508905338535371346881/70039981404865953792000000",
+      "beta": "1572864/198121",
+      "C0": "16065123178340801/494780232499200",
+      "eta": "19590907894144163932469563/166320375154606080000000000",
+      "Q_lower": "456229/524288",
+      "maximum_consumed_multiplier_fraction": "412224179222483063/610059091968000000"
+    },
+    {
+      "radius": "1/300",
+      "T": "1785664562461258812417993553/35019990702432976896000000",
+      "beta": "1048576/86035",
+      "C0": "304233016735657/10307921510400",
+      "eta": "14506562733559452309987993553/129301567558071091200000000000",
+      "Q_lower": "456229/524288",
+      "maximum_consumed_multiplier_fraction": "4375331233938652651/4880472735744000000"
+    },
+    {
+      "radius": "1/300",
+      "T": "1783924415715845553055689553/35019990702432976896000000",
+      "beta": "1048576/86035",
+      "C0": "304233016735657/10307921510400",
+      "eta": "14504822586814039050625689553/129301567558071091200000000000",
+      "Q_lower": "456229/524288",
+      "maximum_consumed_multiplier_fraction": "360784759384304503/466319572992000000"
+    },
+    {
+      "radius": "1/300",
+      "T": "902829562207511697671010997/17509995351216488448000000",
+      "beta": "1048576/86035",
+      "C0": "5020665898813919/164926744166400",
+      "eta": "7463115607012679925364448497/64650783779035545600000000000",
+      "Q_lower": "456229/524288",
+      "maximum_consumed_multiplier_fraction": "496018013757526403/610059091968000000"
+    },
+    {
+      "radius": "1/300",
+      "T": "901959488834805067989858997/17509995351216488448000000",
+      "beta": "1048576/86035",
+      "C0": "5020665898813919/164926744166400",
+      "eta": "7462245533639973295683296497/64650783779035545600000000000",
+      "Q_lower": "456229/524288",
+      "maximum_consumed_multiplier_fraction": "408697898327559053/610059091968000000"
+    }
+  ],
+  "excluded_separators_checked": 43,
+  "analytic_bounds": "LOCAL_RADIUS.md",
+  "arithmetic": "Q(sqrt(13)) derivative identities and rational inequalities",
+  "uniform_strict_bounds": {
+    "T_upper": "55",
+    "eta_upper": "3/25",
+    "Q_lower": "87/100",
+    "consumed_multiplier_ratio_upper": "91/100",
+    "excluded_separator_change_ratio_upper": "1/6"
+  }
+}
++ /Users/lacker/sixpack/.venv/bin/python verify_local_tube.py
+PASS branch 0: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 1: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 2: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 3: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 4: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 5: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 6: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+PASS branch 7: 15 positive exact multipliers; rank 15; critical-kernel curvature (-9/4) + (45/52)*sqrt(13)
+Certified sup-norm neighborhood radius: 1/10000000000
+BRANCH 0 prepared 2.098912499845028
+BRANCH 1 prepared 3.206268582493067
+BRANCH 2 prepared 4.2623248333111405
+BRANCH 3 prepared 5.257274874486029
+BRANCH 4 prepared 6.315798208117485
+BRANCH 5 prepared 7.306073958054185
+BRANCH 6 prepared 8.298515583388507
+BRANCH 7 prepared 9.290035500191152
+A 1/10 valid W []
+A 1/15 valid W []
+A 1/20 valid W []
+A 1/25 valid W ['1/2000', '1/5000', '1/10000']
+A 1/30 valid W ['1/1000', '1/2000', '1/5000', '1/10000']
+A 1/40 valid W ['1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/50 valid W ['1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/60 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/80 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/100 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/150 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/200 valid W ['1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+A 1/300 valid W ['1/200', '1/300', '1/500', '1/1000', '1/2000', '1/5000', '1/10000']
+SUCCESS local tubes 54 seconds 11.034468040801585
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_root
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_root", "regions": 34660, "used_bins": 64, "edges": 159935781, "seconds": 11.86292783357203}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_root
+Independent full coverage checked endpoint_root 34660 regions 9.06
+Independent rational inequalities checked endpoint_root 10.51
+{"status": "verified geometry and graph", "prefix": "endpoint_root", "L": "29770817283/10000000000", "regions": 34660, "used_bins": 64, "rational": {"status": "verified", "regions": 34660, "coordinate_projection_bounds": 13309440, "separation_thresholds": 12288}, "graph": {"status": "verified", "vertices": 34660, "edges": 159935781, "excluded_pairs": 440704689}, "seconds": 16.221365375444293, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_root --children endpoint_b00,endpoint_b01,endpoint_b02,endpoint_b03,endpoint_b04,endpoint_b05,endpoint_b06,endpoint_b07,endpoint_b08,endpoint_b09,endpoint_b10,endpoint_b11,endpoint_b12,endpoint_b13,endpoint_b14,endpoint_b15,endpoint_b16,endpoint_b17,endpoint_b18,endpoint_b19,endpoint_b20,endpoint_b21,endpoint_b22,endpoint_b23,endpoint_b24,endpoint_b25,endpoint_b26,endpoint_b27,endpoint_b28,endpoint_b29,endpoint_b30,endpoint_b31
+{"status": "verified node transfer and closures", "prefix": "endpoint_root", "L": "29770817283/10000000000", "cases_entering": 1396, "cases_closed": 1109, "cases_refined": 287, "fixed_vertex_refutations": 28518, "children": ["endpoint_b00", "endpoint_b01", "endpoint_b02", "endpoint_b03", "endpoint_b04", "endpoint_b05", "endpoint_b06", "endpoint_b07", "endpoint_b08", "endpoint_b09", "endpoint_b10", "endpoint_b11", "endpoint_b12", "endpoint_b13", "endpoint_b14", "endpoint_b15", "endpoint_b16", "endpoint_b17", "endpoint_b18", "endpoint_b19", "endpoint_b20", "endpoint_b21", "endpoint_b22", "endpoint_b23", "endpoint_b24", "endpoint_b25", "endpoint_b26", "endpoint_b27", "endpoint_b28", "endpoint_b29", "endpoint_b30", "endpoint_b31"], "stats": {"calls": 29627, "removed": 11961073, "local_prunes": 0}, "seconds": 40.95091741718352}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b00
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b00", "regions": 19710, "used_bins": 128, "edges": 81288975, "seconds": 5.071088457480073}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b00
+Independent full coverage checked endpoint_b00 19710 regions 3.49
+Independent rational inequalities checked endpoint_b00 4.92
+{"status": "verified geometry and graph", "prefix": "endpoint_b00", "L": "29770817283/10000000000", "regions": 19710, "used_bins": 128, "rational": {"status": "verified", "regions": 19710, "coordinate_projection_bounds": 15137280, "separation_thresholds": 49152}, "graph": {"status": "verified", "vertices": 19710, "edges": 81288975, "excluded_pairs": 112943220}, "seconds": 5.698227042332292, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b00 --children endpoint_b00_c0
+{"status": "verified node transfer and closures", "prefix": "endpoint_b00", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 0, "cases_refined": 1, "fixed_vertex_refutations": 7149, "children": ["endpoint_b00_c0"], "stats": {"calls": 7149, "removed": 12180904, "local_prunes": 0}, "seconds": 17.032140666618943}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b00_c0
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b00_c0", "regions": 42294, "used_bins": 220, "edges": 415437180, "seconds": 16.86007145885378}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b00_c0
+Independent full coverage checked endpoint_b00_c0 42294 regions 7.89
+Independent rational inequalities checked endpoint_b00_c0 11.65
+{"status": "verified geometry and graph", "prefix": "endpoint_b00_c0", "L": "29770817283/10000000000", "regions": 42294, "used_bins": 220, "rational": {"status": "verified", "regions": 42294, "coordinate_projection_bounds": 55828080, "separation_thresholds": 145200}, "graph": {"status": "verified", "vertices": 42294, "edges": 415437180, "excluded_pairs": 478932891}, "seconds": 17.07808691635728, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b00_c0 --children endpoint_b00_c0_c0
+{"status": "verified node transfer and closures", "prefix": "endpoint_b00_c0", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 0, "cases_refined": 1, "fixed_vertex_refutations": 10830, "children": ["endpoint_b00_c0_c0"], "stats": {"calls": 10830, "removed": 23668769, "local_prunes": 0}, "seconds": 36.646362208761275}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b00_c0_c0
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b00_c0_c0", "regions": 55251, "used_bins": 232, "edges": 728606874, "seconds": 26.593254041858017}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b00_c0_c0
+Independent full coverage checked endpoint_b00_c0_c0 55251 regions 10.24
+Independent rational inequalities checked endpoint_b00_c0_c0 19.58
+{"status": "verified geometry and graph", "prefix": "endpoint_b00_c0_c0", "L": "29770817283/10000000000", "regions": 55251, "used_bins": 232, "rational": {"status": "verified", "regions": 55251, "coordinate_projection_bounds": 76909392, "separation_thresholds": 161472}, "graph": {"status": "verified", "vertices": 55251, "edges": 728606874, "excluded_pairs": 797702001}, "seconds": 34.523574041202664, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b00_c0_c0 --children endpoint_b00_c0_c0_r1
+{"status": "verified whole-region local labels", "positive_labels": 3, "regions": 55251, "radius": "1/300", "centering": "rational outer container centered on exact L_star container"}
+{"status": "verified node transfer and closures", "prefix": "endpoint_b00_c0_c0", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 0, "cases_refined": 1, "fixed_vertex_refutations": 5325, "children": ["endpoint_b00_c0_c0_r1"], "stats": {"calls": 5325, "removed": 14232447, "local_prunes": 0}, "seconds": 35.88576608430594}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b00_c0_c0_r1
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b00_c0_c0_r1", "regions": 41354, "used_bins": 388, "edges": 283338780, "seconds": 18.169090250506997}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b00_c0_c0_r1
+Independent full coverage checked endpoint_b00_c0_c0_r1 41354 regions 7.4
+Independent rational inequalities checked endpoint_b00_c0_c0_r1 17.24
+{"status": "verified geometry and graph", "prefix": "endpoint_b00_c0_c0_r1", "L": "29770817283/10000000000", "regions": 41354, "used_bins": 388, "rational": {"status": "verified", "regions": 41354, "coordinate_projection_bounds": 96272112, "separation_thresholds": 451632}, "graph": {"status": "verified", "vertices": 41354, "edges": 283338780, "excluded_pairs": 571717201}, "seconds": 24.085572458803654, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b00_c0_c0_r1 --children endpoint_b00_c0_c0_r1_r2
+{"status": "verified whole-region local labels", "positive_labels": 98, "regions": 41354, "radius": "1/300", "centering": "rational outer container centered on exact L_star container"}
+{"status": "verified node transfer and closures", "prefix": "endpoint_b00_c0_c0_r1", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 0, "cases_refined": 1, "fixed_vertex_refutations": 442, "children": ["endpoint_b00_c0_c0_r1_r2"], "stats": {"calls": 442, "removed": 357342, "local_prunes": 0}, "seconds": 2.740156166255474}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b00_c0_c0_r1_r2
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b00_c0_c0_r1_r2", "regions": 34524, "used_bins": 471, "edges": 301743859, "seconds": 9.801017249934375}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b00_c0_c0_r1_r2
+Independent full coverage checked endpoint_b00_c0_c0_r1_r2 34524 regions 6.3
+Independent rational inequalities checked endpoint_b00_c0_c0_r1_r2 15.77
+{"status": "verified geometry and graph", "prefix": "endpoint_b00_c0_c0_r1_r2", "L": "29770817283/10000000000", "regions": 34524, "used_bins": 471, "rational": {"status": "verified", "regions": 34524, "coordinate_projection_bounds": 97564824, "separation_thresholds": 665523}, "graph": {"status": "verified", "vertices": 34524, "edges": 301743859, "excluded_pairs": 294192167}, "seconds": 18.59576841723174, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b00_c0_c0_r1_r2 --children endpoint_b00_c0_c0_r1_r2_r3
+{"status": "verified whole-region local labels", "positive_labels": 678, "regions": 34524, "radius": "1/300", "centering": "rational outer container centered on exact L_star container"}
+{"status": "verified node transfer and closures", "prefix": "endpoint_b00_c0_c0_r1_r2", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 0, "cases_refined": 1, "fixed_vertex_refutations": 266, "children": ["endpoint_b00_c0_c0_r1_r2_r3"], "stats": {"calls": 266, "removed": 44786, "local_prunes": 0}, "seconds": 2.585259458050132}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b00_c0_c0_r1_r2_r3
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b00_c0_c0_r1_r2_r3", "regions": 38861, "used_bins": 342, "edges": 444910163, "seconds": 17.40388966538012}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b00_c0_c0_r1_r2_r3
+Independent full coverage checked endpoint_b00_c0_c0_r1_r2_r3 38861 regions 9.64
+Independent rational inequalities checked endpoint_b00_c0_c0_r1_r2_r3 25.66
+{"status": "verified geometry and graph", "prefix": "endpoint_b00_c0_c0_r1_r2_r3", "L": "29770817283/10000000000", "regions": 38861, "used_bins": 342, "rational": {"status": "verified", "regions": 38861, "coordinate_projection_bounds": 79742772, "separation_thresholds": 350892}, "graph": {"status": "verified", "vertices": 38861, "edges": 444910163, "excluded_pairs": 310159067}, "seconds": 28.99499816633761, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b00_c0_c0_r1_r2_r3 --children 
+{"status": "verified whole-region local labels", "positive_labels": 1592, "regions": 38861, "radius": "1/300", "centering": "rational outer container centered on exact L_star container"}
+{"status": "verified node transfer and closures", "prefix": "endpoint_b00_c0_c0_r1_r2_r3", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 1, "cases_refined": 0, "fixed_vertex_refutations": 0, "children": [], "stats": {"calls": 1, "removed": 8509, "local_prunes": 0}, "seconds": 1.7560571674257517}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b01
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b01", "regions": 16784, "used_bins": 128, "edges": 19183891, "seconds": 1.995594458654523}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b01
+Independent full coverage checked endpoint_b01 16784 regions 3.02
+Independent rational inequalities checked endpoint_b01 4.12
+{"status": "verified geometry and graph", "prefix": "endpoint_b01", "L": "29770817283/10000000000", "regions": 16784, "used_bins": 128, "rational": {"status": "verified", "regions": 16784, "coordinate_projection_bounds": 12890112, "separation_thresholds": 49152}, "graph": {"status": "verified", "vertices": 16784, "edges": 19183891, "excluded_pairs": 121659045}, "seconds": 4.283722708001733, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b01 --children 
+{"status": "verified node transfer and closures", "prefix": "endpoint_b01", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 1, "cases_refined": 0, "fixed_vertex_refutations": 0, "children": [], "stats": {"calls": 1, "removed": 460, "local_prunes": 0}, "seconds": 0.06397129222750664}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b02
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02", "regions": 15199, "used_bins": 128, "edges": 57328079, "seconds": 2.1946420837193727}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b02
+Independent full coverage checked endpoint_b02 15199 regions 3.06
+Independent rational inequalities checked endpoint_b02 4.15
+{"status": "verified geometry and graph", "prefix": "endpoint_b02", "L": "29770817283/10000000000", "regions": 15199, "used_bins": 128, "rational": {"status": "verified", "regions": 15199, "coordinate_projection_bounds": 11672832, "separation_thresholds": 49152}, "graph": {"status": "verified", "vertices": 15199, "edges": 57328079, "excluded_pairs": 58169122}, "seconds": 4.472298209555447, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b02 --children endpoint_b02_c0
+{"status": "verified node transfer and closures", "prefix": "endpoint_b02", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 0, "cases_refined": 1, "fixed_vertex_refutations": 7082, "children": ["endpoint_b02_c0"], "stats": {"calls": 7082, "removed": 4428909, "local_prunes": 0}, "seconds": 6.274521083571017}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b02_c0
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02_c0", "regions": 21753, "used_bins": 194, "edges": 132283408, "seconds": 3.445761624723673}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b02_c0
+Independent full coverage checked endpoint_b02_c0 21753 regions 4.4
+Independent rational inequalities checked endpoint_b02_c0 6.03
+{"status": "verified geometry and graph", "prefix": "endpoint_b02_c0", "L": "29770817283/10000000000", "regions": 21753, "used_bins": 194, "rational": {"status": "verified", "regions": 21753, "coordinate_projection_bounds": 25320492, "separation_thresholds": 112908}, "graph": {"status": "verified", "vertices": 21753, "edges": 132283408, "excluded_pairs": 104302220}, "seconds": 6.716991417109966, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b02_c0 --children endpoint_b02_c0_c0
+{"status": "verified node transfer and closures", "prefix": "endpoint_b02_c0", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 0, "cases_refined": 1, "fixed_vertex_refutations": 1923, "children": ["endpoint_b02_c0_c0"], "stats": {"calls": 1923, "removed": 1258695, "local_prunes": 0}, "seconds": 1.5009657079353929}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b02_c0_c0
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02_c0_c0", "regions": 18399, "used_bins": 215, "edges": 100719777, "seconds": 2.591908125206828}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b02_c0_c0
+Independent full coverage checked endpoint_b02_c0_c0 18399 regions 3.82
+Independent rational inequalities checked endpoint_b02_c0_c0 6.61
+{"status": "verified geometry and graph", "prefix": "endpoint_b02_c0_c0", "L": "29770817283/10000000000", "regions": 18399, "used_bins": 215, "rational": {"status": "verified", "regions": 18399, "coordinate_projection_bounds": 23734710, "separation_thresholds": 138675}, "graph": {"status": "verified", "vertices": 18399, "edges": 100719777, "excluded_pairs": 68532624}, "seconds": 7.069441749714315, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b02_c0_c0 --children endpoint_b02_c0_c0_r1
+{"status": "verified whole-region local labels", "positive_labels": 1, "regions": 18399, "radius": "1/300", "centering": "rational outer container centered on exact L_star container"}
+{"status": "verified node transfer and closures", "prefix": "endpoint_b02_c0_c0", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 0, "cases_refined": 1, "fixed_vertex_refutations": 3414, "children": ["endpoint_b02_c0_c0_r1"], "stats": {"calls": 3414, "removed": 5117248, "local_prunes": 0}, "seconds": 9.958410374820232}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b02_c0_c0_r1
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02_c0_c0_r1", "regions": 28959, "used_bins": 326, "edges": 236586033, "seconds": 5.7975127920508385}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b02_c0_c0_r1
+Independent full coverage checked endpoint_b02_c0_c0_r1 28959 regions 5.46
+Independent rational inequalities checked endpoint_b02_c0_c0_r1 11.44
+{"status": "verified geometry and graph", "prefix": "endpoint_b02_c0_c0_r1", "L": "29770817283/10000000000", "regions": 28959, "used_bins": 326, "rational": {"status": "verified", "regions": 28959, "coordinate_projection_bounds": 56643804, "separation_thresholds": 318828}, "graph": {"status": "verified", "vertices": 28959, "edges": 236586033, "excluded_pairs": 182711328}, "seconds": 12.812864750623703, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b02_c0_c0_r1 --children endpoint_b02_c0_c0_r1_r2
+{"status": "verified whole-region local labels", "positive_labels": 79, "regions": 28959, "radius": "1/300", "centering": "rational outer container centered on exact L_star container"}
+{"status": "verified node transfer and closures", "prefix": "endpoint_b02_c0_c0_r1", "L": "29770817283/10000000000", "cases_entering": 1, "cases_closed": 0, "cases_refined": 1, "fixed_vertex_refutations": 4733, "children": ["endpoint_b02_c0_c0_r1_r2"], "stats": {"calls": 4733, "removed": 15635726, "local_prunes": 0}, "seconds": 135.06477266643196}
++ /Users/lacker/sixpack/.venv/bin/python rebuild_phase5_data.py endpoint_b02_c0_c0_r1_r2
+{"status": "data rebuilt; exact checks still required", "prefix": "endpoint_b02_c0_c0_r1_r2", "regions": 31777, "used_bins": 315, "edges": 292597491, "seconds": 6.9351292084902525}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_geometry.py endpoint_b02_c0_c0_r1_r2
+Independent full coverage checked endpoint_b02_c0_c0_r1_r2 31777 regions 5.91
+Independent rational inequalities checked endpoint_b02_c0_c0_r1_r2 11.32
+{"status": "verified geometry and graph", "prefix": "endpoint_b02_c0_c0_r1_r2", "L": "29770817283/10000000000", "regions": 31777, "used_bins": 315, "rational": {"status": "verified", "regions": 31777, "coordinate_projection_bounds": 60058530, "separation_thresholds": 297675}, "graph": {"status": "verified", "vertices": 31777, "edges": 292597491, "excluded_pairs": 212275485}, "seconds": 12.832372167147696, "scope": "Parent restrictions and leaf conclusions require separate combinatorial verification."}
++ /Users/lacker/sixpack/.venv/bin/python phase5_verify_node.py endpoint_b02_c0_c0_r1_r2 --children endpoint_b02_c0_c0_r1_r2_r3
+{"status": "verified whole-region local labels", "positive_labels": 740, "regions": 31777, "radius": "1/300", "centering": "rational outer container centered on exact L_star container"}

@@ -1,0 +1,13 @@
+EXACT GEOMETRY endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6_r8
+EXACT GEOMETRY endpoint_b14_c0_r1_r2_r3_r4_r5
+EXHAUSTIVE NODE endpoint_b14_c0_r1_r2_r3_r4_r5
+EXHAUSTIVE NODE endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6_r8
+EXACT GEOMETRY endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6
+EXACT GEOMETRY endpoint_b02_c0_c0_r1_r2_r3_r4_r5
+EXHAUSTIVE NODE endpoint_b02_c0_c0_r1_r2_r3_r4_r5
+EXACT GEOMETRY endpoint_b02_c0_c0_r1_r2_r3_r4
+EXHAUSTIVE NODE endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6
+EXACT GEOMETRY endpoint_b14_c0_r1_r2_r3_r4
+EXHAUSTIVE NODE endpoint_b14_c0_r1_r2_r3_r4
+EXHAUSTIVE NODE endpoint_b02_c0_c0_r1_r2_r3_r4
+EVERY NODE HAS PASSED; STRUCTURAL/HASH AUDIT STILL REQUIRED

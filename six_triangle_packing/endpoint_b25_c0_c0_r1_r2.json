@@ -1,0 +1,474 @@
+{
+  "version": 5,
+  "L": "29770817283/10000000000",
+  "scale": 68719476736,
+  "vertices": 355,
+  "edges": 23099,
+  "used_bins": [
+    [
+      2048,
+      906
+    ],
+    [
+      2048,
+      907
+    ],
+    [
+      2048,
+      908
+    ],
+    [
+      2048,
+      909
+    ],
+    [
+      2048,
+      910
+    ],
+    [
+      2048,
+      911
+    ],
+    [
+      2048,
+      1016
+    ],
+    [
+      2048,
+      1017
+    ],
+    [
+      2048,
+      1018
+    ],
+    [
+      2048,
+      1019
+    ],
+    [
+      2048,
+      1020
+    ],
+    [
+      2048,
+      1021
+    ],
+    [
+      2048,
+      1022
+    ],
+    [
+      2048,
+      1023
+    ],
+    [
+      2048,
+      1024
+    ],
+    [
+      2048,
+      1025
+    ],
+    [
+      2048,
+      1740
+    ],
+    [
+      2048,
+      1741
+    ],
+    [
+      2048,
+      1748
+    ],
+    [
+      2048,
+      1749
+    ],
+    [
+      2048,
+      1750
+    ],
+    [
+      2048,
+      1751
+    ],
+    [
+      2048,
+      1752
+    ],
+    [
+      2048,
+      1753
+    ],
+    [
+      2048,
+      1754
+    ],
+    [
+      2048,
+      1755
+    ],
+    [
+      2048,
+      1756
+    ],
+    [
+      2048,
+      1757
+    ],
+    [
+      2048,
+      1758
+    ],
+    [
+      2048,
+      1759
+    ],
+    [
+      2048,
+      1760
+    ],
+    [
+      2048,
+      1761
+    ],
+    [
+      2048,
+      1898
+    ],
+    [
+      2048,
+      1899
+    ],
+    [
+      2048,
+      1900
+    ],
+    [
+      2048,
+      1901
+    ],
+    [
+      2048,
+      1902
+    ],
+    [
+      2048,
+      1903
+    ]
+  ],
+  "build_seconds": 0.24292880699999841,
+  "cases": [
+    355
+  ],
+  "refinement": {
+    "parent_prefix": "endpoint_b25_c0_c0_r1",
+    "allowed_parent_nodes": [
+      0,
+      1,
+      2,
+      74,
+      505,
+      573,
+      593,
+      594,
+      595,
+      647,
+      648,
+      649,
+      663,
+      664,
+      707,
+      905,
+      906,
+      907,
+      925,
+      926,
+      927,
+      937,
+      938,
+      939,
+      1436,
+      1612,
+      1640,
+      1668,
+      1669,
+      1670,
+      1671,
+      1672,
+      1673,
+      1855,
+      1856,
+      1866,
+      1867,
+      3280,
+      3301,
+      3302,
+      3303,
+      3307,
+      3308,
+      3309,
+      3313,
+      3314,
+      3315,
+      3319,
+      3320,
+      3321
+    ],
+    "plan": [
+      {
+        "parent": 0,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 2,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 74,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 505,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 573,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 593,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 594,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 595,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 647,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 648,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 649,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 663,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 664,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 707,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 905,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 906,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 907,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 925,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 926,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 927,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 937,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 938,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 939,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1436,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1612,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1640,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1668,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1669,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1670,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1671,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1672,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1673,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1855,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1856,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1866,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 1867,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3280,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3301,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3302,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3303,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3307,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3308,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3309,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3313,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3314,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3315,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3319,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3320,
+        "space": true,
+        "angle": true
+      },
+      {
+        "parent": 3321,
+        "space": true,
+        "angle": true
+      }
+    ],
+    "selection_rule": "clique_support",
+    "support_file": "endpoint_b25_c0_c0_r1_bad_support.jsonl"
+  }
+}

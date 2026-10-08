@@ -1,0 +1,25 @@
+{
+  "scope": "Selected clean controls, not a second complete reconstruction of the entire proof",
+  "checks": [
+    {
+      "prefix": "endpoint_root",
+      "status": "clean runner rebuild and all selected graph checks passed",
+      "graph_sha256": "a3118b4f2ca654c304e1ef09ac6f94f0542e42d45fc9009c0a395ad0f014c70b",
+      "matches_working_graph": true,
+      "regions": 34660,
+      "cases_closed": 1109,
+      "cases_refined": 287,
+      "local_splits": 0
+    },
+    {
+      "prefix": "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6_r8",
+      "status": "clean runner rebuild and all selected graph checks passed",
+      "graph_sha256": "c6d93893a0d45c29cb219e82002e19c4ca31496f40d54c6e4c012fa7929f8a71",
+      "matches_working_graph": true,
+      "regions": 28007,
+      "cases_closed": 1,
+      "cases_refined": 0,
+      "local_splits": 3
+    }
+  ]
+}

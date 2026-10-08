@@ -1,0 +1,34 @@
+{
+  "theorem": "L_min = (13 + 3 sqrt(13))/8 for six freely translating and rotating unit equilateral triangles, boundary contact allowed",
+  "proof_status": "Complete computer-assisted argument; not Lean-verified or externally reviewed; no priority claim",
+  "working_run": {
+    "all_108_geometry_and_graph_checks": "passed",
+    "all_108_independent_combinatorial_node_checks": "passed",
+    "complete_tree_audit": "passed",
+    "totals": {
+      "graphs": 108,
+      "placement_regions": 1948929,
+      "cases_closed": 1396,
+      "fixed_vertex_refutations": 207880,
+      "missing_pairs_checked": 16490667855,
+      "search_calls": 209815,
+      "search_removed": 286952100,
+      "search_local_prunes": 1432,
+      "search_local_splits": 510
+    },
+    "coordinate_projection_bounds": 3027404412,
+    "separation_thresholds": 17457330
+  },
+  "standalone_release": {
+    "all_48_implementation_tests": "passed",
+    "exact_construction": "passed",
+    "regenerated_centroid_box_certificate": "passed",
+    "regenerated_selected_pivot_tube_certificates": "passed",
+    "copied_transcript_and_input_hash_audit": "passed",
+    "clean_rebuilds": "root and final endpoint leaf passed with bit-identical graph hashes; not a second fresh full reconstruction of all 108 graphs"
+  },
+  "positive_controls": "Known exact packing plus two movable-piece positions followed through the cover",
+  "negative_controls": "All five deliberately corrupted proof inputs rejected; uncorrupted control accepted",
+  "reproduction": "python run_endpoint_checks.py recomputes the full arithmetic and combinatorial checks rather than trusting saved success statuses",
+  "python_tested": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"
+}

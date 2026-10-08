@@ -1,0 +1,28 @@
+{
+  "status": "verified node transfer and closures",
+  "prefix": "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6",
+  "L": "29770817283/10000000000",
+  "cases_entering": 1,
+  "cases_closed": 0,
+  "cases_refined": 1,
+  "fixed_vertex_refutations": 12831,
+  "children": [
+    "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6_r8"
+  ],
+  "stats": {
+    "calls": 13338,
+    "removed": 38404733,
+    "local_prunes": 1414,
+    "local_splits": 507
+  },
+  "input_sha256": {
+    "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6.json": "926bda97dec528678277c1707bb35571915e32a4b51bea81df3906e204d3e119",
+    "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6_nodes.json": "1ebb56993d766b380676033369614e8aac791276a612e62fd922ec729ff28417",
+    "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6.groups": "8e14de5c2606367af9547ba9ad5337a4bab2f533eaf7a7367f5b49233d370a7f",
+    "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6.graph": "c8dd728a18a5d040743e145e52ac00ec2aa831ef03e0e5c652dfd40f7e0d1a04",
+    "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6_r8.json": "1b8e109bb0ab673999c7d0efdd573b74d221a323ed39c0e4d3e1f4b3aab6422a",
+    "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6.local": "03e3e9cd6d51f25a2dc6471e4595d928103118f7c05848ff5083f5421b0f31dd",
+    "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6_local_meta.json": "29bd39981584106b6f7a004721b5aa0d3d8260a581aa60a746984883a8baf81c"
+  },
+  "seconds": 401.0428721200001
+}

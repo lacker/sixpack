@@ -1,0 +1,35 @@
+import Sixpack
+
+#print axioms Sixpack.root13_nonneg
+#print axioms Sixpack.root13_sq
+#print axioms Sixpack.root13_bounds
+#print axioms Sixpack.optimum_polynomial
+#print axioms Sixpack.optimum_bounds
+#print axioms Sixpack.optimum_lt_outerBound
+#print axioms Sixpack.coarse_cell_diameter
+#print axioms Sixpack.scaledNormSq_cartesian
+#print axioms Sixpack.centerEmbed_margins
+#print axioms Sixpack.centerEmbed_strict
+#print axioms Sixpack.strictlyInContainer_not_boundary
+#print axioms Sixpack.centerEmbed_preserves_delta
+#print axioms Sixpack.rotate_preserves_norm
+#print axioms Sixpack.halfAngle_identity
+#print axioms Sixpack.lower_bound_from_boundary_classification
+#print axioms Sixpack.candidate_unit_sides
+#print axioms Sixpack.candidate_vertices_contained
+#print axioms Sixpack.candidate_ccw
+#print axioms Sixpack.candidate_separating_edges
+#print axioms Sixpack.candidate_has_boundary_vertex
+#print axioms Sixpack.local_omission
+#print axioms Sixpack.negative_slack_excludes_separation
+#print axioms Sixpack.tube_forces_zero
+#print axioms Sixpack.projection_surjective
+#print axioms Sixpack.convex_container
+#print axioms Sixpack.candidate_hulls_contained
+#print axioms Sixpack.separated_hulls_disjoint_interiors
+#print axioms Sixpack.candidate_inside_witness_edge
+#print axioms Sixpack.candidate_hulls_disjoint_of_lt
+#print axioms Sixpack.candidate_hulls_pairwise_disjoint
+#print axioms Sixpack.candidate_feasible
+#print axioms Sixpack.candidate_isPacking
+#print axioms Sixpack.candidate_upper_bound

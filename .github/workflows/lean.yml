@@ -1,0 +1,22 @@
+name: Lean proofs
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865 # v1
+        with:
+          auto-config: "false"
+          build: "true"
+          use-mathlib-cache: "true"
+      - name: Audit theorem axioms
+        run: |
+          lake env lean audit/PrintAxioms.lean > audit/lean-axioms.log
+          python3 audit/check_axioms.py audit/lean-axioms.log
+      - name: Check reference preservation
+        run: python3 audit/check_original_integrity.py

@@ -1,0 +1,61 @@
+# Sixpack
+
+Independent audit and Lean formalization of a proposed optimal packing of six
+unit equilateral triangles in an equilateral triangle, with candidate side
+`(13 + 3√13)/8`.
+
+**The global optimality theorem has not been verified in Lean.** The original
+research claims a complete computer-assisted proof. That claim is being checked
+independently; original success logs are not treated as evidence of a fresh run.
+
+- `six_triangle_packing/`: the 730 original research files, preserved byte for
+  byte from the archive. Its historical claims are reference material.
+- `six_triangle_packing_research_v5.zip`: the unchanged original archive.
+- `audit/`: fresh execution logs, integrity checks, independent symbolic audit,
+  and the audit report. Disposable replay directories are ignored by Git.
+- `Sixpack/`: Lean proofs, with no proof placeholders or custom geometric axioms.
+- [FORMALIZATION_PLAN.md](FORMALIZATION_PLAN.md): theorem boundaries, current
+  formal status, and remaining work.
+- [audit/REPORT.md](audit/REPORT.md): audit findings and replay status.
+
+## Lean
+
+Lean and mathlib are pinned to `v4.24.0`; `lake-manifest.json` pins the dependency
+commits. With that toolchain available:
+
+```sh
+lake exe cache get Mathlib.Data.Real.Sqrt Mathlib.Tactic \
+  Mathlib.Analysis.Convex.Hull Mathlib.Topology.Algebra.Module.FiniteDimension
+lake build
+lake env lean audit/PrintAxioms.lean
+```
+
+The formal results cover exact construction checks, the scaled metric, conservative
+projection logic, local-omission logic, and centering. Consult the plan for exact
+theorem names and limitations. Passing this build does not establish optimality.
+
+## Reproduce the original computer checks without modifying the reference
+
+Python 3.13, a C++17 compiler, and Boost headers are needed. Run from the repo root:
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r six_triangle_packing/requirements-endpoint.txt
+mkdir -p audit
+cp -R six_triangle_packing audit/replay
+cd audit/replay
+../../.venv/bin/python run_endpoint_checks.py
+```
+
+If Boost is outside the compiler's normal include path, set `CPLUS_INCLUDE_PATH`
+to its include directory. The full run recomputes all 108 graphs and can take a
+substantial amount of time. `--node` is a partial diagnostic, not a full proof.
+
+The independent symbolic check additionally needs the pinned SymPy dependency:
+
+```sh
+.venv/bin/python -m pip install -r six_triangle_packing/requirements.txt
+.venv/bin/python audit/check_symbolic_derivatives.py
+```
+
+No license has been inferred for the supplied research material.
