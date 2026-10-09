@@ -217,6 +217,30 @@ proves both regions nonempty, rejects a forged vertex witness, and checks a tiny
 finite-search closure with its conditional geometric conclusion. This is one
 certified pair, not the original compatibility graph or any whole global case.
 
+## Radius-label geometric reconstruction
+
+`OrientationAngles` proves that the local checker’s normalized arctangent angle
+has exactly the rational half-angle rotation coefficients, and that its relative
+angle reconstructs the actual rotation from a reference orientation.
+`RelativeHullChart` transfers this identity to whole triangle hulls with arbitrary
+vertex ordering. `CoreReferenceOrientation` checks explicit exact reference
+coefficients and fundamental parameters for all five candidate core pieces,
+including the cyclic vertex shift for the last piece.
+
+`RadiusLabelBridge` reconstructs all 16 radius-chart coordinates from actual
+centroids, relative angles and container size. Its represented-label lower-bound
+theorem starts from an actual packing and five distinct owners represented by
+placement labels. Closed-bin endpoint tests bound the angle on the entire bin;
+certified centroid bounds and the container-size bound give the chart norm.
+It then proves `optimum ≤ L` through the existing nonlinear rigidity theorem.
+The candidate reference hulls and the geometric chart identity are discharged.
+
+This is still a conditional local result: concrete production labels must prove
+the centroid and angle endpoint inequalities, and global search must show that
+every surviving packing reaches such labels (or one of the tube charts).
+The checker’s six symmetry channels also need orientation-parameter bindings.
+No Python success flag is used as a theorem hypothesis.
+
 ## Remaining trust boundary
 
 Root intersection coverage and the first child enumeration are now proved.

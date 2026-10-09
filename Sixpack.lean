@@ -161,3 +161,7 @@ import Sixpack.ContainerSymmetry
 import Sixpack.RecenteredSymmetry
 import Sixpack.LocalAngleBounds
 import Sixpack.EndpointCenteredCover
+import Sixpack.OrientationAngles
+import Sixpack.RelativeHullChart
+import Sixpack.CoreReferenceOrientation
+import Sixpack.RadiusLabelBridge
