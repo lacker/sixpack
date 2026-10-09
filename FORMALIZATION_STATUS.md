@@ -639,18 +639,35 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 63 blocks, covering 53,739 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and five
+`EndpointB31SpatialAnglePilot` accepts 375 blocks, covering 62,308 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 26
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The five production batches all pass with peaks below 1,434 MiB; the full
-default build peaks at 448 MiB. The generator keeps new batches outside the
+The 26 production batches all pass with peaks below 1,434 MiB; the latest
+full default build peaks at 404 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which the first
-five are accepted. No complete b31 pruning or root reachability theorem is
-claimed; 9,813 of the 9,876 proposed blocks still need acceptance, followed by
+26 are accepted (batches 0–20 and 42–46). No complete b31 pruning or root reachability theorem is
+claimed; 9,501 of the 9,876 proposed blocks still need acceptance, followed by
 checked coverage and composition of all 21 pruning rectangles.
+
+`RectanglePruning` now proves that checked rectangle coverage preserves every
+admissible choice through a sequential pruning trace.
+`SpatialAngleRectanglePruning` specializes this to actual continuous triangle
+packings using accepted geometric blocks. Neither theorem assumes correctness
+of a Python graph. A witness-based row checker avoids evaluating large unions.
+
+`EndpointB31FirstRow` kernel-checks the complete step-0 row for owner 640:
+all 346 blocker choices are covered by 22 declared blocks. Its source audit
+checks every literal member table and selector against the production export.
+`EndpointB31FirstRowGeometry` binds every local block to its accepted production
+certificate and proves exclusion of actual packings whose first piece uses
+owner 640 and second piece uses any of these blocker choices. The finite row
+build peaked at 644 MiB; the geometric assembly peaked at 389 MiB. This row
+is unconditional apart from its explicit region/domain hypotheses. Full
+21-step coverage and full block acceptance remain open; continue serial block
+acceptance from batch 21 (batches 42–46 are already accepted).

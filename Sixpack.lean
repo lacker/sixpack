@@ -211,3 +211,6 @@ import Sixpack.EndpointLeaf31CoarseGroups
 import Sixpack.EndpointLeaf31Refinement
 import Sixpack.SpatialAngleDomainRestriction
 import Sixpack.EndpointB31SpatialAnglePilot
+import Sixpack.SpatialAngleRectanglePruning
+import Sixpack.EndpointB31FirstRow
+import Sixpack.EndpointB31FirstRowGeometry

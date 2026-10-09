@@ -9,5 +9,6 @@ rev = "v4.24.0"
 
 [[lean_lib]]
 name = "Sixpack"
-# Bound compiler memory without invalidating already checked artifacts.
+# Request Lean's allocation limit without invalidating checked artifacts.
+# Physical memory is monitored separately by audit/run_lean_memory_guard.py.
 weakLeanArgs = ["-M4096"]

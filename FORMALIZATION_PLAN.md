@@ -570,10 +570,20 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first five production batches pass, giving 63 accepted
+603 MiB peak. The first 21 production batches and batches 42–46 pass, giving 375 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 5, then prove
+without expanding the default import graph. Continue from batch 21, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
+
+The generic rectangle-trace preservation theorem now uses actual represented
+region compatibility, with no saved-graph premise. The complete owner-640 row
+(step 0) has a kernel-checked witness for each of its 346 blocker choices,
+using 22 local blocks. This row is now bound to accepted geometric certificates, and actual-packing
+exclusion for its owner/blocker hypotheses compiles. Extend row acceptance to
+every removed owner,
+and assemble all 21 sequential steps before invoking the generic theorem.
+The finite coverage and geometric exclusion are separately proved; the full
+trace still requires every removed owner and its current blocker domain.
