@@ -326,3 +326,5 @@ import Sixpack.EndpointB31GeometricChains.Prefix5
 
 import Sixpack.EndpointB31Case970Snapshots
 import Sixpack.EndpointB31Case970SnapshotBlockers
+
+import Sixpack.EndpointB31Case970RootEntry

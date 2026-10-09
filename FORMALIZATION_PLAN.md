@@ -864,3 +864,16 @@ geometric-step constructor to justify all eight deletions and compose a packing
 exclusion at the actual empty final component. The geometric-step constructor
 has not yet had a positive full execution and remains workspace work. Prove
 root-refinement binding and incoming root clique-support selection separately.
+
+
+Case 970's original-root-record entry into its exact initial snapshot is now
+accepted, default-imported and fully dependency-audited. Complete its geometric
+table, row coverage, eight geometric deletions and empty-final-component packing
+exclusion, then compose with this entry theorem. Incoming root clique-support
+selection remains separate.
+
+Complete case 1341's split closure assembly under the existing physical-memory
+cap. The monolithic assembly failed the memory guard and is not accepted.
+`--reuse-compiled-groups` resumes assembly while the final Lake build rechecks
+all geometric dependencies. Its new chunk constructors and resume workflow
+still require complete positive execution before publication.

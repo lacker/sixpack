@@ -1324,3 +1324,33 @@ unproved by this checkpoint. Case 1341's full coverage/packing-closure pipeline
 and the remaining main-chain continuation are still active. Incoming root
 selection, global classification and the lower bound remain unproved.
 Overall completion remains about 60% (55–65%).
+
+
+## Ordered root refinement for b31 case 970
+
+`b31_case970_selected_root_records_enter_initial_snapshot` is now accepted
+and default-imported. Actual represented root-record choices in the selected
+case-970 parent domains, from a packing with `L ≤ outerBound`, refine into
+`b31Case970SnapshotDomains 0`. The binding uses the already checked actual
+snapshot functions directly. Its 31 scalar batches check all 7,752 refinement
+slots for the ordered root groups `[0,3,4,8,11,13]`; 2,921 relevant retained
+alternatives cover all six actual initial domains. The independent source audit
+checks every slot, original coarse-case group and original-record packing
+statement against the production data.
+
+The full root-entry build passed (3,357 jobs, peak 2,150 MiB). The default build
+passed (5,269 jobs, 583 MiB). The complete canonical dependency audit passed in
+155 seconds: 17,483 listed checks / 17,482 distinct declarations depend only on
+standard logical axioms. The archive and all 730 originals remain unchanged.
+This does not prove incoming root clique-support selection or the case-970
+geometric pruning chain. Its complete certificate table remains active.
+
+Case 1341's 117 coverage groups all compiled. Its monolithic closure assembly
+was stopped by the physical-memory guard at 3,174 MiB; that failed assembly
+never counted as proof. The workspace assembly is now split into 17 owner-check
+modules and four dispatch modules and is checking under the same 3,072 MiB cap.
+The split data module passed at 798 MiB, and the first owner chunks passed at
+roughly 450 MiB. The complete packing exclusion and root composition still
+require successful assembly and dependency audit. Five main-chain pruning steps
+remain accepted; the continuation is active. Global classification and the
+lower bound remain unproved. Overall completion remains about 60% (55–65%).
