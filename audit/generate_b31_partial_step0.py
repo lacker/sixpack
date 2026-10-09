@@ -3,13 +3,27 @@
 The list below must be built before the generated partial assembly is built.
 """
 from pathlib import Path
-import json
+import argparse, json
 
 root = Path(__file__).resolve().parents[1]
 plan = json.loads((root/'audit/b31-indexed-row-group-export.json').read_text())['groups']
 partitions = json.loads((root/'audit/b31-domain-partition-export.json').read_text())['steps']
-selected = [1,3,5,7,9,10,11,13,15,17,19,20,21,22,23,24,25,26,27,30,31,34,35,36]
+parser = argparse.ArgumentParser()
+parser.add_argument('--groups', default='1,3,5,7,9,10,11,13,15,17,19,20,21,22,23,24,25,26,27,30,31,34,35,36')
+parser.add_argument('--all-compiled', action='store_true')
+args = parser.parse_args()
+if args.all_compiled:
+    compiled = root/'.lake/build/lib/lean/Sixpack/EndpointB31IndexedGroups'
+    selected = sorted({15} | {int(path.stem.removeprefix('Group'))
+                              for path in compiled.glob('Group*.olean')
+                              if plan[int(path.stem.removeprefix('Group'))]['step'] == 0})
+else:
+    selected = sorted(set(map(int, args.groups.split(','))))
+assert {1,15} <= set(selected)
 assert all(plan[i]['step'] == 0 for i in selected)
+for i in selected:
+    module = 'EndpointB31IndexedFirstGroup' if i == 15 else f'EndpointB31IndexedGroups/Group{i}'
+    assert (root/f'.lake/build/lib/lean/Sixpack/{module}.olean').exists(), ('Uncompiled group', i)
 
 def write_changed(path, text):
     if not path.exists() or path.read_text() != text:
@@ -58,13 +72,13 @@ end Sixpack
 '''
 write_changed(root/'Sixpack/EndpointB31Step0BlockerBinding.lean', s)
 owners = sorted(owner for i in selected for owner in plan[i]['owners'])
-assert len(owners) == len(set(owners)) == 52
+assert len(owners) == len(set(owners))
 owner_group = {owner: (i, part) for i in selected for part, owner in enumerate(plan[i]['owners'])}
 s = 'import Sixpack.EndpointB31Step0BlockerBinding\nimport Sixpack.EndpointB31IndexedFirstGroup\n'
 s += ''.join(f'import Sixpack.EndpointB31IndexedGroups.Group{i}\n' for i in selected if i != 15)
 s += '\nnamespace Sixpack\n\n'
 s += 'def b31Step0PartialRemoved : Finset (Fin 7023) := {'+','.join(map(str, owners))+'}\n\n'
-s += '''theorem b31_step0_partial_removed_count : b31Step0PartialRemoved.card = 52 := by
+s += f'''theorem b31_step0_partial_removed_count : b31Step0PartialRemoved.card = {len(owners)} := by
   decide +kernel
 
 '''
@@ -129,4 +143,4 @@ theorem b31_step0_partial_pruning_preserves_packing (L : ℝ) (T : Fin 6 → Tri
 end Sixpack
 '''
 write_changed(root/'Sixpack/EndpointB31Step0PartialPruning.lean', s)
-print('Prepared actual blocker-domain binding and partial packing preservation for 52 declared removals; Lean assembly acceptance pending.')
+print(f'Prepared actual blocker-domain binding and partial packing preservation for {len(owners)} declared removals; Lean assembly acceptance pending.')

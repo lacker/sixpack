@@ -570,10 +570,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 79 production batches pass, giving 1,211 accepted
+603 MiB peak. The first 111 production batches pass, giving 1,674 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 79, then prove
+without expanding the default import graph. Continue from batch 111, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -642,3 +642,12 @@ the remaining 176 first-step removals by accepting their geometric dependencies
 and row groups, then extend the same actual-domain binding and pruning assembly
 to the remaining 20 steps. The complete geometric table still continues from
 batch 79. The end-to-end root-case classification remains unproved.
+
+The geometric snapshot preservation and chain theorems now compile. Concrete
+row exclusions can discharge each step directly using the already checked
+survivor inclusions, without first accepting one monolithic global lookup
+table. Bind every row group to its actual step blocker domain, prove each
+complete step's removal coverage, and compose the 21 steps to invoke
+`b31_final_snapshot_no_packing`. The partial assembler now supports an explicit
+group list or all compiled step-0 groups; its scope auditor derives that list
+from the actual Lean imports.

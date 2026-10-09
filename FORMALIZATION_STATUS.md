@@ -639,20 +639,20 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 1,211 blocks, covering 81,444 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and 79
+`EndpointB31SpatialAnglePilot` accepts 1,674 blocks, covering 99,441 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 111
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The 79 production batches all pass with peaks below 1,434 MiB; the latest
+The 111 production batches all pass with peaks below 1,434 MiB; the latest
 full default build peaks at 397 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
-79 are accepted (batches 0–78). No complete b31 pruning or root reachability theorem is
-claimed; 8,665 of the 9,876 proposed blocks still need acceptance, followed by
+111 are accepted (batches 0–110). No complete b31 pruning or root reachability theorem is
+claimed; 8,202 of the 9,876 proposed blocks still need acceptance, followed by
 checked coverage and composition of all 21 pruning rectangles.
 
 `RectanglePruning` now proves that checked rectangle coverage preserves every
@@ -708,8 +708,8 @@ leaf closure. The bridge build peaked at 459 MiB. Its source audit compares
 all 36 inverse-parent entries and all 7,023 lookup defaults with the preserved
 refinement scope. Reaching this snapshot from the initial domains remains
 unproved: full geometric block acceptance and every removed owner's complete
-row coverage are still required. The first 79 certificate batches all pass;
-continue with batch 79.
+row coverage are still required. The first 111 certificate batches all pass;
+continue with batch 111.
 
 `IndexedRectangleCoverage` checks direct array-index equality witnesses for
 all group-owner positions in all used blocks and for every blocker position.
@@ -767,3 +767,13 @@ The full first step still needs its other **176 removals**, and all later
 steps and root reachability remain unproved. The source audit compares each
 actual owner/group binding and the partial-domain definition with the complete
 production plan.
+
+`GeometricSnapshotPruning` proves preservation of an actual packing choice
+through one geometrically justified snapshot step, and through a sequence of
+such proved steps. A step must supply exclusion of every removed owner against
+its actual blocker domain and survivor inclusion in the next snapshot. This
+allows concrete row proofs to compose without a global lookup-table correctness
+hypothesis. Both generic theorems compile; the concrete complete b31 sequence
+still requires the outstanding row certificates. The 32 additional production
+batches (79–110) pass under the memory guard. The default build with these
+batches and the generic composition theorem passes at 725 MiB.
