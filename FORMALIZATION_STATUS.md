@@ -15,7 +15,7 @@ should be reassessed against remaining proof obligations, rather than copied.
 
 Current concrete milestones: the upper-bound construction is proved; much of
 the analytic and certificate soundness machinery is proved; the published main
-b31 chain has 6 of 21 steps, and the case-970 chain has 4 of 8 accepted steps.
+b31 chain has 6 of 21 steps, and the case-970 chain has all 8 of 8 accepted steps and a selected-root closure.
 These counts describe only those chains, not overall formalization completion.
 The global root-case classification and unconditional lower bound remain unproved.
 
@@ -1708,7 +1708,7 @@ The fourth complete deletion and its 84 row groups have passed Lean and an
 independent scoped axiom audit. The selected-root handoff now reaches snapshot
 4 through a compiled theorem, also audited against the standard axiom allowlist.
 This still requires selection of those root domains and the remaining four
-steps; it does not prove the global lower bound. The checkpoint is ready for publication.
+steps; it does not prove the global lower bound. Published as `18f12c8`.
 
 Root case 715 now has 22 checked containing-domain pair exclusions for a proposed
 17-owner row group. The independent source audit covers all 1,730 initial
@@ -1728,5 +1728,59 @@ Current evidence: case-970 snapshot-4 handoff build
 union `/tmp/sixpack-case970-snapshot4-audit-union-v1.log` (23,612 declarations).
 Root-715 geometry audit:
 `/tmp/sixpack-root-case715-row-geometry-axioms-8c11a3ff.log`.
-The default build completed all 5,824 jobs. Root-row positional coverage and
+The default build completed all 5,824 jobs at 699.4 MiB. Root-row positional coverage and
 its scoped axiom audit passed; initial-domain binding is still pending.
+
+The complete root-715 row group passed Lean in
+`/tmp/sixpack-root-case715-initial-row-group0-v1.log` and its three public facts
+passed the scoped audit `/tmp/sixpack-root-case715-row0-axioms-v1.log`.
+The finite ordering identity for case 715 also passed Lean through explicit
+increasing-tuple uniqueness, in `/tmp/sixpack-root-case715-order-position-v5.log`.
+Direct reduction attempts failed and were replaced, not counted as acceptance.
+The serial exhaustive binding and initial-pruning pipeline is running in
+`/tmp/sixpack-root-case715-initial-pruning-pipeline-v1.log` (run `19789460`);
+its first 16 batches have passed. Full domain binding and the actual pruning
+statement remain unverified until that complete run and axiom audit succeed.
+
+The full root-715 first deletion is now proposed as 198 complete row patterns
+covering all 459 removed owners and all 1,730 blockers, with a maximum of 135
+blocks per row. All 4,067 distinct geometry proposals and 789 containing domains
+passed the independent cached source audit; this is external evidence only.
+Serial Lean acceptance is running in
+`/tmp/sixpack-root-case715-complete-first-deletion-geometry-check-v1.log`
+(run `1873a127`). The generalized row exporter preserves accepted Group0 bytes;
+full rows use a quantified 32-entry lookup proof, independently tested on actual
+owner and blocker predicates at 418.9 and 446.7 MiB. These tests do not accept
+the remaining rows. Initial-domain binding has passed batches 0–83 of 271.
+
+Case 970 steps 4 and 5 and prefix 6 passed their scoped audits
+`/tmp/sixpack-b31-case970-step4-axioms-297803be.log` and
+`/tmp/sixpack-b31-case970-step5-axioms-297803be.log`. They are not yet published.
+The final two steps and selected-root closure are running in
+`/tmp/sixpack-case970-final-selected-root-closure-v1.log` (step run `5feee536`).
+The proposed closure retains the incoming selected-root-domain hypothesis; it
+must not be reported as a classification of the initial coarse root case.
+
+## Complete selected-root closure for case 970
+
+All eight geometric deletions and the empty final component have passed Lean.
+`b31_case970_selected_root_no_packing` now composes the actual selected-root
+refinement entry with that complete chain, and its scoped axiom audit passed.
+This excludes packings in the selected original root domains. The incoming
+root selection is still unproved, so it is not an initial-root classification
+or the global lower bound. The exact canonical audit union now covers 24,020
+public declarations. The overall estimate remains about 40% (25–55%), since
+most global root/tree coverage and local-label acceptance remain.
+
+Root-715 finite owner-union bookkeeping exceeded the 3 GiB guard during direct
+computation. A replacement uses bounded forward/reverse positions and adjacent
+order checks to prove the 459-owner equality and cardinality; its compilation
+is pending. A proposed single 22,690-record tail check aborted Lean (exit 134)
+and was removed from the working Lean sources; the successful bounded
+initial-domain binding pipeline was unaffected and has passed batches 0–154.
+
+Publication gate for the complete case-970 selected-root closure passed:
+`/tmp/sixpack-case970-closure-default-v1.log` (5,956 jobs, 709.5 MiB), exact
+24,020-declaration audit union `/tmp/sixpack-case970-closure-audit-union-v1.log`,
+and archive/all-730-file integrity check. Incoming initial-root selection and
+the unconditional global lower bound remain unproved.
