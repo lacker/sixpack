@@ -1414,3 +1414,29 @@ checkpoint. Its full geometric table and the remaining main-chain steps continue
 checking separately. Incoming root selection, global case classification and
 the end-to-end lower bound remain unproved. Overall completion remains about
 60% (55–65%).
+
+
+## First complete geometric pruning step for b31 case 970
+
+`b31_case970_step0_pruning_preserves_packing` and
+`b31_case970_prefix1_preserves_packing` are now default-imported and fully
+dependency-audited. The step deletes 128 actual component-1 regions against
+508 actual component-2 blockers, using five checked geometric coverage groups.
+It preserves the same represented packing choice from actual snapshot 0 to
+snapshot 1; no geometric acceptance or coverage hypothesis is assumed.
+
+This checkpoint includes 60 geometric blocks / 65,134 ordered pairs in batches
+0–12. The step build passes at 881 MiB and the chain build at 389 MiB.
+Its targeted audit checks 142 declarations. The default build passes
+(5,493 jobs, 646 MiB); the full canonical audit checks 19,350 listed requests /
+19,349 distinct declarations, all using only standard logical axioms.
+Original archive/file integrity and the actual source/step/chain auditors pass.
+
+The reusable multi-component step and chain constructors have now been
+positively exercised against the production case. Their serial runner checks
+existing geometric prerequisites, compiles each group and complete step,
+rechecks actual source bindings and audits each chain. The complete eight-step
+case-970 exclusion still remains unproved. The runner is continuing through
+steps 1–2; its geometric table and the remaining main-chain checks continue
+separately. Incoming root selection, global classification and the end-to-end
+lower bound remain unproved. Overall completion remains about 60% (55–65%).

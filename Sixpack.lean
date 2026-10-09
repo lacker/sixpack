@@ -331,3 +331,4 @@ import Sixpack.EndpointB31Case970RootEntry
 
 import Sixpack.EndpointB31Case1341RootClosure
 import Sixpack.EndpointB31GeometricChains.Prefix6
+import Sixpack.EndpointB31Case970GeometricChains.Prefix1
