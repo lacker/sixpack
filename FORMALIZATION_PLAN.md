@@ -230,8 +230,17 @@ cosine coefficient matrices. `TubeNormCertificate`, `TubeNormFixture` and
 `TubeNormFamily` reconstruct and check all five constraint norm bounds for all
 eight branches, using only kernel computation. `TubeNormControls` and
 `TubeNormGeometry` derive actual uniform Jacobian variation, second derivative
-and origin-Jacobian constraint error estimates. Inverse/objective contractions,
-final motion/energy estimates and excluded axes remain.
+and origin-Jacobian constraint error estimates. Angle-dependent inverse/objective
+contractions, final motion/energy estimates and excluded axes remain.
+
+The basic inverse and multiplier contractions are now checked for all eight
+branches in `TubeBaseFixture`: feasible-slack domination by `beta`, the inverse
+curve coefficient `Cz`, and the weighted third constants `Mv` and `Mh`.
+`TubeWeightedExpansion` proves the exact weighted Taylor decomposition and derives
+preliminary motion and energy bounds for actual constraints, with no assumed
+remainder or certificate acceptance. The angle-dependent first- and
+second-derivative contractions still need checking and bounding before these
+estimates imply the full tube theorem.
 
 ## Remaining modules, in dependency order
 
@@ -255,7 +264,7 @@ final motion/energy estimates and excluded axes remain.
    tube chart, normal Jacobian at the origin and exact critical-curve energy are
    proved, together with angle-dependent normal derivative identities and uniform
    normal Taylor remainder bounds. Sampled matrices and the five constraint norm
-   enclosures are now checked and bound to geometry. Check the inverse/objective
+   enclosures are now checked and bound to geometry. Check the angle-dependent inverse/objective
    contractions, prove normal
    motion and energy estimates, check the excluded axes, and prove all three tubes.
 4. **Whole-region labels.** Prove exact recentering from the rational cover to the

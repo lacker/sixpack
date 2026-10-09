@@ -689,3 +689,12 @@ import Sixpack
 #print axioms Sixpack.all_tube_constraint_origin_error
 #print axioms Sixpack.tube_norm_data_cover
 #print axioms Sixpack.tube_norm_representatives_checked
+#print axioms Sixpack.tubeThirdContraction_value
+#print axioms Sixpack.checked_tube_base_contractions
+#print axioms Sixpack.checked_tube_inverse_feasible_slacks
+#print axioms Sixpack.checked_tube_inverse_remainder
+#print axioms Sixpack.checked_tube_objective_remainder
+#print axioms Sixpack.all_tube_base_contractions_checked
+#print axioms Sixpack.tube_branch_weighted_expansion
+#print axioms Sixpack.all_tube_preliminary_motion_bound
+#print axioms Sixpack.all_tube_preliminary_energy_bound

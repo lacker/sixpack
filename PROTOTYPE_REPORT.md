@@ -338,7 +338,7 @@ Each retained branch is rigid on the curve with zero normal displacement.
 estimates. It does not supply those estimates. Angle-dependent normal derivative
 identities and uniform Taylor remainders are now proved, as detailed below.
 Sampled matrices and their five constraint norm bounds are now bound to geometry
-and checked across all eight branches. Inverse/objective contractions, final
+and checked across all eight branches. Angle-dependent inverse/objective contractions, final
 motion/energy estimates and the 22 excluded tube axes remain before any of the
 three full tubes is proved.
 
@@ -359,7 +359,7 @@ normal derivatives, with the zero sample bound to the existing geometric jets.
 These proofs use no Python/C++ acceptance assumptions. They do not establish
 full mixed derivative bounds or a complete tube theorem. Sampled matrix bindings
 and the five constraint norm bounds are now checked
-for all eight branches. Inverse/objective contractions, final motion/energy
+for all eight branches. Angle-dependent inverse/objective contractions, final motion/energy
 inequalities and the excluded tube axes remain.
 
 ## Sampled tube matrices and checked constraint norms
@@ -373,5 +373,14 @@ input: `TubeNormCertificate` recomputes them from the geometric formulas and
 `TubeNormFamily` checks all eight branches in the kernel, reusing the 19 distinct
 constraints. `TubeNormGeometry` derives uniform Jacobian variation and second
 derivative bounds, and combines them with Taylor to bound constraint error about
-the origin Jacobian. No complete tube theorem follows yet: inverse/objective
+the origin Jacobian. No complete tube theorem follows yet: angle-dependent inverse/objective
 contractions, the final estimates and excluded axes remain.
+
+The basic inverse and multiplier contractions are now checked for all eight
+branches in `TubeBaseFixture`: feasible-slack domination by `beta`, the inverse
+curve coefficient `Cz`, and the weighted third constants `Mv` and `Mh`.
+`TubeWeightedExpansion` proves the exact weighted Taylor decomposition and derives
+preliminary motion and energy bounds for actual constraints, with no assumed
+remainder or certificate acceptance. The angle-dependent first- and
+second-derivative contractions still need checking and bounding before these
+estimates imply the full tube theorem.

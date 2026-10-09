@@ -48,8 +48,8 @@ remainder supplies the lower energy bound. `retained_tube_curve_rigid` proves
 rigidity in each branch when normal displacement is zero.
 
 `tube_estimates_force_zero` proves the final tube contradiction from explicit
-motion and energy inequalities. Uniform third bounds and Taylor remainders are now proved for actual normal
-paths, as is exact three-sample interpolation of their first and second
+motion and energy inequalities. Uniform third bounds and Taylor remainders are
+now proved for actual normal paths, as is exact three-sample interpolation of their first and second
 derivatives. The sharp bounds cover every retained branch constraint and yield
 weighted remainder bounds for inverse rows and multipliers. These are repeated
 normal-direction derivatives, not full mixed derivative tensors.
@@ -59,9 +59,19 @@ derivatives for every real normal displacement. Their five constraint norm
 bounds are checked across all eight branches, reconstructing coefficients in
 Lean and checking the 19 distinct retained constraints. Lean derives uniform
 Jacobian variation, second derivative and origin-Jacobian constraint error
-estimates. The inverse and objective contractions needed for the final motion
-and energy inequalities remain to be checked and assembled. The 22 excluded
-tube separators also remain to be checked in Lean. No full tube theorem is
+estimates. The angle-dependent inverse and objective derivative contractions
+needed for the final motion and energy inequalities remain to be checked and
+assembled. The 22 excluded tube separators also remain to be checked in Lean. No full tube theorem is
 claimed from this foundation.
+
+
+The basic inverse and multiplier contractions are now checked for all eight
+branches in `TubeBaseFixture`: feasible-slack domination by `beta`, the inverse
+curve coefficient `Cz`, and the weighted third constants `Mv` and `Mh`.
+`TubeWeightedExpansion` proves the exact weighted Taylor decomposition and derives
+preliminary motion and energy bounds for actual constraints, with no assumed
+remainder or certificate acceptance. The angle-dependent first- and
+second-derivative contractions still need checking and bounding before these
+estimates imply the full tube theorem.
 
 See `FORMALIZATION_PLAN.md` and `PROTOTYPE_REPORT.md` for the precise trust boundary.

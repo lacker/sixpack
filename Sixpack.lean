@@ -90,3 +90,6 @@ import Sixpack.TubeNormAdditional
 import Sixpack.TubeNormFamily
 import Sixpack.TubeNormControls
 import Sixpack.TubeNormGeometry
+import Sixpack.TubeBaseContractions
+import Sixpack.TubeBaseFixture
+import Sixpack.TubeWeightedExpansion
