@@ -3258,3 +3258,15 @@ import Sixpack
 #print axioms Sixpack.leaf31_refinement_parent_ancestry_checked
 #print axioms Sixpack.leaf31_refinement_parent_group_geometry
 #print axioms Sixpack.leaf31_refinement_case_domain_geometry
+#print axioms Sixpack.angle_child_represents_parent
+#print axioms Sixpack.angle_descendant_represents_parent
+#print axioms Sixpack.checked_spatial_angle_ancestor_represents
+#print axioms Sixpack.checked_spatial_angle_region_block_exclusion
+#print axioms Sixpack.checked_spatial_angle_block_adj_conservative
+#print axioms Sixpack.checked_spatial_angle_block_search_sound
+#print axioms Sixpack.checked_endpoint_spatial_angle_block_search_boundary
+#print axioms Sixpack.checked_spatial_angle_domain_restriction
+#print axioms Sixpack.b31_spatial_angle_block0_accepted
+#print axioms Sixpack.b31_spatial_angle_block0_pair_excluded
+#print axioms Sixpack.b31_spatial_angle_block6440_accepted
+#print axioms Sixpack.b31_spatial_angle_block6440_pair_excluded

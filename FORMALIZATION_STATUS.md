@@ -623,3 +623,27 @@ assembly peaked at 409 MiB. The export comparison checks the actual Lean
 parent labels, parent-source indices, group tags, ancestor paths and child
 witness codes against the preserved production sources. This is an external
 scope comparison; continuous coverage and contradiction are Lean theorems.
+
+The owned b31 exporter now reproduces the combined arc-pruning trace for cases
+928 and 929: 21 exhaustive no-support rectangles leave exactly the 36 declared
+retained parents. Its adaptive exact-rational proposal partitions 625,585
+ordered pair exclusions into 9,876 spatial/angular ancestor blocks with
+118,512 projection bounds. The source-scope audit compares all 7,023 actual
+records, every integer ancestor path, the full rectangle partition and the
+retained-parent correspondence. This is external export evidence, not Lean
+acceptance of the complete pruning trace.
+
+`SpatialAngleAncestor` proves containment through independent dyadic angle
+and midpoint spatial paths, preserving the actual continuous hull chart.
+`SpatialAngleBlockCertificate` proves geometric pair exclusion from accepted
+parent certificates and those paths. `SpatialAngleBlockSearch` and
+`SpatialAngleDomainRestriction` prove the conservative search and production
+parent-deletion bridges. Concrete b31 table and trace acceptance remain. The selected
+`EndpointB31SpatialAnglePilot` now accepts blocks 0 and 6440, covering 47,030
+ordered pairs from actual b31 records. The largest block covers 46,662 pairs
+using twelve rational projection bounds plus 433 integer ancestry checks. It
+peaked at 1,843 MiB and took 560 seconds; the smaller block and pilot assembly
+peaked at 466 MiB. Only these two of the 9,876 proposed blocks have passed Lean.
+The first combined large decision failed to reduce; separating the pair and
+individual ancestry checks passed without introducing assumptions. The full
+b31 reduction to retained parents is not yet a Lean theorem.

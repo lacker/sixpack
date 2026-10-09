@@ -554,3 +554,23 @@ certificate showing that every admissible entering case either forces boundary
 contact or survives into the declared 36 parents. A saved support list cannot
 replace that geometric domain-restriction proof. Earlier root-to-b31 pruning
 and refinement still need acceptance as well.
+
+### Spatial/angular compression for b31 retained-parent pruning
+
+The combined 928/929 trace proposes a complete reduction to exactly the 36
+already covered final-refinement parents. Spatial/angular ancestor containment,
+block exclusion, conservative search and domain-restriction bridges are now
+proved generically. Accept the 9,876 proposed blocks in bounded modules, prove
+the 21 rectangle pruning steps exhaustive with a checked conservative lookup,
+then compose retained-parent coverage with the accepted final refinement and
+leaf closure. Only compiled arithmetic and pruning checks may discharge these
+obligations. The remaining twelve b31 case closures and root-to-b31 coverage
+still need their own checks.
+
+Two concrete b31 spatial/angular blocks now pass Lean, including the largest
+46,662-pair block. Before bulk acceptance, replace high-index literal pattern
+matches in the ancestry lookup with bounded chunk lookups and verify the
+replacement's exact source scope. The largest current proof stayed below
+2 GiB physical footprint but took 560 seconds, so small-index lookup reduction
+is needed to keep the remaining production acceptance practical. Keep all
+heavy checks serial and retain the external physical-memory guard.

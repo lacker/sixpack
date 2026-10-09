@@ -209,3 +209,5 @@ import Sixpack.EndpointLeaf31AncestorFixture
 import Sixpack.EndpointLeaf31Hybrid
 import Sixpack.EndpointLeaf31CoarseGroups
 import Sixpack.EndpointLeaf31Refinement
+import Sixpack.SpatialAngleDomainRestriction
+import Sixpack.EndpointB31SpatialAnglePilot
