@@ -41,3 +41,9 @@ import Sixpack.LocalTaylor
 import Sixpack.TaylorEnclosures
 import Sixpack.TaylorFixture
 import Sixpack.TaylorControls
+import Sixpack.EnergyAlgebra
+import Sixpack.EnergyEstimate
+import Sixpack.EnergyCertificate
+import Sixpack.EnergyGeometry
+import Sixpack.EnergyFixture
+import Sixpack.EnergyControls

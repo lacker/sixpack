@@ -46,7 +46,8 @@ and checks branch 0’s first-order enclosures. Actual second derivatives and al
 eight pivot curvatures are proved. Branch 0’s Hessian norms and mixed/normal
 curvature bounds are checked against geometry. Uniform third derivatives and
 Taylor remainder bounds are proved; its motion estimate follows from actual
-geometric constraints and the radius. The nonlinear energy estimate remains.
+geometric constraints and the radius. Its nonlinear energy estimate and branch 0 local rigidity are now proved.
+The remaining branches, tube arguments and global coverage remain.
 Consult the plan for exact
 theorem names and limitations. Passing this build does not establish optimality.
 

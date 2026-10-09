@@ -1,7 +1,7 @@
 # Progress estimate
 
-Estimated completion of the **end-to-end formalization: about 20%**, with a
-plausible planning range of **15–25%**. This is a subjective estimate of remaining
+Estimated completion of the **end-to-end formalization: about 25%**, with a
+plausible planning range of **20–30%**. This is a subjective estimate of remaining
 work, not a fraction of theorem statements, source lines, or Python checks.
 There is no objective percentage until the proof architecture and large
 certificate strategy are settled. It should not be read as a schedule forecast.
@@ -11,12 +11,12 @@ certificate strategy are settled. It should not be read as a schedule forecast.
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Partial |
 | Continuous spatial/orientation coverage and symmetry reduction | Mostly remaining |
-| Local five-piece nonlinear rigidity | In progress; all eight first-order branches checked against actual geometric derivatives; actual second derivatives and all eight pivot curvatures checked; branch 0 Hessian/normal bounds checked; uniform third derivatives and Taylor estimates proved; energy estimate remaining |
+| Local five-piece nonlinear rigidity | In progress; all eight first-order branches checked against actual geometric derivatives; actual second derivatives and all eight pivot curvatures checked; branch 0 Hessian/normal bounds checked; uniform third derivatives and Taylor estimates proved; branch 0 geometric energy and local rigidity proved; remaining branch/tube coverage pending |
 | Sound finite search and certificate machinery | Small working prototypes; production checker remaining |
 | All concrete triangle-region certificates checked by Lean | Remaining |
 | Endpoint classification and final lower bound | Conditional final argument proved; classification remaining |
 
-The main uncertainties are the remaining local energy and tube estimates,
+The main uncertainties are the remaining branch and tube estimates,
 geometric coverage, and efficient kernel checking of the full exclusion/search
 data.
 Completing the upper bound and final centering argument therefore accounts for a
@@ -36,5 +36,11 @@ bound, with no Taylor-error hypothesis. Uniform third derivatives and the
 Taylor remainder estimates used to derive those errors are proved for every
 local constraint. Branch 0's actual constraint-growth and weighted remainder
 bounds are proved as well.
-This is a meaningful prerequisite for nonlinear local rigidity, but does not yet
-prove any of the large global search exclusions. The estimate remains about 20%.
+The nonlinear energy estimate now follows from those bounds and the actual
+Lagrangian identity. `branch_zero_geometric_rigidity` proves that a feasible
+perturbation within sup-norm radius `1/300` with nonpositive size displacement
+has all 16 coordinates zero. It assumes the selected branch constraints are
+nonnegative, but assumes no motion, energy or Taylor estimate. The other seven
+concrete branch enclosure checks, branch coverage and tube arguments remain.
+This does not prove any of the large global search exclusions. The estimate is
+now about 25%.

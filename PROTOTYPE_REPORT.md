@@ -184,8 +184,8 @@ successful eight-branch curvature build took about four seconds on the local
 machine, excluding already compiled first-order fixtures.
 
 These results prove the positive quadratic obstruction in the critical direction.
-They do not yet prove a neighborhood contains no competing packing. The
-nonlinear energy estimate and geometric branch coverage are still necessary.
+The energy layer below completes branch 0 radius rigidity. Geometric branch
+coverage and the other branch and tube results are still necessary.
 
 ## Full geometric Hessians and the motion estimate
 
@@ -210,7 +210,7 @@ to the exact inverse. `MotionFixture` accepts those coefficients for branch 0
 and derives the motion inequality for actual geometric constraint values.
 The original motion theorem keeps the Taylor error bound as a hypothesis.
 The later `TaylorFixture` removes that hypothesis using the results below.
-The complete local nonlinear conclusion is still pending.
+The energy layer below now proves the nonlinear conclusion for branch 0.
 
 ## Uniform third derivatives and actual Taylor remainders
 
@@ -240,16 +240,39 @@ with no Taylor-error hypothesis. `TaylorControls` rejects zero third constants,
 a zero weighted remainder bound and a negative radius.
 
 No original Python/C++ routine is used as evidence for these analytic bounds.
-The full lower bound is still pending the nonlinear energy estimate, all branch
-coefficient checks, geometric coverage and production search certificates.
+The full lower bound is still pending the remaining branch coefficient checks,
+tube arguments, geometric coverage and production search certificates.
+
+## Nonlinear energy and branch zero geometric rigidity
+
+`EnergyAlgebra` proves the signed quadratic expansion and the coefficient
+inequality retaining half the weighted nonnegative constraint sum.
+`EnergyEstimate` bounds the mixed and normal Taylor errors and proves the full
+finite-dimensional energy inequality. `EnergyCertificate` rechecks finite-index
+rational sums against the supplied coefficient data and proves soundness over
+real numbers. These are ordinary kernel proofs, independent of Python/C++.
+
+`EnergyGeometry` proves the actual geometric energy identity using stationarity
+and the checked pivot/inverse decomposition of the geometric Hessian. It derives
+the energy inequality using the proved Taylor errors, growth and remainder.
+`EnergyFixture` checks branch 0's finite coefficient conditions and proves
+`branch_zero_geometric_energy`. Combining it with the actual motion estimate
+and checked radius criterion gives `branch_zero_geometric_rigidity`: within
+sup-norm radius `1/300`, nonnegative selected branch constraints and nonpositive
+size displacement imply every displacement coordinate is zero. No motion,
+energy, derivative or Taylor bound is assumed in this theorem.
+
+`EnergyControls` rejects truncated mixed data, zero multiplier lower bounds and
+a negative radius. This is a theorem for one fixed branch's actual constraints;
+coverage of arbitrary feasible packings by the branches and tubes is still an
+explicit remaining obligation.
 
 ## Next useful milestone
 
-Derive the nonlinear energy estimate and connect the proved geometric motion
-and remainder estimates to the radius criterion. Extend
-the concrete second-order enclosure checks from branch 0 to all eight branches. The exact first-order coordinates, positive multipliers and
-inverse identities are now checked against actual geometric derivatives for all
-eight branches. In parallel, extend
-the search prototype with channel-specific local labels and a small genuine
-triangle-region certificate. Only after the geometric bindings are proved does
-accepting a search or radius certificate contribute to the global lower bound.
+Extend the concrete second-order enclosure checks from branch 0 to all eight
+branches, then prove branch coverage and the three tube arguments. The exact
+first-order coordinates, positive multipliers and inverse identities are already
+checked against actual geometric derivatives for all eight branches. Extend the
+search prototype with channel-specific local labels and a small genuine
+triangle-region certificate. Only after geometric coverage is proved can these
+local results be combined with search certificates to prove the global lower bound.

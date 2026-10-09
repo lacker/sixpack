@@ -42,9 +42,9 @@ The following modules now build as part of the default target:
 |---|---|---|
 | `SearchCertificate` | Recursive empty-domain, incompatible-domain and exhaustive subset/complement certificates; acceptance soundness; a three-group refutation; forged closure and changed-graph rejection | Adjacency is input, not certified triangle geometry; no local-label rules, DAG or bitsets |
 | `IntervalCertificate` | A rational interval-region compatibility test, its real soundness, closed continuous cover, and a complete certificate proof that three mutually separated unit-interval endpoints cannot lie in `[0,1]` | A one-dimensional example, not any of the 108 triangle graphs |
-| `RadiusRigidity` | The radius contradiction from explicit motion/energy estimates; exact uniform rational gap; actual corner-triangle rigidity under fixed-centroid rotations with nonnegative cosine | The five-piece core allows moving centroids; its Taylor and matrix estimates remain unproved |
-| `RadiusCertificate` | A dimension-checked rational checker recomputing all component inequalities, `T`, `beta`, `C0`, `eta`, and the decisive gap; accepted arithmetic implies the radius criterion over the reals | Input bounds have not been proved to enclose the actual derivatives and inverse matrices |
-| `RadiusFixture` | Kernel acceptance of all rational radius inequalities for original branch 0 at `1/300`; conditional rigidity from the two analytic estimates; rejection of a truncated input | Neither the exporter nor the bounds file establishes the geometric bridge |
+| `RadiusRigidity` | The radius contradiction from explicit motion/energy estimates; exact uniform rational gap; actual corner-triangle rigidity under fixed-centroid rotations with nonnegative cosine | The generic criterion is conditional; `EnergyFixture` now proves its analytic hypotheses for branch 0 |
+| `RadiusCertificate` | A dimension-checked rational checker recomputing all component inequalities, `T`, `beta`, `C0`, `eta`, and the decisive gap; accepted arithmetic implies the radius criterion over the reals | The generic checker accepts input bounds; branch 0 geometric bindings are supplied by the later enclosure and energy layers |
+| `RadiusFixture` | Kernel acceptance of all rational radius inequalities for original branch 0 at `1/300`; conditional rigidity from the two analytic estimates; rejection of a truncated input | The later `EnergyFixture` establishes the branch 0 geometric bridge; branch and tube coverage remain |
 
 The fixture uses `decide +kernel`, not native evaluation as proof evidence.
 See [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md) for measurements and precise scope.
@@ -67,12 +67,10 @@ every branch index.
 inverse-entry, and gradient-norm bounds against those exact quantities and prove
 a bound on the actual directional derivatives.
 
-These results do not establish nonlinear local rigidity: the nonlinear energy
-estimate remains to be proved,
-as does geometric coverage by the eight branches. The existing radius criterion
-still carries its two explicit analytic motion/energy hypotheses. Branch 0's
-motion estimate is now derived from actual geometric constraints and the radius
-bound, using the Taylor estimates below.
+The first-order results alone do not establish nonlinear local rigidity. The
+later Taylor and energy layers prove branch 0's actual motion and energy
+estimates and discharge the generic radius criterion's analytic hypotheses.
+Geometric coverage by the eight branches remains.
 
 `lower_bound_from_boundary_classification` is deliberately a **conditional**
 theorem: its containment, translation, and boundary-classification hypotheses are
@@ -98,8 +96,8 @@ truncated inputs. `RadiusMotion` derives the motion estimate from checked
 linear reconstruction, nonnegative constraints and explicit Taylor errors.
 `MotionFixture` checks branch 0's motion coefficients and specializes that
 estimate to actual geometric constraint values. The later `TaylorFixture`
-removes its Taylor-error hypothesis. No radius or neighborhood rigidity
-conclusion is claimed without the missing energy estimate and branch coverage.
+removes its Taylor-error hypothesis. The later `EnergyFixture` supplies the energy
+estimate and concludes branch 0 local rigidity. Geometric branch coverage remains.
 
 ### Uniform third derivatives and Taylor estimates
 
@@ -121,9 +119,32 @@ remainder factor and derives first-order errors from actual second derivatives.
 `TaylorEnclosures` checks the rounded error, growth and weighted remainder
 coefficients. `TaylorFixture` accepts those checks for branch 0 and proves the
 actual errors, growth and weighted remainder bounds. Branch 0's geometric motion
-inequality now has no Taylor-error or motion-estimate hypothesis. The nonlinear
-energy estimate, all concrete branch checks and geometric branch coverage remain
-necessary to obtain local rigidity and the global endpoint classification.
+inequality now has no Taylor-error or motion-estimate hypothesis. The later
+energy layer proves branch 0 local rigidity. The remaining concrete branch checks and geometric coverage are needed for endpoint
+classification.
+
+### Nonlinear energy and branch zero rigidity
+
+`EnergyAlgebra` and `EnergyEstimate` prove the finite-dimensional nonlinear
+energy inequality. The coefficient argument keeps half the nonnegative weighted
+constraint sum and bounds the mixed error, normal error and Taylor remainder.
+`EnergyCertificate` checks the rational coefficient inequalities in finite-index
+form and proves their real-valued consequences. It accepts no analytic estimate.
+
+`EnergyGeometry` derives the energy identity from actual Lagrangian stationarity,
+the checked inverse/pivot decomposition and the actual geometric Hessian. Its
+energy bound uses the previously proved geometric Taylor estimates, growth and
+remainder bounds, plus the checked mixed/normal enclosures. `EnergyFixture`
+kernel-checks branch 0's energy coefficients and combines its actual motion and
+energy inequalities with the radius criterion. The resulting
+`branch_zero_geometric_rigidity` has only the radius, nonnegative selected
+geometric constraints and nonpositive size displacement as hypotheses. Its
+conclusion is that every displacement coordinate is zero. `EnergyControls`
+rejects truncated data, zero multiplier lower bounds and a negative radius.
+
+This completes the radius argument for one fixed branch. It does not assert that
+arbitrary packings lie in that branch, or that all eight branches and the three
+tubes have been handled. The global optimality theorem remains unproved.
 
 ## Remaining modules, in dependency order
 
@@ -142,8 +163,9 @@ necessary to obtain local rigidity and the global endpoint classification.
    compute and certify the 8,008-to-1,396 reduction.
 3. **Local analytic theorems.** Define the actual 16-variable constraint functions
    and the 15-normal-variable pivot chart. Prove the remaining tube bounds,
-   the eight separating-edge branches and the nonlinear energy estimate. The
-   uniform third derivatives and Taylor estimates along straight displacement
+   the eight separating-edge branches and all concrete coefficient checks. The
+   nonlinear energy estimate is now proved, and branch 0 radius rigidity is
+   complete. The uniform third derivatives and Taylor estimates along straight displacement
    paths are now proved. Extend all concrete coefficient checks to all eight
    branches. Check
    the exact multiplier, inverse, Hessian, and curvature certificates. Prove the

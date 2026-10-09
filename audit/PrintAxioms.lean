@@ -350,3 +350,22 @@ import Sixpack
 #print axioms Sixpack.forged_third_constants_rejected
 #print axioms Sixpack.forged_lagrangian_remainder_rejected
 #print axioms Sixpack.negative_taylor_radius_rejected
+
+#print axioms Sixpack.finite_energy_estimate
+#print axioms Sixpack.energy_truncated_input_rejected
+#print axioms Sixpack.energy_zero_multipliers_rejected
+#print axioms Sixpack.energy_negative_radius_rejected
+#print axioms Sixpack.localEnergyNormal_symmetric
+#print axioms Sixpack.checked_geometric_energy_identity
+#print axioms Sixpack.checked_geometric_energy
+#print axioms Sixpack.row_absolute_bound
+#print axioms Sixpack.matrix_absolute_bound
+#print axioms Sixpack.matrixBilinear_sub_left
+#print axioms Sixpack.matrixBilinear_sub_right
+#print axioms Sixpack.matrix_error_split
+#print axioms Sixpack.energy_coefficient_bound
+#print axioms Sixpack.constraint_energy_identity
+#print axioms Sixpack.checked_energy_coefficients
+#print axioms Sixpack.branch_zero_energy_bounds_accept
+#print axioms Sixpack.branch_zero_geometric_energy
+#print axioms Sixpack.branch_zero_geometric_rigidity
