@@ -428,6 +428,25 @@ interiors, so the proved six-edge separating-axis necessity applies directly.
 The sixteen-cell coarse spatial subdivision now has kernel-checked cardinality,
 continuous closed-cell coverage, an exact physical diameter bound and an
 injective assignment of the six centroids. No strict cell-interior assignment
-or saved Python success flag is assumed. Production cell numbering, fine-cell
-intersection and refinement, symmetry reduction, chart bindings, production
+or saved Python success flag is assumed. Production cell numbering, saved polygon enumeration and child metadata,
+symmetry reduction, chart bindings, production
 search soundness and endpoint classification remain.
+
+
+## Continuous placement regions and refinement
+
+`GridCover` proves closed spatial coverage for any positive grid size.
+`PlacementRegions` combines that cover with the closed angle bins and exact
+necessary centroid insets. An actual contained unit triangle reaches a region
+containing its true centroid and true angle, with a valid common inner triangle.
+The region is an inequality-defined intersection; line and point intersections
+are retained.
+
+`SpatialRefinement` verifies the actual four midpoint labels, their validity,
+coverage and parent inclusion. `AngleRefinement` proves exact bisection,
+coverage, parent inclusion and monotonicity of the necessary support minimum.
+`RegionRefinement` proves actual parent triangles reach a joint child even when
+its centroid inset is stronger. No external checker acceptance is assumed.
+Saved polygon vertex lists, index maps and selected-child metadata still need
+bindings to these continuous sets. The row-major `gridIndex` has been defined
+but no bijection or saved-record correspondence has been proved for it.

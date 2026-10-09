@@ -10,7 +10,7 @@ It is not a schedule forecast.
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors and separating-axis necessity proved; general outer-container isometry normalization remains |
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
-| Continuous spatial coverage and symmetry reduction | Closed sixteen-cell coarse cover, its cardinality and six-centroid injection proved; fine-cell intersections, refinements, production index bindings and symmetry reduction remain |
+| Continuous spatial coverage and symmetry reduction | Closed sixteen-cell coarse cover, its cardinality and six-centroid injection proved; arbitrary-grid root region coverage and midpoint/angle refinements proved; saved polygon enumeration, production index bindings and symmetry reduction remain |
 | Local five-piece nonlinear rigidity | Packing radius theorem and all three packing tube theorems proved in their explicit charts; global region-to-chart bindings remain |
 | Sound finite search and certificate machinery | Small working prototypes; production checker remaining |
 | All concrete triangle-region certificates checked by Lean | Remaining |
@@ -88,9 +88,26 @@ necessary six-edge separating-axis condition for the inner triangles chosen
 from an arbitrary packing. No external checker acceptance hypothesis is used.
 The production rational polygons and pair-exclusion certificates remain unbound.
 
+`GridCover` extends spatial coverage to every positive grid size.
+`PlacementRegions` proves every actual contained unit triangle has a closed
+cell/bin intersection containing its true centroid and angle. These intersections
+are defined by inequalities; no positive-area test discards lines or points.
+`SpatialRefinement` proves the four midpoint child labels cover their parent and
+are subsets of it. `AngleRefinement` proves the two half-bins cover their parent,
+are subsets of it, and have no smaller support minimum. `RegionRefinement`
+combines them: an actually contained parent triangle has a child with its
+stronger necessary inset and a valid common inner triangle. Artificial parent
+possibilities need not survive refinement.
+
+This does not yet prove that the saved polygon vertex lists equal these
+intersections, that no nonempty record is omitted, or that the production
+refinement metadata selects all required children. The row-major `gridIndex`
+definition is present, but its bijection and production bindings are unproved.
+
 ## Remaining trust boundary
 
-Fine spatial/region coverage, production coarse-cell index bindings, region-to-local-chart bindings, container
+Saved polygon/intersection enumeration, production spatial/refinement index bindings,
+region-to-local-chart bindings, container
 symmetries, the production search checker and its large certificates, and
 endpoint classification remain. The earlier successful Python/C++ replay is
 external evidence for those parts and is not a Lean proof.

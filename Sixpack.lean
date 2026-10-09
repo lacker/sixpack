@@ -130,3 +130,8 @@ import Sixpack.CommonInnerTriangle
 import Sixpack.UniformInnerTriangle
 import Sixpack.InnerPacking
 import Sixpack.SpatialCells
+import Sixpack.GridCover
+import Sixpack.PlacementRegions
+import Sixpack.SpatialRefinement
+import Sixpack.AngleRefinement
+import Sixpack.RegionRefinement

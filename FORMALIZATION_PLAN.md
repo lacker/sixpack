@@ -308,6 +308,17 @@ diameter bound, and proves injective cell assignment for packing centroids at
 `L ≤ outerBound`. The production index maps, fine intersections, refinement and
 symmetry data still need geometric bindings.
 
+`GridCover` proves continuous spatial coverage for every positive grid size.
+`PlacementRegions` defines the closed cell/bin intersections by inequalities
+and connects them to actual contained unit triangles. `SpatialRefinement` proves
+validity, coverage and inclusion of the four midpoint children.
+`AngleRefinement` proves exact half-bin endpoints, coverage and inclusion, plus
+monotonicity of the support minimum. `RegionRefinement` proves both child-region
+inclusion and that an actual contained parent triangle survives joint refinement
+with the stronger child inset. Saved polygon enumeration, all production index
+maps and metadata selections remain unproved. The current `gridIndex` is a
+definition only; its bijection has not been established.
+
 ## Remaining modules, in dependency order
 
 1. **Exact algebra and outer-container normalization.** Extend the proved
@@ -317,9 +328,11 @@ symmetry data still need geometric bindings.
    Euclidean isometry into the current scaled-coordinate model.
 2. **Spatial and region cover.** Fundamental orientation coverage, its closed
    rational bins, exact support margins, common inner triangles and coarse-cell
-   coverage/injection are proved. Bind the cells and inner triangles to production
-   indices and rational data. Prove concrete closed-cell intersections (including
-   lines and points) and all spatial refinements. Prove all six container symmetry actions and
+   coverage/injection are proved. Arbitrary-grid region coverage and spatial/angle
+   refinement are proved for the inequality-defined intersections. Bind them to
+   saved polygon vertex lists, production indices, rational data and metadata.
+   Prove every required nonempty intersection is enumerated, including lines
+   and points. Prove all six container symmetry actions and
    certify the 8,008-to-1,396 reduction.
 3. **Local chart bindings.** The radius and all three tube packing theorems are
    proved in their explicit rotation and anchor charts, including the eight
@@ -355,6 +368,15 @@ the final endpoint leaf before exporting all 108 graphs. Investigate exact
 rectangle/block certificates that justify many excluded pairs at once; if used,
 prove their universal arithmetic implication and partition coverage in Lean.
 Do not assume that this compression exists or that a smaller certificate is sound.
+
+For the inequality-defined placement regions, investigate rational linear
+combination witnesses for projection bounds and empty intersections. A
+nonnegative combination of the six region inequalities can certify a universal
+projection lower or upper bound directly, including degenerate intersections.
+This could replace reliance on saved polygon hull descriptions for those bounds.
+It does not replace exhaustive cell/bin coverage, index-map correctness or
+selected-child metadata coverage. Such a checker and its production witnesses
+are not yet implemented or verified.
 
 Python/C++ can generate certificates. Their output is untrusted input to the
 Lean checker. Prefer kernel-reduced reflection or explicit proof terms with a

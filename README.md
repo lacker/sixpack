@@ -65,8 +65,10 @@ and the inscribed-disk centroid-separation bound are also proved. The fixed
 common inner triangle is now proved valid throughout each closed angle bin,
 including its necessary separating-axis condition for actual packings. The
 sixteen closed coarse spatial cells cover all packing centroids, with an
-injective assignment of the six pieces. Fine spatial coverage, symmetry
-reduction, production index bindings, region-to-chart bindings, search certificates and endpoint
+injective assignment of the six pieces. Arbitrary-grid continuous placement
+regions and their spatial/angle refinements are also proved. Saved polygon
+enumeration, symmetry reduction, production index bindings, region-to-chart
+bindings, search certificates and endpoint
 classification remain. Compilation uses a 4 GB Lean memory limit; the large
 Hessian checks run in serial branch modules.
 Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.
