@@ -264,3 +264,4 @@ import Sixpack.EndpointB31IndexedGroups.Group251
 import Sixpack.EndpointB31IndexedGroups.Group252
 import Sixpack.EndpointB31IndexedGroups.Group253
 import Sixpack.EndpointB31IndexedGroups.Group254
+import Sixpack.EndpointB31Refinement

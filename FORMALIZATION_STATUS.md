@@ -1070,3 +1070,35 @@ owners across the first three steps. Step 2 still needs its other 44 groups,
 the complete geometric transition and prefix-3 composition. Two complete
 pruning steps are accepted; the global classification and lower bound remain
 unproved. Overall completion is still estimated at about 60% (55–65%).
+
+
+## Complete b31 root-to-child refinement enumeration
+
+`EndpointB31Refinement` checks all 969 selected actual root records and every
+one of their 7,752 spatial/angular child alternatives. The 7,023 retained
+children are the same `b31SpatialAngleRegions` used by the production pruning
+chain; the other 729 alternatives have exact checked empty-region witnesses.
+All 31 proof batches and the complete enumeration theorem compile.
+`b31_refinement_preserves_packing` proves that every actual packing represented
+in these selected parents has a refined representation, assuming only the
+explicit container bound and initial parent representation.
+
+This is not a proof that an arbitrary root-case packing reaches the selected
+parents. The research selection uses clique support, which remains unproved.
+Binding each refined choice to the ordered component's actual initial snapshot
+is also separate. Its complete scalar source audit passes for all 7,752 slots
+and 4,283 relevant retained alternatives; its Lean pilot is still being checked
+after explicit decidability instances repaired elaboration failures. Those
+component-binding modules are not accepted by this checkpoint.
+
+The full refinement build passes (3,205 jobs, peak 837 MiB), as does the default
+build (4,889 jobs, 515 MiB). The complete shared dependency audit passes in
+72 seconds at 553 MiB: 12,875 listed checks and 12,874 distinct declarations
+use only standard logical axioms. The source auditor matches actual parent
+indices, paged witnesses, lookup routing, retained child indices and all empty
+alternatives to the preserved sources. No forbidden proof shortcuts occur in
+the accepted modules, and all 730 original files and the archive are unchanged.
+
+The third pruning-step pipeline continues independently. The global lower bound
+and root-case classification remain unproved. Overall completion remains about
+60% (55–65%).

@@ -763,3 +763,16 @@ the singleton hull of a zero-side outer triple, then applies the accepted
 normalizer. Thus the final Cartesian lower bound will not need an extra
 nondegeneracy assumption once the canonical model lower bound is discharged.
 All five degenerate-container prerequisites are compiled and axiom-audited.
+
+
+The complete b31 initial refinement enumeration is now compiled and audited:
+969 selected actual root parents, 7,023 actual children, all 7,752 alternatives
+and 729 exact empty-child witnesses. `b31_refinement_preserves_packing` is
+accepted under an explicit representation in those selected parents. Next
+accept the ordered component binding into `b31SnapshotDomains 0`, then compose
+with the full 21-step pruning closure once it is accepted. The scalar binding
+source audit passes, but its Lean pilot is not yet accepted. Proving root
+clique-support pruning into the selected parent set and classifying the other
+twelve b31 cases are separate remaining obligations. The remaining twelve
+case traces report closure externally; that report does not establish a Lean
+geometric closure.

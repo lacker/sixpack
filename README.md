@@ -9,9 +9,10 @@ research claims a complete computer-assisted proof. The fresh full replay passed
 all 108 graphs and the final tree audit; all rebuilt graph hashes match. The
 written analytic lemmas were audited, with no defect found. The local radius
 and tube analyses have since been formalized for packings in explicit rotation
-and anchor charts. Global spatial coverage, region-to-chart bindings and
-production search claims remain outside Lean. Original success logs are retained
-as reference material.
+and anchor charts. Continuous spatial and orientation coverage, root enumeration
+and ordered root-case coverage are proved. Complete production certificate
+acceptance and the case-tree classification remain unfinished. Original success
+logs are retained as reference material.
 
 - `six_triangle_packing/`: the 730 original research files, preserved byte for
   byte from the archive. Its historical claims are reference material.
@@ -38,8 +39,9 @@ lake exe cache get Mathlib.Data.Real.Sqrt Mathlib.Tactic \
   Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv \
   Mathlib.Analysis.Calculus.Deriv.Prod Mathlib.Analysis.Calculus.Taylor \
   Mathlib.Analysis.NormedSpace.HahnBanach.Separation
-lake build
-lake env lean -M4096 audit/PrintAxioms.lean
+python3 audit/run_lean_memory_guard.py -- lake build
+python3 audit/run_shared_axiom_audit.py --log /tmp/sixpack-axioms.log
+python3 audit/check_axioms.py /tmp/sixpack-axioms.log
 ```
 
 The formal results cover exact construction checks, the scaled metric, conservative
@@ -92,7 +94,12 @@ edge lengths, convex hull containment and disjoint interiors, including the
 upper-bound construction in Cartesian containers.
 `audit/run_lean_memory_guard.py` additionally monitors physical/compressed memory
 and stops only its build's Lean descendants above the configured threshold.
-Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.
+The shared audit runs Lean's official axiom collector over the full declaration
+list while reusing its visited set. It checks an exact dependency scope and
+rejects any axioms beyond the three standard logical axioms. It supplies audit
+evidence; the computational and geometric proofs themselves are kernel-checked
+by the build. Consult the plan for exact theorem names and limitations. Passing
+this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference
 
