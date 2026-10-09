@@ -1,7 +1,7 @@
 # Progress estimate
 
-Estimated completion of the **end-to-end formalization: about 50%**, with a
-plausible planning range of **45–55%**. This is a subjective estimate of remaining
+Estimated completion of the **end-to-end formalization: about 55%**, with a
+plausible planning range of **50–60%**. This is a subjective estimate of remaining
 work, not a fraction of theorem statements, source lines, or Python checks.
 It is not a schedule forecast.
 
@@ -11,7 +11,7 @@ It is not a schedule forecast.
 | General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors and separating-axis necessity proved; general outer-container isometry normalization remains |
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
 | Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries proved; coarse group index bindings and orbit/case reduction remain |
-| Local five-piece nonlinear rigidity | Packing radius theorem and all three packing tube theorems proved in their explicit charts; global region-to-chart bindings remain |
+| Local five-piece nonlinear rigidity | Radius and all three tube rigidity theorems proved; generic region-to-chart and endpoint bridges proved for all four profiles; production-wide certificate acceptance and coverage remain |
 | Sound finite search and certificate machinery | Exact inner geometry, projection/pair-exclusion checker and conditional finite-search bridge proved; production graph certificates, local deletions and tree coverage remain |
 | All concrete triangle-region certificates checked by Lean | Remaining |
 | Endpoint classification and final lower bound | Conditional final argument proved; classification remaining |
@@ -325,8 +325,37 @@ proved monotonic bounds instead of trusting the research interpolation padding.
 `CriticalAnchorFixture` accepts actual saved critical-piece labels from each of
 the three tube profiles, checks their angle tests and exact profile radii, proves
 the regions nonempty, and rejects a zero anchor radius. Full tube chart
-reconstruction, whole tube-label tables and tube covered-search coverage remain
-separate obligations.
+reconstruction and the combined conditional search bridge are now proved below;
+whole tube-label tables and production coverage remain separate obligations.
+
+## All four local profiles reach the endpoint boundary conclusion
+
+`AnchorHullChart` reconstructs the critical triangle hull by rotating about the
+corresponding canonical pivot, with arbitrary original vertex ordering.
+`TubeLabelCoordinates` constructs the 15 normal coordinates from actual anchors
+and relative angles, proves the separate critical coordinate is removed, proves
+the norm and cost identities, and binds the result to the actual tube vertex path.
+`SignedLocalAngles` controls all profile radii throughout closed signed bins.
+
+`CertifiedTubeEndpoint` checks the critical pivot bounds, the other four centroid
+bounds, and their respective angle radii. For each of the three selected profiles,
+five accepted labels in one symmetry channel imply a boundary vertex of the
+original endpoint packing. The proof reconstructs the chart, applies the proved
+nonlinear tube rigidity theorem, obtains the candidate core hulls, and transfers
+the boundary conclusion through the symmetry. No tube chart, separating-axis
+feasibility, or analytic estimate is an extra theorem premise.
+
+`ProductionTubeTuples` accepts a complete five-piece tuple of actual saved labels
+for each of the three profiles, with a checked nonempty point for every region.
+Their boundary theorems are conditional on representation in those particular
+tuples; they do not establish global search coverage.
+
+`EndpointLocalSearch` uses the production 24-channel order: six symmetries for the
+radius profile followed by six for each tube profile. Accepted covered searches
+and accepted one-piece local codes imply the endpoint boundary conclusion for
+actual packings represented in the searched domains. This closes the generic local
+geometry branch for all four profiles. Concrete production-wide local-code and
+pair/search acceptance, domain coverage and refinement-tree assembly remain.
 
 ## Remaining trust boundary
 
