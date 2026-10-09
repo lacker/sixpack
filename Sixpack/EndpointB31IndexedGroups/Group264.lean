@@ -1,0 +1,693 @@
+import Sixpack.IndexedRectangleCoverage
+import Sixpack.SpatialAngleRectanglePruning
+import Sixpack.EndpointB31SpatialAngle.Batch207
+import Sixpack.EndpointB31SpatialAngle.Batch208
+import Sixpack.EndpointB31SpatialAngle.Batch209
+import Sixpack.EndpointB31SpatialAngle.Batch210
+import Sixpack.EndpointB31SpatialAngle.Batch213
+import Sixpack.EndpointB31SpatialAngle.Batch214
+import Sixpack.EndpointB31SpatialAngle.Batch215
+import Sixpack.EndpointB31SpatialAngle.Batch216
+import Sixpack.EndpointB31SpatialAngle.Batch244
+import Sixpack.EndpointB31SpatialAngle.Batch245
+import Sixpack.EndpointB31SpatialAngle.Batch246
+import Sixpack.EndpointB31SpatialAngle.Batch247
+import Sixpack.EndpointB31SpatialAngle.Batch248
+import Sixpack.EndpointB31SpatialAngle.Batch251
+import Sixpack.EndpointB31SpatialAngle.Batch252
+import Sixpack.EndpointB31SpatialAngle.Batch253
+import Sixpack.EndpointB31SpatialAngle.Batch254
+
+set_option maxHeartbeats 20000000
+set_option maxRecDepth 100000
+
+namespace Sixpack
+
+def b31RowGroup264Block0 : IndexedRectangleBlock 7023 :=
+  ⟨2,2,
+    (fun part => b31SpatialAngle3157OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3157OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block1 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3161OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3161OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block2 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3163OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3163OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block3 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3167OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3167OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block4 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3176OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3176OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block5 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3180OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3180OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block6 : IndexedRectangleBlock 7023 :=
+  ⟨4,1,
+    (fun part => b31SpatialAngle3182OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3182OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block7 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3183OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3183OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block8 : IndexedRectangleBlock 7023 :=
+  ⟨4,3,
+    (fun part => b31SpatialAngle3185OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3185OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block9 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3186OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3186OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block10 : IndexedRectangleBlock 7023 :=
+  ⟨8,19,
+    (fun part => b31SpatialAngle3192OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3192OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block11 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3200OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3200OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block12 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3204OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3204OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block13 : IndexedRectangleBlock 7023 :=
+  ⟨4,3,
+    (fun part => b31SpatialAngle3206OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3206OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block14 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3207OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3207OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block15 : IndexedRectangleBlock 7023 :=
+  ⟨8,25,
+    (fun part => b31SpatialAngle3251OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3251OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block16 : IndexedRectangleBlock 7023 :=
+  ⟨4,3,
+    (fun part => b31SpatialAngle3254OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3254OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block17 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3255OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3255OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block18 : IndexedRectangleBlock 7023 :=
+  ⟨8,12,
+    (fun part => b31SpatialAngle3260OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3260OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block19 : IndexedRectangleBlock 7023 :=
+  ⟨8,16,
+    (fun part => b31SpatialAngle3268OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3268OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block20 : IndexedRectangleBlock 7023 :=
+  ⟨8,16,
+    (fun part => b31SpatialAngle3270OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3270OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block21 : IndexedRectangleBlock 7023 :=
+  ⟨10,16,
+    (fun part => b31SpatialAngle3271OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3271OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block22 : IndexedRectangleBlock 7023 :=
+  ⟨10,8,
+    (fun part => b31SpatialAngle3275OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3275OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block23 : IndexedRectangleBlock 7023 :=
+  ⟨32,16,
+    (fun part => b31SpatialAngle3277OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3277OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block24 : IndexedRectangleBlock 7023 :=
+  ⟨1,2,
+    (fun part => b31SpatialAngle3726OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3726OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block25 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3732OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3732OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block26 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3736OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3736OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block27 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3741OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3741OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block28 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3751OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3751OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block29 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3755OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3755OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block30 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3757OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3757OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block31 : IndexedRectangleBlock 7023 :=
+  ⟨4,1,
+    (fun part => b31SpatialAngle3758OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3758OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block32 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3761OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3761OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block33 : IndexedRectangleBlock 7023 :=
+  ⟨4,3,
+    (fun part => b31SpatialAngle3762OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3762OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block34 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3769OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3769OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block35 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3771OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3771OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block36 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3773OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3773OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block37 : IndexedRectangleBlock 7023 :=
+  ⟨4,7,
+    (fun part => b31SpatialAngle3775OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3775OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block38 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3785OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3785OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block39 : IndexedRectangleBlock 7023 :=
+  ⟨2,4,
+    (fun part => b31SpatialAngle3789OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3789OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block40 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3791OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3791OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block41 : IndexedRectangleBlock 7023 :=
+  ⟨4,3,
+    (fun part => b31SpatialAngle3792OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3792OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block42 : IndexedRectangleBlock 7023 :=
+  ⟨8,25,
+    (fun part => b31SpatialAngle3839OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3839OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block43 : IndexedRectangleBlock 7023 :=
+  ⟨4,4,
+    (fun part => b31SpatialAngle3842OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3842OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block44 : IndexedRectangleBlock 7023 :=
+  ⟨4,3,
+    (fun part => b31SpatialAngle3843OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3843OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block45 : IndexedRectangleBlock 7023 :=
+  ⟨8,12,
+    (fun part => b31SpatialAngle3848OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3848OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block46 : IndexedRectangleBlock 7023 :=
+  ⟨8,16,
+    (fun part => b31SpatialAngle3858OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3858OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block47 : IndexedRectangleBlock 7023 :=
+  ⟨8,16,
+    (fun part => b31SpatialAngle3860OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3860OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block48 : IndexedRectangleBlock 7023 :=
+  ⟨8,16,
+    (fun part => b31SpatialAngle3862OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3862OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block49 : IndexedRectangleBlock 7023 :=
+  ⟨8,16,
+    (fun part => b31SpatialAngle3867OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3867OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Block50 : IndexedRectangleBlock 7023 :=
+  ⟨10,15,
+    (fun part => b31SpatialAngle3873OwnerNodes.getD part.val 0),
+    (fun part => b31SpatialAngle3873OtherNodes.getD part.val 0)⟩
+
+def b31RowGroup264Blocks (block : Fin 51) : IndexedRectangleBlock 7023 :=
+  match block.val with
+  | 0 => b31RowGroup264Block0
+  | 1 => b31RowGroup264Block1
+  | 2 => b31RowGroup264Block2
+  | 3 => b31RowGroup264Block3
+  | 4 => b31RowGroup264Block4
+  | 5 => b31RowGroup264Block5
+  | 6 => b31RowGroup264Block6
+  | 7 => b31RowGroup264Block7
+  | 8 => b31RowGroup264Block8
+  | 9 => b31RowGroup264Block9
+  | 10 => b31RowGroup264Block10
+  | 11 => b31RowGroup264Block11
+  | 12 => b31RowGroup264Block12
+  | 13 => b31RowGroup264Block13
+  | 14 => b31RowGroup264Block14
+  | 15 => b31RowGroup264Block15
+  | 16 => b31RowGroup264Block16
+  | 17 => b31RowGroup264Block17
+  | 18 => b31RowGroup264Block18
+  | 19 => b31RowGroup264Block19
+  | 20 => b31RowGroup264Block20
+  | 21 => b31RowGroup264Block21
+  | 22 => b31RowGroup264Block22
+  | 23 => b31RowGroup264Block23
+  | 24 => b31RowGroup264Block24
+  | 25 => b31RowGroup264Block25
+  | 26 => b31RowGroup264Block26
+  | 27 => b31RowGroup264Block27
+  | 28 => b31RowGroup264Block28
+  | 29 => b31RowGroup264Block29
+  | 30 => b31RowGroup264Block30
+  | 31 => b31RowGroup264Block31
+  | 32 => b31RowGroup264Block32
+  | 33 => b31RowGroup264Block33
+  | 34 => b31RowGroup264Block34
+  | 35 => b31RowGroup264Block35
+  | 36 => b31RowGroup264Block36
+  | 37 => b31RowGroup264Block37
+  | 38 => b31RowGroup264Block38
+  | 39 => b31RowGroup264Block39
+  | 40 => b31RowGroup264Block40
+  | 41 => b31RowGroup264Block41
+  | 42 => b31RowGroup264Block42
+  | 43 => b31RowGroup264Block43
+  | 44 => b31RowGroup264Block44
+  | 45 => b31RowGroup264Block45
+  | 46 => b31RowGroup264Block46
+  | 47 => b31RowGroup264Block47
+  | 48 => b31RowGroup264Block48
+  | 49 => b31RowGroup264Block49
+  | 50 => b31RowGroup264Block50
+  | _ => b31RowGroup264Block0
+
+def b31RowGroup264GroupNodes : Array (Fin 7023) := #[1156]
+
+def b31RowGroup264BlockerNodes : Array (Fin 7023) := #[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095,1096,1097,1098,1099,1100,1101,1102,1103,1104,1105,1106,1107,1108,1109,1112,1113,1114,1115,1116,1117,1118,1119,1124,1125,1126,1127,1128,1129,1130,1131]
+
+def b31RowGroup264Group (part : Fin 1) : Fin 7023 := b31RowGroup264GroupNodes.getD part.val 0
+
+def b31RowGroup264Blockers (part : Fin 375) : Fin 7023 := b31RowGroup264BlockerNodes.getD part.val 0
+
+def b31RowGroup264OwnerPosition (block : Fin 51) (part : Fin 1) : ℕ :=
+  match block.val with
+  | 0 => (#[0] : Array ℕ).getD part.val 0
+  | 1 => (#[0] : Array ℕ).getD part.val 0
+  | 2 => (#[2] : Array ℕ).getD part.val 0
+  | 3 => (#[0] : Array ℕ).getD part.val 0
+  | 4 => (#[2] : Array ℕ).getD part.val 0
+  | 5 => (#[0] : Array ℕ).getD part.val 0
+  | 6 => (#[2] : Array ℕ).getD part.val 0
+  | 7 => (#[2] : Array ℕ).getD part.val 0
+  | 8 => (#[2] : Array ℕ).getD part.val 0
+  | 9 => (#[2] : Array ℕ).getD part.val 0
+  | 10 => (#[2] : Array ℕ).getD part.val 0
+  | 11 => (#[0] : Array ℕ).getD part.val 0
+  | 12 => (#[0] : Array ℕ).getD part.val 0
+  | 13 => (#[2] : Array ℕ).getD part.val 0
+  | 14 => (#[2] : Array ℕ).getD part.val 0
+  | 15 => (#[2] : Array ℕ).getD part.val 0
+  | 16 => (#[2] : Array ℕ).getD part.val 0
+  | 17 => (#[2] : Array ℕ).getD part.val 0
+  | 18 => (#[2] : Array ℕ).getD part.val 0
+  | 19 => (#[2] : Array ℕ).getD part.val 0
+  | 20 => (#[2] : Array ℕ).getD part.val 0
+  | 21 => (#[4] : Array ℕ).getD part.val 0
+  | 22 => (#[4] : Array ℕ).getD part.val 0
+  | 23 => (#[26] : Array ℕ).getD part.val 0
+  | 24 => (#[0] : Array ℕ).getD part.val 0
+  | 25 => (#[0] : Array ℕ).getD part.val 0
+  | 26 => (#[0] : Array ℕ).getD part.val 0
+  | 27 => (#[0] : Array ℕ).getD part.val 0
+  | 28 => (#[2] : Array ℕ).getD part.val 0
+  | 29 => (#[0] : Array ℕ).getD part.val 0
+  | 30 => (#[2] : Array ℕ).getD part.val 0
+  | 31 => (#[2] : Array ℕ).getD part.val 0
+  | 32 => (#[2] : Array ℕ).getD part.val 0
+  | 33 => (#[2] : Array ℕ).getD part.val 0
+  | 34 => (#[2] : Array ℕ).getD part.val 0
+  | 35 => (#[2] : Array ℕ).getD part.val 0
+  | 36 => (#[2] : Array ℕ).getD part.val 0
+  | 37 => (#[2] : Array ℕ).getD part.val 0
+  | 38 => (#[0] : Array ℕ).getD part.val 0
+  | 39 => (#[0] : Array ℕ).getD part.val 0
+  | 40 => (#[2] : Array ℕ).getD part.val 0
+  | 41 => (#[2] : Array ℕ).getD part.val 0
+  | 42 => (#[2] : Array ℕ).getD part.val 0
+  | 43 => (#[2] : Array ℕ).getD part.val 0
+  | 44 => (#[2] : Array ℕ).getD part.val 0
+  | 45 => (#[2] : Array ℕ).getD part.val 0
+  | 46 => (#[2] : Array ℕ).getD part.val 0
+  | 47 => (#[2] : Array ℕ).getD part.val 0
+  | 48 => (#[2] : Array ℕ).getD part.val 0
+  | 49 => (#[2] : Array ℕ).getD part.val 0
+  | 50 => (#[4] : Array ℕ).getD part.val 0
+  | _ => 0
+
+private theorem b31RowGroup264_owner_positive (block : Fin 51) : 0 < (b31RowGroup264Blocks block).ownerSize := by
+  fin_cases block <;> decide +kernel
+
+def b31RowGroup264OwnerSelect (block : Fin 51) (part : Fin 1) : Fin (b31RowGroup264Blocks block).ownerSize :=
+  ⟨(b31RowGroup264OwnerPosition block part)%(b31RowGroup264Blocks block).ownerSize,
+    Nat.mod_lt _ (b31RowGroup264_owner_positive block)⟩
+
+def b31RowGroup264OwnerBlock (part : Fin 51) : Fin 51 :=
+  ⟨part.val/1,by have h := part.isLt; omega⟩
+
+def b31RowGroup264OwnerPart (part : Fin 51) : Fin 1 :=
+  ⟨part.val%1,Nat.mod_lt _ (by decide)⟩
+
+def b31RowGroup264OtherPage0 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨0,⟨0,by decide⟩⟩,⟨0,⟨1,by decide⟩⟩,⟨24,⟨0,by decide⟩⟩,⟨24,⟨1,by decide⟩⟩,⟨1,⟨0,by decide⟩⟩,⟨1,⟨1,by decide⟩⟩,⟨1,⟨2,by decide⟩⟩,⟨1,⟨3,by decide⟩⟩,⟨25,⟨0,by decide⟩⟩,⟨25,⟨1,by decide⟩⟩,⟨25,⟨2,by decide⟩⟩,⟨25,⟨3,by decide⟩⟩,⟨2,⟨0,by decide⟩⟩,⟨2,⟨1,by decide⟩⟩,⟨2,⟨2,by decide⟩⟩,⟨2,⟨3,by decide⟩⟩,⟨26,⟨0,by decide⟩⟩,⟨26,⟨1,by decide⟩⟩,⟨26,⟨2,by decide⟩⟩,⟨26,⟨3,by decide⟩⟩,⟨4,⟨0,by decide⟩⟩,⟨4,⟨1,by decide⟩⟩,⟨4,⟨2,by decide⟩⟩,⟨4,⟨3,by decide⟩⟩,⟨28,⟨0,by decide⟩⟩,⟨28,⟨1,by decide⟩⟩,⟨28,⟨2,by decide⟩⟩,⟨28,⟨3,by decide⟩⟩,⟨10,⟨0,by decide⟩⟩,⟨10,⟨1,by decide⟩⟩,⟨10,⟨2,by decide⟩⟩,⟨10,⟨3,by decide⟩⟩]
+
+def b31RowGroup264OtherPage1 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨34,⟨0,by decide⟩⟩,⟨34,⟨1,by decide⟩⟩,⟨34,⟨2,by decide⟩⟩,⟨34,⟨3,by decide⟩⟩,⟨10,⟨4,by decide⟩⟩,⟨10,⟨5,by decide⟩⟩,⟨10,⟨6,by decide⟩⟩,⟨10,⟨7,by decide⟩⟩,⟨35,⟨0,by decide⟩⟩,⟨35,⟨1,by decide⟩⟩,⟨35,⟨2,by decide⟩⟩,⟨35,⟨3,by decide⟩⟩,⟨10,⟨8,by decide⟩⟩,⟨10,⟨9,by decide⟩⟩,⟨10,⟨10,by decide⟩⟩,⟨10,⟨11,by decide⟩⟩,⟨36,⟨0,by decide⟩⟩,⟨36,⟨1,by decide⟩⟩,⟨36,⟨2,by decide⟩⟩,⟨36,⟨3,by decide⟩⟩,⟨15,⟨0,by decide⟩⟩,⟨15,⟨1,by decide⟩⟩,⟨15,⟨2,by decide⟩⟩,⟨15,⟨3,by decide⟩⟩,⟨42,⟨0,by decide⟩⟩,⟨42,⟨1,by decide⟩⟩,⟨42,⟨2,by decide⟩⟩,⟨42,⟨3,by decide⟩⟩,⟨19,⟨0,by decide⟩⟩,⟨19,⟨1,by decide⟩⟩,⟨19,⟨2,by decide⟩⟩,⟨19,⟨3,by decide⟩⟩]
+
+def b31RowGroup264OtherPage2 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨46,⟨0,by decide⟩⟩,⟨46,⟨1,by decide⟩⟩,⟨46,⟨2,by decide⟩⟩,⟨46,⟨3,by decide⟩⟩,⟨19,⟨4,by decide⟩⟩,⟨19,⟨5,by decide⟩⟩,⟨19,⟨6,by decide⟩⟩,⟨19,⟨7,by decide⟩⟩,⟨46,⟨4,by decide⟩⟩,⟨46,⟨5,by decide⟩⟩,⟨46,⟨6,by decide⟩⟩,⟨46,⟨7,by decide⟩⟩,⟨19,⟨8,by decide⟩⟩,⟨19,⟨9,by decide⟩⟩,⟨19,⟨10,by decide⟩⟩,⟨19,⟨11,by decide⟩⟩,⟨46,⟨8,by decide⟩⟩,⟨46,⟨9,by decide⟩⟩,⟨46,⟨10,by decide⟩⟩,⟨46,⟨11,by decide⟩⟩,⟨20,⟨0,by decide⟩⟩,⟨20,⟨1,by decide⟩⟩,⟨20,⟨2,by decide⟩⟩,⟨20,⟨3,by decide⟩⟩,⟨47,⟨0,by decide⟩⟩,⟨47,⟨1,by decide⟩⟩,⟨47,⟨2,by decide⟩⟩,⟨47,⟨3,by decide⟩⟩,⟨21,⟨0,by decide⟩⟩,⟨21,⟨1,by decide⟩⟩,⟨21,⟨2,by decide⟩⟩,⟨21,⟨3,by decide⟩⟩]
+
+def b31RowGroup264OtherPage3 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨48,⟨0,by decide⟩⟩,⟨48,⟨1,by decide⟩⟩,⟨48,⟨2,by decide⟩⟩,⟨48,⟨3,by decide⟩⟩,⟨21,⟨4,by decide⟩⟩,⟨21,⟨5,by decide⟩⟩,⟨21,⟨6,by decide⟩⟩,⟨21,⟨7,by decide⟩⟩,⟨48,⟨4,by decide⟩⟩,⟨48,⟨5,by decide⟩⟩,⟨48,⟨6,by decide⟩⟩,⟨48,⟨7,by decide⟩⟩,⟨21,⟨8,by decide⟩⟩,⟨21,⟨9,by decide⟩⟩,⟨21,⟨10,by decide⟩⟩,⟨21,⟨11,by decide⟩⟩,⟨48,⟨8,by decide⟩⟩,⟨48,⟨9,by decide⟩⟩,⟨48,⟨10,by decide⟩⟩,⟨48,⟨11,by decide⟩⟩,⟨22,⟨0,by decide⟩⟩,⟨22,⟨1,by decide⟩⟩,⟨49,⟨0,by decide⟩⟩,⟨49,⟨1,by decide⟩⟩,⟨49,⟨2,by decide⟩⟩,⟨49,⟨3,by decide⟩⟩,⟨23,⟨0,by decide⟩⟩,⟨23,⟨1,by decide⟩⟩,⟨50,⟨0,by decide⟩⟩,⟨50,⟨1,by decide⟩⟩,⟨23,⟨2,by decide⟩⟩,⟨23,⟨3,by decide⟩⟩]
+
+def b31RowGroup264OtherPage4 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨50,⟨2,by decide⟩⟩,⟨50,⟨3,by decide⟩⟩,⟨23,⟨4,by decide⟩⟩,⟨23,⟨5,by decide⟩⟩,⟨50,⟨4,by decide⟩⟩,⟨50,⟨5,by decide⟩⟩,⟨23,⟨6,by decide⟩⟩,⟨23,⟨7,by decide⟩⟩,⟨50,⟨6,by decide⟩⟩,⟨50,⟨7,by decide⟩⟩,⟨23,⟨8,by decide⟩⟩,⟨23,⟨9,by decide⟩⟩,⟨50,⟨8,by decide⟩⟩,⟨3,⟨0,by decide⟩⟩,⟨3,⟨1,by decide⟩⟩,⟨3,⟨2,by decide⟩⟩,⟨3,⟨3,by decide⟩⟩,⟨27,⟨0,by decide⟩⟩,⟨27,⟨1,by decide⟩⟩,⟨27,⟨2,by decide⟩⟩,⟨27,⟨3,by decide⟩⟩,⟨5,⟨0,by decide⟩⟩,⟨5,⟨1,by decide⟩⟩,⟨5,⟨2,by decide⟩⟩,⟨5,⟨3,by decide⟩⟩,⟨29,⟨0,by decide⟩⟩,⟨29,⟨1,by decide⟩⟩,⟨29,⟨2,by decide⟩⟩,⟨29,⟨3,by decide⟩⟩,⟨6,⟨0,by decide⟩⟩,⟨7,⟨0,by decide⟩⟩,⟨7,⟨1,by decide⟩⟩]
+
+def b31RowGroup264OtherPage5 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨7,⟨2,by decide⟩⟩,⟨7,⟨3,by decide⟩⟩,⟨30,⟨0,by decide⟩⟩,⟨30,⟨1,by decide⟩⟩,⟨30,⟨2,by decide⟩⟩,⟨30,⟨3,by decide⟩⟩,⟨31,⟨0,by decide⟩⟩,⟨8,⟨0,by decide⟩⟩,⟨8,⟨1,by decide⟩⟩,⟨8,⟨2,by decide⟩⟩,⟨9,⟨0,by decide⟩⟩,⟨9,⟨1,by decide⟩⟩,⟨9,⟨2,by decide⟩⟩,⟨9,⟨3,by decide⟩⟩,⟨32,⟨0,by decide⟩⟩,⟨32,⟨1,by decide⟩⟩,⟨32,⟨2,by decide⟩⟩,⟨32,⟨3,by decide⟩⟩,⟨33,⟨0,by decide⟩⟩,⟨33,⟨1,by decide⟩⟩,⟨33,⟨2,by decide⟩⟩,⟨10,⟨12,by decide⟩⟩,⟨10,⟨13,by decide⟩⟩,⟨10,⟨14,by decide⟩⟩,⟨10,⟨15,by decide⟩⟩,⟨10,⟨16,by decide⟩⟩,⟨10,⟨17,by decide⟩⟩,⟨10,⟨18,by decide⟩⟩,⟨37,⟨0,by decide⟩⟩,⟨37,⟨1,by decide⟩⟩,⟨37,⟨2,by decide⟩⟩,⟨37,⟨3,by decide⟩⟩]
+
+def b31RowGroup264OtherPage6 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨37,⟨4,by decide⟩⟩,⟨37,⟨5,by decide⟩⟩,⟨37,⟨6,by decide⟩⟩,⟨15,⟨4,by decide⟩⟩,⟨15,⟨5,by decide⟩⟩,⟨15,⟨6,by decide⟩⟩,⟨15,⟨7,by decide⟩⟩,⟨15,⟨8,by decide⟩⟩,⟨15,⟨9,by decide⟩⟩,⟨15,⟨10,by decide⟩⟩,⟨42,⟨4,by decide⟩⟩,⟨42,⟨5,by decide⟩⟩,⟨42,⟨6,by decide⟩⟩,⟨42,⟨7,by decide⟩⟩,⟨42,⟨8,by decide⟩⟩,⟨42,⟨9,by decide⟩⟩,⟨42,⟨10,by decide⟩⟩,⟨15,⟨11,by decide⟩⟩,⟨15,⟨12,by decide⟩⟩,⟨15,⟨13,by decide⟩⟩,⟨15,⟨14,by decide⟩⟩,⟨15,⟨15,by decide⟩⟩,⟨15,⟨16,by decide⟩⟩,⟨15,⟨17,by decide⟩⟩,⟨42,⟨11,by decide⟩⟩,⟨42,⟨12,by decide⟩⟩,⟨42,⟨13,by decide⟩⟩,⟨42,⟨14,by decide⟩⟩,⟨42,⟨15,by decide⟩⟩,⟨42,⟨16,by decide⟩⟩,⟨42,⟨17,by decide⟩⟩,⟨15,⟨18,by decide⟩⟩]
+
+def b31RowGroup264OtherPage7 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨15,⟨19,by decide⟩⟩,⟨15,⟨20,by decide⟩⟩,⟨15,⟨21,by decide⟩⟩,⟨15,⟨22,by decide⟩⟩,⟨15,⟨23,by decide⟩⟩,⟨15,⟨24,by decide⟩⟩,⟨42,⟨18,by decide⟩⟩,⟨42,⟨19,by decide⟩⟩,⟨42,⟨20,by decide⟩⟩,⟨42,⟨21,by decide⟩⟩,⟨42,⟨22,by decide⟩⟩,⟨42,⟨23,by decide⟩⟩,⟨42,⟨24,by decide⟩⟩,⟨19,⟨12,by decide⟩⟩,⟨19,⟨13,by decide⟩⟩,⟨19,⟨14,by decide⟩⟩,⟨19,⟨15,by decide⟩⟩,⟨46,⟨12,by decide⟩⟩,⟨46,⟨13,by decide⟩⟩,⟨46,⟨14,by decide⟩⟩,⟨46,⟨15,by decide⟩⟩,⟨20,⟨4,by decide⟩⟩,⟨20,⟨5,by decide⟩⟩,⟨20,⟨6,by decide⟩⟩,⟨20,⟨7,by decide⟩⟩,⟨47,⟨4,by decide⟩⟩,⟨47,⟨5,by decide⟩⟩,⟨47,⟨6,by decide⟩⟩,⟨47,⟨7,by decide⟩⟩,⟨20,⟨8,by decide⟩⟩,⟨20,⟨9,by decide⟩⟩,⟨20,⟨10,by decide⟩⟩]
+
+def b31RowGroup264OtherPage8 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨20,⟨11,by decide⟩⟩,⟨47,⟨8,by decide⟩⟩,⟨47,⟨9,by decide⟩⟩,⟨47,⟨10,by decide⟩⟩,⟨47,⟨11,by decide⟩⟩,⟨20,⟨12,by decide⟩⟩,⟨20,⟨13,by decide⟩⟩,⟨20,⟨14,by decide⟩⟩,⟨20,⟨15,by decide⟩⟩,⟨47,⟨12,by decide⟩⟩,⟨47,⟨13,by decide⟩⟩,⟨47,⟨14,by decide⟩⟩,⟨47,⟨15,by decide⟩⟩,⟨21,⟨12,by decide⟩⟩,⟨21,⟨13,by decide⟩⟩,⟨21,⟨14,by decide⟩⟩,⟨21,⟨15,by decide⟩⟩,⟨48,⟨12,by decide⟩⟩,⟨48,⟨13,by decide⟩⟩,⟨48,⟨14,by decide⟩⟩,⟨48,⟨15,by decide⟩⟩,⟨22,⟨2,by decide⟩⟩,⟨22,⟨3,by decide⟩⟩,⟨49,⟨4,by decide⟩⟩,⟨49,⟨5,by decide⟩⟩,⟨49,⟨6,by decide⟩⟩,⟨49,⟨7,by decide⟩⟩,⟨22,⟨4,by decide⟩⟩,⟨22,⟨5,by decide⟩⟩,⟨49,⟨8,by decide⟩⟩,⟨49,⟨9,by decide⟩⟩,⟨49,⟨10,by decide⟩⟩]
+
+def b31RowGroup264OtherPage9 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨49,⟨11,by decide⟩⟩,⟨22,⟨6,by decide⟩⟩,⟨22,⟨7,by decide⟩⟩,⟨49,⟨12,by decide⟩⟩,⟨49,⟨13,by decide⟩⟩,⟨49,⟨14,by decide⟩⟩,⟨49,⟨15,by decide⟩⟩,⟨23,⟨10,by decide⟩⟩,⟨23,⟨11,by decide⟩⟩,⟨50,⟨9,by decide⟩⟩,⟨50,⟨10,by decide⟩⟩,⟨23,⟨12,by decide⟩⟩,⟨23,⟨13,by decide⟩⟩,⟨50,⟨11,by decide⟩⟩,⟨50,⟨12,by decide⟩⟩,⟨23,⟨14,by decide⟩⟩,⟨23,⟨15,by decide⟩⟩,⟨50,⟨13,by decide⟩⟩,⟨50,⟨14,by decide⟩⟩,⟨11,⟨0,by decide⟩⟩,⟨11,⟨1,by decide⟩⟩,⟨11,⟨2,by decide⟩⟩,⟨11,⟨3,by decide⟩⟩,⟨38,⟨0,by decide⟩⟩,⟨38,⟨1,by decide⟩⟩,⟨38,⟨2,by decide⟩⟩,⟨38,⟨3,by decide⟩⟩,⟨12,⟨0,by decide⟩⟩,⟨12,⟨1,by decide⟩⟩,⟨12,⟨2,by decide⟩⟩,⟨12,⟨3,by decide⟩⟩,⟨39,⟨0,by decide⟩⟩]
+
+def b31RowGroup264OtherPage10 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨39,⟨1,by decide⟩⟩,⟨39,⟨2,by decide⟩⟩,⟨39,⟨3,by decide⟩⟩,⟨13,⟨0,by decide⟩⟩,⟨13,⟨1,by decide⟩⟩,⟨13,⟨2,by decide⟩⟩,⟨14,⟨0,by decide⟩⟩,⟨14,⟨1,by decide⟩⟩,⟨14,⟨2,by decide⟩⟩,⟨14,⟨3,by decide⟩⟩,⟨40,⟨0,by decide⟩⟩,⟨40,⟨1,by decide⟩⟩,⟨40,⟨2,by decide⟩⟩,⟨40,⟨3,by decide⟩⟩,⟨41,⟨0,by decide⟩⟩,⟨41,⟨1,by decide⟩⟩,⟨41,⟨2,by decide⟩⟩,⟨16,⟨0,by decide⟩⟩,⟨16,⟨1,by decide⟩⟩,⟨16,⟨2,by decide⟩⟩,⟨17,⟨0,by decide⟩⟩,⟨17,⟨1,by decide⟩⟩,⟨17,⟨2,by decide⟩⟩,⟨17,⟨3,by decide⟩⟩,⟨43,⟨0,by decide⟩⟩,⟨43,⟨1,by decide⟩⟩,⟨43,⟨2,by decide⟩⟩,⟨43,⟨3,by decide⟩⟩,⟨44,⟨0,by decide⟩⟩,⟨44,⟨1,by decide⟩⟩,⟨44,⟨2,by decide⟩⟩,⟨18,⟨0,by decide⟩⟩]
+
+def b31RowGroup264OtherPage11 : Array (Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize) := #[⟨18,⟨1,by decide⟩⟩,⟨18,⟨2,by decide⟩⟩,⟨18,⟨3,by decide⟩⟩,⟨45,⟨0,by decide⟩⟩,⟨45,⟨1,by decide⟩⟩,⟨45,⟨2,by decide⟩⟩,⟨45,⟨3,by decide⟩⟩,⟨18,⟨4,by decide⟩⟩,⟨18,⟨5,by decide⟩⟩,⟨18,⟨6,by decide⟩⟩,⟨18,⟨7,by decide⟩⟩,⟨45,⟨4,by decide⟩⟩,⟨45,⟨5,by decide⟩⟩,⟨45,⟨6,by decide⟩⟩,⟨45,⟨7,by decide⟩⟩,⟨18,⟨8,by decide⟩⟩,⟨18,⟨9,by decide⟩⟩,⟨18,⟨10,by decide⟩⟩,⟨18,⟨11,by decide⟩⟩,⟨45,⟨8,by decide⟩⟩,⟨45,⟨9,by decide⟩⟩,⟨45,⟨10,by decide⟩⟩,⟨45,⟨11,by decide⟩⟩]
+
+def b31RowGroup264OtherSelect (part : Fin 375) : Σ block : Fin 51, Fin (b31RowGroup264Blocks block).otherSize :=
+  match part.val/32 with
+  | 0 => b31RowGroup264OtherPage0.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 1 => b31RowGroup264OtherPage1.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 2 => b31RowGroup264OtherPage2.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 3 => b31RowGroup264OtherPage3.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 4 => b31RowGroup264OtherPage4.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 5 => b31RowGroup264OtherPage5.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 6 => b31RowGroup264OtherPage6.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 7 => b31RowGroup264OtherPage7.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 8 => b31RowGroup264OtherPage8.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 9 => b31RowGroup264OtherPage9.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 10 => b31RowGroup264OtherPage10.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | 11 => b31RowGroup264OtherPage11.getD (part.val%32) ⟨0,⟨0,by decide⟩⟩
+  | _ => ⟨0,⟨0,by decide⟩⟩
+
+def b31RowGroup264OwnerBatchIndex (batch : Fin 2) (offset : Fin 32) : Fin 51 :=
+  ⟨(32*batch.val+offset.val)%51,Nat.mod_lt _ (by decide)⟩
+
+private theorem b31RowGroup264_owner_batch0 (offset : Fin 32) :
+    b31RowGroup264Group (b31RowGroup264OwnerPart (b31RowGroup264OwnerBatchIndex 0 offset)) = (b31RowGroup264Blocks (b31RowGroup264OwnerBlock (b31RowGroup264OwnerBatchIndex 0 offset))).owner (b31RowGroup264OwnerSelect (b31RowGroup264OwnerBlock (b31RowGroup264OwnerBatchIndex 0 offset)) (b31RowGroup264OwnerPart (b31RowGroup264OwnerBatchIndex 0 offset))) := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_owner_batch1 (offset : Fin 32) :
+    b31RowGroup264Group (b31RowGroup264OwnerPart (b31RowGroup264OwnerBatchIndex 1 offset)) = (b31RowGroup264Blocks (b31RowGroup264OwnerBlock (b31RowGroup264OwnerBatchIndex 1 offset))).owner (b31RowGroup264OwnerSelect (b31RowGroup264OwnerBlock (b31RowGroup264OwnerBatchIndex 1 offset)) (b31RowGroup264OwnerPart (b31RowGroup264OwnerBatchIndex 1 offset))) := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_owner_batches (batch : Fin 2) (offset : Fin 32) :
+    b31RowGroup264Group (b31RowGroup264OwnerPart (b31RowGroup264OwnerBatchIndex batch offset)) = (b31RowGroup264Blocks (b31RowGroup264OwnerBlock (b31RowGroup264OwnerBatchIndex batch offset))).owner (b31RowGroup264OwnerSelect (b31RowGroup264OwnerBlock (b31RowGroup264OwnerBatchIndex batch offset)) (b31RowGroup264OwnerPart (b31RowGroup264OwnerBatchIndex batch offset))) := by
+  fin_cases batch
+  · exact b31RowGroup264_owner_batch0 offset
+  · exact b31RowGroup264_owner_batch1 offset
+
+private theorem b31RowGroup264_owner_all (part : Fin 51) :
+    b31RowGroup264Group (b31RowGroup264OwnerPart part) = (b31RowGroup264Blocks (b31RowGroup264OwnerBlock part)).owner (b31RowGroup264OwnerSelect (b31RowGroup264OwnerBlock part) (b31RowGroup264OwnerPart part)) := by
+  let batch : Fin 2 := ⟨part.val/32,by have h := part.isLt; omega⟩
+  let offset : Fin 32 := ⟨part.val%32,Nat.mod_lt _ (by decide)⟩
+  have hi : b31RowGroup264OwnerBatchIndex batch offset = part := by
+    apply Fin.ext
+    change (32*(part.val/32)+part.val%32)%51 = part.val
+    rw [Nat.div_add_mod,Nat.mod_eq_of_lt part.isLt]
+  rw [← hi]
+  exact b31RowGroup264_owner_batches batch offset
+
+def b31RowGroup264OtherBatchIndex (batch : Fin 12) (offset : Fin 32) : Fin 375 :=
+  ⟨(32*batch.val+offset.val)%375,Nat.mod_lt _ (by decide)⟩
+
+private theorem b31RowGroup264_other_batch0 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 0 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 0 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 0 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch1 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 1 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 1 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 1 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch2 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 2 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 2 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 2 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch3 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 3 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 3 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 3 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch4 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 4 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 4 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 4 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch5 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 5 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 5 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 5 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch6 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 6 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 6 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 6 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch7 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 7 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 7 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 7 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch8 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 8 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 8 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 8 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch9 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 9 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 9 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 9 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch10 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 10 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 10 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 10 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batch11 (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex 11 offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 11 offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex 11 offset)).2 := by
+  fin_cases offset <;> decide +kernel
+
+private theorem b31RowGroup264_other_batches (batch : Fin 12) (offset : Fin 32) :
+    b31RowGroup264Blockers (b31RowGroup264OtherBatchIndex batch offset) = (b31RowGroup264Blocks (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex batch offset)).1).other (b31RowGroup264OtherSelect (b31RowGroup264OtherBatchIndex batch offset)).2 := by
+  fin_cases batch
+  · exact b31RowGroup264_other_batch0 offset
+  · exact b31RowGroup264_other_batch1 offset
+  · exact b31RowGroup264_other_batch2 offset
+  · exact b31RowGroup264_other_batch3 offset
+  · exact b31RowGroup264_other_batch4 offset
+  · exact b31RowGroup264_other_batch5 offset
+  · exact b31RowGroup264_other_batch6 offset
+  · exact b31RowGroup264_other_batch7 offset
+  · exact b31RowGroup264_other_batch8 offset
+  · exact b31RowGroup264_other_batch9 offset
+  · exact b31RowGroup264_other_batch10 offset
+  · exact b31RowGroup264_other_batch11 offset
+
+private theorem b31RowGroup264_other_all (part : Fin 375) :
+    b31RowGroup264Blockers part = (b31RowGroup264Blocks (b31RowGroup264OtherSelect part).1).other (b31RowGroup264OtherSelect part).2 := by
+  let batch : Fin 12 := ⟨part.val/32,by have h := part.isLt; omega⟩
+  let offset : Fin 32 := ⟨part.val%32,Nat.mod_lt _ (by decide)⟩
+  have hi : b31RowGroup264OtherBatchIndex batch offset = part := by
+    apply Fin.ext
+    change (32*(part.val/32)+part.val%32)%375 = part.val
+    rw [Nat.div_add_mod,Nat.mod_eq_of_lt part.isLt]
+  rw [← hi]
+  exact b31RowGroup264_other_batches batch offset
+
+theorem b31_row_group264_coverage_accepted :
+    checkIndexedRectangleCoverage b31RowGroup264Blocks b31RowGroup264Group b31RowGroup264Blockers b31RowGroup264OwnerSelect b31RowGroup264OtherSelect = true := by
+  simp only [checkIndexedRectangleCoverage,Bool.and_eq_true,decide_eq_true_eq]
+  refine ⟨?_,b31RowGroup264_other_all⟩
+  intro block part
+  let flat : Fin 51 := ⟨block.val*1+part.val,by
+    have hb := block.isLt; have hp := part.isLt; omega⟩
+  have hb : b31RowGroup264OwnerBlock flat = block := by
+    apply Fin.ext
+    dsimp [b31RowGroup264OwnerBlock,flat]
+    have hp := part.isLt
+    omega
+  have hp : b31RowGroup264OwnerPart flat = part := by
+    apply Fin.ext
+    dsimp [b31RowGroup264OwnerPart,flat]
+    have hp := part.isLt
+    omega
+  have h := b31RowGroup264_owner_all flat
+  rw [hb,hp] at h
+  exact h
+
+theorem b31_row_group264_blocks_exclude (block : Fin 51) (v w : Fin 7023)
+    (hv : v ∈ (b31RowGroup264Blocks block).owners) (hw : w ∈ (b31RowGroup264Blocks block).others) :
+    ¬ representedRegionCompatible b31SpatialAngleRegions v w := by
+  fin_cases block
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3157_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3161_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3163_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3167_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3176_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3180_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3182_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3183_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3185_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3186_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3192_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3200_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3204_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3206_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3207_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3251_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3254_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3255_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3260_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3268_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3270_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3271_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3275_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3277_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3726_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3732_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3736_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3741_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3751_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3755_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3757_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3758_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3761_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3762_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3769_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3771_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3773_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3775_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3785_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3789_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3791_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3792_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3839_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3842_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3843_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3848_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3858_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3860_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3862_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3867_pair_excluded v w hv hw T U hT hU hdisj
+  · rintro ⟨T,U,hT,hU,hdisj⟩
+    exact b31_spatial_angle_block3873_pair_excluded v w hv hw T U hT hU hdisj
+
+theorem b31_row_group264_geometric_exclusion (v w : Fin 7023)
+    (hv : v ∈ Finset.univ.image b31RowGroup264Group) (hw : w ∈ Finset.univ.image b31RowGroup264Blockers) :
+    ¬ representedRegionCompatible b31SpatialAngleRegions v w :=
+  checked_indexed_rectangle_group_exclusion _ _ _ _ _ b31_row_group264_coverage_accepted
+    _ (fun block owner howner other hother =>
+      b31_row_group264_blocks_exclude block owner other howner hother) v w hv hw
+
+end Sixpack

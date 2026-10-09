@@ -1102,3 +1102,33 @@ the accepted modules, and all 730 original files and the archive are unchanged.
 The third pruning-step pipeline continues independently. The global lower bound
 and root-case classification remain unproved. Overall completion remains about
 60% (55–65%).
+
+
+## Complete third b31 pruning step and prefix 3
+
+All 76 groups 223–298 are now accepted. The new default checkpoint includes
+the remaining 44 groups, the complete actual snapshot-2-to-3 transition and
+`b31_prefix3_preserves_packing`. Step 2 covers all 120 removed owners against
+its actual 375 blockers. The same actual packing choice survives each of the
+first three checked transitions, with its geometric region representation
+preserved. No row coverage, certificate acceptance or geometric exclusion
+hypothesis is assumed by the three-step composition. Initial representation
+in snapshot 0 is still an explicit prerequisite.
+
+There are now 299 accepted indexed groups covering 617 removed owners across
+these three steps. All 76 third-step group builds pass (peak 1,229 MiB); the
+complete transition passes in 45 seconds at 1,126 MiB and prefix 3 in nine
+seconds at 418 MiB. The default build passes (4,935 jobs, 514 MiB). The full
+shared dependency audit passes in 104 seconds at 563 MiB: 13,014 listed checks
+and 13,013 distinct declarations, including 139 new public dependencies, use
+only standard logical axioms. The actual group, step and chain source auditors
+pass. No forbidden proof shortcuts occur in these additions; the archive and
+all 730 original files remain unchanged.
+
+The serial continuation for steps 3–20 has rebuilt and axiom-audited prefix 3
+and begun checking missing geometric dependencies for step 3. Its complete
+positive execution is not yet validated. The separate ordered refinement-domain
+bridge is still compiling. Neither those pending results nor the remaining
+eighteen pruning steps count as accepted here. Incoming root-parent coverage,
+the other b31 cases, global classification and lower bound remain unproved.
+Overall completion remains about 60% (55–65%).

@@ -776,3 +776,12 @@ clique-support pruning into the selected parent set and classifying the other
 twelve b31 cases are separate remaining obligations. The remaining twelve
 case traces report closure externally; that report does not establish a Lean
 geometric closure.
+
+
+The third complete b31 transition and prefix 3 are now default-imported and
+fully axiom-audited. Accept and compose the remaining eighteen transitions
+with the excluded final snapshot; the serial continuation has started checking
+step-3 dependencies after rebuilding and auditing prefix 3. Continue the ordered
+refinement-domain bridge independently, then prove incoming root-parent coverage
+and the twelve other b31 case closures. Neither the ongoing continuation nor
+the external closure traces discharge those obligations.
