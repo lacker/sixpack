@@ -165,3 +165,6 @@ import Sixpack.OrientationAngles
 import Sixpack.RelativeHullChart
 import Sixpack.CoreReferenceOrientation
 import Sixpack.RadiusLabelBridge
+import Sixpack.CenteredCentroidCertificate
+import Sixpack.RadiusAngleCertificate
+import Sixpack.CenteredCentroidFixture

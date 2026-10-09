@@ -241,6 +241,32 @@ every surviving packing reaches such labels (or one of the tube charts).
 The checker’s six symmetry channels also need orientation-parameter bindings.
 No Python success flag is used as a theorem hypothesis.
 
+## Exact production centroid and angle certificates
+
+`CenteredCentroidCertificate` derives each inverse-isometry covector from the
+six production matrices, binds the rational graph centering and exact candidate
+centering, and proves the exact √13 centroid offsets. Accepted nonnegative dual
+witnesses bound every real point of the closed halfplane intersection. The
+checker uses exact ℚ(√13) comparisons for the offsets, rather than relying on
+polygon vertex exports. Its triangle theorem bounds the centroid after the
+actual recentering and inverse container isometry.
+
+`RadiusAngleCertificate` checks positive denominators and cross-multiplied exact
+inequalities for the two relative-angle endpoints. Its soundness theorem gives
+the stated real half-angle inequalities against the proved candidate reference
+parameters. No inverse, arctangent approximation or floating-point evaluation
+is trusted by the checker.
+
+`CenteredCentroidFixture` accepts one actual saved positive local label from
+each of the six symmetry channels, with both centroid coordinates and both signed
+angle endpoint tests. Each region has a separately checked nonempty point.
+The checker rejects a forged negative multiplier and a zero angle-radius claim.
+These six examples exercise the production formulas; they are not acceptance of
+all local-label files or their global coverage. The symmetry-to-orientation
+parameter binding and the connection to classified search remain obligations.
+The generator reads saved records and positive flags only to select inputs;
+Lean independently checks every supplied mathematical witness.
+
 ## Remaining trust boundary
 
 Root intersection coverage and the first child enumeration are now proved.
