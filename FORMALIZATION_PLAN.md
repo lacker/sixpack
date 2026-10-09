@@ -624,7 +624,7 @@ plan for all 4,247 owner rows. Its scope checker verifies unique full coverage
 and all 214,380 positional witnesses. The generalized generator now uses this plan with 32-case chunks on both
 sides and proved owner-pair flattening. Groups 1, 3, 5 and 11 compile with
 geometric bindings, in addition to the group-15 prototype. Continue accepting
-the remaining 1,039 groups and their required geometric batches. The unchecked
+the remaining 1,020 groups and their required geometric batches. The unchecked
 portion of the plan remains untrusted until its Lean acceptance compiles.
 
 Use `audit/check_b31_indexed_group_modules.py --groups ...` for serial
@@ -632,3 +632,13 @@ generation and guarded acceptance. The generator requires compiled geometric
 dependencies and imports only the needed batches, keeping completed groups
 independent of later pilot-table import growth. The source audit checks all
 actual generated group inputs against the exhaustive coverage plan.
+
+All 19 further groups supported by the accepted geometric prefix now compile.
+The 24 accepted groups cover 52 first-step owner rows. The blocker array is
+proved equal to the actual initial snapshot domain, and the partial pruning
+theorem preserves every actual packing choice through those 52 deletions.
+Its owner count and declared-removal bindings are kernel-checked. Complete
+the remaining 176 first-step removals by accepting their geometric dependencies
+and row groups, then extend the same actual-domain binding and pruning assembly
+to the remaining 20 steps. The complete geometric table still continues from
+batch 79. The end-to-end root-case classification remains unproved.
