@@ -837,3 +837,16 @@ the pending actual refined-case packing exclusion in
 `EndpointB31Case1341RootClosure`. Check equality of the independently declared
 actual node domains in Lean. Incoming root clique-support pruning remains an
 independent obligation after this selected-root exclusion.
+
+
+Case 1341's ordered root-refinement domain binding is now fully accepted and
+default-imported. Complete the running refined-case exclusion, then compile
+`EndpointB31Case1341RootClosure`, including its equality of actual node domains.
+This will exclude the selected original root domains; proving that arbitrary
+packings in the ordered root case reach those domains remains necessary.
+
+The other closed b31 cases require multi-component survivor snapshots. A new
+workspace partition generator handles empty final components; its case-970
+final partition pilot compiles. Check all intermediate survivor partitions and
+blocker domains before composing their geometric pruning steps. These finite
+bookkeeping proofs do not replace the geometric block and row-coverage checks.

@@ -318,3 +318,5 @@ import Sixpack.EndpointB31Case1341IndexedGroups.Group0
 import Sixpack.EndpointB31Case1341SpatialAngle
 
 import Sixpack.EndpointB31GeometricChains.Prefix4
+
+import Sixpack.EndpointB31Case1341RootEntry

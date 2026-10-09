@@ -1260,3 +1260,32 @@ but their dependency audit and default-import checkpoint remain pending.
 The complete case-1341 coverage and packing-closure workflow is still running.
 Root selection, remaining production branches, global classification and the
 lower bound remain unproved. Overall completion remains about 60% (55–65%).
+
+
+## Ordered root refinement for b31 case 1341
+
+`b31_case1341_selected_root_records_enter_refined_domains` is now accepted
+and default-imported. It starts with actual original root-record choices in
+`b31Case1341SelectedRootDomains`, represented by an actual packing with
+`L ≤ outerBound`, and produces a represented choice in the six actual refined
+case domains. Its 31 scalar batches prove all 7,752 refinement slots against
+the declared root groups `[1,3,5,8,10,13]`; 2,141 relevant retained alternatives
+cover the six actual domains. The existing accepted enumeration and empty-cell
+certificates supply the geometric refinement step.
+
+The complete root-entry build passed (3,346 jobs), with its largest observed
+Lean footprint 3,072 MiB under the guard. The default checkpoint passed
+(5,173 jobs, 577 MiB). The full canonical dependency audit passed in 134 seconds:
+16,994 listed checks / 16,993 distinct declarations use only standard logical
+axioms. The independent source audit verifies actual initial arrays, original
+case groups, every scalar slot and the original-record packing statement.
+The original archive and all 730 research files remain unchanged.
+
+This does not prove incoming root clique-support pruning into the selected
+parent domains. The case-1341 coverage/closure pipeline is still running; its
+root-entry/exclusion composition is written but not yet compiled. A separate
+multi-component partition constructor has passed an empty-component pilot for
+case 970; that workspace pilot is not a geometric exclusion or a default theorem.
+The main chain has four accepted steps, and its continuation remains active.
+Global classification and the lower bound remain unproved. Overall completion
+remains about 60% (55–65%).
