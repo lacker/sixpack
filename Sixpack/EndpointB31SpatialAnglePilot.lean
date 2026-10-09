@@ -26,3 +26,11 @@ import Sixpack.EndpointB31SpatialAngle.Batch43
 import Sixpack.EndpointB31SpatialAngle.Batch44
 import Sixpack.EndpointB31SpatialAngle.Batch45
 import Sixpack.EndpointB31SpatialAngle.Batch46
+import Sixpack.EndpointB31SpatialAngle.Batch21
+import Sixpack.EndpointB31SpatialAngle.Batch22
+import Sixpack.EndpointB31SpatialAngle.Batch23
+import Sixpack.EndpointB31SpatialAngle.Batch24
+import Sixpack.EndpointB31SpatialAngle.Batch25
+import Sixpack.EndpointB31SpatialAngle.Batch26
+import Sixpack.EndpointB31SpatialAngle.Batch27
+import Sixpack.EndpointB31SpatialAngle.Batch28

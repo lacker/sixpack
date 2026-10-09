@@ -570,10 +570,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 21 production batches and batches 42–46 pass, giving 375 accepted
+603 MiB peak. The first 29 production batches and batches 42–46 pass, giving 497 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 21, then prove
+without expanding the default import graph. Continue from batch 29, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -581,9 +581,18 @@ Keep all heavy checks serial under the external memory guard.
 The generic rectangle-trace preservation theorem now uses actual represented
 region compatibility, with no saved-graph premise. The complete owner-640 row
 (step 0) has a kernel-checked witness for each of its 346 blocker choices,
-using 22 local blocks. This row is now bound to accepted geometric certificates, and actual-packing
-exclusion for its owner/blocker hypotheses compiles. Extend row acceptance to
-every removed owner,
-and assemble all 21 sequential steps before invoking the generic theorem.
+using 22 local blocks. This row is now bound to accepted geometric certificates,
+and actual-packing exclusion for its owner/blocker hypotheses compiles. Extend
+row acceptance to every removed owner, then assemble all 21 sequential steps
+before invoking the generic theorem.
 The finite coverage and geometric exclusion are separately proved; the full
 trace still requires every removed owner and its current blocker domain.
+
+Use `RectangleSnapshotPruning` to assemble the production trace with explicit
+next-domain snapshots; its checker proves survivor coverage before proceeding
+to each next step. The indexed-partition checker proves coverage by direct
+retained/removed index witnesses. Step 0 now compiles with all 872 witnesses
+in 32-case chunks and a complete index-cover proof. Export and accept steps
+1–20 with `audit/generate_b31_domain_partitions.py --steps ...`, then bind
+the domain arrays and row coverage to the snapshot trace. The export and its
+source comparison are not substitutes for the remaining Lean acceptance.

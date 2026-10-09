@@ -639,20 +639,20 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 375 blocks, covering 62,308 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and 26
+`EndpointB31SpatialAnglePilot` accepts 497 blocks, covering 65,235 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 34
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The 26 production batches all pass with peaks below 1,434 MiB; the latest
-full default build peaks at 404 MiB. The generator keeps new batches outside the
+The 34 production batches all pass with peaks below 1,434 MiB; the latest
+full default build peaks at 373 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
-external guard. There are 692 planned batches in total, of which the first
-26 are accepted (batches 0–20 and 42–46). No complete b31 pruning or root reachability theorem is
-claimed; 9,501 of the 9,876 proposed blocks still need acceptance, followed by
+external guard. There are 692 planned batches in total, of which
+34 are accepted (batches 0–28 and 42–46). No complete b31 pruning or root reachability theorem is
+claimed; 9,379 of the 9,876 proposed blocks still need acceptance, followed by
 checked coverage and composition of all 21 pruning rectangles.
 
 `RectanglePruning` now proves that checked rectangle coverage preserves every
@@ -670,4 +670,19 @@ owner 640 and second piece uses any of these blocker choices. The finite row
 build peaked at 644 MiB; the geometric assembly peaked at 389 MiB. This row
 is unconditional apart from its explicit region/domain hypotheses. Full
 21-step coverage and full block acceptance remain open; continue serial block
-acceptance from batch 21 (batches 42–46 are already accepted).
+acceptance from batch 29 (batches 42–46 are already accepted).
+
+`RectangleSnapshotPruning` proves actual-packing preservation through checked
+explicit domain snapshots. Each snapshot must contain every choice surviving
+its checked removal step, so saved domain lists are not trusted.
+`IndexedDomainPartition` proves survivor coverage from explicit array-index
+equality witnesses, avoiding a search through large finite sets.
+
+`EndpointB31DomainPartitions.Step0` checks all 872 entries in the first old
+domain: every entry is equal to one of 644 retained or 228 removed entries.
+The 32-case proof chunks have a proved complete index cover, including the
+wrapped final chunk. Acceptance took 25 seconds and peaked at 794 MiB.
+The other 20 snapshot partitions are proposed export data only. An external
+source audit checks all 21 proposed transitions, their final 36 retained choices,
+and every actual Lean lookup for the selected step. Geometric deletion for
+all 228 first-step owners and complete trace assembly remain unproved.
