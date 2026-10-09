@@ -639,20 +639,20 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 497 blocks, covering 65,235 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and 34
+`EndpointB31SpatialAnglePilot` accepts 705 blocks, covering 69,125 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 47
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The 34 production batches all pass with peaks below 1,434 MiB; the latest
-full default build peaks at 397 MiB. The generator keeps new batches outside the
+The 47 production batches all pass with peaks below 1,434 MiB; the latest
+full default build peaks at 406 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
-34 are accepted (batches 0–28 and 42–46). No complete b31 pruning or root reachability theorem is
-claimed; 9,379 of the 9,876 proposed blocks still need acceptance, followed by
+47 are accepted (batches 0–46). No complete b31 pruning or root reachability theorem is
+claimed; 9,171 of the 9,876 proposed blocks still need acceptance, followed by
 checked coverage and composition of all 21 pruning rectangles.
 
 `RectanglePruning` now proves that checked rectangle coverage preserves every
@@ -670,7 +670,7 @@ owner 640 and second piece uses any of these blocker choices. The finite row
 build peaked at 644 MiB; the geometric assembly peaked at 389 MiB. This row
 is unconditional apart from its explicit region/domain hypotheses. Full
 21-step coverage and full block acceptance remain open; continue serial block
-acceptance from batch 29 (batches 42–46 are already accepted).
+acceptance from batch 47.
 
 `RectangleSnapshotPruning` proves actual-packing preservation through checked
 explicit domain snapshots. Each snapshot must contain every choice surviving
@@ -691,10 +691,22 @@ The source audit compares every actual node, witness, lookup and domain in all
 22 snapshots with the production scope. An initial combined transition proof
 was stopped by the external guard at 3,175 MiB; isolated transitions with
 explicit array-function equalities now pass, and the final assembly peaks at
-459 MiB. The default build passes at 397 MiB.
+459 MiB. The latest default build passes at 406 MiB.
 
 This completes the snapshot survivor bookkeeping. Geometric deletion for every
 removed owner, full row coverage and complete geometric trace assembly remain
-unproved. Final snapshot choices still need their Lean binding to the two
-accepted leaf-refinement parent cases. Only compiled geometric and coverage
-checks may discharge the remaining pruning obligations.
+unproved. Final snapshot choices are now bound to the two accepted leaf-refinement
+parent cases, as described below. Only compiled geometric and coverage checks
+may discharge the remaining pruning obligations.
+
+`EndpointB31SnapshotRefinement` verifies the actual labels of every retained
+b31 node against its leaf-refinement parent. It checks each final component
+domain and chooses the applicable ordered case from the last component.
+`b31_final_snapshot_no_packing` excludes every actual packing represented in
+the final snapshot when `L ≤ outerBound`, using the accepted refinement and
+leaf closure. The bridge build peaked at 459 MiB. Its source audit compares
+all 36 inverse-parent entries and all 7,023 lookup defaults with the preserved
+refinement scope. Reaching this snapshot from the initial domains remains
+unproved: full geometric block acceptance and every removed owner's complete
+row coverage are still required. The thirteen new certificate batches all
+passed; continue with batch 47.

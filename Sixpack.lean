@@ -217,3 +217,4 @@ import Sixpack.EndpointB31FirstRowGeometry
 import Sixpack.RectangleSnapshotPruning
 import Sixpack.IndexedDomainPartition
 import Sixpack.EndpointB31SnapshotAssembly
+import Sixpack.EndpointB31SnapshotRefinement

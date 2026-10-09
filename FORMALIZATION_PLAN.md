@@ -570,10 +570,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 29 production batches and batches 42–46 pass, giving 497 accepted
+603 MiB peak. The first 47 production batches pass, giving 705 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 29, then prove
+without expanding the default import graph. Continue from batch 47, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -601,8 +601,10 @@ proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
 `audit/check_b31_domain_partition_steps.py` and
 `audit/check_b31_snapshot_transitions.py` reproduce these checks serially.
 
-Next bind final snapshot choices and their labels to the two accepted
-leaf-refinement parent cases. Accept remaining geometric blocks from batch 29,
+Final snapshot choices and their actual labels are now bound to the two
+accepted leaf-refinement parent cases. `b31_final_snapshot_no_packing` composes
+this complete domain binding with the accepted refinement and leaf closure.
+Accept remaining geometric blocks from batch 47,
 prove every removed owner's complete row coverage against its current blocker
 domain, and assemble geometric pruning with the accepted survivor transitions.
 The full production pruning theorem and root reachability remain open.
