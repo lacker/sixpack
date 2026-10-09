@@ -1233,3 +1233,30 @@ execution remains unvalidated. Incoming root-refinement domain binding and
 root clique-support pruning remain separate obligations. The other eleven
 closed cases, the remaining main-chain steps and global classification are
 still unproved. Overall completion remains about 60% (55–65%).
+
+
+## Fourth complete geometric pruning step of the main b31 chain
+
+`b31_step3_pruning_preserves_packing` and `b31_prefix4_preserves_packing`
+now compile and are default-imported. The step excludes 27 actual removed
+regions against 618 actual blocker regions through 24 complete geometric
+coverage groups. Together, the first four steps exclude 644 removed owners
+through 323 accepted coverage groups. This still assumes representation in
+the actual initial snapshot; incoming root pruning remains unproved.
+
+All 62 additional geometric batches (286–347) are accepted. The main table
+now includes 5,278 blocks covering 193,708 ordered pairs. The step assembly
+passed in 79 seconds at 1,024 MiB, and prefix 4 passed in 14 seconds at 441 MiB.
+The full canonical dependency audit passed in 265 seconds at 664 MiB:
+16,957 listed checks, covering 16,956 distinct declarations, depend only on
+standard logical axioms. The expanded default build passed (5,139 jobs,
+1,638 MiB). Actual step and chain source audits pass. The archive and all
+730 original research files remain unchanged.
+
+The serial continuation runner has completed and audited its first requested
+stage (step 3); steps 4–20 are still running and are not accepted by this
+checkpoint. The case-1341 root-to-refined-domain modules have also compiled,
+but their dependency audit and default-import checkpoint remain pending.
+The complete case-1341 coverage and packing-closure workflow is still running.
+Root selection, remaining production branches, global classification and the
+lower bound remain unproved. Overall completion remains about 60% (55–65%).

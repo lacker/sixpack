@@ -823,3 +823,17 @@ audit. Complete the running 117-group coverage and actual-packing closure
 constructor. Then bind the ordered root refinement to these exact case domains
 and prove incoming root clique-support selection. Geometric block acceptance
 alone does not establish any whole root-case classification.
+
+
+The main b31 chain now has four accepted consecutive geometric steps (0–3),
+with prefix 4 default-imported and fully dependency-audited. Continue the serial
+runner through steps 4–20, checking each actual-packing preservation statement
+and its complete geometric dependencies. Only prefix 21 establishes exclusion
+of the represented initial main-case snapshot.
+
+Case 1341 now has proposed root-to-refined-domain binding modules, whose Lean
+build passes. Complete their dependency audit, then compose the root entry with
+the pending actual refined-case packing exclusion in
+`EndpointB31Case1341RootClosure`. Check equality of the independently declared
+actual node domains in Lean. Incoming root clique-support pruning remains an
+independent obligation after this selected-root exclusion.
