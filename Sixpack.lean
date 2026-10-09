@@ -168,3 +168,7 @@ import Sixpack.RadiusLabelBridge
 import Sixpack.CenteredCentroidCertificate
 import Sixpack.RadiusAngleCertificate
 import Sixpack.CenteredCentroidFixture
+import Sixpack.SymmetryOrientation
+import Sixpack.CertifiedRadiusEndpoint
+import Sixpack.ProductionRadiusTuple
+import Sixpack.RadiusCoveredSearch

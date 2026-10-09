@@ -1,7 +1,7 @@
 # Progress estimate
 
-Estimated completion of the **end-to-end formalization: about 45%**, with a
-plausible planning range of **40–50%**. This is a subjective estimate of remaining
+Estimated completion of the **end-to-end formalization: about 50%**, with a
+plausible planning range of **45–55%**. This is a subjective estimate of remaining
 work, not a fraction of theorem statements, source lines, or Python checks.
 It is not a schedule forecast.
 
@@ -238,7 +238,8 @@ The candidate reference hulls and the geometric chart identity are discharged.
 This is still a conditional local result: concrete production labels must prove
 the centroid and angle endpoint inequalities, and global search must show that
 every surviving packing reaches such labels (or one of the tube charts).
-The checker’s six symmetry channels also need orientation-parameter bindings.
+The checker’s six symmetry channels now have proved orientation-parameter bindings
+and a conditional endpoint-boundary bridge, described below.
 No Python success flag is used as a theorem hypothesis.
 
 ## Exact production centroid and angle certificates
@@ -263,9 +264,37 @@ angle endpoint tests. Each region has a separately checked nonempty point.
 The checker rejects a forged negative multiplier and a zero angle-radius claim.
 These six examples exercise the production formulas; they are not acceptance of
 all local-label files or their global coverage. The symmetry-to-orientation
-parameter binding and the connection to classified search remain obligations.
+parameter binding and the conditional radius covered-search connection are now
+proved below; production-wide acceptance and coverage remain obligations.
 The generator reads saved records and positive flags only to select inputs;
 Lean independently checks every supplied mathematical witness.
+
+## Checked radius labels reach the endpoint boundary conclusion
+
+`SymmetryOrientation` proves the vertex permutations and orientation-parameter
+signs for all six inverse-isometry channels, and transfers canonical hulls through
+the actual centered affine maps. Arbitrary original vertex orderings are allowed.
+`CertifiedRadiusEndpoint` combines the exact centroid and signed angle certificates
+into the radius-label checker. Five accepted labels in one channel, representing
+five distinct members of an endpoint packing after graph centering, imply a
+boundary vertex of the original packing. The theorem reconstructs the local chart,
+proves its norm bound, applies nonlinear rigidity, identifies the candidate core
+hulls, and pulls the boundary conclusion through the container symmetry.
+No local geometric chart or analytic inequality is supplied as an extra premise.
+
+`ProductionRadiusTuple` accepts a complete five-piece tuple from the saved
+`endpoint_b00_c0_c0_r1_r2_r3` labels in channel 2. Every label has a checked nonempty
+point. Its endpoint theorem is conditional only on an actual packing having five
+distinct members represented in that concrete tuple; global search coverage of
+this tuple has not been proved.
+
+`RadiusCoveredSearch` connects accepted covered-search certificates and accepted
+one-piece radius codes to the endpoint boundary theorem for genuine packings.
+Conservative pair certificates establish admissibility, and code uniqueness proves
+an injective assignment of pieces to selected triangles. The remaining premises
+are explicit computational acceptance and geometric domain representation, rather
+than unproved local chart claims. Concrete production search acceptance, domain
+coverage, refinements and the tube-label branch still have to be discharged.
 
 ## Remaining trust boundary
 
