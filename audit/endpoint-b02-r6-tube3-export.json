@@ -1,0 +1,9 @@
+{
+  "node": "endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6",
+  "records": 40259,
+  "positive_tube3_codes": 2353,
+  "serial_batches": 74,
+  "nodes_sha256": "1ebb56993d766b380676033369614e8aac791276a612e62fd922ec729ff28417",
+  "local_sha256": "03e3e9cd6d51f25a2dc6471e4595d928103118f7c05848ff5083f5421b0f31dd",
+  "status": "exported untrusted entries; Lean acceptance is a separate build"
+}

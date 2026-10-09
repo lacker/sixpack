@@ -178,3 +178,29 @@ actual geometric chart, including active constraints and exact multiplier and
 inverse identities. Branch 0's first-order enclosures and kernel coordinate bounds are also checked. Nonlinear
 Taylor/curvature estimates, branch coverage and the global exclusions remain
 unformalized; the global lower bound is still not a Lean theorem.
+
+## Unified endpoint tables and production stage transitions
+
+The default Lean build passed (3,614 jobs). The complete dependency audit now
+checks 1,315 explicit theorem names and permits only `propext`,
+`Classical.choice`, and `Quot.sound`. The original archive and all 730 research
+files still match their preserved hashes.
+
+`EndpointCertificateTable` guards sparse radius/tube entries in all 24 channels.
+`EndpointB00R3Unified` reuses the 1,592 already accepted radius entries.
+`EndpointB02R6Tube3` accepts all 2,353 exported third-tube codes from
+`endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6`, in 74 serial batches, and combines their
+compiled kernel proofs into a whole-table theorem. `check_tube3_export.py`
+independently compares the exported addresses and exact region descriptors with
+the preserved inputs; that Python comparison is export evidence, not geometric
+proof evidence. The guarded full tube run peaked at 1,331.2 MiB; the default
+build and new axiom audit peaked at 391.0 and 395.6 MiB respectively.
+
+`EndpointDomainRestriction`, `RefinementDomainCover`, and
+`EndpointRefinementTransition` prove that accepted parent deletions either force
+an original endpoint boundary vertex or preserve the actual six-triangle packing
+through checked child enumeration in the required component domains. These
+are generic soundness theorems, with concrete production checker acceptances
+still explicit premises. The full graph/search certificates, other local tables,
+case/domain binding, and global tree coverage remain outstanding. No
+unconditional lower-bound theorem is claimed.

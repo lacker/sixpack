@@ -357,13 +357,39 @@ actual packings represented in the searched domains. This closes the generic loc
 geometry branch for all four profiles. Concrete production-wide local-code and
 pair/search acceptance, domain coverage and refinement-tree assembly remain.
 
+## Checked production stage transitions
+
+`EndpointCertificateTable` extends guarded sparse lookup to all 24 radius/tube
+channels. Entries can contribute a piece code only when their node, channel,
+and exact region match. `RadiusEndpointTable` and `EndpointB00R3Unified` reuse
+all 1,592 accepted radius entries in this interface without repeating their
+arithmetic decisions.
+
+`EndpointB02R6Tube3` accepts all **2,353 exported positive third-tube codes**
+from `endpoint_b02_c0_c0_r1_r2_r3_r4_r5_r6` (40,259 saved records), across all
+six symmetry channels. All 74 serial batches and the whole-table theorem passed
+kernel checking. The guarded full run peaked at 1,331.2 MiB. The generator and
+`audit/check_tube3_export.py` establish the export scope against the preserved
+input externally; geometric acceptance is the Lean theorem. Other profiles in
+that source, the second tube-labelled source, production lookups, graph/search
+acceptance, and reachability of this node remain separate obligations.
+
+`EndpointDomainRestriction` connects accepted covered-deletion certificates to
+actual endpoint packings: a removed selection forces a boundary vertex, or all
+six represented members survive in the retained domains. `RefinementDomainCover`
+checks child domain membership as well as exact retained labels or empty-region
+certificates. Its soundness theorem preserves the component domains across
+independent spatial and angular refinement flags. `EndpointRefinementTransition`
+combines both operations into one checked production stage. Concrete production
+deletions, case domains, and child-domain certificates still need acceptance.
+
 ## Remaining trust boundary
 
 Root intersection coverage and the first child enumeration are now proved.
 Saved polygon vertex exports remain unmatched; the certificate-based bounds can
 instead be proved directly from the region halfplanes. Remaining obligations
 include coarse-group/case bindings, the other production refinements,
-region-to-local-chart certificates, production graph/search acceptance, and
+production-wide local-code certificates, production graph/search acceptance, and
 endpoint classification. The earlier successful Python/C++ replay is
 external evidence for those parts and is not a Lean proof.
 

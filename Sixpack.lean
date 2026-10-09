@@ -183,3 +183,10 @@ import Sixpack.SignedLocalAngles
 import Sixpack.CertifiedTubeEndpoint
 import Sixpack.ProductionTubeTuples
 import Sixpack.EndpointLocalSearch
+import Sixpack.EndpointCertificateTable
+import Sixpack.RadiusEndpointTable
+import Sixpack.EndpointB00R3Unified
+import Sixpack.EndpointB02R6Tube3
+import Sixpack.EndpointDomainRestriction
+import Sixpack.RefinementDomainCover
+import Sixpack.EndpointRefinementTransition
