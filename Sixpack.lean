@@ -202,3 +202,5 @@ import Sixpack.EndpointLeaf31Search
 import Sixpack.EndpointLeaf31Closure
 import Sixpack.EndpointRootCoarseCover
 import Sixpack.CoarsePatterns
+import Sixpack.CoarseRootCases
+import Sixpack.CoarseCaseReduction.BatchCoverage

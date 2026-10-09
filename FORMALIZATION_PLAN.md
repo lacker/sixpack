@@ -504,3 +504,17 @@ exhaustive 8,008-pattern universe and actual endpoint-packing coverage of that
 universe. Next, prove finite coverage by the 1,396 production representatives
 and carry transformed assignments, triangle ordering and root domains into
 the endpoint tree. Source group-label binding remains separately required.
+
+### Compatible root domains and representative-table acceptance
+
+The declared root coarse groups now have checked ancestry meaning, and root
+coverage can be selected within any prescribed coarse group even at closed
+boundaries. Triangle reindexing puts the selected representative in increasing
+case-slot order. `CoarseRootCases` defines the ordered root domains and the
+remaining endpoint-case classification proposition. The representative-table
+acceptance is running in individual-check batches; its generic completeness
+proof uses sortedness, a checked rank inverse and the 8,008-pattern cardinality.
+After all batches pass, compile the unconditional representative assembly,
+instantiate the ordered-root coverage bridge, then bind actual root case
+domains to the production tree. No remaining classification hypothesis may
+be replaced by a custom axiom or the external saved success logs.

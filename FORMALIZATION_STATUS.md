@@ -10,7 +10,7 @@ It is not a schedule forecast.
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors and separating-axis necessity proved; general outer-container isometry normalization remains |
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
-| Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries, production coarse-cell actions and actual 8,008-pattern coverage proved; saved-group bindings and representative/case reduction remain |
+| Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries, production coarse-cell actions and actual 8,008-pattern coverage proved; declared root-group bindings and compatible coverage proved; representative table acceptance and case-tree reduction remain |
 | Local five-piece nonlinear rigidity | Radius and all three tube rigidity theorems proved; generic region-to-chart and endpoint bridges proved for all four profiles; production-wide certificate acceptance and coverage remain |
 | Sound finite search and certificate machinery | Exact inner geometry, projection/pair-exclusion checker and conditional finite-search bridge proved; production graph certificates, local deletions and tree coverage remain |
 | All concrete triangle-region certificates checked by Lean | Remaining |
@@ -520,3 +520,42 @@ compares the exported permutations with the original saved table and checks
 all 96 cell-vertex images using exact integers. The Lean proofs do not assume
 that external comparison. The full lower bound remains unproved; the overall
 planning estimate remains about 55% (50–60%).
+
+## Compatible root groups and representative-check progress
+
+`RootCoarseTags` factors the 34,660 saved group tags through the 1,024 fine cells
+and checks every valid cell against its proven ancestry. Its declared root-group
+function equals the computed coarse group for every root record; membership
+and injection follow geometrically. `audit/check_root_coarse_tags_export.py`
+compares every original tag with that export and verifies that all 1,024 cells
+occur in the original records. Source/export provenance is checked externally;
+the geometric meaning of every exported tag is checked in Lean.
+
+`CoarseRootCompatibility` proves that a root representation can be selected
+inside a prescribed closed coarse cell. This matters at shared boundaries:
+a fresh unrestricted root choice need not preserve a selected coarse group.
+The proof uses three actual refinements and accepted root intersection coverage,
+with sixteen finite inverse-ancestry checks. `CoarseRootCases` combines this
+with triangle reindexing and boundary transfer. It defines actual ordered root
+case domains and reduces endpoint boundary classification to those domains.
+The ordered-root coverage bridge currently assumes acceptance of the full
+representative table; it does not require geometric case classification. The
+boundary reduction additionally requires `EndpointRootCaseClassification`,
+which remains unproved.
+
+The new representative checker verifies each tuple's increasing order, unique
+index and exact image under a saved permutation. A generic proof derives
+exhaustive coverage from injection into the proved 8,008-pattern universe,
+then connects that coverage to actual packings. All 1,396 representative and
+8,008 witness exports pass the independent source/scope comparison.
+At this checkpoint, the first **139 batches (4,448 distinct patterns)** have
+passed individual kernel checks and are included in the axiom audit. The rest
+of the 251 small serial batches are still being checked. Full 1,396-case
+coverage is **not yet claimed**. The pending unconditional assembly is saved
+in `CoarseCaseReduction` but is not imported by the default build yet.
+
+The default build includes the completed compatible-root geometry and generic
+coverage bridges. Failed attempts to check hundreds of patterns in one kernel
+decision were stopped by the memory guard; the replacement individual checks
+have stayed below 1.5 GiB at this checkpoint. The lower bound remains unproved;
+the overall planning estimate remains about 55% (50–60%).
