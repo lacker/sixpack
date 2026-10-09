@@ -31,20 +31,22 @@ commits. With that toolchain available:
 
 ```sh
 lake exe cache get Mathlib.Data.Real.Sqrt Mathlib.Tactic \
-  Mathlib.Analysis.Convex.Hull Mathlib.Topology.Algebra.Module.FiniteDimension
+  Mathlib.Analysis.Convex.Hull Mathlib.Topology.Algebra.Module.FiniteDimension \
+  Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv \
+  Mathlib.Analysis.Calculus.Deriv.Prod Mathlib.Analysis.Calculus.Taylor
 lake build
 lake env lean audit/PrintAxioms.lean
 ```
 
 The formal results cover exact construction checks, the scaled metric, conservative
 projection logic, local-omission logic, centering, and small sound certificate
-checkers. The radius branch prototype checks rational arithmetic, while its
-uniform third derivative bounds remain external. The exact first-order local
-layer now checks all eight branches against the actual rotation-chart derivatives,
+checkers. The radius branch prototype checks rational arithmetic. The local
+first-order layer checks all eight branches against the actual rotation-chart derivatives,
 and checks branch 0’s first-order enclosures. Actual second derivatives and all
 eight pivot curvatures are proved. Branch 0’s Hessian norms and mixed/normal
-curvature bounds are checked against geometry, and its motion estimate follows
-from explicit Taylor errors. Uniform Taylor and nonlinear energy estimates remain.
+curvature bounds are checked against geometry. Uniform third derivatives and
+Taylor remainder bounds are proved; its motion estimate follows from actual
+geometric constraints and the radius. The nonlinear energy estimate remains.
 Consult the plan for exact
 theorem names and limitations. Passing this build does not establish optimality.
 

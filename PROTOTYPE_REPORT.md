@@ -77,10 +77,10 @@ criterion with the actual branch data. A truncated multiplier list is rejected.
 
 Radius arithmetic acceptance alone does not establish gradient/Hessian identities,
 matrix inverse identities, outward enclosures, mixed third derivative estimates,
-Taylor remainder bounds, or eight-branch geometric coverage. The later exact
-first-order increment below now verifies the gradients and inverse identities,
-and their branch-0 enclosures. Hessian/curvature/third-derivative estimates, Taylor
-bounds and branch coverage still require formal proofs.
+Taylor remainder bounds, or eight-branch geometric coverage. The subsequent layers below verify all eight branches' gradients, inverse
+identities and pivot curvatures, branch 0's first/second-order enclosures, and the
+uniform diagonal third derivatives and Taylor bounds. The nonlinear energy
+estimate, remaining branch checks and geometric coverage are still pending.
 
 ## Reproduction
 
@@ -139,8 +139,8 @@ and the coordinate bounds on its kernel vector
 to its exact certified matrices. Their soundness proof yields an actual geometric
 directional-derivative bound for directions with bounded coordinates. This is
 part of the radius certificate's geometric bridge. The second-order bounds are
-now checked for branch 0 by the results below; third derivatives remain outside
-that bridge.
+now checked for branch 0 by the results below. Uniform third derivatives and
+Taylor estimates are also proved by the subsequent results.
 
 To regenerate the new fixture, use the Python standard library:
 
@@ -184,9 +184,8 @@ successful eight-branch curvature build took about four seconds on the local
 machine, excluding already compiled first-order fixtures.
 
 These results prove the positive quadratic obstruction in the critical direction.
-They do not yet prove a neighborhood contains no competing packing. Uniform
-third derivatives, Taylor remainders, and the nonlinear energy estimate are still
-necessary.
+They do not yet prove a neighborhood contains no competing packing. The
+nonlinear energy estimate and geometric branch coverage are still necessary.
 
 ## Full geometric Hessians and the motion estimate
 
@@ -209,13 +208,45 @@ nonnegative constraint values and explicit Taylor errors. It supplies a new
 checker binding the inverse-weighted error coefficients and multiplier ratios
 to the exact inverse. `MotionFixture` accepts those coefficients for branch 0
 and derives the motion inequality for actual geometric constraint values.
-The Taylor error bound remains a hypothesis; the motion inequality is derived.
-Thus the complete local nonlinear conclusion is still pending.
+The original motion theorem keeps the Taylor error bound as a hypothesis.
+The later `TaylorFixture` removes that hypothesis using the results below.
+The complete local nonlinear conclusion is still pending.
+
+## Uniform third derivatives and actual Taylor remainders
+
+`PhysicalNorm` proves the physical determinant bound, triangle inequality and
+translation/rotation bounds in the scaled metric. `PhysicalGeometry` proves
+container diameter, centroid containment and the exact centroid-to-vertex radius
+from unit-side identities. `RotationCalculus` proves three derivatives of the
+actual rotation chart at every parameter value. `RotationIdentities` proves the
+centroid/relative-rotation formula for the actual pair constraint, and
+`PairDerivatives` differentiates it three times.
+
+`BoundaryThird` proves the actual boundary third derivative has magnitude at
+most `4*||d||^3`. `PairThirdBound` proves the actual pair third derivative has
+magnitude at most `45*||d||^3` throughout parameter `[0,1]` when `||d|| <= 1/100`.
+The norm here is the sup norm on all 16 coordinates. These are repeated-direction
+bounds sufficient for Taylor along the displacement path; this work does not
+claim a formalization of the complete mixed third-derivative tensor.
+
+`LocalTaylor` proves the second-order remainder estimate from mathlib's
+Lagrange Taylor theorem, including the exact `1/6` factor. It derives the
+first-order error enclosure using the actual second derivatives and the radius.
+`TaylorEnclosures` checks the rounded coefficients against those proved bounds.
+`TaylorFixture` accepts branch 0's coefficients and proves its actual geometric
+Taylor errors, growth bounds and weighted remainder bound. Its geometric motion
+inequality now follows from the radius and nonnegative geometric constraints,
+with no Taylor-error hypothesis. `TaylorControls` rejects zero third constants,
+a zero weighted remainder bound and a negative radius.
+
+No original Python/C++ routine is used as evidence for these analytic bounds.
+The full lower bound is still pending the nonlinear energy estimate, all branch
+coefficient checks, geometric coverage and production search certificates.
 
 ## Next useful milestone
 
-Prove uniform third derivatives and Taylor remainder estimates, derive the
-nonlinear energy estimate, and connect these to the radius criterion. Extend
+Derive the nonlinear energy estimate and connect the proved geometric motion
+and remainder estimates to the radius criterion. Extend
 the concrete second-order enclosure checks from branch 0 to all eight branches. The exact first-order coordinates, positive multipliers and
 inverse identities are now checked against actual geometric derivatives for all
 eight branches. In parallel, extend

@@ -67,11 +67,12 @@ every branch index.
 inverse-entry, and gradient-norm bounds against those exact quantities and prove
 a bound on the actual directional derivatives.
 
-These results do not establish nonlinear local rigidity: uniform third derivative
-bounds, Taylor estimates and the nonlinear energy estimate remain to be proved,
+These results do not establish nonlinear local rigidity: the nonlinear energy
+estimate remains to be proved,
 as does geometric coverage by the eight branches. The existing radius criterion
 still carries its two explicit analytic motion/energy hypotheses. Branch 0's
-motion estimate is now derived from explicit geometric Taylor errors below.
+motion estimate is now derived from actual geometric constraints and the radius
+bound, using the Taylor estimates below.
 
 `lower_bound_from_boundary_classification` is deliberately a **conditional**
 theorem: its containment, translation, and boundary-classification hypotheses are
@@ -96,9 +97,33 @@ derivatives and checks the Hessian norms and mixed/normal contractions.
 truncated inputs. `RadiusMotion` derives the motion estimate from checked
 linear reconstruction, nonnegative constraints and explicit Taylor errors.
 `MotionFixture` checks branch 0's motion coefficients and specializes that
-estimate to actual geometric constraint values. Its Taylor-error hypothesis
-remains explicit. No radius or neighborhood rigidity conclusion is claimed
-without the missing analytic bounds and energy estimate.
+estimate to actual geometric constraint values. The later `TaylorFixture`
+removes its Taylor-error hypothesis. No radius or neighborhood rigidity
+conclusion is claimed without the missing energy estimate and branch coverage.
+
+### Uniform third derivatives and Taylor estimates
+
+`PhysicalNorm` proves the determinant, triangle, translation and rotation length
+bounds in the scaled metric. `PhysicalGeometry` proves container diameter,
+centroid containment and exact unit-triangle circumradius. `RotationCalculus`
+proves the first three derivatives of the actual rotation path everywhere;
+`RotationIdentities` binds the actual pair constraint to the centroid and relative
+rotation model. `PairDerivatives` differentiates that model three times.
+
+`BoundaryThird` and `PairThirdBound` prove uniform diagonal third-directional
+bounds along each actual straight displacement path: `4*||d||^3` for boundary
+constraints and `45*||d||^3` for pair constraints when `||d|| <= 1/100` and the
+path parameter is in `[0,1]`. These are the bounds needed by one-variable Taylor;
+no full mixed third-derivative tensor formalization is claimed.
+
+`LocalTaylor` applies mathlib's Taylor theorem with its exact `1/6` Lagrange
+remainder factor and derives first-order errors from actual second derivatives.
+`TaylorEnclosures` checks the rounded error, growth and weighted remainder
+coefficients. `TaylorFixture` accepts those checks for branch 0 and proves the
+actual errors, growth and weighted remainder bounds. Branch 0's geometric motion
+inequality now has no Taylor-error or motion-estimate hypothesis. The nonlinear
+energy estimate, all concrete branch checks and geometric branch coverage remain
+necessary to obtain local rigidity and the global endpoint classification.
 
 ## Remaining modules, in dependency order
 
@@ -116,10 +141,11 @@ without the missing analytic bounds and energy estimate.
    points. Prove the disk/coarse-cell injection and all six symmetry actions;
    compute and certify the 8,008-to-1,396 reduction.
 3. **Local analytic theorems.** Define the actual 16-variable constraint functions
-   and the 15-normal-variable pivot chart. Formalize mixed third derivative bounds,
-   Taylor estimates along each straight displacement path and the eight
-   separating-edge branches. Prove a third-derivative bound uniform over the path
-   parameter in `[0,1]`, scaled by the cube of the displacement sup norm. Check
+   and the 15-normal-variable pivot chart. Prove the remaining tube bounds,
+   the eight separating-edge branches and the nonlinear energy estimate. The
+   uniform third derivatives and Taylor estimates along straight displacement
+   paths are now proved. Extend all concrete coefficient checks to all eight
+   branches. Check
    the exact multiplier, inverse, Hessian, and curvature certificates. Prove the
    radius `1/300` and each of the three tubes. The scalar implication already
    implemented is only their final step.
