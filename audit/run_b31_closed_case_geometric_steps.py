@@ -11,6 +11,7 @@ p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--case',type=int,required=True)
 p.add_argument('--start',type=int,required=True)
 p.add_argument('--end',type=int,required=True)
+p.add_argument('--paged-blockers',action='store_true',help='Generate new groups with bounded blocker lookup pages.')
 a = p.parse_args(); case = a.case
 meta = json.loads((root/f'audit/b31-case{case}-spatial-angle-block-export.json').read_text())
 groups = json.loads((root/f'audit/b31-case{case}-indexed-row-group-export.json').read_text())['groups']
@@ -60,7 +61,8 @@ for step in range(a.start,a.end+1):
     for index in ids:
         path = root/f'Sixpack/EndpointB31Case{case}IndexedGroups/Group{index}.lean'
         if not path.exists():
-            call([sys.executable,'audit/generate_b31_closed_case_indexed_groups.py','--case',str(case),'--groups',str(index)])
+            call([sys.executable,'audit/generate_b31_closed_case_indexed_groups.py','--case',str(case),'--groups',str(index)] +
+                 (['--paged-blockers'] if a.paged_blockers else []))
         build(f'Sixpack.EndpointB31Case{case}IndexedGroups.Group{index}')
     call([sys.executable,'audit/check_b31_closed_case_indexed_groups.py','--case',str(case)])
     call([sys.executable,'audit/generate_b31_closed_case_geometric_steps.py','--case',str(case),'--steps',str(step)])

@@ -1524,3 +1524,39 @@ certificate or local-label geometry. The production case-970 third-step group
 checks, its remaining geometric batches and the remaining main-chain checks
 continue. Global root classification and the final lower-bound theorem remain
 unproved. Overall completion remains about 60% (55–65%).
+
+
+## Third case-970 pruning step and bounded blocker lookups
+
+`b31_case970_step2_pruning_preserves_packing` and
+`b31_case970_prefix3_preserves_packing` are default-imported and fully
+dependency-audited. The third step deletes 367 component-2 regions against
+16 surviving component-1 blockers using 59 geometric coverage groups.
+The accepted three-step chain deletes 513 owners using 81 groups. Its table
+contains 612 blocks / 78,576 ordered pairs in batches 0–48.
+
+`b31_case970_selected_root_records_enter_snapshot3` extends the actual selected
+root-record handoff through the third checked deletion. Incoming root selection
+and the remaining five steps are still obligations. The step compiles at
+771 MiB, the chain at 332 MiB and the root composition at 421 MiB. The targeted
+step audit checks 492 declarations. The default build passes (5,614 jobs,
+658 MiB); the full canonical audit checks 20,706 listed requests / 20,705
+individual declarations, all using only standard logical axioms.
+
+The closed-case group constructor now optionally uses 32-entry blocker lookup
+pages. The independent source auditor checks every page against the actual
+production blocker array and validates every lookup branch; a corrupted-page
+negative control is rejected. On production case-970 group 81 (714 blockers),
+the dense version compiled in 130 seconds at 1,229 MiB and the paged version
+in 44 seconds at 868 MiB. Both kernel-check the same source-audited coverage
+and geometric exclusion obligations. The paged pilot's three public theorems
+pass their dependency audit. These are observations from one pilot, not a
+universal performance guarantee; the memory cap is unchanged.
+
+The serial continuation now generates new groups for steps 3–5 with paged
+blocker lookups. That pilot and the later groups are not part of this default
+pruning checkpoint. Remaining case-970 batches and main-chain groups continue
+checking separately. Actual source/step/chain audits, forbidden-proof scanning
+and original archive/file integrity pass. Global root classification and the
+final lower-bound theorem remain unproved. Overall completion remains about
+60% (55–65%).

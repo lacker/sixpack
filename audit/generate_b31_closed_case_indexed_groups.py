@@ -4,6 +4,7 @@ import argparse, json
 
 root = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(); parser.add_argument('--case', type=int, required=True); parser.add_argument('--groups', default='0')
+parser.add_argument('--paged-blockers', action='store_true', help='Use bounded 32-entry blocker lookup pages.')
 args = parser.parse_args(); case = args.case
 selected = list(map(int, args.groups.split(',')))
 plan = json.loads((root/f'audit/b31-case{case}-indexed-row-group-export.json').read_text())['groups']
@@ -61,7 +62,15 @@ for group_index in selected:
     s += ''.join(f'  | {local} => {p}Block{local}\n' for local in range(P))+f'  | _ => {p}Block0\n\n'
     s += scalar(p+'GroupNodes', 'Fin 7023', group)+scalar(p+'BlockerNodes', 'Fin 7023', blockers)
     s += f'def {p}Group (part : Fin {G}) : Fin 7023 := {p}GroupNodes.getD part.val 0\n\n'
-    s += f'def {p}Blockers (part : Fin {W}) : Fin 7023 := {p}BlockerNodes.getD part.val 0\n\n'
+    if args.paged_blockers:
+        pages = (W+31)//32
+        for page in range(pages):
+            s += scalar(f'{p}BlockerNodePage{page}', 'Fin 7023', blockers[page*32:(page+1)*32])
+        s += f'def {p}Blockers (part : Fin {W}) : Fin 7023 :=\n  match part.val/32 with\n'
+        s += ''.join(f'  | {page} => {p}BlockerNodePage{page}.getD (part.val%32) 0\n' for page in range(pages))
+        s += '  | _ => 0\n\n'
+    else:
+        s += f'def {p}Blockers (part : Fin {W}) : Fin 7023 := {p}BlockerNodes.getD part.val 0\n\n'
     s += f'def {p}OwnerPosition (block : Fin {P}) (part : Fin {G}) : ℕ :=\n  match block.val with\n'
     s += ''.join(f'  | {local} => (#['+','.join(map(str, positions))+'] : Array ℕ).getD part.val 0\n' for local, positions in enumerate(row['owner_positions']))+'  | _ => 0\n\n'
     s += f'''private theorem {p}_owner_positive (block : Fin {P}) : 0 < ({p}Blocks block).ownerSize := by

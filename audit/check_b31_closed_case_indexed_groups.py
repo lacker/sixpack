@@ -59,7 +59,17 @@ for path in sources:
         body = text.split(f'def {p}{tag}Nodes : Array (Fin 7023) := #[', 1)[1].split(']', 1)[0]
         assert list(map(int, body.split(','))) == nodes
     assert f'def {p}Group (part : Fin {G}) : Fin 7023 := {p}GroupNodes.getD part.val 0\n' in text
-    assert f'def {p}Blockers (part : Fin {W}) : Fin 7023 := {p}BlockerNodes.getD part.val 0\n' in text
+    if f'def {p}BlockerNodePage0 ' in text:
+        pages = (W+31)//32
+        for page in range(pages):
+            body = text.split(f'def {p}BlockerNodePage{page} : Array (Fin 7023) := #[', 1)[1].split(']', 1)[0]
+            assert list(map(int, body.split(','))) == blockers[page*32:(page+1)*32]
+        body = text.split(f'def {p}Blockers (part : Fin {W}) : Fin 7023 :=\n', 1)[1].split('\n\n', 1)[0]
+        wanted = '  match part.val/32 with\n'
+        wanted += ''.join(f'  | {page} => {p}BlockerNodePage{page}.getD (part.val%32) 0\n' for page in range(pages))
+        assert body == wanted+'  | _ => 0'
+    else:
+        assert f'def {p}Blockers (part : Fin {W}) : Fin 7023 := {p}BlockerNodes.getD part.val 0\n' in text
     body = text.split(f'def {p}OwnerPosition (block : Fin {P}) (part : Fin {G}) : ℕ :=\n', 1)[1].split('\n\n', 1)[0]
     wanted = '  match block.val with\n'
     wanted += ''.join(f'  | {local} => (#['+','.join(map(str, positions))+'] : Array ℕ).getD part.val 0\n' for local, positions in enumerate(row['owner_positions']))
