@@ -1000,3 +1000,33 @@ publication and incoming root coverage remain separate obligations.
 The accepted default checkpoint ends at batch 285. Two complete pruning steps
 are proved; nineteen steps and the global classification remain unproved. The
 overall estimate remains about 60% (55–65%).
+
+
+## Cartesian formulation and exact coordinate equivalence
+
+`CartesianPacking` makes the physical interpretation explicit, with ordinary
+Cartesian squared edge length `x²+y²`, containment in the outer convex hull,
+and disjoint topological interiors. `cartesianHomeomorph` proves the invertible
+coordinate change `(x,z) ↦ (x,sqrt(3)*z)`; its inverse divides the second
+coordinate by `sqrt(3)`. The affine hull and homeomorphic interior identities
+are proved, not assumed.
+
+`cartesian_packing_in_iff` and `cartesian_packing_from_iff` prove exact equivalence
+between `CartesianPackingIn` and the weighted `PackingIn` model. The equivalence
+preserves boundary contacts and allows either vertex ordering.
+`cartesian_packing_normalizes` maps any actual Cartesian packing in a positive-
+side-length equilateral outer hull into `Packing L`, preserving the physical
+squared distances in the coordinate change. `cartesian_candidate_upper_bound`
+proves the six-piece upper bound in every Cartesian equilateral outer hull of
+side `optimum`.
+
+The analytic module passed at 358 MiB. Initial inverse-division and implicit
+function-coercion rewrites failed; explicit nonzero division and injectivity
+identities resolved them. The default build passed (4,820 jobs, 509 MiB).
+The complete shared dependency audit passed in 54 seconds at 546 MiB, covering
+12,741 listed checks and 12,740 distinct declarations, including all eleven
+new Cartesian theorem dependencies. Only the three standard logical axioms
+occur. No forbidden proof shortcuts were found, and original integrity passes.
+This binds the model to Cartesian packings; it does not discharge the still
+unproved global classification or lower bound. The third-step group checks
+continue independently.

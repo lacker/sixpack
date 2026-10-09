@@ -12753,3 +12753,14 @@ import Sixpack
 #print axioms Sixpack.b31_spatial_angle_block4334_pair_excluded
 #print axioms Sixpack.b31_spatial_angle_block4335_accepted
 #print axioms Sixpack.b31_spatial_angle_block4335_pair_excluded
+#print axioms Sixpack.delta_toCartesian
+#print axioms Sixpack.cartesian_delta_norm
+#print axioms Sixpack.hull_toCartesian
+#print axioms Sixpack.interior_cartesian_image
+#print axioms Sixpack.cartesian_packing_in_iff
+#print axioms Sixpack.fromCartesian_toCartesian
+#print axioms Sixpack.toCartesian_fromCartesian
+#print axioms Sixpack.scaled_delta_fromCartesian
+#print axioms Sixpack.cartesian_packing_from_iff
+#print axioms Sixpack.cartesian_packing_normalizes
+#print axioms Sixpack.cartesian_candidate_upper_bound

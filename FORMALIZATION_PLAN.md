@@ -745,3 +745,12 @@ checks geometric and owner/blocker coverage, composes the actual snapshot step,
 and runs the shared axiom audit. This does not discharge incoming root coverage
 or the other endpoint branches. After accepted assemblies, expand default
 imports and the canonical audit list, rebuild, scope-audit and publish.
+
+
+`CartesianPacking` now proves the exact physical coordinate interpretation:
+`CartesianPackingIn` uses squared Euclidean edge lengths, actual convex hulls
+and disjoint interiors. Both directions of the coordinate equivalence, arbitrary
+Cartesian container normalization, and the upper-bound construction in arbitrary
+Cartesian outer hulls are compiled and axiom-audited. After the canonical model
+lower bound is proved, `cartesian_packing_normalizes` supplies its transport to
+actual Cartesian packings. No further geometric coordinate hypothesis is needed.
