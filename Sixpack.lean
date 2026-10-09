@@ -68,3 +68,9 @@ import Sixpack.AffineEndpoints
 import Sixpack.NormalCone
 import Sixpack.SeparatingAxis
 import Sixpack.LocalPackingRadius
+import Sixpack.TubeGeometry
+import Sixpack.TubeTrigonometry
+import Sixpack.TubeCurve
+import Sixpack.TubeCurveEnergy
+import Sixpack.TubeLinear
+import Sixpack.TubeEstimates

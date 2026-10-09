@@ -193,6 +193,28 @@ no geometric feasibility, analytic bound or certificate-acceptance hypotheses
 standing in for proved results. The chart representation is still an explicit
 local-domain hypothesis; coverage of arbitrary endpoint packings remains.
 
+### Tube chart and critical curve
+
+`TubeGeometry` implements the anchor E chart using 15 normal coordinates and a
+separate critical angle. It proves unit side lengths, positive orientation,
+geometric separating-axis necessity, and exact agreement with the centroid
+normal path at critical angle zero. `TubeLinear` binds the actual normal
+derivatives at the origin to the checked first-order matrix with pivot column 8
+removed. The existing inverse reconstructs every normal vector, and the checked
+multipliers reproduce the size coordinate. These are proved for all eight
+branches without a new Jacobian-acceptance hypothesis.
+
+`TubeTrigonometry` proves the cosine fourth-order remainder bound by Taylor's
+theorem and derives the sine and cosine defect bounds in `LOCAL_TUBE.md`.
+`TubeCurve` checks the finite branch-to-constraint reduction and proves all
+retained constraint values on the actual anchor rotation curve.
+`TubeCurveEnergy` checks `3 λᵀz = pivotCurvature` from the existing exact
+multipliers, proves the actual curve energy identity and lower bound, and proves
+rigidity within each retained branch when normal displacement is zero.
+`TubeEstimates` proves the final algebraic contradiction from explicit motion
+and energy inequalities. Derivation of those inequalities throughout each tube
+is still required; no full tube or packing theorem follows from their assumption.
+
 ## Remaining modules, in dependency order
 
 1. **Exact algebra and geometric primitives.** Extend the proved rational
@@ -211,8 +233,11 @@ local-domain hypothesis; coverage of arbitrary endpoint packings remains.
 3. **Local analytic theorems.** The actual 16-variable constraints, nonlinear
    energy estimate, all eight coefficient checks, uniform diagonal third
    derivatives, Taylor estimates and finite branch cover are proved. The radius
-   `1/300` is proved for actual packings in the rotation chart. Define the anchor-based tube chart, prove
-   its derivative bounds and normal-motion estimates, and prove all three tubes.
+   `1/300` is proved for actual packings in the rotation chart. The anchor-based
+   tube chart, normal Jacobian at the origin and exact critical-curve energy are
+   proved. Prove the angle-dependent normal derivative identities and uniform
+   remainder bounds, bind the coefficient enclosures to geometry, prove normal
+   motion and energy estimates, check the excluded axes, and prove all three tubes.
 4. **Whole-region labels.** Prove exact recentering from the rational cover to the
    candidate container, including reflections and rotations. Prove uniform
    relative-angle bounds and the critical-vertex interpolation bound. Check each

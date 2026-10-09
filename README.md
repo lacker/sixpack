@@ -55,6 +55,8 @@ oriented nondegenerate triangles with disjoint interiors. The combined radius
 theorem now starts from an actual packing whose five core pieces are in the
 rotation chart, and forces all displacement coordinates to zero. Tube arguments,
 global chart coverage and production search certificates remain.
+The tube anchor chart, normal Jacobian and exact critical-curve energy are now
+proved. Uniform normal estimates and the full tube certificates remain.
 Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference

@@ -322,6 +322,23 @@ sup-norm radius `1/300`. Nonpositive size displacement implies `d = 0`.
 There is no axis-feasibility assumption and no imported numerical result.
 The sixth triangle is unrestricted by the chart hypotheses.
 
+## Tube chart and critical curve
+
+The tube foundation is now in Lean. `TubeGeometry` implements the critical
+vertex anchor and proves its side lengths, orientation and geometric axes.
+`TubeLinear` reuses the checked first-order matrix minor, inverse and objective
+identity by proving exact equality to the centroid chart at zero critical angle.
+`TubeTrigonometry` proves the sharp cosine remainder; `TubeCurve` checks the
+finite reduction to 19 distinct retained constraints and proves their exact
+values on the critical curve. `TubeCurveEnergy` independently checks the weighted
+curvature and proves its actual energy identity and positive lower bound.
+Each retained branch is rigid on the curve with zero normal displacement.
+
+`TubeEstimates` proves the final contradiction from explicit motion and energy
+estimates. It does not supply those estimates. Angle-dependent normal derivatives,
+uniform remainders, geometric binding of the coefficient enclosures and the 22
+excluded tube axes remain before any of the three full tubes is proved.
+
 ## Next useful milestone
 
 Formalize the three tubes, their recentering maps and chart
