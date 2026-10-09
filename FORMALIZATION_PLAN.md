@@ -754,3 +754,12 @@ Cartesian container normalization, and the upper-bound construction in arbitrary
 Cartesian outer hulls are compiled and axiom-audited. After the canonical model
 lower bound is proved, `cartesian_packing_normalizes` supplies its transport to
 actual Cartesian packings. No further geometric coordinate hypothesis is needed.
+
+
+For the final physical theorem, `cartesian_packing_normalizes_nonnegative`
+requires only a nonnegative physical container side length, its three Cartesian
+squared side lengths and the actual packing. It proves positivity by excluding
+the singleton hull of a zero-side outer triple, then applies the accepted
+normalizer. Thus the final Cartesian lower bound will not need an extra
+nondegeneracy assumption once the canonical model lower bound is discharged.
+All five degenerate-container prerequisites are compiled and axiom-audited.

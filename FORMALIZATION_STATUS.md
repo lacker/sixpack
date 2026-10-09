@@ -1030,3 +1030,21 @@ occur. No forbidden proof shortcuts were found, and original integrity passes.
 This binds the model to Cartesian packings; it does not discharge the still
 unproved global classification or lower bound. The third-step group checks
 continue independently.
+
+
+## Nonnegative Cartesian container sizes
+
+`CartesianContainer` proves that a zero-side equilateral outer triple has a
+singleton hull and cannot contain even one unit edge. Consequently every actual
+Cartesian packing whose physical side length is nonnegative has positive side
+length. `cartesian_packing_normalizes_nonnegative` discharges the positive-side
+prerequisite internally and normalizes every such packing into `Packing L`.
+No independent outer nondegeneracy hypothesis remains.
+
+All five public theorems compile (3.6 seconds, 355 MiB). The default build passes
+(4,821 jobs, 441 MiB), and the complete shared audit passes in 53 seconds at
+546 MiB with only standard logical axioms: 12,746 listed checks and 12,745
+distinct declarations. No forbidden proof shortcuts were found, and original
+integrity still passes. This closes the degenerate-side case of the Cartesian
+transport; the global lower bound and the remaining production classification
+are still unproved. The third-step group checks continue separately.

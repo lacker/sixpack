@@ -12764,3 +12764,8 @@ import Sixpack
 #print axioms Sixpack.cartesian_packing_from_iff
 #print axioms Sixpack.cartesian_packing_normalizes
 #print axioms Sixpack.cartesian_candidate_upper_bound
+#print axioms Sixpack.cartesian_delta_zero
+#print axioms Sixpack.cartesian_zero_outer_hull
+#print axioms Sixpack.cartesian_zero_outer_no_packing
+#print axioms Sixpack.cartesian_packing_outer_positive
+#print axioms Sixpack.cartesian_packing_normalizes_nonnegative

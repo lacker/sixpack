@@ -231,3 +231,4 @@ import Sixpack.EndpointB31GeometricSteps.Step0
 import Sixpack.EndpointB31GeometricChains.Prefix2
 import Sixpack.OuterNormalization
 import Sixpack.CartesianPacking
+import Sixpack.CartesianContainer
