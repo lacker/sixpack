@@ -75,11 +75,12 @@ acceptance yields the real scalar rigidity criterion when supplied with the two
 analytic estimates. `radius_branch_zero_estimates_force_zero` instantiates that
 criterion with the actual branch data. A truncated multiplier list is rejected.
 
-The input numbers are **not yet proved to bound the actual geometric functions**.
-In particular, acceptance does not establish the gradient/Hessian identities,
+Radius arithmetic acceptance alone does not establish gradient/Hessian identities,
 matrix inverse identities, outward enclosures, mixed third derivative estimates,
-Taylor remainder bounds, or eight-branch geometric coverage. Those currently
-remain supported by the audited written argument and Python checks.
+Taylor remainder bounds, or eight-branch geometric coverage. The later exact
+first-order increment below now verifies the gradients and inverse identities,
+and their branch-0 enclosures. Hessian/curvature/third-derivative estimates, Taylor
+bounds and branch coverage still require formal proofs.
 
 ## Reproduction
 
@@ -109,11 +110,59 @@ small arithmetic fixture is practical; memory use and large graph-certificate
 compression still require investigation. No native evaluation result serves as proof evidence, and no custom
 axiom or proof placeholder is introduced.
 
+## Exact first-order layer
+
+The next increment verifies all eight original local branches, not just generic
+matrix identities. `ExactLinear` checks positive multipliers, the dual objective
+identity, the one-dimensional kernel, a right inverse, and full reconstruction
+in Q(√13), with soundness proofs over the reals.
+
+`LocalGeometry` reconstructs all gradient entries from the formally verified
+candidate vertices. `LocalDerivatives` defines the original centroid translation
+and sine/cosine rotation chart along arbitrary 16-coordinate directions, proves
+it preserves unit sides, and proves the actual directional derivatives of every
+boundary and separating-edge constraint. These derivatives are identified with
+the executable exact gradient formulas.
+
+`audit/export_linear_prototype.py` exports untrusted candidate matrices and
+multipliers for all eight branches. `LinearFixture` kernel-checks each matrix
+against the geometric gradient formulas, proves all 15 selected constraints are
+active at the candidate, and checks every multiplier/inverse/kernel identity.
+For each branch, nonnegative linearized constraints and a nonpositive container
+side derivative force all linearized slacks to vanish and the direction to be a
+multiple of the certified pivot vector. `LinearFamily` supplies a theorem for
+every index in the eight-branch family. A zero multiplier is rejected.
+
+`LinearEnclosures` and `EnclosureFixture` additionally bind branch 0's 15
+multiplier lower bounds, 240 inverse absolute bounds, 15 gradient norm bounds,
+and the coordinate bounds on its kernel vector
+to its exact certified matrices. Their soundness proof yields an actual geometric
+directional-derivative bound for directions with bounded coordinates. This is
+part of the radius certificate's geometric bridge; the Hessian, curvature and
+third-derivative bounds remain outside that bridge.
+
+To regenerate the new fixture, use the Python standard library:
+
+```sh
+python3 audit/export_linear_prototype.py
+lake build
+```
+
+The source data hash is in `certificates/linear-prototype.json`. The exporter
+imports the old routines as generators; Lean verifies their outputs independently.
+No saved rank claim, determinant, success flag or Python assertion is trusted.
+The eight-branch source is checked with ordinary kernel reduction, and timing
+is recorded in `audit/linear-prototype-kernel.log`. The successful local build
+checked and compiled the eight-branch fixture in about 163 seconds; the earlier
+single-branch check took about 21 seconds. These are small local certificates,
+not a performance estimate for the global graph data.
+
 ## Next useful milestone
 
-Connect the actual branch-0 constraint functions to the radius criterion. Start
-with exact first-order coordinates and the positive multiplier and inverse
-identities, then prove the Taylor motion/energy estimates. In parallel, extend
+Connect second derivatives, curvature and Taylor motion/energy estimates to the
+radius criterion. The exact first-order coordinates, positive multipliers and
+inverse identities are now checked against actual geometric derivatives for all
+eight branches. In parallel, extend
 the search prototype with channel-specific local labels and a small genuine
 triangle-region certificate. Only after the geometric bindings are proved does
 accepting a search or radius certificate contribute to the global lower bound.

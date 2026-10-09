@@ -16,6 +16,8 @@ Lean. Original success logs are retained as reference material.
 - `audit/`: fresh execution logs, integrity checks, independent symbolic audit,
   and the audit report. Disposable replay directories are ignored by Git.
 - `Sixpack/`: Lean proofs, with no proof placeholders or custom geometric axioms.
+- [FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md): approximate completion and
+  milestone status.
 - [FORMALIZATION_PLAN.md](FORMALIZATION_PLAN.md): theorem boundaries, current
   formal status, and remaining work.
 - [audit/REPORT.md](audit/REPORT.md): audit findings and replay status.
@@ -37,7 +39,9 @@ lake env lean audit/PrintAxioms.lean
 The formal results cover exact construction checks, the scaled metric, conservative
 projection logic, local-omission logic, centering, and small sound certificate
 checkers. The radius branch prototype checks rational arithmetic, while its
-geometric derivative bounds remain external. Consult the plan for exact
+second/third derivative bounds remain external. The exact first-order local
+layer now checks all eight branches against the actual rotation-chart derivatives,
+and checks branch 0’s first-order enclosures. Consult the plan for exact
 theorem names and limitations. Passing this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference

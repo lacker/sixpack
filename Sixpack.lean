@@ -13,3 +13,10 @@ import Sixpack.IntervalCertificate
 import Sixpack.RadiusRigidity
 import Sixpack.RadiusCertificate
 import Sixpack.RadiusFixture
+import Sixpack.ExactLinear
+import Sixpack.LocalGeometry
+import Sixpack.LocalDerivatives
+import Sixpack.LinearFixture
+import Sixpack.LinearFamily
+import Sixpack.LinearEnclosures
+import Sixpack.EnclosureFixture

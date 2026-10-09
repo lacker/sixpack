@@ -49,6 +49,29 @@ The following modules now build as part of the default target:
 The fixture uses `decide +kernel`, not native evaluation as proof evidence.
 See [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md) for measurements and precise scope.
 
+### Exact first-order local layer
+
+`ExactLinear` supplies a computable Q(√13) matrix checker with proofs of real
+surjectivity, kernel membership, reconstruction, and positive-multiplier rigidity
+for linearized feasible motions. `LocalGeometry` binds its coefficients to the
+actual candidate vertices and centroid offsets. `LocalDerivatives` proves the
+unit-side rotation chart and directional derivatives of every boundary and
+separating-edge constraint using sine/cosine calculus.
+
+`LinearFixture` kernel-checks the active rows, all multiplier and inverse
+identities, and geometric gradient binding for all eight original local branches.
+Its first-order motion theorems leave exactly the certified pivot direction.
+`LinearFamily` indexes the eight accepted certificates and proves acceptance for
+every branch index.
+`LinearEnclosures` and `EnclosureFixture` check branch 0's rounded multiplier,
+inverse-entry, and gradient-norm bounds against those exact quantities and prove
+a bound on the actual directional derivatives.
+
+These results do not establish nonlinear local rigidity: second/third derivative
+bounds, curvature/Hessian identities and Taylor estimates remain to be connected,
+as does geometric coverage by the eight branches. The existing radius criterion
+still carries its two explicit analytic motion/energy hypotheses.
+
 `lower_bound_from_boundary_classification` is deliberately a **conditional**
 theorem: its containment, translation, and boundary-classification hypotheses are
 visible arguments. It does not certify those hypotheses for packings. It proves

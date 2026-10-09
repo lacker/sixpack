@@ -1,0 +1,19 @@
+{
+  "source": "six_triangle_packing/local_certificate.json",
+  "source_sha256": "fd7fe2d3673ac37619232590163c707e46872bbbcec6bb414a6c05ab2b09ca59",
+  "branches": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "pivot": 8,
+  "constraints": 15,
+  "coordinates": 16,
+  "checked": "Positive multipliers, dual identity, kernel, right inverse, reconstruction, and geometric gradient binding",
+  "not_checked": "Nonlinear Taylor bounds and global coverage"
+}

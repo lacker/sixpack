@@ -23,4 +23,5 @@ jobs:
       - name: Check generated prototype data
         run: |
           python3 audit/export_radius_prototype.py
-          git diff --exit-code -- Sixpack/RadiusFixture.lean certificates/radius-prototype.json
+          python3 audit/export_linear_prototype.py
+          git diff --exit-code -- Sixpack/RadiusFixture.lean Sixpack/LinearFixture.lean certificates/radius-prototype.json certificates/linear-prototype.json

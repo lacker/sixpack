@@ -64,7 +64,7 @@ compiled C++ checkers and the pinned Python dependencies.
   rotation jets. The pivot comparison holds symbolically for arbitrary `C,S`
   subject to `C²+3S²=1`, not merely at the three coefficient-extraction samples.
   The original derivative routines are used only as outputs to compare against.
-- Lean build passed. The 48 printed theorem dependency checks contain only
+- Lean build passed. The initial 48 printed theorem dependency checks contained only
   `propext`, `Classical.choice`, and `Quot.sound` (or subsets thereof).
 
 The collector `finalize_replay.py` checks that the completed full runner visited
@@ -163,3 +163,14 @@ formal proof. In particular:
 The implementation plan in `FORMALIZATION_PLAN.md` identifies the remaining
 proof boundaries and a certificate-checking strategy. No placeholder theorem
 claims the missing global result.
+
+## Subsequent formalization increments
+
+The original audit evidence above records the initial proof boundary. Later
+certificate prototypes and the exact first-order local layer are documented in
+`PROTOTYPE_REPORT.md`, with current status in `FORMALIZATION_STATUS.md`.
+All eight local first-order branches are now checked against derivatives of the
+actual geometric chart, including active constraints and exact multiplier and
+inverse identities. Branch 0's first-order enclosures and kernel coordinate bounds are also checked. Nonlinear
+Taylor/curvature estimates, branch coverage and the global exclusions remain
+unformalized; the global lower bound is still not a Lean theorem.
