@@ -571,10 +571,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 220 production batches pass, giving 3,342 accepted
+603 MiB peak. The first 252 production batches pass, giving 3,847 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 220, then prove
+without expanding the default import graph. Continue from batch 252, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -605,7 +605,7 @@ proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
 Final snapshot choices and their actual labels are now bound to the two
 accepted leaf-refinement parent cases. `b31_final_snapshot_no_packing` composes
 this complete domain binding with the accepted refinement and leaf closure.
-Accept remaining geometric blocks from batch 220,
+Accept remaining geometric blocks from batch 252,
 prove every removed owner's complete row coverage against its current blocker
 domain, and assemble geometric pruning with the accepted survivor transitions.
 The full production pruning theorem and root reachability remain open.
@@ -719,3 +719,18 @@ run from its current live position through 285, then accept step-2 groups
 pipeline enforces exact terminal success of all required batches before group
 builds begin. Default imports and the axiom audit remain separate acceptance
 steps. Do not claim the third pruning step before its assembly compiles.
+
+
+Batches through 251 are now accepted in the default build. The table contains
+3,847 accepted blocks covering 153,062 ordered pairs; continue the live batch
+run through 285 before assembling step 2.
+
+For dependency audits, `python3 audit/run_shared_axiom_audit.py --log PATH`
+uses the canonical `audit/PrintAxioms.lean` declaration list and automatically
+checks its exact scope and standard-only axiom union. Lean's official collector
+shares visited declarations to avoid repeatedly traversing common dependencies.
+Ordinary `#print axioms` logs remain supported by `audit/check_axioms.py`.
+Run after required imports compile, or pass an explicit `--source` containing
+imports of all accepted modules and the exact desired print list. Do not change
+the audit scope during a run. The collector is audit tooling, not a substitute
+for kernel checks of arithmetic certificates or geometric lemmas.

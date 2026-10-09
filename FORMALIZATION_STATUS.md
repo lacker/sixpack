@@ -639,20 +639,20 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 3,342 blocks, covering 144,466 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and 220
+`EndpointB31SpatialAnglePilot` accepts 3,847 blocks, covering 153,062 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 252
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The 220 production batches all pass with peaks below 1,434 MiB; the latest
+The 252 production batches all pass with peaks below 1,434 MiB; the latest
 full default build peaks at 1,639 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
-220 are accepted (batches 0–219). The complete first pruning step is proved
-below; 6,534 of the 9,876 proposed blocks still need acceptance, followed by
+252 are accepted (batches 0–251). The complete first pruning step is proved
+below; 6,029 of the 9,876 proposed blocks still need acceptance, followed by
 checked coverage and composition of the remaining 20 pruning rectangles.
 
 `RectanglePruning` now proves that checked rectangle coverage preserves every
@@ -940,3 +940,37 @@ at any failed build; it does not expand the default imports or replace axiom
 audits. The completed checkpoint contains only batches through 219. Nineteen
 geometric pruning steps, incoming root coverage and the global classification
 remain unproved.
+
+
+## Additional third-step blocks and shared dependency audit
+
+Batches 220–251 add 505 accepted geometric blocks and 8,596 ordered pairs. All
+32 builds passed below 1,434 MiB, and no forbidden proof shortcuts were found.
+The default build passed (4,785 jobs, 1,639 MiB). The source scope comparison
+matched actual certificate bindings and paths; original-file integrity remains
+separate from mathematical acceptance.
+
+The complete dependency audit now covers 11,750 listed checks and 11,749 distinct
+declarations. `SharedAxiomAudit` uses Lean's own `Lean.CollectAxioms.collect`,
+exactly as `#print axioms` does, with a shared visited set across the requested
+names. It checks that every requested declaration exists in the checked kernel
+environment and reports the union of their dependencies. A standard-only union
+bounds every individual declaration's dependencies; it does not report exact
+per-declaration sets. This audit is operational evidence and supplies no proof
+or computational premise to the packing theorems.
+
+The complete earlier 10,739-declaration scope and its union matched the ordinary
+`#print axioms` audit exactly. A temporary negative-control theorem exposed its
+forbidden axiom in both collectors; the strict checker rejected the shared
+result. Unknown declarations, omitted or extra scope, duplicated report entries
+and truncated JSON are rejected. The complete expanded 11,749-declaration audit
+passed at 542 MiB with only `propext`, `Classical.choice` and `Quot.sound`.
+A first attempt started before the rebuilt root import exposed the new names;
+the collector correctly rejected the missing declaration. Explicit batch imports
+resolved this scheduling issue. The runner now automatically checks the result; its final full-scope run passed
+in 54 seconds.
+
+The existing guarded run continues through batch 285 before the step-2 group
+and assembly pipeline begins. Batches through 251 are the accepted default
+checkpoint; later generated sources are not accepted by this status statement.
+The remaining nineteen pruning steps and global classification are unproved.
