@@ -1,143 +1,4 @@
 import Sixpack
-import Sixpack.CoarseCaseReduction.Batch0
-import Sixpack.CoarseCaseReduction.Batch1
-import Sixpack.CoarseCaseReduction.Batch2
-import Sixpack.CoarseCaseReduction.Batch3
-import Sixpack.CoarseCaseReduction.Batch4
-import Sixpack.CoarseCaseReduction.Batch5
-import Sixpack.CoarseCaseReduction.Batch6
-import Sixpack.CoarseCaseReduction.Batch7
-import Sixpack.CoarseCaseReduction.Batch8
-import Sixpack.CoarseCaseReduction.Batch9
-import Sixpack.CoarseCaseReduction.Batch10
-import Sixpack.CoarseCaseReduction.Batch11
-import Sixpack.CoarseCaseReduction.Batch12
-import Sixpack.CoarseCaseReduction.Batch13
-import Sixpack.CoarseCaseReduction.Batch14
-import Sixpack.CoarseCaseReduction.Batch15
-import Sixpack.CoarseCaseReduction.Batch16
-import Sixpack.CoarseCaseReduction.Batch17
-import Sixpack.CoarseCaseReduction.Batch18
-import Sixpack.CoarseCaseReduction.Batch19
-import Sixpack.CoarseCaseReduction.Batch20
-import Sixpack.CoarseCaseReduction.Batch21
-import Sixpack.CoarseCaseReduction.Batch22
-import Sixpack.CoarseCaseReduction.Batch23
-import Sixpack.CoarseCaseReduction.Batch24
-import Sixpack.CoarseCaseReduction.Batch25
-import Sixpack.CoarseCaseReduction.Batch26
-import Sixpack.CoarseCaseReduction.Batch27
-import Sixpack.CoarseCaseReduction.Batch28
-import Sixpack.CoarseCaseReduction.Batch29
-import Sixpack.CoarseCaseReduction.Batch30
-import Sixpack.CoarseCaseReduction.Batch31
-import Sixpack.CoarseCaseReduction.Batch32
-import Sixpack.CoarseCaseReduction.Batch33
-import Sixpack.CoarseCaseReduction.Batch34
-import Sixpack.CoarseCaseReduction.Batch35
-import Sixpack.CoarseCaseReduction.Batch36
-import Sixpack.CoarseCaseReduction.Batch37
-import Sixpack.CoarseCaseReduction.Batch38
-import Sixpack.CoarseCaseReduction.Batch39
-import Sixpack.CoarseCaseReduction.Batch40
-import Sixpack.CoarseCaseReduction.Batch41
-import Sixpack.CoarseCaseReduction.Batch42
-import Sixpack.CoarseCaseReduction.Batch43
-import Sixpack.CoarseCaseReduction.Batch44
-import Sixpack.CoarseCaseReduction.Batch45
-import Sixpack.CoarseCaseReduction.Batch46
-import Sixpack.CoarseCaseReduction.Batch47
-import Sixpack.CoarseCaseReduction.Batch48
-import Sixpack.CoarseCaseReduction.Batch49
-import Sixpack.CoarseCaseReduction.Batch50
-import Sixpack.CoarseCaseReduction.Batch51
-import Sixpack.CoarseCaseReduction.Batch52
-import Sixpack.CoarseCaseReduction.Batch53
-import Sixpack.CoarseCaseReduction.Batch54
-import Sixpack.CoarseCaseReduction.Batch55
-import Sixpack.CoarseCaseReduction.Batch56
-import Sixpack.CoarseCaseReduction.Batch57
-import Sixpack.CoarseCaseReduction.Batch58
-import Sixpack.CoarseCaseReduction.Batch59
-import Sixpack.CoarseCaseReduction.Batch60
-import Sixpack.CoarseCaseReduction.Batch61
-import Sixpack.CoarseCaseReduction.Batch62
-import Sixpack.CoarseCaseReduction.Batch63
-import Sixpack.CoarseCaseReduction.Batch64
-import Sixpack.CoarseCaseReduction.Batch65
-import Sixpack.CoarseCaseReduction.Batch66
-import Sixpack.CoarseCaseReduction.Batch67
-import Sixpack.CoarseCaseReduction.Batch68
-import Sixpack.CoarseCaseReduction.Batch69
-import Sixpack.CoarseCaseReduction.Batch70
-import Sixpack.CoarseCaseReduction.Batch71
-import Sixpack.CoarseCaseReduction.Batch72
-import Sixpack.CoarseCaseReduction.Batch73
-import Sixpack.CoarseCaseReduction.Batch74
-import Sixpack.CoarseCaseReduction.Batch75
-import Sixpack.CoarseCaseReduction.Batch76
-import Sixpack.CoarseCaseReduction.Batch77
-import Sixpack.CoarseCaseReduction.Batch78
-import Sixpack.CoarseCaseReduction.Batch79
-import Sixpack.CoarseCaseReduction.Batch80
-import Sixpack.CoarseCaseReduction.Batch81
-import Sixpack.CoarseCaseReduction.Batch82
-import Sixpack.CoarseCaseReduction.Batch83
-import Sixpack.CoarseCaseReduction.Batch84
-import Sixpack.CoarseCaseReduction.Batch85
-import Sixpack.CoarseCaseReduction.Batch86
-import Sixpack.CoarseCaseReduction.Batch87
-import Sixpack.CoarseCaseReduction.Batch88
-import Sixpack.CoarseCaseReduction.Batch89
-import Sixpack.CoarseCaseReduction.Batch90
-import Sixpack.CoarseCaseReduction.Batch91
-import Sixpack.CoarseCaseReduction.Batch92
-import Sixpack.CoarseCaseReduction.Batch93
-import Sixpack.CoarseCaseReduction.Batch94
-import Sixpack.CoarseCaseReduction.Batch95
-import Sixpack.CoarseCaseReduction.Batch96
-import Sixpack.CoarseCaseReduction.Batch97
-import Sixpack.CoarseCaseReduction.Batch98
-import Sixpack.CoarseCaseReduction.Batch99
-import Sixpack.CoarseCaseReduction.Batch100
-import Sixpack.CoarseCaseReduction.Batch101
-import Sixpack.CoarseCaseReduction.Batch102
-import Sixpack.CoarseCaseReduction.Batch103
-import Sixpack.CoarseCaseReduction.Batch104
-import Sixpack.CoarseCaseReduction.Batch105
-import Sixpack.CoarseCaseReduction.Batch106
-import Sixpack.CoarseCaseReduction.Batch107
-import Sixpack.CoarseCaseReduction.Batch108
-import Sixpack.CoarseCaseReduction.Batch109
-import Sixpack.CoarseCaseReduction.Batch110
-import Sixpack.CoarseCaseReduction.Batch111
-import Sixpack.CoarseCaseReduction.Batch112
-import Sixpack.CoarseCaseReduction.Batch113
-import Sixpack.CoarseCaseReduction.Batch114
-import Sixpack.CoarseCaseReduction.Batch115
-import Sixpack.CoarseCaseReduction.Batch116
-import Sixpack.CoarseCaseReduction.Batch117
-import Sixpack.CoarseCaseReduction.Batch118
-import Sixpack.CoarseCaseReduction.Batch119
-import Sixpack.CoarseCaseReduction.Batch120
-import Sixpack.CoarseCaseReduction.Batch121
-import Sixpack.CoarseCaseReduction.Batch122
-import Sixpack.CoarseCaseReduction.Batch123
-import Sixpack.CoarseCaseReduction.Batch124
-import Sixpack.CoarseCaseReduction.Batch125
-import Sixpack.CoarseCaseReduction.Batch126
-import Sixpack.CoarseCaseReduction.Batch127
-import Sixpack.CoarseCaseReduction.Batch128
-import Sixpack.CoarseCaseReduction.Batch129
-import Sixpack.CoarseCaseReduction.Batch130
-import Sixpack.CoarseCaseReduction.Batch131
-import Sixpack.CoarseCaseReduction.Batch132
-import Sixpack.CoarseCaseReduction.Batch133
-import Sixpack.CoarseCaseReduction.Batch134
-import Sixpack.CoarseCaseReduction.Batch135
-import Sixpack.CoarseCaseReduction.Batch136
-import Sixpack.CoarseCaseReduction.Batch137
-import Sixpack.CoarseCaseReduction.Batch138
 
 #print axioms Sixpack.checked_root_cells_complete
 #print axioms Sixpack.checked_root_rows_complete
@@ -3106,3 +2967,132 @@ import Sixpack.CoarseCaseReduction.Batch138
 #print axioms Sixpack.coarse_case_batch136_checked
 #print axioms Sixpack.coarse_case_batch137_checked
 #print axioms Sixpack.coarse_case_batch138_checked
+
+#print axioms Sixpack.spatial_descendant_subset
+#print axioms Sixpack.checked_label_ancestor_represents
+#print axioms Sixpack.checked_ancestor_region_block_exclusion
+#print axioms Sixpack.checked_ancestor_block_adj_conservative
+#print axioms Sixpack.checked_ancestor_block_search_sound
+#print axioms Sixpack.checked_endpoint_ancestor_block_search_boundary
+#print axioms Sixpack.leaf31_ancestor_block_accepted
+#print axioms Sixpack.leaf31_ancestor_pair_excluded
+#print axioms Sixpack.coarse_case_batches_checked
+#print axioms Sixpack.coarse_case_tuples_checked
+#print axioms Sixpack.coarse_case_representative_coverage
+#print axioms Sixpack.endpoint_coarse_representative_cover
+#print axioms Sixpack.endpoint_ordered_coarse_representative_cover
+#print axioms Sixpack.endpoint_ordered_root_case_cover
+#print axioms Sixpack.endpoint_boundary_of_root_cases
+#print axioms Sixpack.lower_bound_of_root_case_classification
+#print axioms Sixpack.coarse_case_batch139_checked
+#print axioms Sixpack.coarse_case_batch140_checked
+#print axioms Sixpack.coarse_case_batch141_checked
+#print axioms Sixpack.coarse_case_batch142_checked
+#print axioms Sixpack.coarse_case_batch143_checked
+#print axioms Sixpack.coarse_case_batch144_checked
+#print axioms Sixpack.coarse_case_batch145_checked
+#print axioms Sixpack.coarse_case_batch146_checked
+#print axioms Sixpack.coarse_case_batch147_checked
+#print axioms Sixpack.coarse_case_batch148_checked
+#print axioms Sixpack.coarse_case_batch149_checked
+#print axioms Sixpack.coarse_case_batch150_checked
+#print axioms Sixpack.coarse_case_batch151_checked
+#print axioms Sixpack.coarse_case_batch152_checked
+#print axioms Sixpack.coarse_case_batch153_checked
+#print axioms Sixpack.coarse_case_batch154_checked
+#print axioms Sixpack.coarse_case_batch155_checked
+#print axioms Sixpack.coarse_case_batch156_checked
+#print axioms Sixpack.coarse_case_batch157_checked
+#print axioms Sixpack.coarse_case_batch158_checked
+#print axioms Sixpack.coarse_case_batch159_checked
+#print axioms Sixpack.coarse_case_batch160_checked
+#print axioms Sixpack.coarse_case_batch161_checked
+#print axioms Sixpack.coarse_case_batch162_checked
+#print axioms Sixpack.coarse_case_batch163_checked
+#print axioms Sixpack.coarse_case_batch164_checked
+#print axioms Sixpack.coarse_case_batch165_checked
+#print axioms Sixpack.coarse_case_batch166_checked
+#print axioms Sixpack.coarse_case_batch167_checked
+#print axioms Sixpack.coarse_case_batch168_checked
+#print axioms Sixpack.coarse_case_batch169_checked
+#print axioms Sixpack.coarse_case_batch170_checked
+#print axioms Sixpack.coarse_case_batch171_checked
+#print axioms Sixpack.coarse_case_batch172_checked
+#print axioms Sixpack.coarse_case_batch173_checked
+#print axioms Sixpack.coarse_case_batch174_checked
+#print axioms Sixpack.coarse_case_batch175_checked
+#print axioms Sixpack.coarse_case_batch176_checked
+#print axioms Sixpack.coarse_case_batch177_checked
+#print axioms Sixpack.coarse_case_batch178_checked
+#print axioms Sixpack.coarse_case_batch179_checked
+#print axioms Sixpack.coarse_case_batch180_checked
+#print axioms Sixpack.coarse_case_batch181_checked
+#print axioms Sixpack.coarse_case_batch182_checked
+#print axioms Sixpack.coarse_case_batch183_checked
+#print axioms Sixpack.coarse_case_batch184_checked
+#print axioms Sixpack.coarse_case_batch185_checked
+#print axioms Sixpack.coarse_case_batch186_checked
+#print axioms Sixpack.coarse_case_batch187_checked
+#print axioms Sixpack.coarse_case_batch188_checked
+#print axioms Sixpack.coarse_case_batch189_checked
+#print axioms Sixpack.coarse_case_batch190_checked
+#print axioms Sixpack.coarse_case_batch191_checked
+#print axioms Sixpack.coarse_case_batch192_checked
+#print axioms Sixpack.coarse_case_batch193_checked
+#print axioms Sixpack.coarse_case_batch194_checked
+#print axioms Sixpack.coarse_case_batch195_checked
+#print axioms Sixpack.coarse_case_batch196_checked
+#print axioms Sixpack.coarse_case_batch197_checked
+#print axioms Sixpack.coarse_case_batch198_checked
+#print axioms Sixpack.coarse_case_batch199_checked
+#print axioms Sixpack.coarse_case_batch200_checked
+#print axioms Sixpack.coarse_case_batch201_checked
+#print axioms Sixpack.coarse_case_batch202_checked
+#print axioms Sixpack.coarse_case_batch203_checked
+#print axioms Sixpack.coarse_case_batch204_checked
+#print axioms Sixpack.coarse_case_batch205_checked
+#print axioms Sixpack.coarse_case_batch206_checked
+#print axioms Sixpack.coarse_case_batch207_checked
+#print axioms Sixpack.coarse_case_batch208_checked
+#print axioms Sixpack.coarse_case_batch209_checked
+#print axioms Sixpack.coarse_case_batch210_checked
+#print axioms Sixpack.coarse_case_batch211_checked
+#print axioms Sixpack.coarse_case_batch212_checked
+#print axioms Sixpack.coarse_case_batch213_checked
+#print axioms Sixpack.coarse_case_batch214_checked
+#print axioms Sixpack.coarse_case_batch215_checked
+#print axioms Sixpack.coarse_case_batch216_checked
+#print axioms Sixpack.coarse_case_batch217_checked
+#print axioms Sixpack.coarse_case_batch218_checked
+#print axioms Sixpack.coarse_case_batch219_checked
+#print axioms Sixpack.coarse_case_batch220_checked
+#print axioms Sixpack.coarse_case_batch221_checked
+#print axioms Sixpack.coarse_case_batch222_checked
+#print axioms Sixpack.coarse_case_batch223_checked
+#print axioms Sixpack.coarse_case_batch224_checked
+#print axioms Sixpack.coarse_case_batch225_checked
+#print axioms Sixpack.coarse_case_batch226_checked
+#print axioms Sixpack.coarse_case_batch227_checked
+#print axioms Sixpack.coarse_case_batch228_checked
+#print axioms Sixpack.coarse_case_batch229_checked
+#print axioms Sixpack.coarse_case_batch230_checked
+#print axioms Sixpack.coarse_case_batch231_checked
+#print axioms Sixpack.coarse_case_batch232_checked
+#print axioms Sixpack.coarse_case_batch233_checked
+#print axioms Sixpack.coarse_case_batch234_checked
+#print axioms Sixpack.coarse_case_batch235_checked
+#print axioms Sixpack.coarse_case_batch236_checked
+#print axioms Sixpack.coarse_case_batch237_checked
+#print axioms Sixpack.coarse_case_batch238_checked
+#print axioms Sixpack.coarse_case_batch239_checked
+#print axioms Sixpack.coarse_case_batch240_checked
+#print axioms Sixpack.coarse_case_batch241_checked
+#print axioms Sixpack.coarse_case_batch242_checked
+#print axioms Sixpack.coarse_case_batch243_checked
+#print axioms Sixpack.coarse_case_batch244_checked
+#print axioms Sixpack.coarse_case_batch245_checked
+#print axioms Sixpack.coarse_case_batch246_checked
+#print axioms Sixpack.coarse_case_batch247_checked
+#print axioms Sixpack.coarse_case_batch248_checked
+#print axioms Sixpack.coarse_case_batch249_checked
+#print axioms Sixpack.coarse_case_batch250_checked

@@ -204,3 +204,5 @@ import Sixpack.EndpointRootCoarseCover
 import Sixpack.CoarsePatterns
 import Sixpack.CoarseRootCases
 import Sixpack.CoarseCaseReduction.BatchCoverage
+import Sixpack.EndpointCoarseRootCases
+import Sixpack.EndpointLeaf31AncestorFixture

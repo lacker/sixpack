@@ -518,3 +518,22 @@ After all batches pass, compile the unconditional representative assembly,
 instantiate the ordered-root coverage bridge, then bind actual root case
 domains to the production tree. No remaining classification hypothesis may
 be replaced by a custom axiom or the external saved success logs.
+
+### Accepted representative reduction and actual root-case coverage
+
+All 8,008 sorted/indexed witnesses now pass the kernel checks. Their checked
+rank inverse gives injection and the 8,008-pattern cardinality gives exhaustive
+coverage by the 1,396 production representatives. The unconditional
+`endpoint_ordered_root_case_cover` includes compatible actual root records in
+the ordered declared-group domains. `lower_bound_of_root_case_classification`
+has only the actual case-classification hypothesis remaining. Root children
+cover 287 of the 1,396 case indices; the other 1,109 cases need geometric graph
+closures at the root rather than merely a metadata partition argument.
+
+`LabelAncestor`, `AncestorBlockCertificate` and `AncestorBlockSearch` now allow
+one checked pair on containing spatial labels to certify blocks using integer
+ancestry paths. A production pilot verifies 192 pairs this way. Apply this
+compression, with finer blocks or existing certificates where broad ancestors
+fail, to the much larger production graph/search and domain-restriction proofs.
+The pilot's 76-of-80 success count is external arithmetic evidence; it does
+not constitute acceptance of that full replacement table.

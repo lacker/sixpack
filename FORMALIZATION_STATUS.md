@@ -1,7 +1,7 @@
 # Progress estimate
 
-Estimated completion of the **end-to-end formalization: about 55%**, with a
-plausible planning range of **50–60%**. This is a subjective estimate of remaining
+Estimated completion of the **end-to-end formalization: about 60%**, with a
+plausible planning range of **55–65%**. This is a subjective estimate of remaining
 work, not a fraction of theorem statements, source lines, or Python checks.
 It is not a schedule forecast.
 
@@ -10,7 +10,7 @@ It is not a schedule forecast.
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors and separating-axis necessity proved; general outer-container isometry normalization remains |
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
-| Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries, production coarse-cell actions and actual 8,008-pattern coverage proved; declared root-group bindings and compatible coverage proved; representative table acceptance and case-tree reduction remain |
+| Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries, production coarse-cell actions and actual 8,008-pattern coverage proved; declared root-group bindings and compatible coverage proved; full representative and ordered root-case coverage proved; case-tree classification remains |
 | Local five-piece nonlinear rigidity | Radius and all three tube rigidity theorems proved; generic region-to-chart and endpoint bridges proved for all four profiles; production-wide certificate acceptance and coverage remain |
 | Sound finite search and certificate machinery | Exact inner geometry, projection/pair-exclusion checker and conditional finite-search bridge proved; production graph certificates, local deletions and tree coverage remain |
 | All concrete triangle-region certificates checked by Lean | Remaining |
@@ -80,8 +80,8 @@ proves the coordinate metric identity, continuous coverage by all sixteen closed
 coarse cells, their exact cardinality, their squared diameter bound and an
 injective assignment of the six packing centroids whenever `L ≤ outerBound`.
 Boundary points may belong to multiple cells; any cell collision contradicts
-the strict diameter inequality. This does not yet bind the cells to the original
-graph indices or prove the symmetry reduction.
+the strict diameter inequality. `RootCoarseTags` and `EndpointCoarseRootCases`
+now bind the production root groups and prove representative coverage.
 
 `RelativeOrientation`, `CommonInnerTriangle` and `UniformInnerTriangle` prove
 the endpoint-max support construction is contained in every actual triangle
@@ -397,7 +397,8 @@ and the six domains for case 459, `[0,1,5,6,13,15]`. Its domain-binding lemmas
 exhaust the first two domains, and `leaf23_no_domain_packing` excludes every
 actual six-triangle packing represented in the complete exported leaf case.
 This closes that concrete leaf, conditional on reaching its domains. It does not
-yet prove the root-to-leaf transfer or the 1,396-case symmetry reduction.
+yet prove the root-to-leaf transfer. The separate 1,396-case representative
+reduction is now accepted.
 
 The full pair-certificate build peaked at 1,638.4 MiB under the memory guard;
 the domain-binding proof peaked at 2,662.4 MiB.
@@ -467,7 +468,7 @@ code tables and global tree/case coverage remain outstanding.
 Root intersection coverage and the first child enumeration are now proved.
 Saved polygon vertex exports remain unmatched; the certificate-based bounds can
 instead be proved directly from the region halfplanes. Remaining obligations
-include coarse-group/case bindings, the other production refinements,
+include root-to-tree domain transitions, the other production refinements,
 production-wide local-code certificates, production graph/search acceptance, and
 endpoint classification. The earlier successful Python/C++ replay is
 external evidence for those parts and is not a Lean proof.
@@ -489,10 +490,10 @@ is assumed in this theorem.
 `audit/check_grid_ancestry_export.py` independently compares the exported
 witnesses and production numbering, and finds that all 34,660 saved root group
 labels agree. This source-label comparison is external evidence, not a Lean
-binding of the saved `.groups` file. The 8,008 six-group patterns still need
-formal reduction to the 1,396 production symmetry representatives and linkage
-to the endpoint tree. The full lower bound remains unproved; the subjective
-completion estimate remains about 55% (50–60%). All row checks used less than
+binding of the saved `.groups` file bytes. The exported tag meaning and
+representative reduction are now checked by the later modules below; linkage
+through the full endpoint tree remains. The full lower bound remains unproved.
+All ancestry row checks used less than
 400 MiB of observed Lean physical footprint.
 
 ## Production coarse symmetry and the 8,008-pattern universe
@@ -510,16 +511,16 @@ proves their cardinality is 8,008, and proves every endpoint packing admits an
 injective actual coarse assignment in this exhaustive pattern universe. This
 is geometric coverage, not a statement about only exported sample records.
 The symmetry action on the unordered pattern agrees with its action on the
-actual assignment. The reduction to the 1,396 saved representatives and their
-endpoint-tree domains remains unproved.
+actual assignment. The later representative reduction and ordered root-case
+coverage modules now discharge that finite reduction. Deeper tree-domain
+transitions remain unproved.
 
 All six continuous cell-action checks, assembled endpoint action and pattern
 coverage passed under the external memory guard; the maximum observed Lean
 footprint was 442 MiB. `audit/check_coarse_symmetry_export.py` separately
 compares the exported permutations with the original saved table and checks
 all 96 cell-vertex images using exact integers. The Lean proofs do not assume
-that external comparison. The full lower bound remains unproved; the overall
-planning estimate remains about 55% (50–60%).
+that external comparison. The full lower bound remains unproved.
 
 ## Compatible root groups and representative-check progress
 
@@ -548,14 +549,50 @@ index and exact image under a saved permutation. A generic proof derives
 exhaustive coverage from injection into the proved 8,008-pattern universe,
 then connects that coverage to actual packings. All 1,396 representative and
 8,008 witness exports pass the independent source/scope comparison.
-At this checkpoint, the first **139 batches (4,448 distinct patterns)** have
-passed individual kernel checks and are included in the axiom audit. The rest
-of the 251 small serial batches are still being checked. Full 1,396-case
-coverage is **not yet claimed**. The pending unconditional assembly is saved
-in `CoarseCaseReduction` but is not imported by the default build yet.
+All **251 batches (8,008 distinct patterns)** have now passed individual
+kernel checks. The last batch's repeated indices do not omit any index, by the
+proved batch-completeness lemma. `CoarseCaseReduction` compiles the unconditional
+representative coverage theorem, and `EndpointCoarseRootCases` compiles actual
+ordered root-case coverage with no representative-check acceptance hypothesis.
+The remaining `EndpointRootCaseClassification` hypothesis is explicit in the
+boundary and lower-bound reductions; it is not discharged by these results.
 
-The default build includes the completed compatible-root geometry and generic
-coverage bridges. Failed attempts to check hundreds of patterns in one kernel
+The default build includes the completed compatible-root geometry and
+unconditional representative/root-case coverage. Failed attempts to check hundreds of patterns in one kernel
 decision were stopped by the memory guard; the replacement individual checks
-have stayed below 1.5 GiB at this checkpoint. The lower bound remains unproved;
-the overall planning estimate remains about 55% (50–60%).
+have stayed below 1.5 GiB. The lower bound remains unproved; the overall
+planning estimate is about 60% (55–65%).
+
+## Unconditional root-case coverage and ancestor block certificates
+
+All 8,008 sorted/indexed representative witnesses are accepted. Their sortedness
+and checked rank inverse prove injection; the proved 8,008-pattern cardinality
+then proves exhaustiveness. Every endpoint packing can be transformed and
+reindexed into one of the 1,396 production representatives and assigned actual
+retained root records in its declared group domains, including closed boundary
+cases. These theorems require no external checker result. The mathematical
+lower bound remains conditional on the unproved root-case classification.
+
+`LabelAncestor` checks integer midpoint paths and identical orientation bins,
+and proves actual region/hull-chart representation in the containing label.
+`AncestorBlockCertificate` checks one pair certificate on the containing labels
+plus cheap integer ancestry for all member regions. `AncestorBlockSearch`
+proves conservative adjacency, ordinary search exclusion and the endpoint
+covered-search bridge for all 24 local channels. This can reduce repeated
+per-member rational projection checks, but it is not global graph acceptance.
+
+The concrete `EndpointLeaf31AncestorFixture` accepts one production block of
+192 pairs using one six-axis pair certificate (12 rational projection bounds)
+and integer paths for its members. Its source scope is compared independently.
+The untrusted exact-arithmetic pilot found containing-label certificates for
+76 of the 80 existing leaf31 blocks; only the selected 192-pair block has been
+accepted by this new method. The original full leaf31 closure remains proved
+by its existing block certificates. No replacement of the complete table is
+claimed yet.
+
+The 251 witness builds peaked at 1,434 MiB; unconditional root-case assembly
+used 471 MiB and the ancestor pilot 640 MiB. Earlier monolithic decisions were
+stopped by the guard and replaced with individual kernel checks. The current
+planning estimate is about 60% (55–65%): the remaining large obligations are
+production graph/search acceptance, local-code tables, refinement/domain
+transitions and assembly of endpoint classification.
