@@ -680,3 +680,22 @@ indexed snapshot-1-to-2 assembly. The group-exclusion dispatch now uses 32-case
 chunks, reducing the accepted step-0 build peak to 1,639 MiB. Continue the
 remaining geometric table from batch 188 after step 1. The remaining 20 steps, incoming root coverage and
 end-to-end root-case classification remain open.
+
+
+The complete step-1 assembly and consecutive two-step theorem are now accepted:
+`b31_step1_pruning_preserves_packing` maps snapshot 1 to 2;
+`b31_prefix2_preserves_packing` composes it with the accepted first step.
+The 97 new groups, assembled step and chain all pass their axiom audits.
+
+Use `audit/generate_b31_geometric_chain.py --count N` after steps 0 through N−1
+compile. Each generated prefix composes actual packing-preservation theorems in
+order, retaining the same choice function. The source auditor checks the exact
+imports, predecessor evidence, final snapshot and actual-packing statement.
+Compilation and axiom audit remain mandatory. Count 21 also generates the
+initial-domain exclusion via the accepted final-snapshot theorem; this full
+chain remains unaccepted until all 21 geometric steps are proved.
+
+Continue with step 2: accept its remaining geometric dependencies in batches
+188–285, then its 76 groups covering 120 owners against 375 blockers. Compile
+and audit the step and prefix 3 before expanding the default build. The
+remaining nineteen steps and root-case classification remain unproved.

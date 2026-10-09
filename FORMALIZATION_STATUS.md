@@ -847,10 +847,42 @@ statements are unchanged. Its build passed in 78 seconds at 1,639 MiB, down from
 2,458 MiB; all six changed theorem dependencies were re-audited. Regeneration
 reproduces the accepted source byte for byte.
 
-All geometric dependencies for step 1 are now accepted. Its 97 indexed groups,
-covering 269 owners against 24 blockers, are being checked serially under the
-physical-memory guard. This does not yet prove the snapshot-1-to-2 transition:
-all group modules and the assembled step still need acceptance and axiom audit.
-Continue geometric block acceptance from batch 188 after this assembly. The
+All geometric dependencies and 97 indexed groups for step 1 are now accepted,
+covering 269 owners against 24 blockers. The snapshot-1-to-2 transition and
+its composition with step 0 are also accepted and axiom-audited, as detailed
+below. Continue geometric block acceptance from batch 188. The
 complete 21-step trace, incoming root coverage and global lower bound remain
 unproved. The overall planning estimate remains about 60% (55–65%).
+
+
+## Complete second b31 step and consecutive two-step preservation
+
+`EndpointB31GeometricSteps.Step1` kernel-checks all 269 removed-index mappings
+and all 24 blocker-index identities. Its 97 accepted geometric groups exclude
+every declared removal against the actual current blocker domain. Composing
+these exclusions with the checked survivor inclusion proves
+`b31_step1_pruning_preserves_packing` from snapshot 1 to snapshot 2. The assembly
+passed in 37 seconds at 1,127 MiB; all group builds passed at most 451 MiB.
+
+`EndpointB31GeometricChains.Prefix2` proves
+`b31_prefix2_preserves_packing`: the same actual packing choice represented in
+snapshot 0 survives through both accepted steps into snapshot 2. Its build
+passed in 5.4 seconds at 387 MiB. Neither theorem assumes geometric certificate
+acceptance, a saved graph, or row coverage. Their initial representation and
+actual-packing hypotheses remain explicit.
+
+The default build passed (4,720 jobs, 501 MiB). All 291 new group dependencies,
+six step dependencies and the chain theorem passed the axiom audit; the combined
+list has 9,739 checks using only the three standard logical axioms. Source audits
+match the actual group arrays, selectors, snapshot domains and consecutive proof
+calls. Both assemblies regenerate byte for byte. No forbidden proof shortcuts
+were found in the 99 new modules. The original archive and 730 files are unchanged.
+
+The chain generator supports every consecutive prefix through 21 steps, requiring
+compiled step modules before generation. At length 21 it proposes the initial
+snapshot exclusion by composition with `b31_final_snapshot_no_packing`; that
+length-21 theorem has not yet been generated or accepted. Nineteen pruning steps,
+incoming root coverage and the global case classification remain. Step 2 needs
+76 groups, 120 removed owners and 375 blockers; its geometric dependencies extend
+through batch 285. Accept batches 188–285, then its groups, assembled step and
+three-step chain. The overall estimate remains about 60% (55–65%).
