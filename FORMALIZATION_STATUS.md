@@ -122,10 +122,11 @@ been accepted.
 
 For the first production refinement node, `EndpointB00` exports the actual
 2,862 declared parents and 19,710 child records, plus 3,186 empty-child witnesses.
-The first batch (32 parents, eight potential children each) is kernel-checked
-and included in the default build and axiom audit. Acceptance of the remaining
-89 batches and the combined packing-preservation theorem is running serially.
-Even after it passes, preservation is conditional on representation by a
+All 90 production batches and the combined packing-preservation theorem are
+kernel-checked and included in the default build. The global theorem's axiom
+audit transitively covers every batch. The guarded acceptance run passed with
+an observed physical peak of about 921 MiB.
+Preservation is conditional on representation by a
 declared parent: omitted-parent safety and case coverage remain separate gaps.
 `RefinementChunks` proves reusable bounded-batch composition, separating the
 chunk arithmetic from production certificate hypotheses. Its guarded build
@@ -149,6 +150,17 @@ meaning in the radius/tube charts remain unverified.
 assignment of covered pieces to selected triangle indices. The production mask
 decoder maps invalid masks to no label. This settles distinct ownership in the
 finite logic, but supplies no geometric meaning or certificate for a label.
+
+`AssignedPacking` proves that every injective five-piece assignment extends to
+a permutation of the six triangles and that reindexing preserves packing. The
+radius/tube rigidity and lower bounds now apply to arbitrary distinct owners.
+`HullChartPacking` strengthens these results to hull identities, removing any
+assumption about the original triangles' vertex order. The replacement chart
+triangles have separately proved unit sides, and the sixth triangle is retained.
+`HullBoundary` proves that a contained hull meeting a container boundary has an
+original boundary vertex. Thus exact candidate core hulls suffice for the
+existing endpoint boundary reduction. None of these theorems proves global
+chart coverage or classification of arbitrary packings.
 
 This does not yet prove that the saved polygon vertex lists equal these
 intersections, that no nonempty record is omitted, or that the production

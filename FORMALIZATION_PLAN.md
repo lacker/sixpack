@@ -340,8 +340,8 @@ fixed, proving that retained parent domains preserve every admissible selection
 and every actual represented packing. Production fixed-vertex certificates are
 still needed. `EndpointB00` begins production child acceptance for the first
 refinement node: 2,862 declared parents, 19,710 child records and 3,186 exact
-empty-child witnesses. The first 32-parent batch passes; the remaining batches
-and combined theorem are being checked serially. This acceptance does not prove
+empty-child witnesses. All 90 batches and the combined preservation theorem now
+pass kernel checking, with an observed guarded peak of about 921 MiB. This acceptance does not prove
 that the declared parent list contains every possible packing selection.
 
 `CoveredSearchCertificate` implements the production local-omission logic as a
@@ -356,6 +356,15 @@ certificates must also be exported and accepted.
 `PieceAssignment` derives distinct owners from one-piece-per-channel codes,
 providing the injective five-piece assignment needed for later geometric chart
 binding. Production label masks still require region-to-chart certificates.
+
+`AssignedPacking` extends each injective assignment to a full permutation and
+preserves the original packing, including the sixth triangle. `HullChartPacking`
+allows radius/tube chart hypotheses to be hull identities instead of ordered
+vertex equalities: chart unit sides are proved independently before replacement.
+`HullBoundary` transfers a boundary point in a contained hull to an original
+vertex and connects exact candidate core hulls to the existing endpoint boundary
+reduction. Region-to-chart coordinate bounds, container isometries and global
+classification are still needed.
 
 The first monolithic row reduction reached 12 GB physical footprint despite
 `-M4096` and was stopped. Each row now uses 32 separate column checks, and

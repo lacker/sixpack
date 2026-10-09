@@ -152,3 +152,7 @@ import Sixpack.CoveredSearchCertificate
 import Sixpack.CoveredDomainRestriction
 import Sixpack.CoveredSearchFixture
 import Sixpack.PieceAssignment
+import Sixpack.AssignedPacking
+import Sixpack.HullChartPacking
+import Sixpack.HullBoundary
+import Sixpack.EndpointB00Refinement

@@ -32,6 +32,25 @@ import Sixpack
 #print axioms Sixpack.coverage_prototype_uncovered_selection_survives
 #print axioms Sixpack.piece_code_unique
 #print axioms Sixpack.piece_code_covered_assignment
+#print axioms Sixpack.packing_reindex
+#print axioms Sixpack.core_assignment_permutation
+#print axioms Sixpack.assigned_radius_packing_rigidity
+#print axioms Sixpack.assigned_tube_packing_rigidity
+#print axioms Sixpack.assigned_radius_packing_lower_bound
+#print axioms Sixpack.assigned_tube_packing_lower_bound
+#print axioms Sixpack.packing_replace_hulls
+#print axioms Sixpack.replace_core_at
+#print axioms Sixpack.packing_replace_core
+#print axioms Sixpack.assigned_radius_hull_rigidity
+#print axioms Sixpack.assigned_tube_hull_rigidity
+#print axioms Sixpack.assigned_radius_hull_lower_bound
+#print axioms Sixpack.assigned_tube_hull_lower_bound
+#print axioms Sixpack.convex_strict_container
+#print axioms Sixpack.triangle_hull_boundary_vertex
+#print axioms Sixpack.packing_candidate_hull_boundary
+#print axioms Sixpack.packing_candidate_core_boundary
+#print axioms Sixpack.b00_refinement_enumeration_checked
+#print axioms Sixpack.b00_refinement_preserves_packing
 
 #print axioms Sixpack.root13_nonneg
 #print axioms Sixpack.root13_sq
