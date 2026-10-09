@@ -1,7 +1,7 @@
 # Progress estimate
 
-Estimated completion of the **end-to-end formalization: about 40%**, with a
-plausible planning range of **35–45%**. This is a subjective estimate of remaining
+Estimated completion of the **end-to-end formalization: about 45%**, with a
+plausible planning range of **40–50%**. This is a subjective estimate of remaining
 work, not a fraction of theorem statements, source lines, or Python checks.
 It is not a schedule forecast.
 
@@ -10,7 +10,7 @@ It is not a schedule forecast.
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors and separating-axis necessity proved; general outer-container isometry normalization remains |
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
-| Continuous spatial coverage and symmetry reduction | Closed sixteen-cell coarse cover, its cardinality and six-centroid injection proved; arbitrary-grid root region coverage and midpoint/angle refinements proved; saved polygon enumeration, production index bindings and symmetry reduction remain |
+| Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries proved; coarse group index bindings and orbit/case reduction remain |
 | Local five-piece nonlinear rigidity | Packing radius theorem and all three packing tube theorems proved in their explicit charts; global region-to-chart bindings remain |
 | Sound finite search and certificate machinery | Exact inner geometry, projection/pair-exclusion checker and conditional finite-search bridge proved; production graph certificates, local deletions and tree coverage remain |
 | All concrete triangle-region certificates checked by Lean | Remaining |
@@ -110,10 +110,12 @@ match a retained label or pass an exact empty-region certificate; omission and
 record ordering are not assumed correct. These are generic soundness results,
 not acceptance of the production refinement metadata.
 
-`RootEnumeration` similarly proves soundness of exhaustive root-record
-enumeration. Production data for all 34,660 retained labels and the omitted
-candidate witnesses have been generated. Serial production row acceptance is
-still running under the memory guard; full production root coverage is pending.
+`RootEnumeration` proves soundness of exhaustive root-record enumeration.
+All 32 production rows are now kernel-checked: every one of the 65,536 valid
+cell/bin keys matches a retained record or has a proved empty intersection.
+There are 34,660 retained labels and 30,876 empty keys. The full packing-coverage
+theorem uses no external record-completeness assumption. The guarded run passed
+with an observed peak physical footprint of about 1.6 GiB.
 
 `DomainRestriction` proves soundness of parent deletions justified by search
 refutations with each removed vertex fixed, and transports that result to actual
@@ -162,6 +164,17 @@ original boundary vertex. Thus exact candidate core hulls suffice for the
 existing endpoint boundary reduction. None of these theorems proves global
 chart coverage or classification of arbitrary packings.
 
+`ContainerSymmetry` proves that the six inverse container isometries preserve
+unit sides, containment, hulls and interior disjointness. `RecenteredSymmetry`
+proves their exact matrix/channel order and the production centroid-centering
+formula. `EndpointCenteredCover` uses the accepted root enumeration to cover
+every endpoint packing after centering it in the rational outer container, and
+identifies the local checker's centroid expression with an actual transformed
+triangle. `LocalAngleBounds` proves the arctangent estimate and whole-bin angle
+bound from endpoint relative-parameter bounds. Orientation action, trigonometric
+chart reconstruction, candidate reference parameters and the production label
+certificates remain unverified.
+
 This does not yet prove that the saved polygon vertex lists equal these
 intersections, that no nonempty record is omitted, or that the production
 refinement metadata selects all required children. The row-major `gridIndex`
@@ -196,7 +209,7 @@ therefore excludes actual triangles represented there.
 `RegionSearchBridge` derives conservative adjacency from accepted pair witnesses;
 missing or failed certificates retain the edge. An accepted finite search
 certificate then excludes actual six-triangle packings represented in its domains.
-Domain/root coverage, production local-label deletions, the full refinement tree
+Per-case domain coverage, production local-label deletions, the full refinement tree
 and endpoint conclusions remain separate obligations.
 
 `RegionPairFixture` checks all six axes for endpoint-root labels 110 and 126,
@@ -206,10 +219,12 @@ certified pair, not the original compatibility graph or any whole global case.
 
 ## Remaining trust boundary
 
-Saved polygon/intersection enumeration, production spatial/refinement index bindings,
-region-to-local-chart bindings, container
-symmetries, the production search checker and its large certificates, and
-endpoint classification remain. The earlier successful Python/C++ replay is
+Root intersection coverage and the first child enumeration are now proved.
+Saved polygon vertex exports remain unmatched; the certificate-based bounds can
+instead be proved directly from the region halfplanes. Remaining obligations
+include coarse-group/case bindings, the other production refinements,
+region-to-local-chart certificates, production graph/search acceptance, and
+endpoint classification. The earlier successful Python/C++ replay is
 external evidence for those parts and is not a Lean proof.
 
 See `FORMALIZATION_PLAN.md`, `PROTOTYPE_REPORT.md` and the axiom audit for the

@@ -156,3 +156,8 @@ import Sixpack.AssignedPacking
 import Sixpack.HullChartPacking
 import Sixpack.HullBoundary
 import Sixpack.EndpointB00Refinement
+import Sixpack.EndpointRootEnumeration
+import Sixpack.ContainerSymmetry
+import Sixpack.RecenteredSymmetry
+import Sixpack.LocalAngleBounds
+import Sixpack.EndpointCenteredCover

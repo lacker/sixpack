@@ -68,12 +68,16 @@ sixteen closed coarse spatial cells cover all packing centroids, with an
 injective assignment of the six pieces. Arbitrary-grid continuous placement
 regions and their spatial/angle refinements are also proved. An exact rational
 projection/emptiness checker is now proved sound and bound to these regions,
-with selected kernel-checked endpoint-root examples. Rational inner-triangle
+with selected kernel-checked endpoint-root bounds. The full production root
+enumeration is now kernel-checked: all 65,536 valid cell/bin keys are covered by
+34,660 retained records and 30,876 exact empty-intersection witnesses. Rational inner-triangle
 geometry, six-axis pair exclusions and the geometric finite-search bridge are
 also proved, with one checked endpoint-root pair. Child enumeration for the first
 production refinement node is kernel-checked for all 2,862 declared parents.
 Local lower bounds now accept arbitrary distinct triangle owners and hull
-identities; exact candidate core hulls force an original boundary vertex.
+identities; exact candidate core hulls force an original boundary vertex. The
+six inverse container symmetries, exact centroid recentering and whole-bin
+relative-angle bounds are also proved.
 Full production data, saved polygon
 enumeration, symmetry reduction, production index bindings, region-to-chart
 bindings, search certificates and endpoint

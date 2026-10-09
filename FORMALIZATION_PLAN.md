@@ -319,15 +319,17 @@ with the stronger child inset. Saved polygon enumeration, all production index
 maps and metadata selections remain unproved. The current `gridIndex` is a
 definition only; its bijection has not been established.
 
-### Root enumeration implementation underway
+### Production root enumeration verified
 
 `RootEnumeration` proves an exhaustive finite enumeration checker sound: every
 valid grid cell/bin must have a matching retained index or a checked empty-region
 certificate. Checked rows give complete coverage of real triangles and packings.
 `EndpointRoot` exports all 34,660 actual root labels and 30,876 omitted-key
 contradiction witnesses, using 64-entry data blocks and serial row modules.
-The production acceptance proofs are still being checked; exported data alone
-is not proof of coverage.
+All 32 row acceptance proofs and the combined packing-coverage theorem now
+pass kernel checking. They cover all 65,536 valid keys, including closed
+line/point intersections, with no external record-completeness hypothesis. The
+guarded run observed a peak physical footprint of about 1.6 GiB.
 
 `LabelRefinement` now handles independent spatial and angular flags, and
 `RefinementEnumeration` checks every possible child against retained records or
@@ -363,8 +365,15 @@ allows radius/tube chart hypotheses to be hull identities instead of ordered
 vertex equalities: chart unit sides are proved independently before replacement.
 `HullBoundary` transfers a boundary point in a contained hull to an original
 vertex and connects exact candidate core hulls to the existing endpoint boundary
-reduction. Region-to-chart coordinate bounds, container isometries and global
-classification are still needed.
+reduction. Region-to-chart coordinate bounds and global classification are still needed.
+
+`ContainerSymmetry` proves the six inverse container isometries preserve actual
+packings. `RecenteredSymmetry` binds their exact matrix order and centroid
+centering formula. `EndpointCenteredCover` connects endpoint packings to the
+accepted rational root cover and identifies the centroid quantity tested by
+production local labels. `LocalAngleBounds` proves the arctangent estimate and
+the endpoint-to-whole-bin angle bound. The action on orientation parameters,
+trigonometric chart reconstruction and production label acceptance remain.
 
 The first monolithic row reduction reached 12 GB physical footprint despite
 `-M4096` and was stopped. Each row now uses 32 separate column checks, and
