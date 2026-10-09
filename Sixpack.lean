@@ -208,3 +208,4 @@ import Sixpack.EndpointCoarseRootCases
 import Sixpack.EndpointLeaf31AncestorFixture
 import Sixpack.EndpointLeaf31Hybrid
 import Sixpack.EndpointLeaf31CoarseGroups
+import Sixpack.EndpointLeaf31Refinement

@@ -543,3 +543,14 @@ proved geometric meaning, and both leaf domains are linked to representatives
 production graph acceptance; local leaf closure alone cannot discharge the
 root-case classification. Keep large certificate builds sequential under the
 external physical-memory guard.
+
+### Complete final leaf31 refinement
+
+The final b31-to-leaf31 refinement now has accepted coverage of all 36 declared
+retained parents, including component domains and exact empty alternatives.
+Its composition with the checked leaf closure excludes both retained-parent
+case packings. The next obligation for this branch is a checked b31 deletion
+certificate showing that every admissible entering case either forces boundary
+contact or survives into the declared 36 parents. A saved support list cannot
+replace that geometric domain-restriction proof. Earlier root-to-b31 pruning
+and refinement still need acceptance as well.

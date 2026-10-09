@@ -606,3 +606,20 @@ stopped by the guard and replaced with individual kernel checks. The current
 planning estimate is about 60% (55–65%): the remaining large obligations are
 production graph/search acceptance, local-code tables, refinement/domain
 transitions and assembly of endpoint classification.
+
+`EndpointLeaf31Refinement` accepts the complete final b31-to-leaf31 refinement:
+all 36 retained parents at m=64, K=128, all 288 spatial/angular child
+alternatives, all 254 retained leaf records and 34 exact empty-region
+certificates. Each of the two case component domains is preserved. The parent
+coarse-group tags also have checked integer ancestry and continuous geometric
+meaning. Composing this cover with `leaf31_hybrid_no_case_packing` proves
+`leaf31_refinement_no_parent_case_packing` for both retained-parent cases, for
+container sizes at most `outerBound`. This does not prove that every packing
+entering b31 reaches these retained parents; preceding graph pruning and root
+reachability remain. The original support-file success logs are not premises.
+
+The nine serial refinement batches peaked at 736 MiB; their full geometric
+assembly peaked at 409 MiB. The export comparison checks the actual Lean
+parent labels, parent-source indices, group tags, ancestor paths and child
+witness codes against the preserved production sources. This is an external
+scope comparison; continuous coverage and contradiction are Lean theorems.
