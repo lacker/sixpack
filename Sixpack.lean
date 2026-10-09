@@ -320,3 +320,9 @@ import Sixpack.EndpointB31Case1341SpatialAngle
 import Sixpack.EndpointB31GeometricChains.Prefix4
 
 import Sixpack.EndpointB31Case1341RootEntry
+
+import Sixpack.EndpointB31SpatialAngleAccepted
+import Sixpack.EndpointB31GeometricChains.Prefix5
+
+import Sixpack.EndpointB31Case970Snapshots
+import Sixpack.EndpointB31Case970SnapshotBlockers

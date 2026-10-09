@@ -850,3 +850,17 @@ workspace partition generator handles empty final components; its case-970
 final partition pilot compiles. Check all intermediate survivor partitions and
 blocker domains before composing their geometric pruning steps. These finite
 bookkeeping proofs do not replace the geometric block and row-coverage checks.
+
+
+Five consecutive main b31 geometric steps (0–4) now form the accepted prefix 5.
+Continue through step 20 and the actual initial-snapshot exclusion. Expand
+`EndpointB31SpatialAngleAccepted` for later accepted batches; keep the original
+pilot imports fixed to avoid recompiling older dependent proofs.
+
+Case 970's eight survivor transitions and exact current-blocker identities are
+now accepted. Its 156-batch geometric table is running. After table acceptance,
+compile the 291 actual indexed row groups, then use the proposed multi-component
+geometric-step constructor to justify all eight deletions and compose a packing
+exclusion at the actual empty final component. The geometric-step constructor
+has not yet had a positive full execution and remains workspace work. Prove
+root-refinement binding and incoming root clique-support selection separately.

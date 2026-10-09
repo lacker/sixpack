@@ -1289,3 +1289,38 @@ case 970; that workspace pilot is not a geometric exclusion or a default theorem
 The main chain has four accepted steps, and its continuation remains active.
 Global classification and the lower bound remain unproved. Overall completion
 remains about 60% (55–65%).
+
+
+## Fifth main-chain pruning step and case-970 survivor snapshots
+
+`b31_step4_pruning_preserves_packing` and `b31_prefix5_preserves_packing`
+are now default-imported and fully dependency-audited. This step excludes
+42 actual removed regions through 30 geometric coverage groups. The accepted
+main-chain prefix has five consecutive steps, 686 removed owners and 353
+coverage groups. Its table now includes 5,438 geometric blocks / 194,734
+ordered pairs in batches 0–357 plus the two original pilots.
+
+`EndpointB31SpatialAngleAccepted` imports the newly accepted batches while
+keeping the original pilot import graph fixed. This avoids rebuilding the
+older prototype and step proofs whenever the accepted table grows. The fifth
+step's assembly and prefix builds passed at 467 MiB and 463 MiB respectively.
+
+Case 970's finite domain bookkeeping is also accepted: eight indexed
+partitions, nine actual snapshots, all eight survivor transitions, an empty
+final component, and eight blocker-domain identities. The serial workflow
+compiled every partition and transition and passed its dependency audit.
+Its largest partition build was 711 MiB; assembly passed at 335 MiB, and the
+blocker identities passed at 368 MiB. The source auditors independently replay
+the original trace and check the actual arrays, every positional witness,
+intermediate blocker selection and terminal empty component. These theorems
+conserve surviving choices; they do not justify geometric deletion.
+
+The combined default build passes (5,235 jobs, 623 MiB). The complete canonical
+axiom audit passes in 178 seconds: 17,446 listed checks / 17,445 distinct
+declarations use only standard logical axioms. The archive and all 730 original
+research files remain unchanged. The complete case-970 geometric table is now
+checking 156 bounded batches; its geometric pruning and packing closure remain
+unproved by this checkpoint. Case 1341's full coverage/packing-closure pipeline
+and the remaining main-chain continuation are still active. Incoming root
+selection, global classification and the lower bound remain unproved.
+Overall completion remains about 60% (55–65%).
