@@ -648,7 +648,7 @@ The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
 The 111 production batches all pass with peaks below 1,434 MiB; the latest
-full default build peaks at 397 MiB. The generator keeps new batches outside the
+full default build peaks at 402 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
 111 are accepted (batches 0–110). No complete b31 pruning or root reachability theorem is
@@ -670,7 +670,7 @@ owner 640 and second piece uses any of these blocker choices. The finite row
 build peaked at 644 MiB; the geometric assembly peaked at 389 MiB. This row
 is unconditional apart from its explicit region/domain hypotheses. Full
 21-step coverage and full block acceptance remain open; continue serial block
-acceptance from batch 79.
+acceptance from batch 111.
 
 `RectangleSnapshotPruning` proves actual-packing preservation through checked
 explicit domain snapshots. Each snapshot must contain every choice surviving
@@ -732,8 +732,8 @@ The complete untrusted indexed-row proposal now contains **1,044 groups**,
 covering all **4,247 removed-owner rows** exactly once. It proposes 37,838 owner
 position and 176,542 blocker position checks. The external scope audit verifies
 every positional equality against the actual production blocks and verifies
-complete owner coverage in all 21 steps. The 640/641 prototype and 23 generalized groups are now accepted by Lean
-with geometric exclusion, covering 52 rows; the remaining 1,020 groups are
+complete owner coverage in all 21 steps. The 640/641 prototype and 64 generalized groups are now accepted by Lean
+with geometric exclusion, covering 115 rows; the remaining 979 groups are
 not formal evidence.
 
 `audit/generate_b31_indexed_groups.py` generalizes positional acceptance to
@@ -750,20 +750,21 @@ actual block factory, node array, positional lookup and geometric proof binding
 with the production plan. Full 1,044-group acceptance and trace assembly remain
 open. The sixteen additional certificate batches pass below 1,434 MiB.
 
-The nineteen additional supported groups all compile under the external guard,
-with peaks below 885 MiB. There are now **24 accepted groups covering 52 rows**.
+The nineteen earlier groups and 41 additional groups all compile under the
+external guard, with peaks below 885 MiB. There are now **65 accepted groups
+covering 115 rows**. The latest 41 groups pass below 850 MiB.
 `EndpointB31Step0BlockerBinding` checks every scalar entry and proves that
 these groups' blocker function is exactly the actual initial snapshot blocker
 domain; explicit function equality avoids reduction of large finite-set images.
 
-`EndpointB31Step0PartialPruning` kernel-checks the selected owner count (52),
+`EndpointB31Step0PartialPruning` kernel-checks the selected owner count (115),
 binds every removal to the declared first-step removed array, and uses the
 accepted geometric group exclusions against the actual initial blocker domain.
 `b31_step0_partial_pruning_preserves_packing` proves that every actual initial
-packing choice survives deletion of those 52 owners from component 0. It uses
+packing choice survives deletion of those 115 owners from component 0. It uses
 no saved graph, success flag or unchecked row-coverage hypothesis. The partial
-assembly builds at 464 MiB; the latest default build passes at 397 MiB.
-The full first step still needs its other **176 removals**, and all later
+assembly builds at 668 MiB; the latest default build passes at 402 MiB.
+The full first step still needs its other **113 removals**, and all later
 steps and root reachability remain unproved. The source audit compares each
 actual owner/group binding and the partial-domain definition with the complete
 production plan.
@@ -777,3 +778,10 @@ hypothesis. Both generic theorems compile; the concrete complete b31 sequence
 still requires the outstanding row certificates. The 32 additional production
 batches (79–110) pass under the memory guard. The default build with these
 batches and the generic composition theorem passes at 725 MiB.
+
+The expanded partial assembly's four changed theorem dependencies and all
+123 new group-theorem dependencies pass the axiom audit. The combined list
+contains 6,886 checks and uses only `propext`, `Classical.choice` and
+`Quot.sound`. Default regeneration preserves the current 115-removal assembly
+byte for byte; additional groups require an explicit selection or
+`--all-compiled`, followed by a fresh Lean build and audit.

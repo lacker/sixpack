@@ -1,24 +1,30 @@
 """Bind accepted step-0 row groups to actual snapshot domains and prune them.
 
-The list below must be built before the generated partial assembly is built.
+Selected groups must be compiled before the generated assembly is built.
+The default selection preserves the existing assembly imports.
 """
 from pathlib import Path
-import argparse, json
+import argparse, json, re
 
 root = Path(__file__).resolve().parents[1]
 plan = json.loads((root/'audit/b31-indexed-row-group-export.json').read_text())['groups']
 partitions = json.loads((root/'audit/b31-domain-partition-export.json').read_text())['steps']
 parser = argparse.ArgumentParser()
-parser.add_argument('--groups', default='1,3,5,7,9,10,11,13,15,17,19,20,21,22,23,24,25,26,27,30,31,34,35,36')
-parser.add_argument('--all-compiled', action='store_true')
+selection = parser.add_mutually_exclusive_group()
+selection.add_argument('--groups', help='Explicit group list; by default preserve the current assembly imports')
+selection.add_argument('--all-compiled', action='store_true')
 args = parser.parse_args()
 if args.all_compiled:
     compiled = root/'.lake/build/lib/lean/Sixpack/EndpointB31IndexedGroups'
     selected = sorted({15} | {int(path.stem.removeprefix('Group'))
                               for path in compiled.glob('Group*.olean')
                               if plan[int(path.stem.removeprefix('Group'))]['step'] == 0})
-else:
+elif args.groups:
     selected = sorted(set(map(int, args.groups.split(','))))
+else:
+    existing = (root/'Sixpack/EndpointB31Step0PartialPruning.lean').read_text()
+    selected = sorted({15} | set(map(int, re.findall(
+        r'^import Sixpack.EndpointB31IndexedGroups.Group(\d+)$', existing, re.M))))
 assert {1,15} <= set(selected)
 assert all(plan[i]['step'] == 0 for i in selected)
 for i in selected:

@@ -604,7 +604,7 @@ proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
 Final snapshot choices and their actual labels are now bound to the two
 accepted leaf-refinement parent cases. `b31_final_snapshot_no_packing` composes
 this complete domain binding with the accepted refinement and leaf closure.
-Accept remaining geometric blocks from batch 79,
+Accept remaining geometric blocks from batch 111,
 prove every removed owner's complete row coverage against its current blocker
 domain, and assemble geometric pruning with the accepted survivor transitions.
 The full production pruning theorem and root reachability remain open.
@@ -624,7 +624,7 @@ plan for all 4,247 owner rows. Its scope checker verifies unique full coverage
 and all 214,380 positional witnesses. The generalized generator now uses this plan with 32-case chunks on both
 sides and proved owner-pair flattening. Groups 1, 3, 5 and 11 compile with
 geometric bindings, in addition to the group-15 prototype. Continue accepting
-the remaining 1,020 groups and their required geometric batches. The unchecked
+the remaining 979 groups and their required geometric batches. The unchecked
 portion of the plan remains untrusted until its Lean acceptance compiles.
 
 Use `audit/check_b31_indexed_group_modules.py --groups ...` for serial
@@ -633,15 +633,16 @@ dependencies and imports only the needed batches, keeping completed groups
 independent of later pilot-table import growth. The source audit checks all
 actual generated group inputs against the exhaustive coverage plan.
 
-All 19 further groups supported by the accepted geometric prefix now compile.
-The 24 accepted groups cover 52 first-step owner rows. The blocker array is
+All 19 earlier and 41 additional groups supported by the accepted geometric
+prefix now compile. The 65 accepted groups cover 115 first-step owner rows.
+The blocker array is
 proved equal to the actual initial snapshot domain, and the partial pruning
-theorem preserves every actual packing choice through those 52 deletions.
+theorem preserves every actual packing choice through those 115 deletions.
 Its owner count and declared-removal bindings are kernel-checked. Complete
-the remaining 176 first-step removals by accepting their geometric dependencies
+the remaining 113 first-step removals by accepting their geometric dependencies
 and row groups, then extend the same actual-domain binding and pruning assembly
 to the remaining 20 steps. The complete geometric table still continues from
-batch 79. The end-to-end root-case classification remains unproved.
+batch 111. The end-to-end root-case classification remains unproved.
 
 The geometric snapshot preservation and chain theorems now compile. Concrete
 row exclusions can discharge each step directly using the already checked
@@ -651,3 +652,8 @@ complete step's removal coverage, and compose the 21 steps to invoke
 `b31_final_snapshot_no_packing`. The partial assembler now supports an explicit
 group list or all compiled step-0 groups; its scope auditor derives that list
 from the actual Lean imports.
+
+Default partial-step regeneration now derives its selected groups from the
+existing checked assembly imports. Use `--all-compiled` to extend that selection
+after new group acceptance; the resulting assembly itself must compile, and
+its changed theorem dependencies must be re-audited.
