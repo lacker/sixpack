@@ -138,9 +138,9 @@ multiplier lower bounds, 240 inverse absolute bounds, 15 gradient norm bounds,
 and the coordinate bounds on its kernel vector
 to its exact certified matrices. Their soundness proof yields an actual geometric
 directional-derivative bound for directions with bounded coordinates. This is
-part of the radius certificate's geometric bridge; the Hessian norm and
-third-derivative bounds remain outside that bridge. The curvature gap is closed
-by the new results below.
+part of the radius certificate's geometric bridge. The second-order bounds are
+now checked for branch 0 by the results below; third derivatives remain outside
+that bridge.
 
 To regenerate the new fixture, use the Python standard library:
 
@@ -184,14 +184,39 @@ successful eight-branch curvature build took about four seconds on the local
 machine, excluding already compiled first-order fixtures.
 
 These results prove the positive quadratic obstruction in the critical direction.
-They do not yet prove a neighborhood contains no competing packing. The Hessian
-bounds in directions normal to the pivot, uniform third derivatives, Taylor
-remainders, and nonlinear motion/energy estimates are still necessary.
+They do not yet prove a neighborhood contains no competing packing. Uniform
+third derivatives, Taylor remainders, and the nonlinear energy estimate are still
+necessary.
+
+## Full geometric Hessians and the motion estimate
+
+`LocalHessian` reconstructs all second-order matrix entries from the candidate
+vertices, centroid offsets and rotation chart. It proves their quadratic forms
+are actual second derivatives for every real direction. `HessianEnclosures`
+reconstructs the full Lagrangian matrix and binds it to actual second derivatives.
+Its proved enclosure checkers cover constraint Hessian norms and contractions
+with the certified kernel and inverse columns. `HessianForms` proves symmetry,
+pivot/normal splitting and the full quadratic decomposition in inverse coordinates.
+
+`HessianFixture` accepts branch 0's 15 Hessian norms, 15 mixed bounds and 225
+normal curvature bounds by ordinary kernel reduction, with no precomputed matrix
+accepted as geometric evidence. The successful build took 384 seconds locally;
+see `audit/hessian-kernel.log`. `HessianControls` rejects falsely zero norms and
+truncated Hessian or normal inputs. These checks currently cover branch 0 only.
+
+`RadiusMotion` proves the motion estimate from exact checked reconstruction,
+nonnegative constraint values and explicit Taylor errors. It supplies a new
+checker binding the inverse-weighted error coefficients and multiplier ratios
+to the exact inverse. `MotionFixture` accepts those coefficients for branch 0
+and derives the motion inequality for actual geometric constraint values.
+The Taylor error bound remains a hypothesis; the motion inequality is derived.
+Thus the complete local nonlinear conclusion is still pending.
 
 ## Next useful milestone
 
-Connect Hessian enclosures, third derivatives and Taylor motion/energy estimates
-to the radius criterion. The exact first-order coordinates, positive multipliers and
+Prove uniform third derivatives and Taylor remainder estimates, derive the
+nonlinear energy estimate, and connect these to the radius criterion. Extend
+the concrete second-order enclosure checks from branch 0 to all eight branches. The exact first-order coordinates, positive multipliers and
 inverse identities are now checked against actual geometric derivatives for all
 eight branches. In parallel, extend
 the search prototype with channel-specific local labels and a small genuine

@@ -11,7 +11,7 @@ certificate strategy are settled. It should not be read as a schedule forecast.
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Partial |
 | Continuous spatial/orientation coverage and symmetry reduction | Mostly remaining |
-| Local five-piece nonlinear rigidity | In progress; all eight first-order branches checked against actual geometric derivatives; actual second derivatives and all eight pivot curvatures checked; nonlinear estimates remaining |
+| Local five-piece nonlinear rigidity | In progress; all eight first-order branches checked against actual geometric derivatives; actual second derivatives and all eight pivot curvatures checked; branch 0 Hessian/normal bounds checked; Taylor and energy estimates remaining |
 | Sound finite search and certificate machinery | Small working prototypes; production checker remaining |
 | All concrete triangle-region certificates checked by Lean | Remaining |
 | Endpoint classification and final lower bound | Conditional final argument proved; classification remaining |
@@ -28,6 +28,8 @@ checks all eight branches' exact multiplier/inverse/kernel certificates against
 those derivatives. The actual second derivatives of every local constraint and
 Lagrangian are now proved. All eight pivot curvatures are recomputed from geometry
 and proved to be at least 4/5. Branch 0's rounded curvature lower bound and
-first-order rational enclosures are also proved.
+first-order rational enclosures are also proved. Its Hessian norms, mixed/normal
+curvature bounds, and inverse-weighted error coefficients are now checked. Its
+motion inequality follows from explicit geometric Taylor-error hypotheses.
 This is a meaningful prerequisite for nonlinear local rigidity, but does not yet
 prove any of the large global search exclusions. The estimate remains about 15%.

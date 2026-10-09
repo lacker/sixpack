@@ -23,3 +23,10 @@ import Sixpack.EnclosureFixture
 import Sixpack.LocalSecondDerivatives
 import Sixpack.LocalCurvature
 import Sixpack.CurvatureFixture
+import Sixpack.LocalHessian
+import Sixpack.HessianEnclosures
+import Sixpack.HessianFixture
+import Sixpack.HessianForms
+import Sixpack.HessianControls
+import Sixpack.RadiusMotion
+import Sixpack.MotionFixture

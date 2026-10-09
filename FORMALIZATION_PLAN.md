@@ -67,10 +67,11 @@ every branch index.
 inverse-entry, and gradient-norm bounds against those exact quantities and prove
 a bound on the actual directional derivatives.
 
-These results do not establish nonlinear local rigidity: second/third derivative
-bounds, curvature/Hessian identities and Taylor estimates remain to be connected,
+These results do not establish nonlinear local rigidity: uniform third derivative
+bounds, Taylor estimates and the nonlinear energy estimate remain to be proved,
 as does geometric coverage by the eight branches. The existing radius criterion
-still carries its two explicit analytic motion/energy hypotheses.
+still carries its two explicit analytic motion/energy hypotheses. Branch 0's
+motion estimate is now derived from explicit geometric Taylor errors below.
 
 `lower_bound_from_boundary_classification` is deliberately a **conditional**
 theorem: its containment, translation, and boundary-classification hypotheses are
@@ -79,6 +80,25 @@ the last contradiction step once the missing prerequisites are supplied.
 `lower_bound_of_endpoint_boundary` specializes this to actual `Packing` and
 proves the containment and translation prerequisites. Its only remaining
 mathematical hypothesis is endpoint boundary classification, stated explicitly.
+
+### Second-order geometry and radius motion
+
+`LocalSecondDerivatives` and `LocalCurvature` prove actual second derivatives,
+stationarity of the geometric Lagrangian, and all eight checked pivot curvatures.
+`LocalHessian` reconstructs the entire constraint matrices from geometry and
+proves their quadratic forms equal actual second derivatives for every real
+direction. `HessianEnclosures` binds the Lagrangian matrix to its actual second
+derivatives and checks the Hessian norms and mixed/normal contractions.
+`HessianForms` proves symmetry and the pivot/normal quadratic decomposition.
+
+`HessianFixture` kernel-checks branch 0's 15 Hessian norms, 15 mixed bounds and
+225 normal-matrix bounds. `HessianControls` rejects zero Hessian norms and
+truncated inputs. `RadiusMotion` derives the motion estimate from checked
+linear reconstruction, nonnegative constraints and explicit Taylor errors.
+`MotionFixture` checks branch 0's motion coefficients and specializes that
+estimate to actual geometric constraint values. Its Taylor-error hypothesis
+remains explicit. No radius or neighborhood rigidity conclusion is claimed
+without the missing analytic bounds and energy estimate.
 
 ## Remaining modules, in dependency order
 
@@ -97,7 +117,9 @@ mathematical hypothesis is endpoint boundary classification, stated explicitly.
    compute and certify the 8,008-to-1,396 reduction.
 3. **Local analytic theorems.** Define the actual 16-variable constraint functions
    and the 15-normal-variable pivot chart. Formalize mixed third derivative bounds,
-   multivariable Taylor estimates, and the eight separating-edge branches. Check
+   Taylor estimates along each straight displacement path and the eight
+   separating-edge branches. Prove a third-derivative bound uniform over the path
+   parameter in `[0,1]`, scaled by the cube of the displacement sup norm. Check
    the exact multiplier, inverse, Hessian, and curvature certificates. Prove the
    radius `1/300` and each of the three tubes. The scalar implication already
    implemented is only their final step.
