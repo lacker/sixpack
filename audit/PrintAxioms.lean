@@ -19386,3 +19386,9 @@ import Sixpack
 #print axioms Sixpack.b31_case970_spatial_angle_block58_pair_excluded
 #print axioms Sixpack.b31_case970_spatial_angle_block59_accepted
 #print axioms Sixpack.b31_case970_spatial_angle_block59_pair_excluded
+#print axioms Sixpack.fixed_vertex_selection
+#print axioms Sixpack.checked_fixed_vertex_not_selected
+#print axioms Sixpack.checked_fixed_vertex_deletion_preserves_selection
+#print axioms Sixpack.checked_fixed_vertex_deletion_preserves_packing
+#print axioms Sixpack.checked_fixed_vertex_cover_or_deletion
+#print axioms Sixpack.checked_fixed_vertex_cover_or_preserves_packing

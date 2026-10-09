@@ -1440,3 +1440,34 @@ case-970 exclusion still remains unproved. The runner is continuing through
 steps 1–2; its geometric table and the remaining main-chain checks continue
 separately. Incoming root selection, global classification and the end-to-end
 lower bound remain unproved. Overall completion remains about 60% (55–65%).
+
+
+## Sound fixed-vertex support pruning
+
+`FixedVertexSearch` proves that fixing a selected component and restricting
+other domains to its neighbors preserves admissibility. A checked ordinary
+search refutation on those domains rules out that vertex and preserves the
+same selection when it is erased. `FixedVertexRegionPruning` connects this
+theorem to actual represented packings using checked missing-edge geometry.
+
+`FixedVertexCoveredPruning` handles the stronger operation used by the current
+production root checker: a checked covered-search result supplies either one
+common local channel covering the selected vertices or the same represented
+packing in the pruned domains. Local label geometry and concrete production
+search acceptance remain separate obligations. These generic soundness lemmas
+do not certify the saved root support lists or discharge root classification.
+
+All three modules compile under the memory guard; their six public theorems
+are default-imported. The expanded default build passes (5,496 jobs, 642 MiB).
+The canonical list has 19,355 distinct declarations. A full audit of 19,353
+and a separate audit of the two subsequently added covered-pruning lemmas
+both use only standard logical axioms. `check_axiom_audit_union.py` strictly
+validates each part against its request source and requires their union to
+equal the complete current canonical scope. Its positive check passes and its
+missing-part negative control is rejected. The utility creates no Lean proof
+or synthetic success log. Original archive/file integrity passes.
+
+The two case-970 continuation steps, its remaining geometric table and the
+remaining main-chain steps continue checking separately. Concrete root-support
+certificates, local-label coverage, global classification and the final lower
+bound remain unfinished. Overall completion remains about 60% (55–65%).
