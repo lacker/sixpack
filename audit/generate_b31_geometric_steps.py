@@ -107,20 +107,53 @@ for step in selected:
     text += finite_checks(p+'OwnerCheckIndex', t+'_removed_rows_covered', R,
                           lambda part: f'b31Partition{step}Removed {part} =\n'
                           f'      ({p}Groups ({p}OwnerSelect {part}).1).owner ({p}OwnerSelect {part}).2')
-    text += f'''theorem {t}_groups_exclude (group : Fin {P}) (owner other : Fin 7023)
-    (hm : owner ∈ ({p}Groups group).owners)
+    group_batches = (P+31)//32
+    text += f'''def {p}GroupCheckIndex (batch : Fin {group_batches}) (offset : Fin 32) : Fin {P} :=
+  ⟨(32*batch.val+offset.val)%{P},Nat.mod_lt _ (by decide)⟩
+
+'''
+    for batch in range(group_batches):
+        text += f'''private theorem {t}_groups_batch{batch} (offset : Fin 32) (owner other : Fin 7023)
+    (hm : owner ∈ ({p}Groups ({p}GroupCheckIndex {batch} offset)).owners)
     (hw : other ∈ b31SnapshotDomains {step} (b31PartitionBlocker {step})) :
     ¬ representedRegionCompatible b31SpatialAngleRegions owner other := by
-  fin_cases group
+  fin_cases offset
 '''
-    for local, index in enumerate(ids):
-        _, owner_fn, blockers, exclusion = group_names(index)
-        text += f'''  · apply {exclusion} owner other
+        for offset in range(32):
+            index = ids[(32*batch+offset)%P]
+            _, owner_fn, blockers, exclusion = group_names(index)
+            text += f'''  · apply {exclusion} owner other
     · change owner ∈ Finset.univ.image {owner_fn} at hm
       exact hm
     · have hblockers : {blockers} = {first_blockers} := by rfl
       rw [hblockers,{t}_blocker_function,b31_snapshot_step{step}_blocker_domain]
       exact hw
+'''
+        text += '\n'
+    text += f'''private theorem {t}_groups_batches (batch : Fin {group_batches})
+    (offset : Fin 32) (owner other : Fin 7023)
+    (hm : owner ∈ ({p}Groups ({p}GroupCheckIndex batch offset)).owners)
+    (hw : other ∈ b31SnapshotDomains {step} (b31PartitionBlocker {step})) :
+    ¬ representedRegionCompatible b31SpatialAngleRegions owner other := by
+  fin_cases batch
+'''
+    text += ''.join(f'  · exact {t}_groups_batch{batch} offset owner other hm hw\n'
+                    for batch in range(group_batches))
+    text += f'''
+theorem {t}_groups_exclude (group : Fin {P}) (owner other : Fin 7023)
+    (hm : owner ∈ ({p}Groups group).owners)
+    (hw : other ∈ b31SnapshotDomains {step} (b31PartitionBlocker {step})) :
+    ¬ representedRegionCompatible b31SpatialAngleRegions owner other := by
+  let batch : Fin {group_batches} := ⟨group.val/32,by have h := group.isLt; omega⟩
+  let offset : Fin 32 := ⟨group.val%32,Nat.mod_lt _ (by decide)⟩
+  have hi : {p}GroupCheckIndex batch offset = group := by
+    apply Fin.ext
+    change (32*(group.val/32)+group.val%32)%{P} = group.val
+    rw [Nat.div_add_mod,Nat.mod_eq_of_lt group.isLt]
+  apply {t}_groups_batches batch offset owner other ?_ hw
+  rw [hi]
+  exact hm
+
 '''
     text += f'''
 /-- Every declared removed owner is excluded against the actual current

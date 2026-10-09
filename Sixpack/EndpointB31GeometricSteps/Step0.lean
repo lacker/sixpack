@@ -815,11 +815,14 @@ theorem b31_geometric_step0_removed_rows_covered (part : Fin 228) :
   rw [← hi]
   exact b31_geometric_step0_removed_rows_covered_batches batch offset
 
-theorem b31_geometric_step0_groups_exclude (group : Fin 126) (owner other : Fin 7023)
-    (hm : owner ∈ (b31GeometricStep0Groups group).owners)
+def b31GeometricStep0GroupCheckIndex (batch : Fin 4) (offset : Fin 32) : Fin 126 :=
+  ⟨(32*batch.val+offset.val)%126,Nat.mod_lt _ (by decide)⟩
+
+private theorem b31_geometric_step0_groups_batch0 (offset : Fin 32) (owner other : Fin 7023)
+    (hm : owner ∈ (b31GeometricStep0Groups (b31GeometricStep0GroupCheckIndex 0 offset)).owners)
     (hw : other ∈ b31SnapshotDomains 0 (b31PartitionBlocker 0)) :
     ¬ representedRegionCompatible b31SpatialAngleRegions owner other := by
-  fin_cases group
+  fin_cases offset
   · apply b31_row_group0_geometric_exclusion owner other
     · change owner ∈ Finset.univ.image b31RowGroup0Group at hm
       exact hm
@@ -1012,6 +1015,12 @@ theorem b31_geometric_step0_groups_exclude (group : Fin 126) (owner other : Fin 
     · have hblockers : b31RowGroup31Blockers = b31RowGroup0Blockers := by rfl
       rw [hblockers,b31_geometric_step0_blocker_function,b31_snapshot_step0_blocker_domain]
       exact hw
+
+private theorem b31_geometric_step0_groups_batch1 (offset : Fin 32) (owner other : Fin 7023)
+    (hm : owner ∈ (b31GeometricStep0Groups (b31GeometricStep0GroupCheckIndex 1 offset)).owners)
+    (hw : other ∈ b31SnapshotDomains 0 (b31PartitionBlocker 0)) :
+    ¬ representedRegionCompatible b31SpatialAngleRegions owner other := by
+  fin_cases offset
   · apply b31_row_group32_geometric_exclusion owner other
     · change owner ∈ Finset.univ.image b31RowGroup32Group at hm
       exact hm
@@ -1204,6 +1213,12 @@ theorem b31_geometric_step0_groups_exclude (group : Fin 126) (owner other : Fin 
     · have hblockers : b31RowGroup63Blockers = b31RowGroup0Blockers := by rfl
       rw [hblockers,b31_geometric_step0_blocker_function,b31_snapshot_step0_blocker_domain]
       exact hw
+
+private theorem b31_geometric_step0_groups_batch2 (offset : Fin 32) (owner other : Fin 7023)
+    (hm : owner ∈ (b31GeometricStep0Groups (b31GeometricStep0GroupCheckIndex 2 offset)).owners)
+    (hw : other ∈ b31SnapshotDomains 0 (b31PartitionBlocker 0)) :
+    ¬ representedRegionCompatible b31SpatialAngleRegions owner other := by
+  fin_cases offset
   · apply b31_row_group64_geometric_exclusion owner other
     · change owner ∈ Finset.univ.image b31RowGroup64Group at hm
       exact hm
@@ -1396,6 +1411,12 @@ theorem b31_geometric_step0_groups_exclude (group : Fin 126) (owner other : Fin 
     · have hblockers : b31RowGroup95Blockers = b31RowGroup0Blockers := by rfl
       rw [hblockers,b31_geometric_step0_blocker_function,b31_snapshot_step0_blocker_domain]
       exact hw
+
+private theorem b31_geometric_step0_groups_batch3 (offset : Fin 32) (owner other : Fin 7023)
+    (hm : owner ∈ (b31GeometricStep0Groups (b31GeometricStep0GroupCheckIndex 3 offset)).owners)
+    (hw : other ∈ b31SnapshotDomains 0 (b31PartitionBlocker 0)) :
+    ¬ representedRegionCompatible b31SpatialAngleRegions owner other := by
+  fin_cases offset
   · apply b31_row_group96_geometric_exclusion owner other
     · change owner ∈ Finset.univ.image b31RowGroup96Group at hm
       exact hm
@@ -1576,6 +1597,44 @@ theorem b31_geometric_step0_groups_exclude (group : Fin 126) (owner other : Fin 
     · have hblockers : b31RowGroup125Blockers = b31RowGroup0Blockers := by rfl
       rw [hblockers,b31_geometric_step0_blocker_function,b31_snapshot_step0_blocker_domain]
       exact hw
+  · apply b31_row_group0_geometric_exclusion owner other
+    · change owner ∈ Finset.univ.image b31RowGroup0Group at hm
+      exact hm
+    · have hblockers : b31RowGroup0Blockers = b31RowGroup0Blockers := by rfl
+      rw [hblockers,b31_geometric_step0_blocker_function,b31_snapshot_step0_blocker_domain]
+      exact hw
+  · apply b31_row_group1_geometric_exclusion owner other
+    · change owner ∈ Finset.univ.image b31RowGroup1Group at hm
+      exact hm
+    · have hblockers : b31RowGroup1Blockers = b31RowGroup0Blockers := by rfl
+      rw [hblockers,b31_geometric_step0_blocker_function,b31_snapshot_step0_blocker_domain]
+      exact hw
+
+private theorem b31_geometric_step0_groups_batches (batch : Fin 4)
+    (offset : Fin 32) (owner other : Fin 7023)
+    (hm : owner ∈ (b31GeometricStep0Groups (b31GeometricStep0GroupCheckIndex batch offset)).owners)
+    (hw : other ∈ b31SnapshotDomains 0 (b31PartitionBlocker 0)) :
+    ¬ representedRegionCompatible b31SpatialAngleRegions owner other := by
+  fin_cases batch
+  · exact b31_geometric_step0_groups_batch0 offset owner other hm hw
+  · exact b31_geometric_step0_groups_batch1 offset owner other hm hw
+  · exact b31_geometric_step0_groups_batch2 offset owner other hm hw
+  · exact b31_geometric_step0_groups_batch3 offset owner other hm hw
+
+theorem b31_geometric_step0_groups_exclude (group : Fin 126) (owner other : Fin 7023)
+    (hm : owner ∈ (b31GeometricStep0Groups group).owners)
+    (hw : other ∈ b31SnapshotDomains 0 (b31PartitionBlocker 0)) :
+    ¬ representedRegionCompatible b31SpatialAngleRegions owner other := by
+  let batch : Fin 4 := ⟨group.val/32,by have h := group.isLt; omega⟩
+  let offset : Fin 32 := ⟨group.val%32,Nat.mod_lt _ (by decide)⟩
+  have hi : b31GeometricStep0GroupCheckIndex batch offset = group := by
+    apply Fin.ext
+    change (32*(group.val/32)+group.val%32)%126 = group.val
+    rw [Nat.div_add_mod,Nat.mod_eq_of_lt group.isLt]
+  apply b31_geometric_step0_groups_batches batch offset owner other ?_ hw
+  rw [hi]
+  exact hm
+
 
 /-- Every declared removed owner is excluded against the actual current
 blocker domain. Removed-index coverage and all group exclusions are checked. -/

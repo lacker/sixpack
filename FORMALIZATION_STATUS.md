@@ -639,21 +639,21 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 2,302 blocks, covering 125,606 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and 154
+`EndpointB31SpatialAnglePilot` accepts 2,846 blocks, covering 132,058 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 188
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The 154 production batches all pass with peaks below 1,434 MiB; the latest
-full default build peaks at 716 MiB. The generator keeps new batches outside the
+The 188 production batches all pass with peaks below 1,434 MiB; the latest
+full default build peaks at 699 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
-154 are accepted (batches 0–153). No complete b31 pruning or root reachability theorem is
-claimed; 7,574 of the 9,876 proposed blocks still need acceptance, followed by
-checked coverage and composition of all 21 pruning rectangles.
+188 are accepted (batches 0–187). The complete first pruning step is proved
+below; 7,030 of the 9,876 proposed blocks still need acceptance, followed by
+checked coverage and composition of the remaining 20 pruning rectangles.
 
 `RectanglePruning` now proves that checked rectangle coverage preserves every
 admissible choice through a sequential pruning trace.
@@ -830,3 +830,27 @@ geometric dependencies still require acceptance. It avoids a large literal
 removed-owner case split or cardinality computation. This proves one complete
 pruning step, not the complete 21-step trace, root reachability, or global lower
 bound. The legacy 115-owner partial theorem remains available as a reference.
+
+
+## Second-step geometry and smaller assembly checks
+
+Batches 154–187 add 544 accepted geometric blocks. All 34 serial builds passed,
+with observed peaks at most 1,332 MiB. Their 1,088 theorem dependencies passed
+Lean's axiom audit; the current combined list has 9,441 checks, all using only
+`propext`, `Classical.choice` and `Quot.sound`. The source scope auditor checks
+these bindings against the actual preserved b31 records. The default build
+passes at 699 MiB. No proof shortcuts were found in these new modules.
+
+The complete first-step assembler now divides its group-exclusion dispatch into
+32-case chunks as well as chunking owner and blocker identities. The public
+statements are unchanged. Its build passed in 78 seconds at 1,639 MiB, down from
+2,458 MiB; all six changed theorem dependencies were re-audited. Regeneration
+reproduces the accepted source byte for byte.
+
+All geometric dependencies for step 1 are now accepted. Its 97 indexed groups,
+covering 269 owners against 24 blockers, are being checked serially under the
+physical-memory guard. This does not yet prove the snapshot-1-to-2 transition:
+all group modules and the assembled step still need acceptance and axiom audit.
+Continue geometric block acceptance from batch 188 after this assembly. The
+complete 21-step trace, incoming root coverage and global lower bound remain
+unproved. The overall planning estimate remains about 60% (55–65%).

@@ -570,10 +570,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 154 production batches pass, giving 2,302 accepted
+603 MiB peak. The first 188 production batches pass, giving 2,846 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 154, then prove
+without expanding the default import graph. Continue from batch 188, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -604,7 +604,7 @@ proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
 Final snapshot choices and their actual labels are now bound to the two
 accepted leaf-refinement parent cases. `b31_final_snapshot_no_packing` composes
 this complete domain binding with the accepted refinement and leaf closure.
-Accept remaining geometric blocks from batch 154,
+Accept remaining geometric blocks from batch 188,
 prove every removed owner's complete row coverage against its current blocker
 domain, and assemble geometric pruning with the accepted survivor transitions.
 The full production pruning theorem and root reachability remain open.
@@ -641,7 +641,7 @@ theorem preserves every actual packing choice through those 115 deletions.
 Its owner count and declared-removal bindings are kernel-checked. The complete
 first step is now accepted by the indexed geometric assembler; extend this
 actual-domain binding and pruning assembly to the remaining 20 steps. The complete geometric table still continues from
-batch 154. The end-to-end root-case classification remains unproved.
+batch 188. The end-to-end root-case classification remains unproved.
 
 The geometric snapshot preservation and chain theorems now compile. Concrete
 row exclusions can discharge each step directly using the already checked
@@ -675,6 +675,8 @@ module must compile and be axiom-audited; generation alone is not acceptance.
 Blocker-domain identities for all 21 steps are now proved independently of
 geometric deletion. Continue with step 1: its 269 owners form 97 groups, its
 blocker domain has 24 choices, and its geometric dependencies extend through
-batch 187. Accept batches 154–187, then all step-1 groups and the indexed
-snapshot-1-to-2 assembly. The remaining 20 steps, incoming root coverage and
+batch 187. Batches 154–187 are now accepted; check all step-1 groups and the
+indexed snapshot-1-to-2 assembly. The group-exclusion dispatch now uses 32-case
+chunks, reducing the accepted step-0 build peak to 1,639 MiB. Continue the
+remaining geometric table from batch 188 after step 1. The remaining 20 steps, incoming root coverage and
 end-to-end root-case classification remain open.

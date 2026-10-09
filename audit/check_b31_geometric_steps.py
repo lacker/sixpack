@@ -40,7 +40,8 @@ for path in sources:
     body = text.split(f'def {p}OwnerSelect ', 1)[1].split('\n\n', 1)[0]
     assert [(int(a),int(b)) for a,b in re.findall(rf'^  \| (\d+) => {p}OwnerPage(\d+)\.getD \(part.val%32\)', body, re.M)] == [(i,i) for i in range((R+31)//32)]
     actual_exclusions = re.findall(r'apply (b31_row_group\d+_geometric_exclusion|b31_indexed_first_group_geometric_exclusion) owner other', text)
-    assert actual_exclusions == exclusions
+    assert actual_exclusions == [exclusions[i%P] for i in range(32*((P+31)//32))]
+    assert f'⟨(32*batch.val+offset.val)%{P},Nat.mod_lt _ (by decide)⟩' in text
     assert f'theorem b31_geometric_step{step}_removed_rows_covered (part : Fin {R})' in text
     assert f'b31Partition{step}Removed part =' in text
     assert f'(hm : owner ∈ b31PartitionRemovedDomains {step})' in text
