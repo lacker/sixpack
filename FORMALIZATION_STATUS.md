@@ -9,8 +9,8 @@ It is not a schedule forecast.
 |---|---|
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors and separating-axis necessity proved; general outer-container isometry normalization remains |
-| Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage and necessary centroid domains proved |
-| Continuous spatial coverage and symmetry reduction | Inscribed-disk and centroid-separation foundations proved; concrete spatial cells, refinements and symmetry reduction remain |
+| Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
+| Continuous spatial coverage and symmetry reduction | Closed sixteen-cell coarse cover, its cardinality and six-centroid injection proved; fine-cell intersections, refinements, production index bindings and symmetry reduction remain |
 | Local five-piece nonlinear rigidity | Packing radius theorem and all three packing tube theorems proved in their explicit charts; global region-to-chart bindings remain |
 | Sound finite search and certificate machinery | Small working prototypes; production checker remaining |
 | All concrete triangle-region certificates checked by Lean | Remaining |
@@ -72,13 +72,25 @@ actual contained unit triangles and their necessary centroid domains.
 
 `InscribedDisk` proves the open disk of physical radius `sqrt(3)/6` lies in the
 interior of either ordering of a unit triangle. Disjoint unit triangles therefore
-have squared physical centroid separation at least `1/3`. Concrete coarse-cell
-injection, spatial intersections and refinements are still to be bound to these
-results.
+have squared physical centroid separation at least `1/3`. `SpatialCells` now
+proves the coordinate metric identity, continuous coverage by all sixteen closed
+coarse cells, their exact cardinality, their squared diameter bound and an
+injective assignment of the six packing centroids whenever `L ≤ outerBound`.
+Boundary points may belong to multiple cells; any cell collision contradicts
+the strict diameter inequality. This does not yet bind the cells to the original
+graph indices or prove the symmetry reduction.
+
+`RelativeOrientation`, `CommonInnerTriangle` and `UniformInnerTriangle` prove
+the endpoint-max support construction is contained in every actual triangle
+throughout each closed uniform bin for `K ≥ 2`. Its scale lies in `[1/2,1]`.
+`InnerPacking` proves positive area, inherited disjoint interiors and the
+necessary six-edge separating-axis condition for the inner triangles chosen
+from an arbitrary packing. No external checker acceptance hypothesis is used.
+The production rational polygons and pair-exclusion certificates remain unbound.
 
 ## Remaining trust boundary
 
-Global spatial/region coverage, region-to-local-chart bindings, container
+Fine spatial/region coverage, production coarse-cell index bindings, region-to-local-chart bindings, container
 symmetries, the production search checker and its large certificates, and
 endpoint classification remain. The earlier successful Python/C++ replay is
 external evidence for those parts and is not a Lean proof.

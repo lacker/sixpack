@@ -61,8 +61,12 @@ All three selected tubes now have packing rigidity theorems in the explicit
 anchor chart, including checked derivative contractions, positive gaps, the 22
 excluded axes and finite branch coverage. Unit-triangle congruence, fundamental
 half-angle coverage, closed angle-bin coverage, support/centroid-domain bounds
-and the inscribed-disk centroid-separation bound are also proved. Global spatial
-coverage, region-to-chart bindings, production search certificates and endpoint
+and the inscribed-disk centroid-separation bound are also proved. The fixed
+common inner triangle is now proved valid throughout each closed angle bin,
+including its necessary separating-axis condition for actual packings. The
+sixteen closed coarse spatial cells cover all packing centroids, with an
+injective assignment of the six pieces. Fine spatial coverage, symmetry
+reduction, production index bindings, region-to-chart bindings, search certificates and endpoint
 classification remain. Compilation uses a 4 GB Lean memory limit; the large
 Hessian checks run in serial branch modules.
 Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.

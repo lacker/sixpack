@@ -291,7 +291,22 @@ its evenness and monotonicity, and the closed-bin minimum. `OrientationBins`
 proves continuous coverage by all closed rational bins and connects their
 minimum support to actual triangle centroid domains. `InscribedDisk` proves the
 open inscribed disk and the squared centroid separation `1/3` for disjoint unit
-triangles. The spatial region and graph data still need geometric bindings.
+triangles.
+
+`RotationMaps` proves affine hull transport and inverse rotations.
+`RelativeOrientation` derives the rational relative parameter and proves its
+monotonicity and endpoint support bound. `CommonInnerTriangle` and
+`UniformInnerTriangle` prove the fixed endpoint-max inner triangle is contained
+for every actual angle in a closed bin (`K ≥ 2`), with positive scale in
+`[1/2,1]`. `InnerPacking` connects these triangles to arbitrary packings, proves
+their positive area and disjoint interiors, and derives their necessary
+six-edge-axis condition.
+
+`SpatialCells` defines the sixteen closed triangular coarse cells, checks their
+cardinality in the kernel, proves continuous coverage and the physical squared
+diameter bound, and proves injective cell assignment for packing centroids at
+`L ≤ outerBound`. The production index maps, fine intersections, refinement and
+symmetry data still need geometric bindings.
 
 ## Remaining modules, in dependency order
 
@@ -301,10 +316,10 @@ triangles. The spatial region and graph data still need geometric bindings.
    orderings are proved. Normalize an arbitrary equilateral outer container by a
    Euclidean isometry into the current scaled-coordinate model.
 2. **Spatial and region cover.** Fundamental orientation coverage, its closed
-   rational bins, exact support margins and bin minima are proved. Prove the
-   common inner triangle, concrete closed-cell intersections (including lines
-   and points), all spatial refinements and the coarse-cell injection using the
-   proved inscribed-disk separation. Prove all six container symmetry actions and
+   rational bins, exact support margins, common inner triangles and coarse-cell
+   coverage/injection are proved. Bind the cells and inner triangles to production
+   indices and rational data. Prove concrete closed-cell intersections (including
+   lines and points) and all spatial refinements. Prove all six container symmetry actions and
    certify the 8,008-to-1,396 reduction.
 3. **Local chart bindings.** The radius and all three tube packing theorems are
    proved in their explicit rotation and anchor charts, including the eight

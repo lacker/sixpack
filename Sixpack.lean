@@ -124,3 +124,9 @@ import Sixpack.EquilateralGeometry
 import Sixpack.OrientationCover
 import Sixpack.OrientationBins
 import Sixpack.InscribedDisk
+import Sixpack.RotationMaps
+import Sixpack.RelativeOrientation
+import Sixpack.CommonInnerTriangle
+import Sixpack.UniformInnerTriangle
+import Sixpack.InnerPacking
+import Sixpack.SpatialCells

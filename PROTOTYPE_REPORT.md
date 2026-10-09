@@ -415,5 +415,19 @@ hull by the fundamental half-angle chart with either vertex ordering, cover ever
 real parameter by closed angle bins, and prove their exact support/centroid
 bounds. The inscribed disk implies squared centroid separation at least `1/3`.
 These are foundations for global coverage, not certification of any production
-triangle-region graph. Spatial cells, inner triangles, symmetries, chart bindings,
-production search soundness and endpoint classification remain.
+triangle-region graph.
+
+## Common inner triangles and coarse spatial injection
+
+The uniform common inner triangle is proved contained for every actual angle
+in a closed bin (`K ≥ 2`). Relative-angle monotonicity and endpoint support
+bounds justify the exact shrink factor; its scale is in `[1/2,1]`. Its area is
+strictly positive. Any actual packing supplies such inner triangles with disjoint
+interiors, so the proved six-edge separating-axis necessity applies directly.
+
+The sixteen-cell coarse spatial subdivision now has kernel-checked cardinality,
+continuous closed-cell coverage, an exact physical diameter bound and an
+injective assignment of the six centroids. No strict cell-interior assignment
+or saved Python success flag is assumed. Production cell numbering, fine-cell
+intersection and refinement, symmetry reduction, chart bindings, production
+search soundness and endpoint classification remain.

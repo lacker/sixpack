@@ -1,4 +1,4 @@
-⚠ [3103/3257] Replayed Sixpack.LocalGeometry
+⚠ [3103/3263] Replayed Sixpack.LocalGeometry
 warning: Sixpack/LocalGeometry.lean:126:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -173,7 +173,7 @@ Hint: Omit it from the simp argument list.
   ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲show (̵2̵:̵F̵i̵n̵(̲2̲ ̲:̲ ̲F̲i̲n̲ 3) ≠ 1 by decide, h0, h1, add_mul, neg_mul, F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵ ̵Finset.sum_neg_distrib]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [3114/3257] Replayed Sixpack.LocalDerivatives
+⚠ [3114/3263] Replayed Sixpack.LocalDerivatives
 info: Sixpack/LocalDerivatives.lean:59:66: Try this:
   ring_nf
   
@@ -212,7 +212,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Sixpack/LocalDerivatives.lean:117:90: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3119/3257] Replayed Sixpack.LocalSecondDerivatives
+⚠ [3119/3263] Replayed Sixpack.LocalSecondDerivatives
 warning: Sixpack/LocalSecondDerivatives.lean:46:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -240,14 +240,14 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Sixpack/LocalSecondDerivatives.lean:174:90: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3120/3257] Replayed Sixpack.LocalCurvature
+⚠ [3120/3263] Replayed Sixpack.LocalCurvature
 warning: Sixpack/LocalCurvature.lean:29:36: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 warning: Sixpack/LocalCurvature.lean:61:84: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3131/3257] Replayed Sixpack.RotationCalculus
+⚠ [3131/3263] Replayed Sixpack.RotationCalculus
 warning: Sixpack/RotationCalculus.lean:41:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -257,11 +257,11 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Sixpack/RotationCalculus.lean:58:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3132/3257] Replayed Sixpack.BoundaryThird
+⚠ [3132/3263] Replayed Sixpack.BoundaryThird
 warning: Sixpack/BoundaryThird.lean:22:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3134/3257] Replayed Sixpack.PairDerivatives
+⚠ [3134/3263] Replayed Sixpack.PairDerivatives
 warning: Sixpack/PairDerivatives.lean:28:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -271,14 +271,14 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Sixpack/PairDerivatives.lean:48:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3135/3257] Replayed Sixpack.PairThirdBound
+⚠ [3135/3263] Replayed Sixpack.PairThirdBound
 warning: Sixpack/PairThirdBound.lean:8:60: unused variable `hδ`
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
 warning: Sixpack/PairThirdBound.lean:44:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
 warning: Sixpack/PairThirdBound.lean:52:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
 warning: Sixpack/PairThirdBound.lean:61:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
-⚠ [3153/3257] Replayed Sixpack.LocalSeparatorCertificate
+⚠ [3153/3263] Replayed Sixpack.LocalSeparatorCertificate
 info: Sixpack/LocalSeparatorCertificate.lean:57:112: Try this:
   ring_nf
   
@@ -288,15 +288,15 @@ info: Sixpack/LocalSeparatorCertificate.lean:57:112: Try this:
 warning: Sixpack/LocalSeparatorCertificate.lean:57:108: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3177/3257] Replayed Sixpack.TriangleHalfplanes
+⚠ [3177/3263] Replayed Sixpack.TriangleHalfplanes
 warning: Sixpack/TriangleHalfplanes.lean:17:2: Try this: intro p hp q hq a b ha hb hab e
-⚠ [3198/3257] Replayed Sixpack.TubeThirdBounds
+⚠ [3198/3263] Replayed Sixpack.TubeThirdBounds
 warning: Sixpack/TubeThirdBounds.lean:40:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
 warning: Sixpack/TubeThirdBounds.lean:46:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
 warning: Sixpack/TubeThirdBounds.lean:72:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
 warning: Sixpack/TubeThirdBounds.lean:110:9: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
 warning: Sixpack/TubeThirdBounds.lean:138:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
-⚠ [3199/3257] Replayed Sixpack.TubeNormalModel
+⚠ [3199/3263] Replayed Sixpack.TubeNormalModel
 warning: Sixpack/TubeNormalModel.lean:32:76: this tactic is never executed
 
 Note: This linter can be disabled with `set_option linter.unreachableTactic false`
@@ -315,18 +315,18 @@ Note: This linter can be disabled with `set_option linter.unreachableTactic fals
 warning: Sixpack/TubeNormalModel.lean:82:57: 'ring' tactic does nothing
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [3200/3257] Replayed Sixpack.TubeThirdGeometry
+⚠ [3200/3263] Replayed Sixpack.TubeThirdGeometry
 warning: Sixpack/TubeThirdGeometry.lean:100:4: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
 warning: Sixpack/TubeThirdGeometry.lean:97:41: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3201/3257] Replayed Sixpack.TubeTaylor
+⚠ [3201/3263] Replayed Sixpack.TubeTaylor
 warning: Sixpack/TubeTaylor.lean:59:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3202/3257] Replayed Sixpack.TubeAngleInterpolation
+⚠ [3202/3263] Replayed Sixpack.TubeAngleInterpolation
 warning: Sixpack/TubeAngleInterpolation.lean:30:25: this tactic is never executed
 
 Note: This linter can be disabled with `set_option linter.unreachableTactic false`
@@ -365,7 +365,7 @@ Hint: Omit it from the simp argument list.
   simp only [̵t̵u̵b̵e̵C̵o̵n̵s̵t̵r̵a̵i̵n̵t̵C̵S̵P̵a̵t̵h̵,̵t̵u̵b̵e̵V̵e̵r̵t̵e̵x̵C̵S̵P̵a̵t̵h̵,̵F̵i̵n̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵h̵j̵,̵i̵f̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵]̵[̲t̲u̲b̲e̲C̲o̲n̲s̲t̲r̲a̲i̲n̲t̲C̲S̲P̲a̲t̲h̲,̲ ̲t̲u̲b̲e̲V̲e̲r̲t̲e̲x̲C̲S̲P̲a̲t̲h̲,̲ ̲h̲j̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲]̲
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [3205/3257] Replayed Sixpack.TubeSampleJets
+⚠ [3205/3263] Replayed Sixpack.TubeSampleJets
 warning: Sixpack/TubeSampleJets.lean:111:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -378,7 +378,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Sixpack/TubeSampleJets.lean:141:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3207/3257] Replayed Sixpack.TubeCoefficientForms
+⚠ [3207/3263] Replayed Sixpack.TubeCoefficientForms
 warning: Sixpack/TubeCoefficientForms.lean:41:4: This simp argument is unused:
   Rat.cast_div
 
@@ -419,7 +419,7 @@ Hint: Omit it from the simp argument list.
   ̲ ̲ ̲ ̲ ̲Q̲u̲a̲d̲r̲a̲t̲i̲c̲1̲3̲.̲v̲a̲l̲u̲e̲_̲r̲a̲t̲i̲o̲n̲a̲l̲,̲ ̲R̲a̲t̲.̲c̲a̲s̲t̲_̲o̲f̲N̲a̲t̲,̲ ̲R̲a̲t̲.̲c̲a̲s̲t̲_̲d̲i̲v̲]̲
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [3211/3257] Replayed Sixpack.TubeNormFamily
+⚠ [3211/3263] Replayed Sixpack.TubeNormFamily
 warning: Sixpack/TubeNormFamily.lean:23:40: This simp argument is unused:
   if_pos
 
@@ -441,11 +441,45 @@ Hint: Omit it from the simp argument list.
   simp only [̵t̵u̵b̵e̵N̵o̵r̵m̵R̵e̵p̵r̵e̵s̵e̵n̵t̵a̵t̵i̵v̵e̵,̵h̵,̵i̵f̵_̵p̵o̵s̵,̵P̵r̵o̵d̵.̵f̵s̵t̵,̵P̵r̵o̵d̵.̵s̵n̵d̵]̵[̲t̲u̲b̲e̲N̲o̲r̲m̲R̲e̲p̲r̲e̲s̲e̲n̲t̲a̲t̲i̲v̲e̲,̲ ̲h̲,̲ ̲i̲f̲_̲p̲o̲s̲,̲ ̲P̲r̲o̲d̲.̲f̲s̲t̲]̲
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [3241/3257] Replayed Sixpack.TubeRadiusEnergy
+⚠ [3222/3263] Replayed Sixpack.EquilateralGeometry
+warning: Sixpack/EquilateralGeometry.lean:43:31: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Sixpack/EquilateralGeometry.lean:43:31: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3227/3263] Replayed Sixpack.RelativeOrientation
+warning: Sixpack/RelativeOrientation.lean:30:61: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Sixpack/RelativeOrientation.lean:30:89: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Sixpack/RelativeOrientation.lean:26:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Sixpack/RelativeOrientation.lean:28:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Sixpack/RelativeOrientation.lean:30:61: 'field_simp [hd2, hdcomm]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Sixpack/RelativeOrientation.lean:30:89: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3229/3263] Replayed Sixpack.UniformInnerTriangle
+warning: Sixpack/UniformInnerTriangle.lean:46:44: unused variable `hK`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3231/3263] Replayed Sixpack.SpatialCells
+warning: Sixpack/SpatialCells.lean:114:47: unused variable `hh`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3253/3263] Replayed Sixpack.TubeRadiusEnergy
 warning: Sixpack/TubeRadiusEnergy.lean:7:74: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3243/3257] Replayed Sixpack.TubeValueForms
+⚠ [3255/3263] Replayed Sixpack.TubeValueForms
 warning: Sixpack/TubeValueForms.lean:19:57: This simp argument is unused:
   mul_zero
 
@@ -457,7 +491,7 @@ Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 warning: Sixpack/TubeValueForms.lean:20:70: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3244/3257] Replayed Sixpack.TubeSeparatorCertificate
+⚠ [3256/3263] Replayed Sixpack.TubeSeparatorCertificate
 info: Sixpack/TubeSeparatorCertificate.lean:74:61: Try this:
   ring_nf
   
@@ -467,15 +501,5 @@ info: Sixpack/TubeSeparatorCertificate.lean:74:61: Try this:
 warning: Sixpack/TubeSeparatorCertificate.lean:74:57: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3249/3257] Replayed Sixpack.EquilateralGeometry
-warning: Sixpack/EquilateralGeometry.lean:43:31: this tactic is never executed
-
-Note: This linter can be disabled with `set_option linter.unreachableTactic false`
-warning: Sixpack/EquilateralGeometry.lean:43:31: 'ring' tactic does nothing
-
-Note: This linter can be disabled with `set_option linter.unusedTactic false`
-✔ [3253/3257] Built Sixpack.TubeSeparatorFixture (159s)
-✔ [3254/3257] Built Sixpack.TubeBranchCoverage (1.9s)
-✔ [3255/3257] Built Sixpack.TubePackingRigidity (1.8s)
-✔ [3256/3257] Built Sixpack (1.7s)
-Build completed successfully (3257 jobs).
+✔ [3262/3263] Built Sixpack (1.6s)
+Build completed successfully (3263 jobs).
