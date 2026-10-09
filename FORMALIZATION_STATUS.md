@@ -639,20 +639,20 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 1,674 blocks, covering 99,441 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and 111
+`EndpointB31SpatialAnglePilot` accepts 2,302 blocks, covering 125,606 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 154
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The 111 production batches all pass with peaks below 1,434 MiB; the latest
-full default build peaks at 402 MiB. The generator keeps new batches outside the
+The 154 production batches all pass with peaks below 1,434 MiB; the latest
+full default build peaks at 716 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
-111 are accepted (batches 0–110). No complete b31 pruning or root reachability theorem is
-claimed; 8,202 of the 9,876 proposed blocks still need acceptance, followed by
+154 are accepted (batches 0–153). No complete b31 pruning or root reachability theorem is
+claimed; 7,574 of the 9,876 proposed blocks still need acceptance, followed by
 checked coverage and composition of all 21 pruning rectangles.
 
 `RectanglePruning` now proves that checked rectangle coverage preserves every
@@ -670,7 +670,7 @@ owner 640 and second piece uses any of these blocker choices. The finite row
 build peaked at 644 MiB; the geometric assembly peaked at 389 MiB. This row
 is unconditional apart from its explicit region/domain hypotheses. Full
 21-step coverage and full block acceptance remain open; continue serial block
-acceptance from batch 111.
+acceptance from batch 154.
 
 `RectangleSnapshotPruning` proves actual-packing preservation through checked
 explicit domain snapshots. Each snapshot must contain every choice surviving
@@ -708,8 +708,8 @@ leaf closure. The bridge build peaked at 459 MiB. Its source audit compares
 all 36 inverse-parent entries and all 7,023 lookup defaults with the preserved
 refinement scope. Reaching this snapshot from the initial domains remains
 unproved: full geometric block acceptance and every removed owner's complete
-row coverage are still required. The first 111 certificate batches all pass;
-continue with batch 111.
+row coverage are still required. The first 154 certificate batches all pass;
+continue with batch 154.
 
 `IndexedRectangleCoverage` checks direct array-index equality witnesses for
 all group-owner positions in all used blocks and for every blocker position.
@@ -785,3 +785,15 @@ contains 6,886 checks and uses only `propext`, `Classical.choice` and
 `Quot.sound`. Default regeneration preserves the current 115-removal assembly
 byte for byte; additional groups require an explicit selection or
 `--all-compiled`, followed by a fresh Lean build and audit.
+
+Batches 111–153 add 628 accepted geometric blocks and pass with peaks below
+1,434 MiB. The default build with all 154 production batches passes at
+716 MiB. These dependencies support every first-step group; the remaining
+61 groups cover 113 owners and still need their own positional and geometric
+acceptance. The complete first-step snapshot bridge is prepared as a guarded
+generator, but no complete 228-removal pruning theorem is yet claimed.
+
+The latest combined axiom audit covers 8,142 listed theorem dependencies,
+including all 1,256 dependencies added by these 43 batches; all use only
+the three standard logical axioms. The preserved archive and all 730 original
+research files pass the integrity check.

@@ -570,10 +570,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 111 production batches pass, giving 1,674 accepted
+603 MiB peak. The first 154 production batches pass, giving 2,302 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 111, then prove
+without expanding the default import graph. Continue from batch 154, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -604,7 +604,7 @@ proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
 Final snapshot choices and their actual labels are now bound to the two
 accepted leaf-refinement parent cases. `b31_final_snapshot_no_packing` composes
 this complete domain binding with the accepted refinement and leaf closure.
-Accept remaining geometric blocks from batch 111,
+Accept remaining geometric blocks from batch 154,
 prove every removed owner's complete row coverage against its current blocker
 domain, and assemble geometric pruning with the accepted survivor transitions.
 The full production pruning theorem and root reachability remain open.
@@ -642,7 +642,7 @@ Its owner count and declared-removal bindings are kernel-checked. Complete
 the remaining 113 first-step removals by accepting their geometric dependencies
 and row groups, then extend the same actual-domain binding and pruning assembly
 to the remaining 20 steps. The complete geometric table still continues from
-batch 111. The end-to-end root-case classification remains unproved.
+batch 154. The end-to-end root-case classification remains unproved.
 
 The geometric snapshot preservation and chain theorems now compile. Concrete
 row exclusions can discharge each step directly using the already checked
@@ -657,3 +657,13 @@ Default partial-step regeneration now derives its selected groups from the
 existing checked assembly imports. Use `--all-compiled` to extend that selection
 after new group acceptance; the resulting assembly itself must compile, and
 its changed theorem dependencies must be re-audited.
+
+Geometric dependencies for every one of the first step's 126 indexed row
+groups are now accepted through batch 153. Accept the remaining 61 groups,
+which cover 113 owners, then regenerate the full 228-removal assembly and
+run `audit/generate_b31_complete_step0.py`. The bridge generator refuses an
+incomplete selected group list or removal list; its output must compile and
+be axiom-audited. The generated proof is intended to establish exact removal-domain equality
+from the checked subset and cardinality, and compose geometric row exclusion
+with the checked snapshot-0-to-1 survivor transition. The complete bridge has not yet been compiled. Generation alone does
+not establish that transition for actual packings.
