@@ -815,3 +815,11 @@ indexed-group auditor. These external audits never replace Lean acceptance.
 All twelve externally closed cases have source-audited proposals in the workspace.
 Their 102,887 blocks contain repeated parent-pair certificates; investigate reuse
 before accepting all of them separately. No additional whole case is yet proved.
+
+
+The whole case-1341 geometric table is now accepted and default-imported:
+971 blocks, all 80 batches, 88,602 pairs, complete source scope and full axiom
+audit. Complete the running 117-group coverage and actual-packing closure
+constructor. Then bind the ordered root refinement to these exact case domains
+and prove incoming root clique-support selection. Geometric block acceptance
+alone does not establish any whole root-case classification.

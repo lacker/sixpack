@@ -315,3 +315,4 @@ import Sixpack.EndpointB31RefinementDomains
 import Sixpack.EndpointB31RootEntry
 import Sixpack.EndpointB31Case1341SpatialAngle.Batch0
 import Sixpack.EndpointB31Case1341IndexedGroups.Group0
+import Sixpack.EndpointB31Case1341SpatialAngle

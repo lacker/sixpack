@@ -1207,3 +1207,29 @@ selectors to be proved. Those queued workflows and the full closure are not yet
 accepted. Incoming root selection, the other closed cases, remaining main-chain
 steps, global classification and lower bound remain unproved. Overall completion
 remains about 60% (55–65%).
+
+
+## Complete geometric table for b31 case 1341
+
+All 80 bounded certificate batches now compile, covering every one of the
+971 proposed blocks and 88,602 ordered record pairs of case 1341. The default
+build imports `EndpointB31Case1341SpatialAngle`, and the canonical audit list
+contains both public geometric theorems for every block. The independent source
+auditor verifies the full two-step partition scope and actual ancestry and node
+bindings. This acceptance concerns geometric blocks; it does not yet prove
+complete row coverage or an actual-packing case closure.
+
+Every guarded batch passed (largest observed physical footprint 1434 MiB).
+The table assembly passed at 301 MiB. The default build passes (5,051 jobs,
+495 MiB). The complete shared dependency audit passes in 78 seconds at
+594 MiB: 14,996 listed checks and 14,995 distinct declarations use only standard
+logical axioms. Its exact scope matches the expanded canonical audit list.
+The original archive and all 730 research files remain unchanged.
+
+The full 117-group coverage pipeline has started after verified table acceptance.
+It will construct and check a packing exclusion on the actual ordered refined
+case domains, including all 540 initial owner selectors. Complete positive
+execution remains unvalidated. Incoming root-refinement domain binding and
+root clique-support pruning remain separate obligations. The other eleven
+closed cases, the remaining main-chain steps and global classification are
+still unproved. Overall completion remains about 60% (55–65%).
