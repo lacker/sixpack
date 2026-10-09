@@ -20,3 +20,6 @@ import Sixpack.LinearFixture
 import Sixpack.LinearFamily
 import Sixpack.LinearEnclosures
 import Sixpack.EnclosureFixture
+import Sixpack.LocalSecondDerivatives
+import Sixpack.LocalCurvature
+import Sixpack.CurvatureFixture

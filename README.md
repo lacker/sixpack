@@ -39,9 +39,11 @@ lake env lean audit/PrintAxioms.lean
 The formal results cover exact construction checks, the scaled metric, conservative
 projection logic, local-omission logic, centering, and small sound certificate
 checkers. The radius branch prototype checks rational arithmetic, while its
-second/third derivative bounds remain external. The exact first-order local
+Hessian norm and third derivative bounds remain external. The exact first-order local
 layer now checks all eight branches against the actual rotation-chart derivatives,
-and checks branch 0’s first-order enclosures. Consult the plan for exact
+and checks branch 0’s first-order enclosures. Actual second derivatives and all
+eight pivot curvatures are proved; nonlinear Taylor estimates are still remaining.
+Consult the plan for exact
 theorem names and limitations. Passing this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference

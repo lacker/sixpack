@@ -138,8 +138,9 @@ multiplier lower bounds, 240 inverse absolute bounds, 15 gradient norm bounds,
 and the coordinate bounds on its kernel vector
 to its exact certified matrices. Their soundness proof yields an actual geometric
 directional-derivative bound for directions with bounded coordinates. This is
-part of the radius certificate's geometric bridge; the Hessian, curvature and
-third-derivative bounds remain outside that bridge.
+part of the radius certificate's geometric bridge; the Hessian norm and
+third-derivative bounds remain outside that bridge. The curvature gap is closed
+by the new results below.
 
 To regenerate the new fixture, use the Python standard library:
 
@@ -157,10 +158,40 @@ checked and compiled the eight-branch fixture in about 163 seconds; the earlier
 single-branch check took about 21 seconds. These are small local certificates,
 not a performance estimate for the global graph data.
 
+## Actual second derivatives and eight checked pivot curvatures
+
+`LocalSecondDerivatives` proves the derivative of every vertex path at every
+parameter value, the actual second derivative at the candidate, and the actual
+second derivative of every boundary and separating-edge constraint. Its formulas
+follow by differentiation of the same sine/cosine chart used in the first-order
+proof; no saved Hessian or jet is assumed.
+
+`LocalCurvature` gives executable quadratic-field formulas for vertex and
+constraint accelerations and proves that their interpretation equals those
+actual derivatives. It defines the actual Lagrangian as the container side change
+minus the weighted constraints and proves its second derivative along the checked
+pivot direction equals the executable curvature. Checked multipliers and geometric
+gradient binding also prove that the actual Lagrangian is stationary in every
+direction at the candidate.
+
+`CurvatureFixture` independently recomputes all eight pivot curvatures using
+ordinary Lean kernel reduction. Every branch has the exact value
+`-9/4 + (45/52)*sqrt(13)`, proved to be at least `4/5`. Each branch has an actual
+Lagrangian second-derivative theorem and a stationarity theorem. Branch 0's finer
+rounded curvature lower bound from the radius certificate is also checked against
+this exact value. A deliberately zero curvature claim is rejected. The initial
+successful eight-branch curvature build took about four seconds on the local
+machine, excluding already compiled first-order fixtures.
+
+These results prove the positive quadratic obstruction in the critical direction.
+They do not yet prove a neighborhood contains no competing packing. The Hessian
+bounds in directions normal to the pivot, uniform third derivatives, Taylor
+remainders, and nonlinear motion/energy estimates are still necessary.
+
 ## Next useful milestone
 
-Connect second derivatives, curvature and Taylor motion/energy estimates to the
-radius criterion. The exact first-order coordinates, positive multipliers and
+Connect Hessian enclosures, third derivatives and Taylor motion/energy estimates
+to the radius criterion. The exact first-order coordinates, positive multipliers and
 inverse identities are now checked against actual geometric derivatives for all
 eight branches. In parallel, extend
 the search prototype with channel-specific local labels and a small genuine
