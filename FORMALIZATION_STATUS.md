@@ -54,7 +54,10 @@ normal-direction bounds, not full mixed derivative tensors.
 The original monolithic Hessian replay was stopped for excessive memory use.
 Its replacement checks individual contraction inequalities in separate commands
 and serializes the eight branch modules. Project compilation passes Lean's
-`-M4096` memory limit. These checks take minutes per branch; no saved Python
+`-M4096` option. This tracks some allocations but is not an absolute physical
+memory cap: a monolithic root-row kernel reduction reached 12 GB and was stopped.
+Root checks now use smaller commands plus an external physical-memory guard.
+These checks take minutes per branch; no saved Python
 success flag or compiler-trusted native Boolean is used as a proof.
 
 ## Continuous cover foundations
@@ -98,6 +101,19 @@ are subsets of it, and have no smaller support minimum. `RegionRefinement`
 combines them: an actually contained parent triangle has a child with its
 stronger necessary inset and a valid common inner triangle. Artificial parent
 possibilities need not survive refinement.
+
+`LabelRefinement` now proves coverage and parent inclusion for independent
+spatial and angular refinement flags, including either flag alone.
+`RefinementEnumeration` proves that a checked list of children preserves every
+actual parent triangle and all six packing members. Every potential child must
+match a retained label or pass an exact empty-region certificate; omission and
+record ordering are not assumed correct. These are generic soundness results,
+not acceptance of the production refinement metadata.
+
+`RootEnumeration` similarly proves soundness of exhaustive root-record
+enumeration. Production data for all 34,660 retained labels and the omitted
+candidate witnesses have been generated. Serial production row acceptance is
+still running under the memory guard; full production root coverage is pending.
 
 This does not yet prove that the saved polygon vertex lists equal these
 intersections, that no nonempty record is omitted, or that the production

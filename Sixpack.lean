@@ -142,3 +142,6 @@ import Sixpack.RationalInnerTriangles
 import Sixpack.RegionPairCertificate
 import Sixpack.RegionSearchBridge
 import Sixpack.RegionPairFixture
+import Sixpack.RootEnumeration
+import Sixpack.LabelRefinement
+import Sixpack.RefinementEnumeration

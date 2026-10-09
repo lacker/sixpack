@@ -319,6 +319,29 @@ with the stronger child inset. Saved polygon enumeration, all production index
 maps and metadata selections remain unproved. The current `gridIndex` is a
 definition only; its bijection has not been established.
 
+### Root enumeration implementation underway
+
+`RootEnumeration` proves an exhaustive finite enumeration checker sound: every
+valid grid cell/bin must have a matching retained index or a checked empty-region
+certificate. Checked rows give complete coverage of real triangles and packings.
+`EndpointRoot` exports all 34,660 actual root labels and 30,876 omitted-key
+contradiction witnesses, using 64-entry data blocks and serial row modules.
+The production acceptance proofs are still being checked; exported data alone
+is not proof of coverage.
+
+`LabelRefinement` now handles independent spatial and angular flags, and
+`RefinementEnumeration` checks every possible child against retained records or
+exact empty-region witnesses. Its soundness theorem preserves the represented
+six members of an actual packing. Production child lists and flags still need
+to be supplied and accepted; the generic theorem does not certify that metadata.
+
+The first monolithic row reduction reached 12 GB physical footprint despite
+`-M4096` and was stopped. Each row now uses 32 separate column checks, and
+`audit/run_lean_memory_guard.py` monitors physical/compressed memory for this
+build's Lean descendants. The guard controls resources; it is not mathematical
+proof evidence. The default physical threshold is 3 GiB and may be adjusted
+explicitly with `--physical-limit-mib`.
+
 ## Remaining modules, in dependency order
 
 1. **Exact algebra and outer-container normalization.** Extend the proved

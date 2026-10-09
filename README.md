@@ -73,8 +73,11 @@ geometry, six-axis pair exclusions and the geometric finite-search bridge are
 also proved, with one checked endpoint-root pair. Full production data, saved polygon
 enumeration, symmetry reduction, production index bindings, region-to-chart
 bindings, search certificates and endpoint
-classification remain. Compilation uses a 4 GB Lean memory limit; the large
-Hessian checks run in serial branch modules.
+classification remain. Compilation passes Lean `-M4096`, but this does not bound every kernel
+allocation: a monolithic root-row check exceeded it and was stopped. Heavy
+checks are split into smaller commands and serial modules.
+`audit/run_lean_memory_guard.py` additionally monitors physical/compressed memory
+and stops only its build's Lean descendants above the configured threshold.
 Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference

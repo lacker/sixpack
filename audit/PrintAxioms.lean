@@ -1,5 +1,20 @@
 import Sixpack
 
+#print axioms Sixpack.checked_root_cells_complete
+#print axioms Sixpack.checked_root_rows_complete
+#print axioms Sixpack.checked_root_enumeration_point
+#print axioms Sixpack.checked_root_enumeration_triangle
+#print axioms Sixpack.checked_root_enumeration_packing
+#print axioms Sixpack.represented_spatial_child
+#print axioms Sixpack.represented_angle_child
+#print axioms Sixpack.spatial_child_region_subset
+#print axioms Sixpack.angle_child_region_subset
+#print axioms Sixpack.represented_refined_label
+#print axioms Sixpack.refined_label_region_subset
+#print axioms Sixpack.checked_refinement_entry_point
+#print axioms Sixpack.checked_refinement_triangle
+#print axioms Sixpack.checked_refinement_packing
+
 #print axioms Sixpack.root13_nonneg
 #print axioms Sixpack.root13_sq
 #print axioms Sixpack.root13_bounds
