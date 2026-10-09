@@ -335,9 +335,11 @@ curvature and proves its actual energy identity and positive lower bound.
 Each retained branch is rigid on the curve with zero normal displacement.
 
 `TubeEstimates` proves the final contradiction from explicit motion and energy
-estimates. It does not supply those estimates. Angle-dependent normal derivatives,
-uniform remainders, geometric binding of the coefficient enclosures and the 22
-excluded tube axes remain before any of the three full tubes is proved.
+estimates. It does not supply those estimates. Angle-dependent normal derivative
+identities and uniform Taylor remainders are now proved, as detailed below.
+Geometric binding of sampled matrices and their coefficient enclosures, the
+motion/energy estimates and the 22 excluded tube axes remain before any of the
+three full tubes is proved.
 
 ## Next useful milestone
 
@@ -345,3 +347,14 @@ Formalize the three tubes, their recentering maps and chart
 coverage. Extend the search prototype with channel-specific local labels and a
 small genuine triangle-region certificate. Production global coverage and search
 certificates remain necessary for the end-to-end lower bound.
+
+## Uniform tube normal Taylor bounds and sample interpolation
+
+The actual anchor-chart paths now have uniform repeated normal-direction third
+bounds at radius `1/10`, including sharp retained-constraint constants. Lean
+derives their Taylor remainders and weighted remainder bounds. It also proves
+three-sample angle interpolation of the full paths and their first and second
+normal derivatives, with the zero sample bound to the existing geometric jets.
+These proofs use no Python/C++ acceptance assumptions. They do not establish
+full mixed derivative bounds or a complete tube theorem. Sampled matrix bindings,
+coefficient checks, motion/energy inequalities and the excluded tube axes remain.

@@ -1,7 +1,7 @@
 # Progress estimate
 
-Estimated completion of the **end-to-end formalization: about 33%**, with a
-plausible planning range of **28–38%**. This is a subjective estimate of remaining
+Estimated completion of the **end-to-end formalization: about 35%**, with a
+plausible planning range of **30–40%**. This is a subjective estimate of remaining
 work, not a fraction of theorem statements, source lines, or Python checks.
 It should not be read as a schedule forecast.
 
@@ -10,7 +10,7 @@ It should not be read as a schedule forecast.
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Partial; triangle hulls and interiors characterized, and separating-axis necessity proved |
 | Continuous spatial/orientation coverage and symmetry reduction | Mostly remaining |
-| Local five-piece nonlinear rigidity | Packing radius theorem proved; tube chart, normal Jacobian and critical-curve energy proved; full three tubes and chart coverage remain |
+| Local five-piece nonlinear rigidity | Packing radius theorem proved; tube geometry, normal Taylor bounds and angle interpolation proved; full three tubes and chart coverage remain |
 | Sound finite search and certificate machinery | Small working prototypes; production checker remaining |
 | All concrete triangle-region certificates checked by Lean | Remaining |
 | Endpoint classification and final lower bound | Conditional final argument proved; classification remaining |
@@ -48,8 +48,13 @@ remainder supplies the lower energy bound. `retained_tube_curve_rigid` proves
 rigidity in each branch when normal displacement is zero.
 
 `tube_estimates_force_zero` proves the final tube contradiction from explicit
-motion and energy inequalities. Those inequalities still need uniform derivative
-bounds and checked coefficient enclosures throughout each tube. The 22 excluded
+motion and energy inequalities. Uniform third bounds and Taylor remainders are now proved for actual normal
+paths, as is exact three-sample interpolation of their first and second
+derivatives. The sharp bounds cover every retained branch constraint and yield
+weighted remainder bounds for inverse rows and multipliers. These are repeated
+normal-direction derivatives, not full mixed derivative tensors. The motion and
+energy inequalities still need geometric bindings of the sampled matrices and
+checked coefficient enclosures throughout each tube. The 22 excluded
 tube separators also remain to be checked in Lean. No full tube theorem is
 claimed from this foundation.
 

@@ -215,6 +215,17 @@ rigidity within each retained branch when normal displacement is zero.
 and energy inequalities. Derivation of those inequalities throughout each tube
 is still required; no full tube or packing theorem follows from their assumption.
 
+`TubeNormalModel` identifies the actual normal paths with the rotation model.
+`TubeThirdBounds` and `TubeThirdGeometry` prove uniform repeated normal-direction
+third derivative bounds at normal radius `1/10`, with sharp constants for every
+retained constraint. `TubeTaylor` and `TubeTaylorAtCurve` derive Taylor and
+weighted remainder estimates. `TubeAngleInterpolation` proves an identity for
+the entire normal path from three exact cosine/sine samples;
+`TubeSampleDerivatives` differentiates it twice and binds the zero-angle sample
+to the existing geometric velocity and acceleration. These results do not rely
+on Python or C++ sample logs. Computable bindings of the other sampled matrices,
+their coefficient bounds, motion/energy estimates and excluded axes remain.
+
 ## Remaining modules, in dependency order
 
 1. **Exact algebra and geometric primitives.** Extend the proved rational
@@ -235,8 +246,9 @@ is still required; no full tube or packing theorem follows from their assumption
    derivatives, Taylor estimates and finite branch cover are proved. The radius
    `1/300` is proved for actual packings in the rotation chart. The anchor-based
    tube chart, normal Jacobian at the origin and exact critical-curve energy are
-   proved. Prove the angle-dependent normal derivative identities and uniform
-   remainder bounds, bind the coefficient enclosures to geometry, prove normal
+   proved, together with angle-dependent normal derivative identities and uniform
+   normal Taylor remainder bounds. Bind sampled matrices and their coefficient
+   enclosures to geometry, prove normal
    motion and energy estimates, check the excluded axes, and prove all three tubes.
 4. **Whole-region labels.** Prove exact recentering from the rational cover to the
    candidate container, including reflections and rotations. Prove uniform

@@ -74,3 +74,10 @@ import Sixpack.TubeCurve
 import Sixpack.TubeCurveEnergy
 import Sixpack.TubeLinear
 import Sixpack.TubeEstimates
+import Sixpack.TubeThirdBounds
+import Sixpack.TubeNormalModel
+import Sixpack.TubeThirdGeometry
+import Sixpack.TubeTaylor
+import Sixpack.TubeAngleInterpolation
+import Sixpack.TubeSampleDerivatives
+import Sixpack.TubeTaylorAtCurve

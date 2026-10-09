@@ -56,7 +56,8 @@ theorem now starts from an actual packing whose five core pieces are in the
 rotation chart, and forces all displacement coordinates to zero. Tube arguments,
 global chart coverage and production search certificates remain.
 The tube anchor chart, normal Jacobian and exact critical-curve energy are now
-proved. Uniform normal estimates and the full tube certificates remain.
+proved. Uniform normal Taylor bounds and exact angle interpolation are also proved.
+Sampled matrix certificates, the full tube theorems and global coverage remain.
 Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference
