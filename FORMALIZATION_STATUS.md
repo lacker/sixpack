@@ -1500,3 +1500,27 @@ The third step's coverage groups, the remaining case-970 geometric batches and
 the remaining main-chain steps continue checking separately. Case 970's complete
 eight-step exclusion, concrete root support, global classification and the final
 lower bound remain unproved. Overall completion remains about 60% (55–65%).
+
+
+## Successive fixed-vertex covered support pruning
+
+`FixedVertexCoveredTrace` defines a sequence of fixed-vertex covered-search
+certificates. Each certificate is checked against the domains remaining after
+the preceding deletions. Its soundness theorem proves that the original
+selection either has one common covering local channel or remains admissible
+in the actual final domains. The packing theorem preserves the same represented
+packing and selected vertices through the sequence.
+
+The module compiles under the memory guard at 343 MiB. Both public lemmas are
+default-imported; the default build passes (5,543 jobs, 652 MiB). Their shared
+axiom audit passes. The strict audit-union validator confirms exact coverage of
+all 20,244 current canonical declarations using the preceding complete audit
+and this new two-lemma audit; every dependency is a standard logical axiom.
+Forbidden-proof scanning and original archive/file integrity pass.
+
+This establishes the composition rule required for successive production root
+support deletions. It does not accept any concrete saved support list, search
+certificate or local-label geometry. The production case-970 third-step group
+checks, its remaining geometric batches and the remaining main-chain checks
+continue. Global root classification and the final lower-bound theorem remain
+unproved. Overall completion remains about 60% (55–65%).

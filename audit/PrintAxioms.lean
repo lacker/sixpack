@@ -20279,3 +20279,5 @@ import Sixpack
 #print axioms Sixpack.b31_case970_spatial_angle_block473_accepted
 #print axioms Sixpack.b31_case970_spatial_angle_block473_pair_excluded
 #print axioms Sixpack.b31_case970_selected_root_records_enter_snapshot2
+#print axioms Sixpack.checked_fixed_vertex_covered_trace
+#print axioms Sixpack.checked_fixed_vertex_covered_trace_preserves_packing
