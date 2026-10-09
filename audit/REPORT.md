@@ -250,3 +250,33 @@ checks 1,930 theorem names, with only standard logical axioms. Export scope and
 all preserved research-file hashes still pass their separate Python comparisons.
 Larger production block partitions/search certificates and global tree coverage
 remain outstanding; the unconditional lower bound is not yet proved.
+
+## Production leaf cases 928 and 929
+
+`EndpointLeaf31Blocks` accepts 80 shared blocks covering the 6,764 pair exclusions
+needed at `endpoint_b31_c0`. All 480 directed-axis gaps and 8,778 regional dual
+projection bounds passed. A guarded first attempt exposed the cost of a 254-way
+region dispatch; chunking it reduced the first block from 2,764.8 to 1,126.4 MiB
+and from 58 to 14 seconds. The complete serial block build peaked at 1,228.8 MiB.
+
+`EndpointLeaf31Search` checks 168 pruning rows and assembles four exhaustive
+split/clash stages into acceptance of the original search checker. The first
+16-row batch peaked at 2,867.2 MiB. Smaller batches and chunked lookup dispatch
+reduced the first revised batch to 1,740.8 MiB; the complete row/trace build
+peaked at 1,843.2 MiB. `SearchComposition` reuses compiled branch proofs rather
+than reducing the entire certificate again. The search removes 63 choices from
+the first domain, then all 105 choices from the second domain.
+
+`EndpointLeaf31Closure` binds the search adjacency to the accepted geometric
+blocks and closes both complete leaf case domains, 928 and 929. Its initial
+adjacency identity needed a pointwise case proof; the corrected closure build
+passed (793.7 MiB peak). No saved graph or external search success flag enters
+the proof. Root reachability of these domains remains unproved.
+
+The default build passed (3,777 jobs; 334.9 MiB peak). The combined axiom audit
+now checks 2,682 explicit theorem names, with only standard logical axioms; the
+new audit peaked at 394.8 MiB. Original archive/file integrity and external
+export-scope comparison passed. The latter verifies all 254 exact descriptors,
+80 block partitions, and the pruning trace's source scope; it is separate from
+Lean's geometric and exhaustive-search proofs. The unconditional lower bound
+and complete root/case/tree coverage remain outstanding.

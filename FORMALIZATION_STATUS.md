@@ -434,6 +434,34 @@ lookup retains its edge. `leaf23_compressed_no_domain_packing` closes the origin
 bindings. The other production searches and global root/case/tree assembly
 remain unverified.
 
+## Two-case production leaf with checked pruning
+
+`EndpointLeaf31Blocks` accepts **80 blocks covering the 6,764 pair exclusions**
+needed for `endpoint_b31_c0`. This uses 480 shared directed-axis gap checks and
+8,778 regional projection-bound checks, compared with 40,584 gaps and 81,168
+bounds for separate pair certificates. The complete serial block build passed,
+peaking at 1,228.8 MiB with a chunked 254-region factory.
+
+`EndpointLeaf31Search` kernel-checks 168 pruning rows in 21 small batches. Four
+no-support rectangles remove 63 choices from the first domain, then all 105
+choices from the second domain. `SearchComposition` combines compiled row and
+branch proofs into acceptance of the original exhaustive `SearchCertificate`
+checker; it does not bypass that checker or assume the trace safe. All row and
+trace checks passed, peaking at 1,843.2 MiB.
+
+`EndpointLeaf31Closure` binds the guarded lookup domains to the accepted geometry
+table and proves that the adjacency used by the search has exactly that geometric
+meaning. `leaf31_no_case_packing` closes both complete production leaf cases,
+928 and 929, whose group patterns are `[0,2,10,11,12,13]` and
+`[0,2,10,11,12,14]`. The conclusion is conditional on actual representation in
+the specified case domains; root reachability remains unproved.
+
+`audit/check_leaf31_export.py` externally compares all 254 region descriptors,
+block partitions and pruning-export scope with the preserved research files.
+This comparison gives source provenance and scope rather than Lean proof evidence
+for geometry or search acceptance. Larger production nodes, the remaining local
+code tables and global tree/case coverage remain outstanding.
+
 ## Remaining trust boundary
 
 Root intersection coverage and the first child enumeration are now proved.

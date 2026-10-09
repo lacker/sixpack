@@ -196,3 +196,7 @@ import Sixpack.RegionBlockCertificate
 import Sixpack.RegionBlockSearch
 import Sixpack.EndpointLeaf23Blocks
 import Sixpack.EndpointLeaf23BlockSearch
+import Sixpack.SearchComposition
+import Sixpack.EndpointLeaf31Blocks
+import Sixpack.EndpointLeaf31Search
+import Sixpack.EndpointLeaf31Closure

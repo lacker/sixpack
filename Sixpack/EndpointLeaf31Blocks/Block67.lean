@@ -1,0 +1,49 @@
+import Sixpack.EndpointLeaf31Blocks.Block66
+
+set_option maxHeartbeats 20000000
+set_option maxRecDepth 100000
+
+namespace Sixpack
+
+def leaf31Block67Owners : Finset (Fin 254) := {66,79,92,104}
+def leaf31Block67Others : Finset (Fin 254) := {2}
+
+def leaf31Block67Forward0 : BlockAxisCertificate 254 :=
+  ⟨(-10817959929/17179869184:ℚ),(-5359195431/34359738368:ℚ),(fun node => match node.val with | 66 => ⟨![(0/1:ℚ),(3162281325/6495513382:ℚ),(0/1:ℚ),(58731008/3247756691:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 79 => ⟨![(0/1:ℚ),(0/1:ℚ),(3162281325/6495513382:ℚ),(3279743341/6495513382:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 92 => ⟨![(0/1:ℚ),(3162281325/6495513382:ℚ),(0/1:ℚ),(58731008/3247756691:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 104 => ⟨![(0/1:ℚ),(0/1:ℚ),(3162281325/6495513382:ℚ),(3279743341/6495513382:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),(fun node => match node.val with | 2 => ⟨![(0/1:ℚ),(3279743341/6495513382:ℚ),(58731008/3247756691:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),2⟩
+theorem leaf31Block67Forward0_accepted : checkBlockAxis leaf31BlockRegions leaf31Block67Owners leaf31Block67Others leaf31Region66 leaf31Region2 0 leaf31Block67Forward0 = true := by decide +kernel
+
+def leaf31Block67Forward1 : BlockAxisCertificate 254 :=
+  ⟨(13977028591/17179869184:ℚ),(11626904781/34359738368:ℚ),(fun node => match node.val with | 66 => ⟨![(58731008/3247756691:ℚ),(0/1:ℚ),(3279743341/6495513382:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 79 => ⟨![(0/1:ℚ),(3279743341/6495513382:ℚ),(0/1:ℚ),(3162281325/6495513382:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 92 => ⟨![(58731008/3247756691:ℚ),(0/1:ℚ),(3279743341/6495513382:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 104 => ⟨![(0/1:ℚ),(3279743341/6495513382:ℚ),(0/1:ℚ),(3162281325/6495513382:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),(fun node => match node.val with | 2 => ⟨![(58731008/3247756691:ℚ),(0/1:ℚ),(3279743341/6495513382:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),0⟩
+theorem leaf31Block67Forward1_accepted : checkBlockAxis leaf31BlockRegions leaf31Block67Owners leaf31Block67Others leaf31Region66 leaf31Region2 1 leaf31Block67Forward1 = true := by decide +kernel
+
+def leaf31Block67Forward2 : BlockAxisCertificate 254 :=
+  ⟨(-7121116741/34359738368:ℚ),(-5990139161/34359738368:ℚ),(fun node => match node.val with | 66 => ⟨![(3279743341/6495513382:ℚ),(58731008/3247756691:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 79 => ⟨![(0/1:ℚ),(3162281325/6495513382:ℚ),(3279743341/6495513382:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 92 => ⟨![(3279743341/6495513382:ℚ),(58731008/3247756691:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 104 => ⟨![(0/1:ℚ),(3162281325/6495513382:ℚ),(3279743341/6495513382:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),(fun node => match node.val with | 2 => ⟨![(3279743341/6495513382:ℚ),(58731008/3247756691:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),1⟩
+theorem leaf31Block67Forward2_accepted : checkBlockAxis leaf31BlockRegions leaf31Block67Owners leaf31Block67Others leaf31Region66 leaf31Region2 2 leaf31Block67Forward2 = true := by decide +kernel
+
+def leaf31Block67Reverse0 : BlockAxisCertificate 254 :=
+  ⟨(-11800908861/68719476736:ℚ),(-42784190521/68719476736:ℚ),(fun node => match node.val with | 2 => ⟨![(197119/396286:ℚ),(0/1:ℚ),(196095/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),(fun node => match node.val with | 66 => ⟨![(197119/396286:ℚ),(0/1:ℚ),(196095/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 79 => ⟨![(0/1:ℚ),(197119/396286:ℚ),(512/198143:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 92 => ⟨![(197119/396286:ℚ),(0/1:ℚ),(196095/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 104 => ⟨![(0/1:ℚ),(197119/396286:ℚ),(512/198143:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),2⟩
+theorem leaf31Block67Reverse0_accepted : checkBlockAxis leaf31BlockRegions leaf31Block67Others leaf31Block67Owners leaf31Region2 leaf31Region66 0 leaf31Block67Reverse0 = true := by decide +kernel
+
+def leaf31Block67Reverse1 : BlockAxisCertificate 254 :=
+  ⟨(22728921641/68719476736:ℚ),(28258319471/34359738368:ℚ),(fun node => match node.val with | 2 => ⟨![(196095/396286:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),(fun node => match node.val with | 66 => ⟨![(196095/396286:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 79 => ⟨![(0/1:ℚ),(0/1:ℚ),(197119/396286:ℚ),(512/198143:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 92 => ⟨![(196095/396286:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 104 => ⟨![(0/1:ℚ),(0/1:ℚ),(197119/396286:ℚ),(512/198143:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),0⟩
+theorem leaf31Block67Reverse1_accepted : checkBlockAxis leaf31BlockRegions leaf31Block67Others leaf31Block67Owners leaf31Region2 leaf31Region66 1 leaf31Block67Reverse1 = true := by decide +kernel
+
+def leaf31Block67Reverse2 : BlockAxisCertificate 254 :=
+  ⟨(-2995305553/17179869184:ℚ),(-12150370795/68719476736:ℚ),(fun node => match node.val with | 2 => ⟨![(0/1:ℚ),(196095/396286:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),(fun node => match node.val with | 66 => ⟨![(0/1:ℚ),(0/1:ℚ),(512/198143:ℚ),(196095/396286:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 79 => ⟨![(0/1:ℚ),(512/198143:ℚ),(0/1:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 92 => ⟨![(0/1:ℚ),(0/1:ℚ),(512/198143:ℚ),(196095/396286:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | 104 => ⟨![(0/1:ℚ),(512/198143:ℚ),(0/1:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩ | _ => ⟨fun _ => 0⟩),1⟩
+theorem leaf31Block67Reverse2_accepted : checkBlockAxis leaf31BlockRegions leaf31Block67Others leaf31Block67Owners leaf31Region2 leaf31Region66 2 leaf31Block67Reverse2 = true := by decide +kernel
+
+def leaf31Block67Certificate : RegionBlockCertificate 254 := ⟨leaf31Region66,leaf31Region2,![leaf31Block67Forward0,leaf31Block67Forward1,leaf31Block67Forward2],![leaf31Block67Reverse0,leaf31Block67Reverse1,leaf31Block67Reverse2]⟩
+
+theorem leaf31_block67_accepted : checkRegionBlock leaf31BlockRegions leaf31Block67Owners leaf31Block67Others leaf31Block67Certificate = true := by
+  simp only [checkRegionBlock,decide_eq_true_eq]
+  refine ⟨by decide,by decide,?_,?_⟩
+  · intro e; fin_cases e
+    · exact leaf31Block67Forward0_accepted
+    · exact leaf31Block67Forward1_accepted
+    · exact leaf31Block67Forward2_accepted
+  · intro e; fin_cases e
+    · exact leaf31Block67Reverse0_accepted
+    · exact leaf31Block67Reverse1_accepted
+    · exact leaf31Block67Reverse2_accepted
+
+end Sixpack
