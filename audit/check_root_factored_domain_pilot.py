@@ -31,8 +31,10 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--case', type=int, default=715)
     p.add_argument('--block', type=int, default=0)
+    p.add_argument('--shared', action='store_true', help='Audit domains of an independent shared pair')
     a = p.parse_args()
-    meta = json.loads((ROOT / f'audit/root-case{a.case}-factored-block{a.block}-export.json').read_text())
+    kind = 'shared' if a.shared else 'factored'
+    meta = json.loads((ROOT / f'audit/root-case{a.case}-{kind}-block{a.block}-export.json').read_text())
     assert meta['case'] == a.case and meta['block'] == a.block and len(meta['domains']) == 2
     records = json.loads((ROOT / 'six_triangle_packing/endpoint_root_nodes.json').read_text())
     for domain in meta['domains']:
@@ -58,6 +60,21 @@ def main():
             assert r == records[n]
         name = domain['name']
         text = (ROOT / f'Sixpack/RootSpatialAngleDomains/Domain{digest}.lean').read_text()
+        if len(expected) > 64:
+            folder = ROOT / f'Sixpack/RootSpatialAngleDomains/Domain{digest}'
+            batches = (len(expected) + 31) // 32
+            assert text.startswith(f'import Sixpack.RootSpatialAngleDomains.Domain{digest}.Batch{batches-1}\n')
+            for batch in range(batches):
+                base = 32 * batch
+                count = min(32, len(expected) - base)
+                code = (folder / f'Batch{batch}.lean').read_text()
+                prior = 'Data' if batch == 0 else f'Batch{batch-1}'
+                assert code.startswith(f'import Sixpack.RootSpatialAngleDomains.Domain{digest}.{prior}\n')
+                assert f'theorem {name}_batch{batch}_checked (part : Fin {count})' in code
+                assert f'{name}Nodes.getD ({base}+part.val) 0' in code
+                assert f'let offset : Fin {count} := ⟨part.val-{base},by omega⟩' in text
+                assert f'have hc := {name}_batch{batch}_checked offset' in text
+            text = (folder / 'Data.lean').read_text() + text
         assert 'import Sixpack.EndpointRootSpatialAngleData' in text
         array = text.split(f'def {name}Nodes : Array (Fin 34660) := #[', 1)[1].split(']', 1)[0]
         assert list(map(int, array.split(','))) == expected

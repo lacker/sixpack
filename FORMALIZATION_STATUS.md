@@ -15,7 +15,7 @@ should be reassessed against remaining proof obligations, rather than copied.
 
 Current concrete milestones: the upper-bound construction is proved; much of
 the analytic and certificate soundness machinery is proved; the published main
-b31 chain has 6 of 21 steps, and the published case-970 chain has 3 of 8 steps.
+b31 chain has 6 of 21 steps, and the case-970 chain has 4 of 8 accepted steps.
 These counts describe only those chains, not overall formalization completion.
 The global root-case classification and unconditional lower bound remain unproved.
 
@@ -1670,3 +1670,63 @@ all 23,341 canonical declarations, using only standard logical axioms.
 This validates a reusable proof interface on actual root data. It does not
 prove the entire case-715 trace, other root cases, or the final lower bound.
 Overall planning completion is reassessed at about 40% (wide uncertainty 25–55%).
+
+
+## Independent shared pair arithmetic and bounded ancestry batches
+
+`generate_root_shared_pair.py` now emits pair modules that import the checked
+containing domains directly, without importing the original block's per-member
+acceptance proof. Canonical parent ordering also reuses reversed label pairs.
+The independent source auditor checks this ordering, all six directed-axis
+witnesses, actual imports, domain members and ancestry lookup dispatches. An
+altered axis proposal is rejected. Arithmetic acceptance remains a Lean check.
+
+Two additional actual root-case-715 proposals pass Lean. The first independently
+checks a pair on 25-by-25 original-root domains, excluding all 625 pairs. It
+compiles at 446 MiB, and its three new public declarations pass the standard-axiom
+audit. The larger example checks domains with 112 and 42 original records,
+excluding all 4,704 pairs. Its 112-member ancestry check is divided into four
+modules of at most 32 checks; the aggregate acceptance theorem composes those
+actual checked batches for every member. The build passes at 424 MiB, and all
+eight new declarations pass their scoped standard-axiom audit. The memory cap
+is unchanged. Regeneration preserves the earlier accepted domain sources.
+
+The new pair/domain checks are default-imported and included in the canonical
+audit request list. Their updated default build passes (5,738 jobs). Exact
+coverage by five independently scoped audits checks all 23,352 canonical
+declarations with only standard logical axioms. These examples
+validate the independent reusable route and its bounded domain checking; they
+do not prove the full 16,077-block table, nine-step case-715 closure, global
+classification or unconditional lower bound. Overall planning remains roughly
+40%, with wide uncertainty 25–55%; no significant global milestone was closed.
+
+Shared-pair default build resource check: `MEMORY GUARD: observed peak Lean physical footprint 668.5 MiB; exit=0; stopped=False.`
+
+## Current checked extension: case 970 fourth deletion
+
+The fourth complete deletion and its 84 row groups have passed Lean and an
+independent scoped axiom audit. The selected-root handoff now reaches snapshot
+4 through a compiled theorem, also audited against the standard axiom allowlist.
+This still requires selection of those root domains and the remaining four
+steps; it does not prove the global lower bound. The checkpoint is ready for publication.
+
+Root case 715 now has 22 checked containing-domain pair exclusions for a proposed
+17-owner row group. The independent source audit covers all 1,730 initial
+blockers; Lean positional coverage has now passed (1,843.2 MiB) with a three-declaration
+standard-axiom audit; exhaustive initial-domain binding remains pending. Source audits are external evidence, not formal verification.
+
+The pending root-715 initial-domain bridge consists of 271 proposed 128-entry
+Lean checks over all 34,660 root records, with an explicit inverse lookup for
+coarse group 2. Its independent source audit passes. Neither that audit nor the
+written pruning theorem counts as formal acceptance before compilation and
+axiom auditing. The completed root-row geometry audit covers 109 declarations
+and uses only the standard three allowed axioms.
+
+Current evidence: case-970 snapshot-4 handoff build
+`/tmp/sixpack-case970-root-snapshot4-v2.log` (478.1 MiB), scoped audit
+`/tmp/sixpack-case970-root-snapshot4-axioms-v1.log`, and exact canonical audit
+union `/tmp/sixpack-case970-snapshot4-audit-union-v1.log` (23,612 declarations).
+Root-715 geometry audit:
+`/tmp/sixpack-root-case715-row-geometry-axioms-8c11a3ff.log`.
+The default build completed all 5,824 jobs. Root-row positional coverage and
+its scoped axiom audit passed; initial-domain binding is still pending.

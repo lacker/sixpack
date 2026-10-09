@@ -12,6 +12,13 @@ from spatial_angle_export_utils import path_declarations
 
 ROOT = Path(__file__).resolve().parents[1]
 FIELDS = ('m', 'K', 'i', 'j', 'd', 'bin')
+_cached_records = None
+_cached_domains = {}
+
+
+def write_changed(path, text):
+    if not path.exists() or path.read_text() != text:
+        path.write_text(text)
 
 
 def ancestry(original, parent):
@@ -37,6 +44,90 @@ def label(r):
     return f'⟨{r["m"]},{r["K"]},⟨({r["i"]},{r["j"]},{str(bool(r["d"])).lower()}),by decide⟩,{r["bin"]}⟩'
 
 
+def export_domain(parent, records):
+    global _cached_records
+    if _cached_records is not records:
+        _cached_domains.clear()
+        _cached_records = records
+    key = tuple(parent[f] for f in FIELDS)
+    if key in _cached_domains:
+        return _cached_domains[key]
+    folder = ROOT / "Sixpack/RootSpatialAngleDomains"
+    folder.mkdir(exist_ok=True)
+    digest = hashlib.sha256(json.dumps(key).encode()).hexdigest()[:16]
+    name = 'rootSpatialAngleDomain' + digest
+    members = {n: paths for n, r in enumerate(records) if (paths := ancestry(r, parent)) is not None}
+    assert members
+    text = 'import Sixpack.EndpointRootSpatialAngleData\nimport Sixpack.SpatialAngleDomainCertificate\n\n'
+    text += 'set_option maxHeartbeats 20000000\nset_option maxRecDepth 100000\n\nnamespace Sixpack\n\n'
+    text += f'def {name}Nodes : Array (Fin 34660) := #[' + ','.join(map(str, members)) + ']\n\n'
+    text += f'def {name}Members : Finset (Fin 34660) :=\n  Finset.univ.image (fun part : Fin {len(members)} => {name}Nodes.getD part.val 0)\n\n'
+    text += path_declarations(name + 'Spatial', {str(n): v[0] for n, v in members.items()})
+    text += path_declarations(name + 'Angular', {str(n): v[1] for n, v in members.items()}, True)
+    text += f'def {name}Certificate : SpatialAngleDomainCertificate 34660 :=\n  ⟨{label(parent)},(fun n => {name}Spatial n.val),(fun n => {name}Angular n.val)⟩\n\n'
+    if len(members) > 64:
+        chunks = folder / f'Domain{digest}'
+        chunks.mkdir(exist_ok=True)
+        data = text + 'end Sixpack\n'
+        write_changed(chunks / 'Data.lean', data)
+        batches = (len(members) + 31) // 32
+        for batch in range(batches):
+            base = 32 * batch
+            count = min(32, len(members) - base)
+            prior = 'Data' if batch == 0 else f'Batch{batch-1}'
+            code = f'import Sixpack.RootSpatialAngleDomains.Domain{digest}.{prior}\n\n'
+            code += 'set_option maxHeartbeats 20000000\nset_option maxRecDepth 100000\n\nnamespace Sixpack\n\n'
+            code += f'''theorem {name}_batch{batch}_checked (part : Fin {count}) :
+    checkSpatialAngleAncestor {name}Certificate.parent
+      (endpointRootSpatialAngleRegions ({name}Nodes.getD ({base}+part.val) 0))
+      ({name}Certificate.spatial ({name}Nodes.getD ({base}+part.val) 0))
+      ({name}Certificate.angular ({name}Nodes.getD ({base}+part.val) 0)) = true := by
+  fin_cases part <;> decide +kernel
+
+end Sixpack
+'''
+            write_changed(chunks / f'Batch{batch}.lean', code)
+        text = f'import Sixpack.RootSpatialAngleDomains.Domain{digest}.Batch{batches-1}\n\nnamespace Sixpack\n\n'
+        text += f'''theorem {name}_checked :
+    checkSpatialAngleRegionDomain endpointRootSpatialAngleRegions {name}Members {name}Certificate = true := by
+  simp only [checkSpatialAngleRegionDomain,decide_eq_true_eq]
+  intro v hv
+  simp only [{name}Members] at hv
+  obtain ⟨part,_,rfl⟩ := Finset.mem_image.mp hv
+  have hquot : part.val/32 ≤ {batches-1} := by omega
+  interval_cases h : part.val/32
+'''
+        for batch in range(batches):
+            base = 32 * batch
+            count = min(32, len(members) - base)
+            text += f'''  · let offset : Fin {count} := ⟨part.val-{base},by omega⟩
+    have hp : {base}+offset.val = part.val := by
+      dsimp [offset]
+      omega
+    have hc := {name}_batch{batch}_checked offset
+    rw [hp] at hc
+    exact hc
+'''
+        text += '\nend Sixpack\n'
+    else:
+        text += f'''theorem {name}_checked :
+    checkSpatialAngleRegionDomain endpointRootSpatialAngleRegions {name}Members {name}Certificate = true := by
+  simp only [checkSpatialAngleRegionDomain,decide_eq_true_eq]
+  intro v hv
+  simp only [{name}Members] at hv
+  obtain ⟨part,_,rfl⟩ := Finset.mem_image.mp hv
+  fin_cases part <;> decide +kernel
+
+end Sixpack
+'''
+    path = folder / f'Domain{digest}.lean'
+    write_changed(path, text)
+    result = dict(name=name, digest=digest, parent=parent,
+                  members=list(members), paths={str(n): ps for n, ps in members.items()})
+    _cached_domains[key] = result
+    return result
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('prefix', type=Path)
@@ -48,36 +139,7 @@ def main():
     records = json.loads((ROOT / 'six_triangle_packing/endpoint_root_nodes.json').read_text())
     folder = ROOT / 'Sixpack/RootSpatialAngleDomains'
     folder.mkdir(exist_ok=True)
-    exports = []
-    for side in ('owner', 'other'):
-        parent = block[side + '_parent']
-        key = tuple(parent[f] for f in FIELDS)
-        digest = hashlib.sha256(json.dumps(key).encode()).hexdigest()[:16]
-        name = 'rootSpatialAngleDomain' + digest
-        members = {n: paths for n, r in enumerate(records) if (paths := ancestry(r, parent)) is not None}
-        assert members
-        text = 'import Sixpack.EndpointRootSpatialAngleData\nimport Sixpack.SpatialAngleDomainCertificate\n\n'
-        text += 'set_option maxHeartbeats 20000000\nset_option maxRecDepth 100000\n\nnamespace Sixpack\n\n'
-        text += f'def {name}Nodes : Array (Fin 34660) := #[' + ','.join(map(str, members)) + ']\n\n'
-        text += f'def {name}Members : Finset (Fin 34660) :=\n  Finset.univ.image (fun part : Fin {len(members)} => {name}Nodes.getD part.val 0)\n\n'
-        text += path_declarations(name + 'Spatial', {str(n): v[0] for n, v in members.items()})
-        text += path_declarations(name + 'Angular', {str(n): v[1] for n, v in members.items()}, True)
-        text += f'def {name}Certificate : SpatialAngleDomainCertificate 34660 :=\n  ⟨{label(parent)},(fun n => {name}Spatial n.val),(fun n => {name}Angular n.val)⟩\n\n'
-        text += f'''theorem {name}_checked :
-    checkSpatialAngleRegionDomain endpointRootSpatialAngleRegions {name}Members {name}Certificate = true := by
-  simp only [checkSpatialAngleRegionDomain,decide_eq_true_eq]
-  intro v hv
-  simp only [{name}Members] at hv
-  obtain ⟨part,_,rfl⟩ := Finset.mem_image.mp hv
-  fin_cases part <;> decide +kernel
-
-end Sixpack
-'''
-        path = folder / f'Domain{digest}.lean'
-        if not path.exists() or path.read_text() != text:
-            path.write_text(text)
-        exports.append(dict(name=name, digest=digest, parent=parent,
-                            members=list(members), paths={str(n): ps for n, ps in members.items()}))
+    exports = [export_domain(block[side + '_parent'], records) for side in ('owner', 'other')]
     own, other = exports
     out = f'import Sixpack.EndpointRootCase{case}SpatialAngle.Block{a.block}\n'
     out += ''.join(f'import Sixpack.RootSpatialAngleDomains.Domain{d["digest"]}\n' for d in exports)
