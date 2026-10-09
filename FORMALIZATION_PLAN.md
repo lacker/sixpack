@@ -567,10 +567,13 @@ leaf closure. Only compiled arithmetic and pruning checks may discharge these
 obligations. The remaining twelve b31 case closures and root-to-b31 coverage
 still need their own checks.
 
-Two concrete b31 spatial/angular blocks now pass Lean, including the largest
-46,662-pair block. Before bulk acceptance, replace high-index literal pattern
-matches in the ancestry lookup with bounded chunk lookups and verify the
-replacement's exact source scope. The largest current proof stayed below
-2 GiB physical footprint but took 560 seconds, so small-index lookup reduction
-is needed to keep the remaining production acceptance practical. Keep all
-heavy checks serial and retain the external physical-memory guard.
+The spatial/angular lookup bottleneck is now reduced: sparse paths use
+bounded 32-entry pages and block members use finite images of indexed arrays.
+The largest block now passes in 59 seconds rather than 560 seconds, with a
+603 MiB peak. The first five production batches pass, giving 63 accepted
+blocks in total. The remaining table is partitioned into 692 bounded batches;
+`audit/check_b31_spatial_angle_batches.py` generates and checks them serially
+without expanding the default import graph. Continue from batch 5, then prove
+the complete block acceptance and pruning coverage before composing the
+retained-parent reduction with the accepted final refinement and leaf closure.
+Keep all heavy checks serial under the external memory guard.

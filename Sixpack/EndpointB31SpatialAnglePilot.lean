@@ -1,2 +1,7 @@
 import Sixpack.EndpointB31SpatialAngle.Block0
 import Sixpack.EndpointB31SpatialAngle.Block6440
+import Sixpack.EndpointB31SpatialAngle.Batch0
+import Sixpack.EndpointB31SpatialAngle.Batch1
+import Sixpack.EndpointB31SpatialAngle.Batch2
+import Sixpack.EndpointB31SpatialAngle.Batch3
+import Sixpack.EndpointB31SpatialAngle.Batch4

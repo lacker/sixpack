@@ -638,12 +638,19 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 `SpatialAngleBlockCertificate` proves geometric pair exclusion from accepted
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
-parent-deletion bridges. Concrete b31 table and trace acceptance remain. The selected
-`EndpointB31SpatialAnglePilot` now accepts blocks 0 and 6440, covering 47,030
-ordered pairs from actual b31 records. The largest block covers 46,662 pairs
-using twelve rational projection bounds plus 433 integer ancestry checks. It
-peaked at 1,843 MiB and took 560 seconds; the smaller block and pilot assembly
-peaked at 466 MiB. Only these two of the 9,876 proposed blocks have passed Lean.
-The first combined large decision failed to reduce; separating the pair and
-individual ancestry checks passed without introducing assumptions. The full
-b31 reduction to retained parents is not yet a Lean theorem.
+parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
+`EndpointB31SpatialAnglePilot` accepts 63 blocks, covering 53,739 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and five
+bounded production batches. The source audit checks the indexed member images,
+every chunk selector and path, and the complete untrusted batch partition.
+
+The largest block covers 46,662 pairs using twelve rational projection bounds
+plus 433 integer ancestry checks. Bounded path lookups and finite-image member
+sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
+The five production batches all pass with peaks below 1,434 MiB; the full
+default build peaks at 448 MiB. The generator keeps new batches outside the
+import graph until checked, and the runner checks them serially under the
+external guard. There are 692 planned batches in total, of which the first
+five are accepted. No complete b31 pruning or root reachability theorem is
+claimed; 9,813 of the 9,876 proposed blocks still need acceptance, followed by
+checked coverage and composition of all 21 pruning rectangles.

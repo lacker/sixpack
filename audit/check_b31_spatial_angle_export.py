@@ -61,17 +61,48 @@ assert 'let r := b31SpatialAngleRawRecord index.val' in text
 assert 'rootKeyOfCoordinates 64 128 (by decide) (by decide) r.1 r.2.1 r.2.2.1 r.2.2.2' in text
 
 selected=[]
-for path in sorted((root/'Sixpack/EndpointB31SpatialAngle').glob('Block*.lean')):
- index=int(path.stem[5:]);selected.append(index);b=meta['blocks'][index];text=path.read_text()
- for prefix,nodes in [('Owners',b['owners']),('Others',b['others'])]:
-  body=text.split(f'def b31SpatialAngle{index}{prefix} : Finset (Fin 7023) := {{',1)[1].split('}',1)[0]
+plan=json.loads((root/'audit/b31-spatial-angle-batch-plan.json').read_text())
+assert plan['pilot_blocks']==[0,6440]
+assert sorted(sum(plan['batches'],[])+plan['pilot_blocks'])==list(range(9876))
+assert all(1<=len(batch)<=16 for batch in plan['batches'])
+for batch,indices in enumerate(plan['batches']):
+ members=sum(len(meta['blocks'][n]['owners'])+len(meta['blocks'][n]['others']) for n in indices)
+ assert members<=256 or len(indices)==1 or batch==0
+sources=sorted((root/'Sixpack/EndpointB31SpatialAngle').glob('Block*.lean'))+sorted((root/'Sixpack/EndpointB31SpatialAngle').glob('Batch*.lean'))
+for path in sources:
+ indices=list(map(int,re.findall(r'^def b31SpatialAngle(\d+)Owners',path.read_text(),re.M)))
+ if path.stem.startswith('Batch'):assert indices==plan['batches'][int(path.stem[5:])]
+ else:assert indices==[int(path.stem[5:])]
+entries=[(int(index),path.read_text()) for path in sources for index in re.findall(r'^def b31SpatialAngle(\d+)Owners',path.read_text(),re.M)]
+for index,text in entries:
+ assert index not in selected;selected.append(index);b=meta['blocks'][index]
+ for tag,nodes in [('Owner',b['owners']),('Other',b['others'])]:
+  name=f'b31SpatialAngle{index}{tag}'
+  body=text.split(f'def {name}Nodes : Array (Fin 7023) := #[',1)[1].split(']',1)[0]
   assert list(map(int,body.split(',')))==nodes
+  definition=text.split(f'def {name}s : Finset (Fin 7023) :=',1)[1].split('\n\n',1)[0].strip()
+  assert definition==f'Finset.univ.image (fun part : Fin {len(nodes)} => {name}Nodes.getD part.val 0)'
  body=text.split(f'def b31SpatialAngle{index}Certificate ',1)[1].split('\ntheorem ',1)[0]
  labels=[(int(m),int(K),int(i),int(j),int(d=='true'),int(bin)) for m,K,i,j,d,bin in re.findall(r'⟨(\d+),(\d+),⟨\((\d+),(\d+),(true|false)\),by decide⟩,(\d+)⟩',body)]
  assert labels==[tuple(b[p+'_parent'][k] for k in ('m','K','i','j','d','bin')) for p in ['owner','other']]
- parts=body.split('(fun n => match n.val with ')[1:];assert len(parts)==4
- for part,key in zip(parts,['owner_spatial_paths','other_spatial_paths','owner_angular_paths','other_angular_paths']):
-  values={n:ast.literal_eval('['+v.replace('true','True').replace('false','False')+']') for n,v in re.findall(r'\| (\d+) => \[([^\]]*)\]',part)}
-  assert values==b[key]
-print('PASS: all 7023 source records; complete 21-step proposed trace and 9876 partitions cover 625585 pairs with exact ancestor paths. Selected Lean source blocks:',selected)
+ names=[f'b31SpatialAngle{index}{tag}' for tag in ['OwnerSpatial','OtherSpatial','OwnerAngular','OtherAngular']]
+ assert re.findall(r'\(fun n => (\w+) n.val\)',body)==names
+ for name,key in zip(names,['owner_spatial_paths','other_spatial_paths','owner_angular_paths','other_angular_paths']):
+  pattern=rf'def {name}Page(\d+) : Array \(List \((?:Fin 4|Bool)\)\) := #\[(.*?)\]\n'
+  pages={int(n):ast.literal_eval('['+entries.replace('true','True').replace('false','False')+']') for n,entries in re.findall(pattern,text,re.S)}
+  expected={int(n):v for n,v in b[key].items()}
+  assert set(pages)=={n//32 for n in expected} and all(len(v)==32 for v in pages.values())
+  groups=sorted({page//32 for page in pages})
+  for group in groups:
+   gb=text.split(f'def {name}Group{group} ',1)[1].split('\n\n',1)[0]
+   assert 'match (index%1024)/32 with' in gb
+   got=[(int(a),int(page)) for a,page in re.findall(rf'\| (\d+) => {name}Page(\d+)\.getD \(index%32\)',gb)]
+   assert got==[(page%32,page) for page in sorted(pages) if page//32==group]
+  lookup=text.split(f'def {name} (index ',1)[1].split('\n\n',1)[0]
+  assert 'match index/1024 with' in lookup
+  assert [(int(a),int(g)) for a,g in re.findall(rf'\| (\d+) => {name}Group(\d+) index',lookup)]==[(g,g) for g in groups]
+  for n in range(7023):
+   actual=pages.get(n//32,[[]]*32)[n%32]
+   assert actual==expected.get(n,[])
+print('PASS: all 7023 source records; complete 21-step proposed trace and 9876 partitions cover 625585 pairs with exact ancestor paths. Selected Lean source blocks:',len(selected))
 print('Complete arithmetic/pruning acceptance is still pending; source scope alone does not prove the b31 closure.')
