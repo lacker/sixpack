@@ -334,3 +334,4 @@ import Sixpack.EndpointB31GeometricChains.Prefix6
 import Sixpack.EndpointB31Case970GeometricChains.Prefix1
 import Sixpack.FixedVertexRegionPruning
 import Sixpack.FixedVertexCoveredPruning
+import Sixpack.EndpointB31Case970RootPruning

@@ -1471,3 +1471,32 @@ The two case-970 continuation steps, its remaining geometric table and the
 remaining main-chain steps continue checking separately. Concrete root-support
 certificates, local-label coverage, global classification and the final lower
 bound remain unfinished. Overall completion remains about 60% (55–65%).
+
+
+## Two-step case-970 chain from actual selected root records
+
+`b31_case970_step1_pruning_preserves_packing` and
+`b31_case970_prefix2_preserves_packing` are now default-imported and fully
+dependency-audited. The second step deletes 18 actual component-1 regions
+against 264 component-3 blockers using 17 geometric coverage groups.
+The accepted consecutive chain now deletes 146 owners using 22 groups.
+Its table contains 474 geometric blocks / 70,613 ordered pairs in batches 0–38.
+
+`b31_case970_selected_root_records_enter_snapshot2` composes the already-proved
+actual-root refinement with both geometric steps. An actual packing with
+selected original root records and `L ≤ outerBound` consequently has represented
+choices in the actual second survivor snapshot. No initial refined-choice or
+geometric acceptance hypothesis is assumed. Incoming root selection remains
+an explicit obligation.
+
+The second step compiles at 596 MiB, the chain at 325 MiB and the root composition
+at 401 MiB. The targeted step audit checks 912 declarations. The complete default
+build passes (5,542 jobs, 640 MiB); the full canonical audit checks 20,243 listed
+requests / 20,242 distinct declarations, all using only standard logical axioms.
+The actual group/step/chain source auditors, forbidden-proof scan and original
+archive/file integrity pass.
+
+The third step's coverage groups, the remaining case-970 geometric batches and
+the remaining main-chain steps continue checking separately. Case 970's complete
+eight-step exclusion, concrete root support, global classification and the final
+lower bound remain unproved. Overall completion remains about 60% (55–65%).
