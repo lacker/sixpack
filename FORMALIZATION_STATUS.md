@@ -1132,3 +1132,41 @@ bridge is still compiling. Neither those pending results nor the remaining
 eighteen pruning steps count as accepted here. Incoming root-parent coverage,
 the other b31 cases, global classification and lower bound remain unproved.
 Overall completion remains about 60% (55–65%).
+
+
+## Ordered b31 root records enter the actual initial snapshot
+
+`EndpointB31RefinementDomains` checks all 969 selected parent positions against
+the actual declared root groups. Every retained child belonging to components
+0–4, or either allowed last-component group, is identified with an explicit
+entry of that component's actual initial snapshot. The source audit checks all
+7,752 scalar slots and routing functions; the 4,283 relevant retained
+alternatives cover exactly all entries of the six initial component domains.
+All 31 scalar proof batches and the complete domain checker compile.
+
+`b31_root_refinement_enters_initial_snapshot` starts from an actual packing in
+the selected ordered parent domains and produces the actual initial-snapshot
+choice with its geometric representation preserved. `EndpointB31RootEntry`
+also defines the corresponding selected domains on the original
+`Fin 34660` root-record indices. `b31_selected_root_records_enter_initial_snapshot`
+lifts any choice in those domains to the accepted refinement proof; no caller
+has to assume a choice of internal refinement-table positions. Proving that an
+arbitrary root-case packing enters these selected root domains remains an
+explicit, unproved production clique-support obligation.
+
+The first pilot failed to elaborate decidability of two finite case predicates.
+Explicit computable instances repaired those errors without changing the
+positional data or adding proof assumptions. The complete domain build passes
+(3,369 jobs, peak 1,946 MiB), and the original-root-record bridge compiles in
+four seconds at 390 MiB. The combined default build passes (4,969 jobs,
+522 MiB). The full shared dependency audit passes in 88 seconds at 570 MiB:
+13,051 listed checks and 13,050 distinct declarations, including the 37 new
+public dependencies, use only standard logical axioms. Both refinement source
+auditors pass. No forbidden proof shortcuts occur in the 34 new modules, and
+the archive and all 730 original research files remain unchanged.
+
+Three complete pruning steps are accepted. The serial continuation is checking
+step-3 geometric dependencies, and its full positive execution remains to be
+validated. The remaining eighteen transitions, incoming selected-root coverage,
+the twelve other b31 cases, global classification and lower bound remain
+unproved. Overall completion remains about 60% (55–65%).

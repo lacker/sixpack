@@ -311,3 +311,5 @@ import Sixpack.EndpointB31IndexedGroups.Group297
 import Sixpack.EndpointB31IndexedGroups.Group298
 import Sixpack.EndpointB31GeometricSteps.Step2
 import Sixpack.EndpointB31GeometricChains.Prefix3
+import Sixpack.EndpointB31RefinementDomains
+import Sixpack.EndpointB31RootEntry

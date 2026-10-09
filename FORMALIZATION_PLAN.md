@@ -785,3 +785,14 @@ step-3 dependencies after rebuilding and auditing prefix 3. Continue the ordered
 refinement-domain bridge independently, then prove incoming root-parent coverage
 and the twelve other b31 case closures. Neither the ongoing continuation nor
 the external closure traces discharge those obligations.
+
+
+The ordered initial-refinement bridge is now compiled and fully axiom-audited.
+Use `b31_selected_root_records_enter_initial_snapshot` to pass from actual
+original root-record choices in `b31SelectedRootDomains` to the actual
+`b31SnapshotDomains 0` choice. Once prefix 21 is accepted, compose this with
+`b31_initial_snapshot_no_packing` to exclude these selected ordered root
+domains. The remaining incoming obligation is to prove that the two relevant
+root cases reach those selected domains by sound geometric clique-support
+pruning. The other twelve b31 cases and all other production branches remain
+independent obligations.
