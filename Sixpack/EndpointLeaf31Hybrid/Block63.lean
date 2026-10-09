@@ -1,0 +1,29 @@
+import Sixpack.HybridBlockSearch
+import Sixpack.EndpointLeaf31Blocks.Data
+import Sixpack.EndpointLeaf31Search.Data
+
+namespace Sixpack
+
+def leaf31Hybrid63Forward0 : AxisExclusionCertificate := ⟨(-5655464473/8589934592:ℚ),(-5726623061/34359738368:ℚ),⟨![(196095/396286:ℚ),(0/1:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,⟨![(512/198143:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,2⟩
+
+def leaf31Hybrid63Forward1 : AxisExclusionCertificate := ⟨(27121461069/34359738368:ℚ),(23256897731/68719476736:ℚ),⟨![(197119/396286:ℚ),(196095/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,⟨![(0/1:ℚ),(512/198143:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,0⟩
+
+def leaf31Hybrid63Forward2 : AxisExclusionCertificate := ⟨(-3303011019/17179869184:ℚ),(-2818233193/17179869184:ℚ),⟨![(0/1:ℚ),(197119/396286:ℚ),(196095/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,⟨![(197119/396286:ℚ),(0/1:ℚ),(512/198143:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,1⟩
+
+def leaf31Hybrid63Reverse0 : AxisExclusionCertificate := ⟨(-11800908861/68719476736:ℚ),(-10694676257/17179869184:ℚ),⟨![(197119/396286:ℚ),(0/1:ℚ),(196095/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,⟨![(0/1:ℚ),(197119/396286:ℚ),(512/198143:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,2⟩
+
+def leaf31Hybrid63Reverse1 : AxisExclusionCertificate := ⟨(22728921641/68719476736:ℚ),(56519391303/68719476736:ℚ),⟨![(196095/396286:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,⟨![(512/198143:ℚ),(0/1:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,0⟩
+
+def leaf31Hybrid63Reverse2 : AxisExclusionCertificate := ⟨(-2995305553/17179869184:ℚ),(-11617810933/68719476736:ℚ),⟨![(0/1:ℚ),(196095/396286:ℚ),(197119/396286:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,⟨![(197119/396286:ℚ),(512/198143:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩,1⟩
+
+def leaf31Hybrid63Pair : RegionPairCertificate :=
+  ⟨![leaf31Hybrid63Forward0,leaf31Hybrid63Forward1,leaf31Hybrid63Forward2],![leaf31Hybrid63Reverse0,leaf31Hybrid63Reverse1,leaf31Hybrid63Reverse2]⟩
+
+def leaf31Hybrid63Certificate : AncestorBlockCertificate 254 :=
+  ⟨⟨32,256,⟨(0,15,false),by decide⟩,127⟩,⟨128,256,⟨(0,0,false),by decide⟩,128⟩,(fun n => match n.val with | 18 => [3,2] | 24 => [2,0] | 30 => [2,3] | 36 => [2,2] | 62 => [3,0] | 75 => [3,3] | 88 => [3,1] | 100 => [2,1] | _ => []),(fun n => match n.val with | 2 => [] | _ => []),leaf31Hybrid63Pair⟩
+
+theorem leaf31_hybrid_ancestor63_accepted :
+    checkAncestorRegionBlock leaf31BlockRegions (leaf31LookupOwners 63) (leaf31LookupOthers 63)
+      leaf31Hybrid63Certificate = true := by decide +kernel
+
+end Sixpack

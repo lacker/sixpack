@@ -584,11 +584,21 @@ per-member rational projection checks, but it is not global graph acceptance.
 The concrete `EndpointLeaf31AncestorFixture` accepts one production block of
 192 pairs using one six-axis pair certificate (12 rational projection bounds)
 and integer paths for its members. Its source scope is compared independently.
-The untrusted exact-arithmetic pilot found containing-label certificates for
-76 of the 80 existing leaf31 blocks; only the selected 192-pair block has been
-accepted by this new method. The original full leaf31 closure remains proved
-by its existing block certificates. No replacement of the complete table is
-claimed yet.
+`EndpointLeaf31Hybrid` now accepts the complete replacement table: 76
+containing-label blocks and four independently checked original projection
+blocks. It excludes the same 6,764 ordered pairs and closes both leaf31 cases,
+928 and 929, using the existing search. Rational projection checks fall from
+8,778 to 1,308; integer ancestry is checked separately. The original full
+leaf31 proof remains available as a reference. `EndpointLeaf31CoarseGroups`
+also proves the geometric meaning of all 254 saved coarse-group tags and the
+case domains' correspondence to representatives 928 and 929. Root-to-leaf
+reachability remains unproved; these leaf closures do not finish classification.
+The source/export comparison independently checks all members, paths and tags.
+
+The new block builds peaked at 1,229 MiB, the complete mixed table and closure
+at 744 MiB, and the coarse-group bindings at 2,253 MiB. Heavy checks run
+sequentially under the external 3,072 MiB per-process physical-footprint guard;
+Lean's own allocation limit alone did not reliably constrain earlier builds.
 
 The 251 witness builds peaked at 1,434 MiB; unconditional root-case assembly
 used 471 MiB and the ancestor pilot 640 MiB. Earlier monolithic decisions were

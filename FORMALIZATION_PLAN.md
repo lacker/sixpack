@@ -535,5 +535,11 @@ one checked pair on containing spatial labels to certify blocks using integer
 ancestry paths. A production pilot verifies 192 pairs this way. Apply this
 compression, with finer blocks or existing certificates where broad ancestors
 fail, to the much larger production graph/search and domain-restriction proofs.
-The pilot's 76-of-80 success count is external arithmetic evidence; it does
-not constitute acceptance of that full replacement table.
+The full leaf31 replacement table now passes Lean: 76 ancestor blocks plus
+four original projection blocks, with identical 6,764-pair coverage and a
+complete checked leaf closure. All 254 saved leaf31 coarse-group tags now have
+proved geometric meaning, and both leaf domains are linked to representatives
+928 and 929. The next obligations are root-to-leaf reachability and broader
+production graph acceptance; local leaf closure alone cannot discharge the
+root-case classification. Keep large certificate builds sequential under the
+external physical-memory guard.
