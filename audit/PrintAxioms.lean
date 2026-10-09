@@ -9762,3 +9762,12 @@ import Sixpack
 #print axioms Sixpack.b31_geometric_step1_rows_exclude
 #print axioms Sixpack.b31_step1_pruning_preserves_packing
 #print axioms Sixpack.b31_prefix2_preserves_packing
+#print axioms Sixpack.rigidMap_preserves_norm
+#print axioms Sixpack.hull_rigidMap
+#print axioms Sixpack.hull_smul
+#print axioms Sixpack.scaledNormSq_smul
+#print axioms Sixpack.delta_smul
+#print axioms Sixpack.equilateral_outer_rigid_image
+#print axioms Sixpack.equilateral_outer_normalization
+#print axioms Sixpack.packing_in_equilateral_outer_normalizes
+#print axioms Sixpack.candidate_in_arbitrary_equilateral_outer

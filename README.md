@@ -84,6 +84,9 @@ bindings, search certificates and endpoint
 classification remain. Compilation passes Lean `-M4096`, but this does not bound every kernel
 allocation: a monolithic root-row check exceeded it and was stopped. Heavy
 checks are split into smaller commands and serial modules.
+Arbitrary equilateral outer hulls now normalize by a proved rigid map into this
+model, preserving unit edges, containment and disjoint interiors. The verified
+upper-bound construction also transfers to any outer hull of side `optimum`.
 `audit/run_lean_memory_guard.py` additionally monitors physical/compressed memory
 and stops only its build's Lean descendants above the configured threshold.
 Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.

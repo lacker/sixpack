@@ -8,7 +8,7 @@ It is not a schedule forecast.
 | Milestone | Status |
 |---|---|
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
-| General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors and separating-axis necessity proved; general outer-container isometry normalization remains |
+| General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors, separating-axis necessity and arbitrary outer-container rigid normalization proved |
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
 | Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries, production coarse-cell actions and actual 8,008-pattern coverage proved; declared root-group bindings and compatible coverage proved; full representative and ordered root-case coverage proved; case-tree classification remains |
 | Local five-piece nonlinear rigidity | Radius and all three tube rigidity theorems proved; generic region-to-chart and endpoint bridges proved for all four profiles; production-wide certificate acceptance and coverage remain |
@@ -886,3 +886,35 @@ incoming root coverage and the global case classification remain. Step 2 needs
 76 groups, 120 removed owners and 375 blockers; its geometric dependencies extend
 through batch 285. Accept batches 188–285, then its groups, assembled step and
 three-step chain. The overall estimate remains about 60% (55–65%).
+
+
+## Arbitrary outer-container normalization
+
+`OuterNormalization` closes the arbitrary-container congruence obligation in
+this project's scaled-coordinate model. The metric corresponds exactly to
+Cartesian squared distance by `scaledNormSq_cartesian`.
+`equilateral_outer_rigid_image` derives a rotation-and-translation image of the
+canonical outer hull from the three squared side lengths and `0 < L`. It scales
+the outer triangle to a unit triangle, applies the accepted congruence theorem
+for either vertex ordering, and scales back. No geometric congruence axiom is
+assumed.
+
+`equilateral_outer_normalization` constructs an invertible continuous rigid map
+whose image of the arbitrary outer hull is exactly `{p | InContainer L p}`.
+It proves distance preservation and affine transport of every triangle hull.
+`PackingIn` states unit edges, hull containment and pairwise disjoint interiors
+in an arbitrary outer triple. `packing_in_equilateral_outer_normalizes` maps
+any such packing to `Packing L` with unchanged physical side lengths; interior
+disjointness follows from the proved homeomorphism. Finally,
+`candidate_in_arbitrary_equilateral_outer` transports the accepted six-piece
+construction into every equilateral outer hull of side `optimum`.
+
+The final analytic module passes in 3.8 seconds at 366 MiB. Earlier attempts
+had affine-coercion and rewrite elaboration failures; explicit map identities
+fixed them. The default build passes (4,721 jobs, 501 MiB), and all nine new
+public theorem dependencies pass the axiom audit. The combined list has 9,748
+checks using only `propext`, `Classical.choice` and `Quot.sound`; no proof shortcuts
+were found in the new module. This closes normalization and the arbitrary
+container upper-bound transport, but does not discharge global root-case
+classification or establish the global lower bound. The geometric batch run
+for step 2 continues separately.

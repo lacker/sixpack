@@ -229,3 +229,4 @@ import Sixpack.GeometricSnapshotPruning
 import Sixpack.EndpointB31SnapshotBlockers
 import Sixpack.EndpointB31GeometricSteps.Step0
 import Sixpack.EndpointB31GeometricChains.Prefix2
+import Sixpack.OuterNormalization

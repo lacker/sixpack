@@ -386,9 +386,10 @@ explicitly with `--physical-limit-mib`.
 
 1. **Exact algebra and outer-container normalization.** Extend the proved
    rational quadratic algebra with division and outward rational enclosures as
-   required by production certificates. Unit-triangle congruence and both vertex
-   orderings are proved. Normalize an arbitrary equilateral outer container by a
-   Euclidean isometry into the current scaled-coordinate model.
+   required by production certificates. Unit-triangle congruence, both vertex
+   orderings and arbitrary equilateral outer-container rigid normalization are
+   proved. `OuterNormalization` transports actual packings into the canonical
+   model and transports the upper-bound construction into arbitrary outer hulls.
 2. **Spatial and region cover.** Fundamental orientation coverage, its closed
    rational bins, exact support margins, common inner triangles and coarse-cell
    coverage/injection are proved. Arbitrary-grid region coverage and spatial/angle
@@ -699,3 +700,13 @@ Continue with step 2: accept its remaining geometric dependencies in batches
 188–285, then its 76 groups covering 120 owners against 375 blockers. Compile
 and audit the step and prefix 3 before expanding the default build. The
 remaining nineteen steps and root-case classification remain unproved.
+
+
+The arbitrary outer-container normalization obligation is now discharged by
+`equilateral_outer_normalization` and `packing_in_equilateral_outer_normalizes`.
+The latter assumes only the actual packing in the outer hull, its three side
+lengths and a positive container side length, and constructs a distance-preserving
+homeomorphism into the existing model. `candidate_in_arbitrary_equilateral_outer`
+proves the upper-bound packing in every equilateral outer hull of side `optimum`.
+All nine public normalization dependencies pass compilation and axiom audit.
+The global lower bound still requires the production case classification.
