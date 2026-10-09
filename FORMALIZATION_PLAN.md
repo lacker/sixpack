@@ -381,7 +381,19 @@ and transports checked UV bounds to Cartesian projections. `RegionBoundFixture`
 checks 24 projection witnesses from four endpoint-root labels and one empty
 intersection, including conservative `2^36` rounding; four checked rational
 points prove the sampled intersections nonempty. The covector-to-inner-edge
-binding, full production witnesses and graph/search coverage remain unverified.
+binding is now proved by `RationalInnerTriangles` and twelve concrete identities.
+Full production witnesses and graph/search coverage remain unverified.
+
+`RegionPairCertificate` checks each of the six directed edge exclusions using
+these bounds and a rational witness-vertex threshold. Its soundness theorem
+starts from continuous region membership and excludes disjoint actual triangle
+interiors through the proved chart/bin inner-hull containment. `RegionSearchBridge`
+derives conservative computed adjacency and connects the finite search checker
+to represented six-triangle packings. A failed or absent pair proof retains its
+edge. `RegionPairFixture` checks one pair of actual endpoint-root labels (110,
+126), including nonempty-region points, rejection of a forged vertex, and a small
+conditional geometric search closure. Production adjacency, domain enumeration,
+local omission/deletion channels, DAG compression and tree coverage remain.
 
 The cell/bin halfplane normals use only the six directions associated with
 `u`, `v` and `u+v`. Investigate sharing dual coefficient pairs across regions

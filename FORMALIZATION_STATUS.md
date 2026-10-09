@@ -12,7 +12,7 @@ It is not a schedule forecast.
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
 | Continuous spatial coverage and symmetry reduction | Closed sixteen-cell coarse cover, its cardinality and six-centroid injection proved; arbitrary-grid root region coverage and midpoint/angle refinements proved; saved polygon enumeration, production index bindings and symmetry reduction remain |
 | Local five-piece nonlinear rigidity | Packing radius theorem and all three packing tube theorems proved in their explicit charts; global region-to-chart bindings remain |
-| Sound finite search and certificate machinery | Search prototypes and exact region projection/emptiness checker proved; production graph/search checker remaining |
+| Sound finite search and certificate machinery | Exact inner geometry, projection/pair-exclusion checker and conditional finite-search bridge proved; production graph certificates, local deletions and tree coverage remain |
 | All concrete triangle-region certificates checked by Lean | Remaining |
 | Endpoint classification and final lower bound | Conditional final argument proved; classification remaining |
 
@@ -118,8 +118,28 @@ actual endpoint-root region labels and one empty-intersection witness. Four
 checked rational points also prove the sampled regions are nonempty. The
 projection bounds use the original `2^36` scale. The Python generator supplies
 untrusted rational data; it is not a proof dependency. These are selected examples,
-not all root bounds or a production graph certificate. The fixture's rational
-covectors are not yet formally identified with the bin inner triangles' edges.
+not all root bounds or a production graph certificate. The twelve rational
+covectors are now kernel-identified with the corresponding inner-triangle edges.
+
+## Exact pair exclusions and the geometric search bridge
+
+`RationalInnerTriangles` proves the rational midpoint, shrink, rotation, vertices,
+edge normals and projection thresholds agree with the real bin inner triangles.
+`RegionPairCertificate` checks lower/upper centroid bounds and a strict gap for
+one witness vertex on each of the six possible separating edges. Acceptance
+excludes disjoint interiors uniformly throughout both continuous regions, and
+therefore excludes actual triangles represented there.
+
+`RegionSearchBridge` derives conservative adjacency from accepted pair witnesses;
+missing or failed certificates retain the edge. An accepted finite search
+certificate then excludes actual six-triangle packings represented in its domains.
+Domain/root coverage, production local-label deletions, the full refinement tree
+and endpoint conclusions remain separate obligations.
+
+`RegionPairFixture` checks all six axes for endpoint-root labels 110 and 126,
+proves both regions nonempty, rejects a forged vertex witness, and checks a tiny
+finite-search closure with its conditional geometric conclusion. This is one
+certified pair, not the original compatibility graph or any whole global case.
 
 ## Remaining trust boundary
 

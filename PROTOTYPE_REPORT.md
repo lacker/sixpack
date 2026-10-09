@@ -468,5 +468,27 @@ checked rational points proving the sampled intersections nonempty. The generato
 reads research metadata and outputs untrusted rationals; no saved success log or
 native Boolean is proof evidence. The examples use the original `2^36` integer
 scale. They do not certify record enumeration, the complete production projection
-table, the covectors' identification with inner edges, any compatibility graph,
+table, any complete compatibility graph,
 or a global search conclusion.
+
+
+## Rational inner geometry and six-axis region exclusions
+
+`RationalInnerTriangles` binds the entire rational inner-triangle factory to
+its real geometric model, including the exact edge normals and vertex projection
+thresholds. Twelve concrete normal identities also bind the earlier projection
+examples to this factory.
+
+`RegionPairCertificate` checks uniform centroid projection bounds and a strict
+witness-vertex gap on each of the six candidate axes. Accepted certificates
+exclude disjoint interiors for every represented pair of actual triangles.
+`RegionSearchBridge` computes conservative adjacency from these certificates
+and connects a checked finite search to represented six-triangle packings.
+A failed or absent certificate retains the edge.
+
+`RegionPairFixture` verifies all axes for original endpoint-root labels 110 and
+126, checks rational points proving both regions nonempty, rejects a forged
+vertex witness, and proves a tiny conditional geometric search closure. This
+certifies one pair and its small example; the original graph, whole-case coverage,
+production local omissions/deletions, DAG and refinement-tree conclusions remain
+unverified by Lean.

@@ -62,38 +62,43 @@ def rat(q):
     return f'({q.numerator}/{q.denominator}:ℚ)'
 def vec(ws):return '!['+','.join(map(rat,ws))+']'
 
-out=['import Sixpack.RationalPlacementRegions','', 'namespace Sixpack', '']
-names=[]
-for index in [0,len(records)//3,2*len(records)//3,len(records)-1]:
-    r=records[index];lines,normals=data(r)
-    m,i,j,d,K,b=(r[k] for k in ('m','i','j','d','K','bin'))
-    x,z=feasible_point(lines)
-    out += [f'def rootRecord_{index}Cell : GridCell {m} := ⟨({i},{j},{str(bool(d)).lower()}),by norm_num [ValidGridCell]⟩',
-        f'theorem rootRecord_{index}_point_checks : checkPlacementPoint {m} {K} rootRecord_{index}Cell {b} {rat(x)} {rat(z)} = true := by decide +kernel',
-        f'theorem rootRecord_{index}_nonempty : ∃ p, InPlacementRegion {m} {K} rootRecord_{index}Cell {b} p :=',
-        f'  ⟨(({rat(x)}:ℝ),({rat(z)}:ℝ)),checked_placement_point_sound {m} {K} rootRecord_{index}Cell {b} _ _ rootRecord_{index}_point_checks⟩','']
-    for edge,(a,z) in enumerate(normals):
-        low,lw=lower_witness(lines,a,z)
-        neg_upper,uw=lower_witness(lines,-a,-z)
-        upper=-neg_upper
-        name=f'rootBound_{index}_{edge}';names.append(name)
-        out += [f'-- Endpoint-root record {index}: m={m}, K={K}, bin={b}, edge={edge}.',
-            f'def {name}Cell : GridCell {m} := ⟨({i},{j},{str(bool(d)).lower()}),by norm_num [ValidGridCell]⟩',
-            f'def {name}Lower : LinearRegionCertificate 6 := ⟨{vec(lw)}⟩',
-            f'def {name}Upper : LinearRegionCertificate 6 := ⟨{vec(uw)}⟩',
+def main():
+    out=['import Sixpack.RationalInnerTriangles','', 'namespace Sixpack', '']
+    names=[]
+    for index in [0,len(records)//3,2*len(records)//3,len(records)-1]:
+        r=records[index];lines,normals=data(r)
+        m,i,j,d,K,b=(r[k] for k in ('m','i','j','d','K','bin'))
+        x,z=feasible_point(lines)
+        out += [f'def rootRecord_{index}Cell : GridCell {m} := ⟨({i},{j},{str(bool(d)).lower()}),by norm_num [ValidGridCell]⟩',
+            f'theorem rootRecord_{index}_point_checks : checkPlacementPoint {m} {K} rootRecord_{index}Cell {b} {rat(x)} {rat(z)} = true := by decide +kernel',
+            f'theorem rootRecord_{index}_nonempty : ∃ p, InPlacementRegion {m} {K} rootRecord_{index}Cell {b} p :=',
+            f'  ⟨(({rat(x)}:ℝ),({rat(z)}:ℝ)),checked_placement_point_sound {m} {K} rootRecord_{index}Cell {b} _ _ rootRecord_{index}_point_checks⟩','']
+        for edge,(a,z) in enumerate(normals):
+            low,lw=lower_witness(lines,a,z)
+            neg_upper,uw=lower_witness(lines,-a,-z)
+            upper=-neg_upper
+            name=f'rootBound_{index}_{edge}';names.append(name)
+            out += [f'-- Endpoint-root record {index}: m={m}, K={K}, bin={b}, edge={edge}.',
+                f'def {name}Cell : GridCell {m} := ⟨({i},{j},{str(bool(d)).lower()}),by norm_num [ValidGridCell]⟩',
+                f'def {name}Lower : LinearRegionCertificate 6 := ⟨{vec(lw)}⟩',
+                f'def {name}Upper : LinearRegionCertificate 6 := ⟨{vec(uw)}⟩',
+                f'theorem {name}_normal : rationalInnerNormal {K} {b} {edge} = ({rat(a)},{rat(z)}) := by decide +kernel',
             f'theorem {name}_checks :',
-            f'    checkPlacementLower {m} {K} {name}Cell {b} {rat(a)} {rat(z)} {rat(low)} {name}Lower = true ∧',
-            f'    checkPlacementUpper {m} {K} {name}Cell {b} {rat(a)} {rat(z)} {rat(upper)} {name}Upper = true := by decide +kernel',
-            f'theorem {name}_sound (p : Point) (hp : InPlacementRegion {m} {K} {name}Cell {b} p) :',
-            f'    ({rat(low)}:ℝ) ≤ ({rat(a)}:ℝ)*p.1+({rat(z)}:ℝ)*p.2 ∧',
-            f'    ({rat(a)}:ℝ)*p.1+({rat(z)}:ℝ)*p.2 ≤ ({rat(upper)}:ℝ) := by',
-            f'  exact ⟨checked_placement_lower_sound {m} {K} {name}Cell {b} _ _ _ {name}Lower {name}_checks.1 p hp,',
-            f'    checked_placement_upper_sound {m} {K} {name}Cell {b} _ _ _ {name}Upper {name}_checks.2 p hp⟩','']
-out += ['def rootEmptyCell : GridCell 32 := ⟨(0,0,false),by norm_num [ValidGridCell]⟩',
-        'def rootEmptyCertificate : LinearRegionCertificate 6 := ⟨![0,0,1,1,1,0]⟩',
-        'theorem root_empty_checks : checkRegionEmpty (placementHalfplanes 32 64 rootEmptyCell 0) rootEmptyCertificate = true := by decide +kernel',
-        'theorem root_empty_region : ¬ ∃ p, InPlacementRegion 32 64 rootEmptyCell 0 p :=',
-        '  checked_placement_region_empty 32 64 rootEmptyCell 0 rootEmptyCertificate root_empty_checks',
-        '', 'end Sixpack','']
-(ROOT/'Sixpack/RegionBoundFixture.lean').write_text('\n'.join(out))
-print(f'Exported {2*len(names)} projection witnesses and one empty-region witness.')
+                f'    checkPlacementLower {m} {K} {name}Cell {b} {rat(a)} {rat(z)} {rat(low)} {name}Lower = true ∧',
+                f'    checkPlacementUpper {m} {K} {name}Cell {b} {rat(a)} {rat(z)} {rat(upper)} {name}Upper = true := by decide +kernel',
+                f'theorem {name}_sound (p : Point) (hp : InPlacementRegion {m} {K} {name}Cell {b} p) :',
+                f'    ({rat(low)}:ℝ) ≤ ({rat(a)}:ℝ)*p.1+({rat(z)}:ℝ)*p.2 ∧',
+                f'    ({rat(a)}:ℝ)*p.1+({rat(z)}:ℝ)*p.2 ≤ ({rat(upper)}:ℝ) := by',
+                f'  exact ⟨checked_placement_lower_sound {m} {K} {name}Cell {b} _ _ _ {name}Lower {name}_checks.1 p hp,',
+                f'    checked_placement_upper_sound {m} {K} {name}Cell {b} _ _ _ {name}Upper {name}_checks.2 p hp⟩','']
+    out += ['def rootEmptyCell : GridCell 32 := ⟨(0,0,false),by norm_num [ValidGridCell]⟩',
+            'def rootEmptyCertificate : LinearRegionCertificate 6 := ⟨![0,0,1,1,1,0]⟩',
+            'theorem root_empty_checks : checkRegionEmpty (placementHalfplanes 32 64 rootEmptyCell 0) rootEmptyCertificate = true := by decide +kernel',
+            'theorem root_empty_region : ¬ ∃ p, InPlacementRegion 32 64 rootEmptyCell 0 p :=',
+            '  checked_placement_region_empty 32 64 rootEmptyCell 0 rootEmptyCertificate root_empty_checks',
+            '', 'end Sixpack','']
+    (ROOT/'Sixpack/RegionBoundFixture.lean').write_text('\n'.join(out))
+    print(f'Exported {2*len(names)} projection witnesses and one empty-region witness.')
+
+if __name__ == '__main__':
+    main()

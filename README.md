@@ -68,7 +68,9 @@ sixteen closed coarse spatial cells cover all packing centroids, with an
 injective assignment of the six pieces. Arbitrary-grid continuous placement
 regions and their spatial/angle refinements are also proved. An exact rational
 projection/emptiness checker is now proved sound and bound to these regions,
-with selected kernel-checked endpoint-root examples. Full production data, saved polygon
+with selected kernel-checked endpoint-root examples. Rational inner-triangle
+geometry, six-axis pair exclusions and the geometric finite-search bridge are
+also proved, with one checked endpoint-root pair. Full production data, saved polygon
 enumeration, symmetry reduction, production index bindings, region-to-chart
 bindings, search certificates and endpoint
 classification remain. Compilation uses a 4 GB Lean memory limit; the large

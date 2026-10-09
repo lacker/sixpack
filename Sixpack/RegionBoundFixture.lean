@@ -1,4 +1,4 @@
-import Sixpack.RationalPlacementRegions
+import Sixpack.RationalInnerTriangles
 
 namespace Sixpack
 
@@ -11,6 +11,7 @@ theorem rootRecord_0_nonempty : ∃ p, InPlacementRegion 32 64 rootRecord_0Cell 
 def rootBound_0_0Cell : GridCell 32 := ⟨(0,0,false),by norm_num [ValidGridCell]⟩
 def rootBound_0_0Lower : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(0/1:ℚ),(12971133/25975174:ℚ),(12184445/25975174:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
 def rootBound_0_0Upper : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(393344/12987587:ℚ),(12971133/25975174:ℚ),(0/1:ℚ)]⟩
+theorem rootBound_0_0_normal : rationalInnerNormal 64 30 0 = ((-393344/12987587:ℚ),(-12577789/12987587:ℚ)) := by decide +kernel
 theorem rootBound_0_0_checks :
     checkPlacementLower 32 64 rootBound_0_0Cell 30 (-393344/12987587:ℚ) (-12577789/12987587:ℚ) (-6794160665/34359738368:ℚ) rootBound_0_0Lower = true ∧
     checkPlacementUpper 32 64 rootBound_0_0Cell 30 (-393344/12987587:ℚ) (-12577789/12987587:ℚ) (-3220655707/17179869184:ℚ) rootBound_0_0Upper = true := by decide +kernel
@@ -24,6 +25,7 @@ theorem rootBound_0_0_sound (p : Point) (hp : InPlacementRegion 32 64 rootBound_
 def rootBound_0_1Cell : GridCell 32 := ⟨(0,0,false),by norm_num [ValidGridCell]⟩
 def rootBound_0_1Lower : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(12971133/25975174:ℚ),(12184445/25975174:ℚ),(0/1:ℚ)]⟩
 def rootBound_0_1Upper : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(0/1:ℚ),(12971133/25975174:ℚ),(0/1:ℚ),(393344/12987587:ℚ),(0/1:ℚ)]⟩
+theorem rootBound_0_1_normal : rationalInnerNormal 64 30 1 = ((12971133/25975174:ℚ),(11397757/25975174:ℚ)) := by decide +kernel
 theorem rootBound_0_1_checks :
     checkPlacementLower 32 64 rootBound_0_1Cell 30 (12971133/25975174:ℚ) (11397757/25975174:ℚ) (23555316165/68719476736:ℚ) rootBound_0_1Lower = true ∧
     checkPlacementUpper 32 64 rootBound_0_1Cell 30 (12971133/25975174:ℚ) (11397757/25975174:ℚ) (24261014667/68719476736:ℚ) rootBound_0_1Upper = true := by decide +kernel
@@ -37,6 +39,7 @@ theorem rootBound_0_1_sound (p : Point) (hp : InPlacementRegion 32 64 rootBound_
 def rootBound_0_2Cell : GridCell 32 := ⟨(0,0,false),by norm_num [ValidGridCell]⟩
 def rootBound_0_2Lower : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(0/1:ℚ),(12184445/25975174:ℚ),(0/1:ℚ),(12971133/25975174:ℚ),(0/1:ℚ)]⟩
 def rootBound_0_2Upper : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(0/1:ℚ),(393344/12987587:ℚ),(12971133/25975174:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
+theorem rootBound_0_2_normal : rationalInnerNormal 64 30 2 = ((-12184445/25975174:ℚ),(13757821/25975174:ℚ)) := by decide +kernel
 theorem rootBound_0_2_checks :
     checkPlacementLower 32 64 rootBound_0_2Cell 30 (-12184445/25975174:ℚ) (13757821/25975174:ℚ) (-11335591835/68719476736:ℚ) rootBound_0_2Lower = true ∧
     checkPlacementUpper 32 64 rootBound_0_2Cell 30 (-12184445/25975174:ℚ) (13757821/25975174:ℚ) (-10629893333/68719476736:ℚ) rootBound_0_2Upper = true := by decide +kernel
@@ -55,6 +58,7 @@ theorem rootRecord_11553_nonempty : ∃ p, InPlacementRegion 32 64 rootRecord_11
 def rootBound_11553_0Cell : GridCell 32 := ⟨(7,5,false),by norm_num [ValidGridCell]⟩
 def rootBound_11553_0Lower : LinearRegionCertificate 6 := ⟨![(12159/25342:ℚ),(0/1:ℚ),(12415/25342:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
 def rootBound_11553_0Upper : LinearRegionCertificate 6 := ⟨![(128/12671:ℚ),(12415/25342:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
+theorem rootBound_11553_0_normal : rationalInnerNormal 64 31 0 = ((-128/12671:ℚ),(-12287/12671:ℚ)) := by decide +kernel
 theorem rootBound_11553_0_checks :
     checkPlacementLower 32 64 rootBound_11553_0Cell 31 (-128/12671:ℚ) (-12287/12671:ℚ) (-24233387925/68719476736:ℚ) rootBound_11553_0Lower = true ∧
     checkPlacementUpper 32 64 rootBound_11553_0Cell 31 (-128/12671:ℚ) (-12287/12671:ℚ) (-11076701169/34359738368:ℚ) rootBound_11553_0Upper = true := by decide +kernel
@@ -68,6 +72,7 @@ theorem rootBound_11553_0_sound (p : Point) (hp : InPlacementRegion 32 64 rootBo
 def rootBound_11553_1Cell : GridCell 32 := ⟨(7,5,false),by norm_num [ValidGridCell]⟩
 def rootBound_11553_1Lower : LinearRegionCertificate 6 := ⟨![(12415/25342:ℚ),(12159/25342:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
 def rootBound_11553_1Upper : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(128/12671:ℚ),(12415/25342:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
+theorem rootBound_11553_1_normal : rationalInnerNormal 64 31 1 = ((12415/25342:ℚ),(11903/25342:ℚ)) := by decide +kernel
 theorem rootBound_11553_1_checks :
     checkPlacementLower 32 64 rootBound_11553_1Cell 31 (12415/25342:ℚ) (11903/25342:ℚ) (46957679591/68719476736:ℚ) rootBound_11553_1Lower = true ∧
     checkPlacementUpper 32 64 rootBound_11553_1Cell 31 (12415/25342:ℚ) (11903/25342:ℚ) (24518832589/34359738368:ℚ) rootBound_11553_1Upper = true := by decide +kernel
@@ -81,6 +86,7 @@ theorem rootBound_11553_1_sound (p : Point) (hp : InPlacementRegion 32 64 rootBo
 def rootBound_11553_2Cell : GridCell 32 := ⟨(7,5,false),by norm_num [ValidGridCell]⟩
 def rootBound_11553_2Lower : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(12415/25342:ℚ),(12159/25342:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
 def rootBound_11553_2Upper : LinearRegionCertificate 6 := ⟨![(12415/25342:ℚ),(0/1:ℚ),(128/12671:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
+theorem rootBound_11553_2_normal : rationalInnerNormal 64 31 2 = ((-12159/25342:ℚ),(1/2:ℚ)) := by decide +kernel
 theorem rootBound_11553_2_checks :
     checkPlacementLower 32 64 rootBound_11553_2Cell 31 (-12159/25342:ℚ) (1/2:ℚ) (-6710343271/17179869184:ℚ) rootBound_11553_2Lower = true ∧
     checkPlacementUpper 32 64 rootBound_11553_2Cell 31 (-12159/25342:ℚ) (1/2:ℚ) (-24761387497/68719476736:ℚ) rootBound_11553_2Upper = true := by decide +kernel
@@ -99,6 +105,7 @@ theorem rootRecord_23106_nonempty : ∃ p, InPlacementRegion 32 64 rootRecord_23
 def rootBound_23106_0Cell : GridCell 32 := ⟨(12,13,true),by norm_num [ValidGridCell]⟩
 def rootBound_23106_0Lower : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(307021/572758:ℚ),(119168/286379:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
 def rootBound_23106_0Upper : LinearRegionCertificate 6 := ⟨![(307021/572758:ℚ),(0/1:ℚ),(68685/572758:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
+theorem rootBound_23106_0_normal : rationalInnerNormal 64 56 0 = ((119168/286379:ℚ),(-187853/286379:ℚ)) := by decide +kernel
 theorem rootBound_23106_0_checks :
     checkPlacementLower 32 64 rootBound_23106_0Cell 56 (119168/286379:ℚ) (-187853/286379:ℚ) (20857710817/68719476736:ℚ) rootBound_23106_0Lower = true ∧
     checkPlacementUpper 32 64 rootBound_23106_0Cell 56 (119168/286379:ℚ) (-187853/286379:ℚ) (2891700193/8589934592:ℚ) rootBound_23106_0Upper = true := by decide +kernel
@@ -112,6 +119,7 @@ theorem rootBound_23106_0_sound (p : Point) (hp : InPlacementRegion 32 64 rootBo
 def rootBound_23106_1Cell : GridCell 32 := ⟨(12,13,true),by norm_num [ValidGridCell]⟩
 def rootBound_23106_1Lower : LinearRegionCertificate 6 := ⟨![(119168/286379:ℚ),(0/1:ℚ),(307021/572758:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
 def rootBound_23106_1Upper : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(119168/286379:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(68685/572758:ℚ)]⟩
+theorem rootBound_23106_1_normal : rationalInnerNormal 64 56 1 = ((68685/572758:ℚ),(545357/572758:ℚ)) := by decide +kernel
 theorem rootBound_23106_1_checks :
     checkPlacementLower 32 64 rootBound_23106_1Cell 56 (68685/572758:ℚ) (545357/572758:ℚ) (51231250635/68719476736:ℚ) rootBound_23106_1Lower = true ∧
     checkPlacementUpper 32 64 rootBound_23106_1Cell 56 (68685/572758:ℚ) (545357/572758:ℚ) (26725261585/34359738368:ℚ) rootBound_23106_1Upper = true := by decide +kernel
@@ -125,6 +133,7 @@ theorem rootBound_23106_1_sound (p : Point) (hp : InPlacementRegion 32 64 rootBo
 def rootBound_23106_2Cell : GridCell 32 := ⟨(12,13,true),by norm_num [ValidGridCell]⟩
 def rootBound_23106_2Lower : LinearRegionCertificate 6 := ⟨![(68685/572758:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(119168/286379:ℚ)]⟩
 def rootBound_23106_2Upper : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(68685/572758:ℚ),(307021/572758:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ)]⟩
+theorem rootBound_23106_2_normal : rationalInnerNormal 64 56 2 = ((-307021/572758:ℚ),(-169651/572758:ℚ)) := by decide +kernel
 theorem rootBound_23106_2_checks :
     checkPlacementLower 32 64 rootBound_23106_2Cell 56 (-307021/572758:ℚ) (-169651/572758:ℚ) (-37967564587/34359738368:ℚ) rootBound_23106_2Lower = true ∧
     checkPlacementUpper 32 64 rootBound_23106_2Cell 56 (-307021/572758:ℚ) (-169651/572758:ℚ) (-36927851395/34359738368:ℚ) rootBound_23106_2Upper = true := by decide +kernel
@@ -143,6 +152,7 @@ theorem rootRecord_34659_nonempty : ∃ p, InPlacementRegion 32 64 rootRecord_34
 def rootBound_34659_0Cell : GridCell 32 := ⟨(31,0,false),by norm_num [ValidGridCell]⟩
 def rootBound_34659_0Lower : LinearRegionCertificate 6 := ⟨![(12971133/25975174:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(12184445/25975174:ℚ)]⟩
 def rootBound_34659_0Upper : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(12971133/25975174:ℚ),(393344/12987587:ℚ)]⟩
+theorem rootBound_34659_0_normal : rationalInnerNormal 64 33 0 = ((393344/12987587:ℚ),(-12577789/12987587:ℚ)) := by decide +kernel
 theorem rootBound_34659_0_checks :
     checkPlacementLower 32 64 rootBound_34659_0Cell 33 (393344/12987587:ℚ) (-12577789/12987587:ℚ) (-7392274931/68719476736:ℚ) rootBound_34659_0Lower = true ∧
     checkPlacementUpper 32 64 rootBound_34659_0Cell 33 (393344/12987587:ℚ) (-12577789/12987587:ℚ) (-6686576429/68719476736:ℚ) rootBound_34659_0Upper = true := by decide +kernel
@@ -156,6 +166,7 @@ theorem rootBound_34659_0_sound (p : Point) (hp : InPlacementRegion 32 64 rootBo
 def rootBound_34659_1Cell : GridCell 32 := ⟨(31,0,false),by norm_num [ValidGridCell]⟩
 def rootBound_34659_1Lower : LinearRegionCertificate 6 := ⟨![(12184445/25975174:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(12971133/25975174:ℚ),(0/1:ℚ)]⟩
 def rootBound_34659_1Upper : LinearRegionCertificate 6 := ⟨![(393344/12987587:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(12971133/25975174:ℚ)]⟩
+theorem rootBound_34659_1_normal : rationalInnerNormal 64 33 1 = ((12184445/25975174:ℚ),(13757821/25975174:ℚ)) := by decide +kernel
 theorem rootBound_34659_1_checks :
     checkPlacementLower 32 64 rootBound_34659_1Cell 33 (12184445/25975174:ℚ) (13757821/25975174:ℚ) (84630517429/68719476736:ℚ) rootBound_34659_1Lower = true ∧
     checkPlacementUpper 32 64 rootBound_34659_1Cell 33 (12184445/25975174:ℚ) (13757821/25975174:ℚ) (85336215931/68719476736:ℚ) rootBound_34659_1Upper = true := by decide +kernel
@@ -169,6 +180,7 @@ theorem rootBound_34659_1_sound (p : Point) (hp : InPlacementRegion 32 64 rootBo
 def rootBound_34659_2Cell : GridCell 32 := ⟨(31,0,false),by norm_num [ValidGridCell]⟩
 def rootBound_34659_2Lower : LinearRegionCertificate 6 := ⟨![(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(12184445/25975174:ℚ),(12971133/25975174:ℚ)]⟩
 def rootBound_34659_2Upper : LinearRegionCertificate 6 := ⟨![(12971133/25975174:ℚ),(0/1:ℚ),(0/1:ℚ),(0/1:ℚ),(393344/12987587:ℚ),(0/1:ℚ)]⟩
+theorem rootBound_34659_2_normal : rationalInnerNormal 64 33 2 = ((-12971133/25975174:ℚ),(11397757/25975174:ℚ)) := by decide +kernel
 theorem rootBound_34659_2_checks :
     checkPlacementLower 32 64 rootBound_34659_2Cell 33 (-12971133/25975174:ℚ) (11397757/25975174:ℚ) (-78606839497/68719476736:ℚ) rootBound_34659_2Lower = true ∧
     checkPlacementUpper 32 64 rootBound_34659_2Cell 33 (-12971133/25975174:ℚ) (11397757/25975174:ℚ) (-77901140995/68719476736:ℚ) rootBound_34659_2Upper = true := by decide +kernel

@@ -138,3 +138,7 @@ import Sixpack.RegionRefinement
 import Sixpack.LinearRegionCertificate
 import Sixpack.RationalPlacementRegions
 import Sixpack.RegionBoundFixture
+import Sixpack.RationalInnerTriangles
+import Sixpack.RegionPairCertificate
+import Sixpack.RegionSearchBridge
+import Sixpack.RegionPairFixture

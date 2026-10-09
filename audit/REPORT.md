@@ -12,9 +12,13 @@ verification of the global theorem.
 
 The **upper-bound construction is now formally verified in Lean**, using closed
 convex hulls and disjoint topological interiors. The claimed global lower bound
-and equality classification are not yet formally verified. The exact written
-analytic estimates and Python/C++ certificate verification still lie outside
-the Lean proof.
+and equality classification are not yet formally verified. The local radius and
+all three tube packing theorems have since been proved in their explicit charts.
+Continuous region coverage/refinement, exact rational inner geometry and a sound
+pair-exclusion/search bridge are also proved, with selected checked examples.
+Global region-to-chart bindings, production graph/tree certificates and endpoint
+classification remain outside the Lean proof. See `FORMALIZATION_STATUS.md` for
+the current boundaries; the replay below remains external computational evidence.
 
 ## Preservation and methodology
 
