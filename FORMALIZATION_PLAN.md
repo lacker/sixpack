@@ -344,6 +344,19 @@ empty-child witnesses. The first 32-parent batch passes; the remaining batches
 and combined theorem are being checked serially. This acceptance does not prove
 that the declared parent list contains every possible packing selection.
 
+`CoveredSearchCertificate` implements the production local-omission logic as a
+kernel-computable checker: ordinary refutations, vertex-domain splits, forced
+channel coverage, and all-piece omission branches. Its proved soundness and
+geometric adjacency bridge yield combinatorial label coverage of represented
+packings. `CoveredDomainRestriction` extends fixed-vertex deletion to permit
+classified selections while preserving all uncovered selections. Production
+local labels still need certified region-to-chart meanings; coverage of arbitrary
+Boolean labels is not a geometric endpoint classification. Production search
+certificates must also be exported and accepted.
+`PieceAssignment` derives distinct owners from one-piece-per-channel codes,
+providing the injective five-piece assignment needed for later geometric chart
+binding. Production label masks still require region-to-chart certificates.
+
 The first monolithic row reduction reached 12 GB physical footprint despite
 `-M4096` and was stopped. Each row now uses 32 separate column checks, and
 `audit/run_lean_memory_guard.py` monitors physical/compressed memory for this

@@ -133,6 +133,23 @@ passed with an observed physical footprint of about 275 MiB. An earlier
 preflight with 90 explicit hypotheses exceeded the safe memory budget and was
 stopped; it contributes no proof evidence.
 
+`CoveredSearchCertificate` now checks ordinary refutation, exhaustive vertex
+splits, forced local-label coverage, and exhaustive omission of each piece in a
+channel. Its soundness theorem classifies every admissible selection as covered,
+and conservatively certified adjacency transports that result to represented
+packings. `CoveredDomainRestriction` checks fixed-vertex classifications before
+deletion, proving that every uncovered admissible selection survives in the
+retained domains. Its packing bridge gives covered-or-retained alternatives.
+Kernel fixtures accept real covered selections, reject corrupted coverage and
+omission certificates, and preserve an explicit uncovered selection after
+deleting a covered extension. These prove the finite logic only. Production
+search trees, production local-label acceptance, and the labels' geometric
+meaning in the radius/tube charts remain unverified.
+`PieceAssignment` proves that one-piece-per-channel codes give an injective
+assignment of covered pieces to selected triangle indices. The production mask
+decoder maps invalid masks to no label. This settles distinct ownership in the
+finite logic, but supplies no geometric meaning or certificate for a label.
+
 This does not yet prove that the saved polygon vertex lists equal these
 intersections, that no nonempty record is omitted, or that the production
 refinement metadata selects all required children. The row-major `gridIndex`

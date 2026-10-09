@@ -148,3 +148,7 @@ import Sixpack.RefinementEnumeration
 import Sixpack.DomainRestriction
 import Sixpack.EndpointB00.Batch0
 import Sixpack.RefinementChunks
+import Sixpack.CoveredSearchCertificate
+import Sixpack.CoveredDomainRestriction
+import Sixpack.CoveredSearchFixture
+import Sixpack.PieceAssignment

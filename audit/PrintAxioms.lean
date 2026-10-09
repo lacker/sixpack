@@ -19,6 +19,19 @@ import Sixpack
 #print axioms Sixpack.checked_region_domain_restriction
 #print axioms Sixpack.b00_refinement_batch0_checked
 #print axioms Sixpack.checked_refinement_chunks_complete
+#print axioms Sixpack.checkCoveredSearch_sound
+#print axioms Sixpack.checked_covered_region_search
+#print axioms Sixpack.checked_covered_domain_restriction
+#print axioms Sixpack.checked_covered_region_domain_restriction
+#print axioms Sixpack.coverage_prototype_omission_accepts
+#print axioms Sixpack.coverage_prototype_selection_exists
+#print axioms Sixpack.coverage_prototype_direct_cover_accepts
+#print axioms Sixpack.coverage_prototype_corrupt_cover_rejected
+#print axioms Sixpack.coverage_prototype_corrupt_omission_rejected
+#print axioms Sixpack.coverage_prototype_deletion_accepts
+#print axioms Sixpack.coverage_prototype_uncovered_selection_survives
+#print axioms Sixpack.piece_code_unique
+#print axioms Sixpack.piece_code_covered_assignment
 
 #print axioms Sixpack.root13_nonneg
 #print axioms Sixpack.root13_sq
