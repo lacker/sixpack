@@ -172,3 +172,8 @@ import Sixpack.SymmetryOrientation
 import Sixpack.CertifiedRadiusEndpoint
 import Sixpack.ProductionRadiusTuple
 import Sixpack.RadiusCoveredSearch
+import Sixpack.RadiusCertificateTable
+import Sixpack.EndpointB00R3Radius
+import Sixpack.AnchorOffsetBounds
+import Sixpack.CriticalAnchorCertificate
+import Sixpack.CriticalAnchorFixture

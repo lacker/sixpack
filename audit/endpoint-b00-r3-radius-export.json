@@ -1,0 +1,9 @@
+{
+  "node": "endpoint_b00_c0_c0_r1_r2_r3",
+  "records": 38861,
+  "positive_radius_codes": 1592,
+  "serial_batches": 50,
+  "nodes_sha256": "dc1a8609f1ea882409bfc9e9b0a1552f747b923d292b4b783969a43bb52fc3bf",
+  "local_sha256": "3c81b7407e19f61cc7ccb9978d61f1df268db569b4d0118dae84c4950f0ec5c6",
+  "status": "exported untrusted entries; Lean acceptance is a separate build"
+}

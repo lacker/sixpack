@@ -296,6 +296,38 @@ are explicit computational acceptance and geometric domain representation, rathe
 than unproved local chart claims. Concrete production search acceptance, domain
 coverage, refinements and the tube-label branch still have to be discharged.
 
+## Full production radius table and critical tube anchor bounds
+
+`RadiusCertificateTable` guards sparse lookups with exact equality of the node
+index, channel and region descriptor. A misaddressed lookup supplies no positive
+piece code. Acceptance of all table entries therefore certifies the resulting
+codes for any lookup and binds them to the existing covered-search endpoint
+boundary theorem.
+
+`EndpointB00R3Radius` accepts all **1,592 exported positive radius codes** from
+`endpoint_b00_c0_c0_r1_r2_r3`, which has 38,861 saved records. The generator exports
+the complete positive-code list from that source and records its hashes; Lean
+checks every exported entry against its exact region and certificate. The 50
+serial batches use individual kernel decisions, and a theorem combines them into
+acceptance of the whole table. This is complete acceptance of this exported radius
+table, not proof that the global refinement tree reaches the node or that its
+search/domains are complete. Sparse lookup guards discharge exact region binding
+when a code is used. Other production radius tables remain to be accepted.
+
+`AnchorOffsetBounds` proves exact x-coordinate monotonicity under a rational
+left-endpoint derivative condition and z-coordinate antitonicity throughout the
+fundamental sector. This gives endpoint bounds throughout the critical tube's
+closed signed bin. `CriticalAnchorCertificate` checks that condition and exact
+dual centroid bounds against the candidate pivot vertex. Its soundness theorem
+controls the entire continuous region and signed angle interval. It uses these
+proved monotonic bounds instead of trusting the research interpolation padding.
+
+`CriticalAnchorFixture` accepts actual saved critical-piece labels from each of
+the three tube profiles, checks their angle tests and exact profile radii, proves
+the regions nonempty, and rejects a zero anchor radius. Full tube chart
+reconstruction, whole tube-label tables and tube covered-search coverage remain
+separate obligations.
+
 ## Remaining trust boundary
 
 Root intersection coverage and the first child enumeration are now proved.
