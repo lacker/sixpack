@@ -571,10 +571,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 188 production batches pass, giving 2,846 accepted
+603 MiB peak. The first 220 production batches pass, giving 3,342 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 188, then prove
+without expanding the default import graph. Continue from batch 220, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -605,7 +605,7 @@ proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
 Final snapshot choices and their actual labels are now bound to the two
 accepted leaf-refinement parent cases. `b31_final_snapshot_no_packing` composes
 this complete domain binding with the accepted refinement and leaf closure.
-Accept remaining geometric blocks from batch 188,
+Accept remaining geometric blocks from batch 220,
 prove every removed owner's complete row coverage against its current blocker
 domain, and assemble geometric pruning with the accepted survivor transitions.
 The full production pruning theorem and root reachability remain open.
@@ -710,3 +710,12 @@ homeomorphism into the existing model. `candidate_in_arbitrary_equilateral_outer
 proves the upper-bound packing in every equilateral outer hull of side `optimum`.
 All nine public normalization dependencies pass compilation and axiom audit.
 The global lower bound still requires the production case classification.
+
+
+Batches 188–219 are now accepted and axiom-audited, bringing the accepted table
+to 3,342 blocks and 144,466 ordered pairs. Continue the existing guarded batch
+run from its current live position through 285, then accept step-2 groups
+223–298 and assemble the actual geometric transition and prefix 3. The queued
+pipeline enforces exact terminal success of all required batches before group
+builds begin. Default imports and the axiom audit remain separate acceptance
+steps. Do not claim the third pruning step before its assembly compiles.

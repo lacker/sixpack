@@ -639,20 +639,20 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 2,846 blocks, covering 132,058 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and 188
+`EndpointB31SpatialAnglePilot` accepts 3,342 blocks, covering 144,466 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 220
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The 188 production batches all pass with peaks below 1,434 MiB; the latest
-full default build peaks at 699 MiB. The generator keeps new batches outside the
+The 220 production batches all pass with peaks below 1,434 MiB; the latest
+full default build peaks at 1,639 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
-188 are accepted (batches 0–187). The complete first pruning step is proved
-below; 7,030 of the 9,876 proposed blocks still need acceptance, followed by
+220 are accepted (batches 0–219). The complete first pruning step is proved
+below; 6,534 of the 9,876 proposed blocks still need acceptance, followed by
 checked coverage and composition of the remaining 20 pruning rectangles.
 
 `RectanglePruning` now proves that checked rectangle coverage preserves every
@@ -918,3 +918,25 @@ were found in the new module. This closes normalization and the arbitrary
 container upper-bound transport, but does not discharge global root-case
 classification or establish the global lower bound. The geometric batch run
 for step 2 continues separately.
+
+
+## Further third-step geometric acceptance
+
+Batches 188–219 add 496 kernel-accepted geometric blocks covering 12,408 ordered
+pairs. All 32 serial builds passed, with a highest observed footprint of
+1,434 MiB. Their 992 new theorem dependencies passed the axiom audit; the
+combined list now has 10,740 checks using only standard logical axioms.
+The default build passed (4,753 jobs, 1,639 MiB), including a rebuild of the
+complete first-step assembly after its transitive pilot imports expanded.
+No forbidden proof shortcuts were found in the completed batch sources.
+The external source audit matched actual records, selectors, ancestor paths
+and certificate bindings; its checks of the full proposed trace do not establish
+acceptance of the remaining blocks. Original-file integrity still passes.
+
+Continue the existing serial run through batch 285. A dependent pipeline waits
+for exact terminal success of every batch 188–285 before checking step 2's 76
+groups (indices 223–298), assembling the step, and compiling prefix 3. It stops
+at any failed build; it does not expand the default imports or replace axiom
+audits. The completed checkpoint contains only batches through 219. Nineteen
+geometric pruning steps, incoming root coverage and the global classification
+remain unproved.
