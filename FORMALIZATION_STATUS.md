@@ -1,9 +1,23 @@
 # Progress estimate
 
-Estimated completion of the **end-to-end formalization: about 60%**, with a
-plausible planning range of **55–65%**. This is a subjective estimate of remaining
-work, not a fraction of theorem statements, source lines, or Python checks.
-It is not a schedule forecast.
+The reassessed overall planning estimate is **about 40%, with wide uncertainty
+(roughly 25–55%)**. This is a subjective estimate of formalization work, not a
+fraction of certificate entries accepted or a prediction of remaining runtime.
+The upper bound, normalization, analytic lemmas and much of the certificate
+soundness machinery are complete. Most concrete root/tree classification and
+production local-label acceptance remain; they receive substantial weight in
+this reassessment. No unconditional global classification is proved.
+
+The earlier repeated **60% (55–65%)** estimate was carried forward without
+adequately accounting for that production work. It is superseded; percentages
+in older checkpoint entries are historical guesses. Future checkpoint estimates
+should be reassessed against remaining proof obligations, rather than copied.
+
+Current concrete milestones: the upper-bound construction is proved; much of
+the analytic and certificate soundness machinery is proved; the published main
+b31 chain has 6 of 21 steps, and the published case-970 chain has 3 of 8 steps.
+These counts describe only those chains, not overall formalization completion.
+The global root-case classification and unconditional lower bound remain unproved.
 
 | Milestone | Status |
 |---|---|
@@ -1560,3 +1574,99 @@ checking separately. Actual source/step/chain audits, forbidden-proof scanning
 and original archive/file integrity pass. Global root classification and the
 final lower-bound theorem remain unproved. Overall completion remains about
 60% (55–65%).
+
+
+## Complete case-970 geometric table and explicit covered-search exports
+
+All 156 case-970 geometric batches compile: 1,926 blocks covering 180,889
+ordered pairs. The complete table is now imported by `Sixpack.lean`. Its
+independently scoped dependency audit checks 23,333 distinct declarations,
+including the existing canonical scope, with only standard logical axioms.
+The canonical request list now includes all block acceptance and geometric
+exclusion declarations. Exact audit-scope comparison passes. The default build
+with the complete table passes (5,722 jobs, observed peak Lean physical footprint
+660 MiB). This accepts the table, not the remaining five pruning steps or incoming
+root selection.
+
+`audit/export_covered_search.py` begins the explicit production search-certificate
+export path. It keeps all six domains throughout a search, turns each arc deletion
+into a split and clash, and records all five local-omission branches, including
+empty branches. It fails on an uncovered selection or an exhausted search budget;
+it does not export a partial success. `audit/check_covered_search_export.py`
+independently replays the proposed certificate using sets and raw graph bytes,
+checks the exact input hashes and domains, and requires every certificate node
+to be reachable. These are external combinatorial checks, not formal acceptance
+of the graph geometry, local labels or root domains.
+
+A generated ten-node example exercises omission, arc-deletion splits, clashes
+and empty branches. It passes independent replay and Lean kernel acceptance
+(`/tmp/sixpack-covered-export-fixture-lean-v2.log`, 340 MiB), using only
+`propext`, `Classical.choice` and `Quot.sound`. Removing one omission branch
+is rejected by replay. The first example compilation failed because an emitted
+finite-set expression lacked a type annotation; adding that annotation fixes it.
+No production root-case certificate has yet been accepted through this exporter.
+The global classifier and unconditional lower bound remain unproved.
+
+
+## Direct original-root case-715 certificate pilot
+
+The new compact root-case input builder retains every original root record in
+case 715's six groups: 7,824 records. The independent input auditor checks the
+exact original index map, all source hashes, and the complete six domains. A
+duplicated original-index negative control is rejected. The independently
+reconstructed rational geometry checks 3,004,416 coordinate projection bounds
+and 12,288 separation thresholds; the exact graph checker accepts all 17,998,894
+missing pairs. These are external Python/C++ checks, not Lean acceptance.
+
+The covered-search exporter produces a 19-node certificate that closes this
+case using nine arc-deletion steps and no positive local labels. Independent
+replay passes. Its arc trace deletes 4,040 vertices using 2,999,886 ordered
+missing-edge witness pairs. Exact-rational compression proposes 16,077 ancestor
+blocks. The source auditor checks the complete partition coverage and all
+ancestor paths against the original records. Those partitions remain proposals.
+
+`EndpointRootSpatialAngleData` binds geometric labels directly to the original
+`Fin 34660` root records, avoiding an assumed compact-domain geometric mapping.
+`root_case715_spatial_angle_block0_accepted` and
+`root_case715_spatial_angle_block0_pair_excluded` accept the first block, covering
+19 actual original-root pairs. The module compiles at 453 MiB; both declarations
+pass a separately scoped standard-axiom audit. This pilot is default-imported
+and added to the canonical audit list. The updated default build passes
+(5,724 jobs; its memory-guard summary is recorded below). The exact union of
+independently scoped audits covers all 23,335 canonical declarations.
+The complete case-715 pruning coverage and root-case conclusion are unproved.
+The remaining blocks are not claimed as formally verified.
+
+Default root-pilot build resource check: `MEMORY GUARD: observed peak Lean physical footprint 656.7 MiB; exit=0; stopped=False.`
+
+
+## Reusable original-root ancestry domains
+
+`SpatialAngleDomainCertificate` separates checked ancestry from pair exclusion.
+Its two soundness theorems combine accepted containing domains and an accepted
+pair certificate into the existing checked block result and its geometric
+exclusion consequence. The same original packing labels are used throughout;
+no external computation or new geometric axiom is assumed.
+
+The direct root-case-715 proposal repeats 279,282 ancestry memberships across
+16,077 blocks, while only 31,684 parent/member memberships are distinct. This
+measurement motivates reuse; it does not establish a production speedup. The
+pilot constructs two containing domains over original root records, with 25 and
+19 members. The independent source auditor tests completeness using all three
+integer cell vertices, separately from the exporter's inverse ancestry algorithm,
+and checks actual Lean arrays, paths and dispatches. Removing a domain member
+is rejected. Full-domain completeness remains external audit evidence; Lean
+checks ancestry for every member of the explicit finite domains.
+
+Both domain acceptance theorems compile. The existing accepted pair certificate
+is reused without recomputing its geometry. The composed theorem excludes all
+475 original-record pairs in these domains, expanding the earlier 19-pair pilot.
+The factored pilot build passes at 395 MiB. Its six new generic and production
+declarations pass a scoped standard-axiom audit. The default import and canonical
+audit scope include this pilot. The updated default build passes (5,728 jobs,
+670 MiB). Exact coverage by the three independently scoped axiom audits checks
+all 23,341 canonical declarations, using only standard logical axioms.
+
+This validates a reusable proof interface on actual root data. It does not
+prove the entire case-715 trace, other root cases, or the final lower bound.
+Overall planning completion is reassessed at about 40% (wide uncertainty 25–55%).

@@ -336,3 +336,9 @@ import Sixpack.FixedVertexRegionPruning
 import Sixpack.FixedVertexCoveredPruning
 import Sixpack.EndpointB31Case970RootPruning
 import Sixpack.FixedVertexCoveredTrace
+
+import Sixpack.EndpointB31Case970SpatialAngle
+
+import Sixpack.EndpointRootCase715SpatialAngle.Block0
+
+import Sixpack.EndpointRootCase715SpatialAngle.Factored0
