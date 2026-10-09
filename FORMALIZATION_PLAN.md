@@ -589,10 +589,20 @@ The finite coverage and geometric exclusion are separately proved; the full
 trace still requires every removed owner and its current blocker domain.
 
 Use `RectangleSnapshotPruning` to assemble the production trace with explicit
-next-domain snapshots; its checker proves survivor coverage before proceeding
-to each next step. The indexed-partition checker proves coverage by direct
-retained/removed index witnesses. Step 0 now compiles with all 872 witnesses
-in 32-case chunks and a complete index-cover proof. Export and accept steps
-1–20 with `audit/generate_b31_domain_partitions.py --steps ...`, then bind
-the domain arrays and row coverage to the snapshot trace. The export and its
-source comparison are not substitutes for the remaining Lean acceptance.
+next-domain snapshots. All 21 indexed partitions now compile, covering 8,964
+old-domain entries. `EndpointB31SnapshotAssembly` binds consecutive domains,
+proves survivor coverage for every component at every step and proves that the
+final union contains exactly the declared 36 choices. The source audit checks
+all 22 actual snapshots and every selected node/witness lookup.
+
+Keep transitions in separate modules and prove array-function equalities before
+rewriting finite-set images. Direct conversion of the combined finite-set
+proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
+`audit/check_b31_domain_partition_steps.py` and
+`audit/check_b31_snapshot_transitions.py` reproduce these checks serially.
+
+Next bind final snapshot choices and their labels to the two accepted
+leaf-refinement parent cases. Accept remaining geometric blocks from batch 29,
+prove every removed owner's complete row coverage against its current blocker
+domain, and assemble geometric pruning with the accepted survivor transitions.
+The full production pruning theorem and root reachability remain open.

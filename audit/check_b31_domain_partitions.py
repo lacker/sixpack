@@ -56,5 +56,32 @@ for path in sources:
     check_pages(text, prefix+'WitnessNode', typ, entries, '.inl 0')
     assert f'def {prefix}Witness (part : Fin {len(data["old"])}) : {typ} :=\n  {prefix}WitnessNode part.val\n' in text
 assert sources
+assembly = root/'Sixpack/EndpointB31SnapshotAssembly/Data.lean'
+if assembly.exists():
+    text = assembly.read_text()
+    expected = '  match step.val with\n'
+    expected += ''.join(f'  | {i} => {step["component"]}\n' for i, step in enumerate(export['steps']))
+    expected += '  | _ => 0'
+    body = text.split('def b31PartitionComponent (step : Fin 21) : Fin 6 :=\n', 1)[1].split('\n\n', 1)[0]
+    assert body == expected
+    for tag in ['Old', 'Kept', 'Removed']:
+        body = text.split(f'def b31Partition{tag}Domains (step : Fin 21) : Finset (Fin 7023) :=\n', 1)[1].split('\n\n', 1)[0]
+        expected = '  match step.val with\n'
+        expected += ''.join(f'  | {i} => Finset.univ.image b31Partition{i}{tag}\n' for i in range(21))
+        assert body == expected + '  | _ => ∅'
+    first = [next(i for i, step in enumerate(export['steps']) if step['component'] == c) for c in range(6)]
+    current = [f'Finset.univ.image b31Partition{i}Old' for i in first]
+    expected = '  match stage.val with\n'
+    for stage in range(22):
+        expected += f'  | {stage} => match component.val with\n'
+        expected += ''.join(f'    | {c} => {domain}\n' for c, domain in enumerate(current))
+        expected += '    | _ => ∅\n'
+        if stage < 21:
+            current[export['steps'][stage]['component']] = f'Finset.univ.image b31Partition{stage}Kept'
+    body = text.split('def b31SnapshotDomains (stage : Fin 22) (component : Fin 6) : Finset (Fin 7023) :=\n', 1)[1].split('\n\n', 1)[0]
+    assert body == expected + '  | _ => ∅'
+    retained = text.split('def b31SnapshotRetained : Finset (Fin 7023) := {', 1)[1].split('}', 1)[0]
+    assert list(map(int, retained.split(','))) == sorted(set(production['retained']))
+    print('PASS: actual assembly binds all 21 component selectors and every domain in all 22 snapshots, ending at the declared 36 choices.')
 print(f'PASS: all 21 proposed partitions conserve survivor choices and end at 36 retained choices; {len(sources)} actual Lean source modules match every node, witness and lookup.')
 print('Only compiled acceptance theorems are formal evidence; full geometric pruning remains separate.')

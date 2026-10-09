@@ -648,7 +648,7 @@ The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
 The 34 production batches all pass with peaks below 1,434 MiB; the latest
-full default build peaks at 373 MiB. The generator keeps new batches outside the
+full default build peaks at 397 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
 34 are accepted (batches 0–28 and 42–46). No complete b31 pruning or root reachability theorem is
@@ -678,11 +678,23 @@ its checked removal step, so saved domain lists are not trusted.
 `IndexedDomainPartition` proves survivor coverage from explicit array-index
 equality witnesses, avoiding a search through large finite sets.
 
-`EndpointB31DomainPartitions.Step0` checks all 872 entries in the first old
-domain: every entry is equal to one of 644 retained or 228 removed entries.
-The 32-case proof chunks have a proved complete index cover, including the
-wrapped final chunk. Acceptance took 25 seconds and peaked at 794 MiB.
-The other 20 snapshot partitions are proposed export data only. An external
-source audit checks all 21 proposed transitions, their final 36 retained choices,
-and every actual Lean lookup for the selected step. Geometric deletion for
-all 228 first-step owners and complete trace assembly remain unproved.
+`EndpointB31DomainPartitions` now accepts all **21 partitions**, checking
+8,964 old-domain entries with explicit retained/removed index witnesses.
+The 32-case proof chunks have proved complete index covers, including wrapped
+final chunks. All individual partitions passed with peaks at most 1,229 MiB.
+Step 0 covers its 872 old entries by 644 retained and 228 removed entries.
+
+`EndpointB31SnapshotAssembly` proves survivor coverage for all 21 consecutive
+transitions and every component, binding each old-domain array to its preceding
+retained-domain array. The final union equals exactly the declared 36 choices.
+The source audit compares every actual node, witness, lookup and domain in all
+22 snapshots with the production scope. An initial combined transition proof
+was stopped by the external guard at 3,175 MiB; isolated transitions with
+explicit array-function equalities now pass, and the final assembly peaks at
+459 MiB. The default build passes at 397 MiB.
+
+This completes the snapshot survivor bookkeeping. Geometric deletion for every
+removed owner, full row coverage and complete geometric trace assembly remain
+unproved. Final snapshot choices still need their Lean binding to the two
+accepted leaf-refinement parent cases. Only compiled geometric and coverage
+checks may discharge the remaining pruning obligations.
