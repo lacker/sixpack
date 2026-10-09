@@ -450,3 +450,23 @@ its centroid inset is stronger. No external checker acceptance is assumed.
 Saved polygon vertex lists, index maps and selected-child metadata still need
 bindings to these continuous sets. The row-major `gridIndex` has been defined
 but no bijection or saved-record correspondence has been proved for it.
+
+
+## Exact halfplane projection certificates
+
+`LinearRegionCertificate` verifies nonnegative rational linear combinations and
+proves their bounds for every real point satisfying the input halfplanes.
+`RationalPlacementRegions` constructs the six cell/bin lines from rational
+parameters and proves equivalence with the continuous placement region. Checked
+projection bounds transport from UV coordinates to Cartesian centroid coordinates;
+checked positive contradictions exclude empty regions without discarding touching,
+line or point intersections by convention.
+
+`RegionBoundFixture` checks 24 conservative projection witnesses from four actual
+endpoint-root labels and one empty-region witness in the kernel, with four
+checked rational points proving the sampled intersections nonempty. The generator
+reads research metadata and outputs untrusted rationals; no saved success log or
+native Boolean is proof evidence. The examples use the original `2^36` integer
+scale. They do not certify record enumeration, the complete production projection
+table, the covectors' identification with inner edges, any compatibility graph,
+or a global search conclusion.

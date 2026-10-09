@@ -66,7 +66,9 @@ common inner triangle is now proved valid throughout each closed angle bin,
 including its necessary separating-axis condition for actual packings. The
 sixteen closed coarse spatial cells cover all packing centroids, with an
 injective assignment of the six pieces. Arbitrary-grid continuous placement
-regions and their spatial/angle refinements are also proved. Saved polygon
+regions and their spatial/angle refinements are also proved. An exact rational
+projection/emptiness checker is now proved sound and bound to these regions,
+with selected kernel-checked endpoint-root examples. Full production data, saved polygon
 enumeration, symmetry reduction, production index bindings, region-to-chart
 bindings, search certificates and endpoint
 classification remain. Compilation uses a 4 GB Lean memory limit; the large

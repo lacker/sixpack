@@ -12,7 +12,7 @@ It is not a schedule forecast.
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
 | Continuous spatial coverage and symmetry reduction | Closed sixteen-cell coarse cover, its cardinality and six-centroid injection proved; arbitrary-grid root region coverage and midpoint/angle refinements proved; saved polygon enumeration, production index bindings and symmetry reduction remain |
 | Local five-piece nonlinear rigidity | Packing radius theorem and all three packing tube theorems proved in their explicit charts; global region-to-chart bindings remain |
-| Sound finite search and certificate machinery | Small working prototypes; production checker remaining |
+| Sound finite search and certificate machinery | Search prototypes and exact region projection/emptiness checker proved; production graph/search checker remaining |
 | All concrete triangle-region certificates checked by Lean | Remaining |
 | Endpoint classification and final lower bound | Conditional final argument proved; classification remaining |
 
@@ -103,6 +103,23 @@ This does not yet prove that the saved polygon vertex lists equal these
 intersections, that no nonempty record is omitted, or that the production
 refinement metadata selects all required children. The row-major `gridIndex`
 definition is present, but its bijection and production bindings are unproved.
+
+## Exact region projection certificates
+
+`LinearRegionCertificate` proves soundness of nonnegative rational linear
+combinations of halfplane inequalities for lower bounds, upper bounds and empty
+intersections. `RationalPlacementRegions` reconstructs the six rational lines
+from a cell/bin label and proves they are exactly equivalent to the continuous
+placement region. It transports accepted UV certificates to Cartesian projection
+bounds throughout that region. Saved polygon vertices are not used in this route.
+
+`RegionBoundFixture` kernel-checks 24 conservative projection witnesses for four
+actual endpoint-root region labels and one empty-intersection witness. Four
+checked rational points also prove the sampled regions are nonempty. The
+projection bounds use the original `2^36` scale. The Python generator supplies
+untrusted rational data; it is not a proof dependency. These are selected examples,
+not all root bounds or a production graph certificate. The fixture's rational
+covectors are not yet formally identified with the bin inner triangles' edges.
 
 ## Remaining trust boundary
 

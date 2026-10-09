@@ -375,8 +375,20 @@ nonnegative combination of the six region inequalities can certify a universal
 projection lower or upper bound directly, including degenerate intersections.
 This could replace reliance on saved polygon hull descriptions for those bounds.
 It does not replace exhaustive cell/bin coverage, index-map correctness or
-selected-child metadata coverage. Such a checker and its production witnesses
-are not yet implemented or verified.
+selected-child metadata coverage. `LinearRegionCertificate` now proves the general checker sound.
+`RationalPlacementRegions` proves exact factory binding to the continuous regions
+and transports checked UV bounds to Cartesian projections. `RegionBoundFixture`
+checks 24 projection witnesses from four endpoint-root labels and one empty
+intersection, including conservative `2^36` rounding; four checked rational
+points prove the sampled intersections nonempty. The covector-to-inner-edge
+binding, full production witnesses and graph/search coverage remain unverified.
+
+The cell/bin halfplane normals use only the six directions associated with
+`u`, `v` and `u+v`. Investigate sharing dual coefficient pairs across regions
+for each rational projection covector; only the right-hand sides then depend on
+the region. Upward cell intersections reduce to three effective inequalities;
+downward cells may retain all six. This is a possible compression direction,
+not yet a proved production certificate scheme.
 
 Python/C++ can generate certificates. Their output is untrusted input to the
 Lean checker. Prefer kernel-reduced reflection or explicit proof terms with a

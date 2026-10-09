@@ -135,3 +135,6 @@ import Sixpack.PlacementRegions
 import Sixpack.SpatialRefinement
 import Sixpack.AngleRefinement
 import Sixpack.RegionRefinement
+import Sixpack.LinearRegionCertificate
+import Sixpack.RationalPlacementRegions
+import Sixpack.RegionBoundFixture
