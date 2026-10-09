@@ -7,8 +7,10 @@ unit equilateral triangles in an equilateral triangle, with candidate side
 **The global optimality theorem has not been verified in Lean.** The original
 research claims a complete computer-assisted proof. The fresh full replay passed
 all 108 graphs and the final tree audit; all rebuilt graph hashes match. The
-written analytic lemmas were audited, with no defect found, but remain outside
-Lean. Original success logs are retained as reference material.
+written analytic lemmas were audited, with no defect found. The local radius
+analysis has since been formalized for its geometric constraint model; tube,
+global coverage and production search claims remain outside Lean. Original
+success logs are retained as reference material.
 
 - `six_triangle_packing/`: the 730 original research files, preserved byte for
   byte from the archive. Its historical claims are reference material.
@@ -43,13 +45,15 @@ projection logic, local-omission logic, centering, and small sound certificate
 checkers. The radius branch prototype checks rational arithmetic. The local
 first-order layer checks all eight branches against the actual rotation-chart derivatives,
 and checks branch 0’s first-order enclosures. Actual second derivatives and all
-eight pivot curvatures are proved. Branch 0’s Hessian norms and mixed/normal
-curvature bounds are checked against geometry. Uniform third derivatives and
-Taylor remainder bounds are proved; its motion estimate follows from actual
-geometric constraints and the radius. Its nonlinear energy estimate and branch 0 local rigidity are now proved.
-The remaining branches, tube arguments and global coverage remain.
-Consult the plan for exact
-theorem names and limitations. Passing this build does not establish optimality.
+eight pivot curvatures are proved. All eight branches' coefficient bounds are
+now checked against geometry. Uniform
+third derivatives, Taylor remainders, nonlinear energy and motion estimates,
+and radius rigidity are proved. The 43 excluded separators and finite branch
+cover are checked. The combined local theorem assumes boundary and separating-axis
+feasibility in the rotation chart. Separating-axis necessity for arbitrary disjoint
+triangles, tube arguments, and global coverage remain. General triangle hulls
+are now identified with their three supporting half-planes.
+Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference
 

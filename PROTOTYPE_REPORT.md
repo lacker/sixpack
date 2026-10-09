@@ -75,12 +75,12 @@ acceptance yields the real scalar rigidity criterion when supplied with the two
 analytic estimates. `radius_branch_zero_estimates_force_zero` instantiates that
 criterion with the actual branch data. A truncated multiplier list is rejected.
 
-Radius arithmetic acceptance alone does not establish gradient/Hessian identities,
-matrix inverse identities, outward enclosures, mixed third derivative estimates,
-Taylor remainder bounds, or eight-branch geometric coverage. The subsequent layers below verify all eight branches' gradients, inverse
-identities and pivot curvatures, branch 0's first/second-order enclosures, and the
-uniform diagonal third derivatives and Taylor bounds. The nonlinear energy
-estimate, remaining branch checks and geometric coverage are still pending.
+Radius arithmetic acceptance alone does not establish the analytic hypotheses.
+The subsequent layers below now prove the geometric derivatives, matrix identities,
+coefficient enclosures, nonlinear energy and motion estimates for all eight
+branches. Their finite separating-axis constraint cover is also proved. The
+packing-to-axis bridge, tube results, global coverage and production search
+certificates remain.
 
 ## Reproduction
 
@@ -240,8 +240,8 @@ with no Taylor-error hypothesis. `TaylorControls` rejects zero third constants,
 a zero weighted remainder bound and a negative radius.
 
 No original Python/C++ routine is used as evidence for these analytic bounds.
-The full lower bound is still pending the remaining branch coefficient checks,
-tube arguments, geometric coverage and production search certificates.
+The full lower bound is still pending tube arguments, the remaining geometric
+bridge and global coverage, and production search certificates.
 
 ## Nonlinear energy and branch zero geometric rigidity
 
@@ -267,12 +267,45 @@ a negative radius. This is a theorem for one fixed branch's actual constraints;
 coverage of arbitrary feasible packings by the branches and tubes is still an
 explicit remaining obligation.
 
+## All branches and the radius constraint cover
+
+The seven remaining branches now pass every coefficient check against actual
+geometry. `GeometricRigidity` derives their motion, energy and radius conclusions.
+`RigidityFamily.all_branches_geometric_rigidity` quantifies over all eight branches.
+The generators in `audit/export_remaining_radius.py` supply untrusted data only.
+Their output is checked by ordinary Lean kernel reduction.
+
+The normal checker stages each geometric Hessian in an explicit matrix. Its
+exact equality to geometry is proved first. `SparseHessian` proves off-support
+entries vanish and shows its faster norm checker implies the original checker.
+False staged matrices, zero Hessian bounds and truncated data are rejected.
+The final six staged-matrix builds took 44–47 seconds each locally, with their
+remaining branch checks taking 14–15 seconds; machine memory pressure caused
+longer earlier runs. The measured logs are in `audit/rigidity-*-kernel.log`.
+
+`LocalSeparatorCertificate` proves strict exclusion from actual Taylor estimates;
+`SparseSeparator` preserves its soundness while skipping proved zero entries.
+`LocalSeparatorFixture` accepts all 43 witness inequalities. `LocalBranchSelection`
+proves the eight retained-constraint cases, and `LocalBranchCoverage` checks that
+every unretained contact-pair axis has a negative witness. Negative controls
+reject false margins, gradients and radii.
+
+`local_constraint_radius_rigidity` concludes every displacement coordinate is
+zero from radius `1/300`, boundary feasibility, one feasible separating axis for
+each of five contact pairs, and nonpositive size displacement. No analytic bound
+or certificate acceptance is assumed. Its remaining geometric bridge is the
+necessity of those axes for disjoint triangle interiors. This is a constraint-chart
+radius theorem, not yet the global packing theorem.
+
+`TriangleHalfplanes` proves that an arbitrary positively oriented nondegenerate
+triangle's convex hull equals its three supporting half-planes. The converse uses
+explicit nonnegative barycentric coordinates. This is a prerequisite for the
+remaining separating-axis bridge.
+
 ## Next useful milestone
 
-Extend the concrete second-order enclosure checks from branch 0 to all eight
-branches, then prove branch coverage and the three tube arguments. The exact
-first-order coordinates, positive multipliers and inverse identities are already
-checked against actual geometric derivatives for all eight branches. Extend the
-search prototype with channel-specific local labels and a small genuine
-triangle-region certificate. Only after geometric coverage is proved can these
-local results be combined with search certificates to prove the global lower bound.
+Prove separating-axis necessity and connect actual disjoint triangle interiors to
+the radius theorem. Formalize the three tubes, their recentering maps and chart
+coverage. Extend the search prototype with channel-specific local labels and a
+small genuine triangle-region certificate. Production global coverage and search
+certificates remain necessary for the end-to-end lower bound.

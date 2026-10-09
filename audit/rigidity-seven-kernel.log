@@ -1,4 +1,4 @@
-⚠ [3103/3179] Replayed Sixpack.LocalGeometry
+⚠ [3092/3137] Replayed Sixpack.LocalGeometry
 warning: Sixpack/LocalGeometry.lean:126:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -173,7 +173,7 @@ Hint: Omit it from the simp argument list.
   ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲show (̵2̵:̵F̵i̵n̵(̲2̲ ̲:̲ ̲F̲i̲n̲ 3) ≠ 1 by decide, h0, h1, add_mul, neg_mul, F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵ ̵Finset.sum_neg_distrib]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [3114/3179] Replayed Sixpack.LocalDerivatives
+⚠ [3103/3137] Replayed Sixpack.LocalDerivatives
 info: Sixpack/LocalDerivatives.lean:59:66: Try this:
   ring_nf
   
@@ -212,7 +212,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Sixpack/LocalDerivatives.lean:117:90: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3119/3179] Replayed Sixpack.LocalSecondDerivatives
+⚠ [3104/3137] Replayed Sixpack.LocalSecondDerivatives
 warning: Sixpack/LocalSecondDerivatives.lean:46:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -240,14 +240,14 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Sixpack/LocalSecondDerivatives.lean:174:90: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3120/3179] Replayed Sixpack.LocalCurvature
+⚠ [3105/3137] Replayed Sixpack.LocalCurvature
 warning: Sixpack/LocalCurvature.lean:29:36: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 warning: Sixpack/LocalCurvature.lean:61:84: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3131/3179] Replayed Sixpack.RotationCalculus
+⚠ [3120/3137] Replayed Sixpack.RotationCalculus
 warning: Sixpack/RotationCalculus.lean:41:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -257,11 +257,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Sixpack/RotationCalculus.lean:58:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3132/3179] Replayed Sixpack.BoundaryThird
-warning: Sixpack/BoundaryThird.lean:22:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-
-Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3134/3179] Replayed Sixpack.PairDerivatives
+⚠ [3122/3137] Replayed Sixpack.PairDerivatives
 warning: Sixpack/PairDerivatives.lean:28:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -271,28 +267,17 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Sixpack/PairDerivatives.lean:48:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3135/3179] Replayed Sixpack.PairThirdBound
+⚠ [3124/3137] Replayed Sixpack.BoundaryThird
+warning: Sixpack/BoundaryThird.lean:22:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3125/3137] Replayed Sixpack.PairThirdBound
 warning: Sixpack/PairThirdBound.lean:8:60: unused variable `hδ`
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
 warning: Sixpack/PairThirdBound.lean:44:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
 warning: Sixpack/PairThirdBound.lean:52:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
 warning: Sixpack/PairThirdBound.lean:61:11: `mul_le_mul_left` has been deprecated: Use `mul_le_mul_iff_right₀` instead
-⚠ [3153/3179] Replayed Sixpack.LocalSeparatorCertificate
-info: Sixpack/LocalSeparatorCertificate.lean:57:112: Try this:
-  ring_nf
-  
-  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
-    
-  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
-warning: Sixpack/LocalSeparatorCertificate.lean:57:108: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-
-Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3173/3179] Replayed Sixpack.TriangleHalfplanes
-warning: Sixpack/TriangleHalfplanes.lean:17:2: Try this: intro p hp q hq a b ha hb hab e
-✔ [3174/3179] Built Sixpack.RigidityFamily (1.8s)
-✔ [3175/3179] Built Sixpack.SparseHessianControls (1.0s)
-✔ [3176/3179] Built Sixpack.NormalMatrixControls (2.3s)
-✔ [3177/3179] Built Sixpack.LocalRadiusTheorem (1.7s)
-✔ [3178/3179] Built Sixpack (1.6s)
-Build completed successfully (3179 jobs).
+✔ [3136/3137] Built Sixpack.RadiusDataSeven (47s)
+✔ [3137/3137] Built Sixpack.RigiditySeven (15s)
+Build completed successfully (3137 jobs).

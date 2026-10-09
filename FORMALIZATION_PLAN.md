@@ -146,6 +146,38 @@ This completes the radius argument for one fixed branch. It does not assert that
 arbitrary packings lie in that branch, or that all eight branches and the three
 tubes have been handled. The global optimality theorem remains unproved.
 
+### All eight radius branches and their constraint cover
+
+`GeometricRigidity` supplies the general motion and radius theorems from actual
+geometric constraints and checked coefficient data. `RadiusDataOne` through
+`RadiusDataSeven` and `RigidityOne` through `RigiditySeven` discharge all those
+checks for the other seven branches. `NormalMatrixCertificate` stages an explicit
+Hessian matrix, whose equality to the actual geometric matrix is proved by kernel
+reduction before its bounds can be used. `SparseHessian` proves which actual
+entries are zero and transports a faster norm check to the original enclosure
+checker. Neither optimization trusts generated matrix data. Negative controls
+reject false staged geometry, zero norm bounds, and truncated inputs.
+
+`LocalSeparatorCertificate` derives strict exclusion throughout the radius box
+from actual Taylor derivatives and checked rational margins. `SparseSeparator`
+transports the sparse check to this original checker. `LocalSeparatorFixture`
+kernel-checks all 43 exclusions. `LocalBranchSelection` proves the eight cases
+with explicit retained constraints. `LocalBranchCoverage` checks that every
+unretained axis for the five contact pairs has one of the negative witnesses and
+proves the resulting branch cover.
+
+`RigidityFamily` proves rigidity for every branch index. `LocalRadiusTheorem`
+combines this with the constraint cover. Its theorem
+`local_constraint_radius_rigidity` assumes the radius, boundary feasibility,
+separating-axis feasibility for five contact pairs, and nonpositive size
+displacement; it concludes all coordinates are zero. All analytic estimates
+and concrete certificate acceptances are discharged. It does not yet assume
+only non-overlapping triangle interiors: separating-axis necessity remains.
+
+`TriangleHalfplanes` proves the supporting half-plane description for arbitrary
+positively oriented nondegenerate triangles, using explicit barycentric weights.
+This begins the geometric bridge needed for separating-axis necessity.
+
 ## Remaining modules, in dependency order
 
 1. **Exact algebra and geometric primitives.** Extend the proved rational
@@ -153,24 +185,20 @@ tubes have been handled. The global optimality theorem remains unproved.
    Connect all three squared unit
    lengths to congruence with the upright triangle and normalize an arbitrary
    equilateral outer container into this coordinate chart by a Euclidean isometry.
-   Prove the triangle supporting
-   half-planes, inscribed disk, and separating-axis necessity. Extend the current
+   The triangle supporting half-planes are now proved for positive orientation.
+   Prove the inscribed disk and separating-axis necessity. Extend the current
    hull lemmas rather than assuming polygon geometry.
 2. **Orientation and region cover.** Prove the half-angle chart covers shapes
    modulo 120°, derive the support factor and its monotonicity, prove the common
    inner triangle, and certify closed-cell intersections including lines and
    points. Prove the disk/coarse-cell injection and all six symmetry actions;
    compute and certify the 8,008-to-1,396 reduction.
-3. **Local analytic theorems.** Define the actual 16-variable constraint functions
-   and the 15-normal-variable pivot chart. Prove the remaining tube bounds,
-   the eight separating-edge branches and all concrete coefficient checks. The
-   nonlinear energy estimate is now proved, and branch 0 radius rigidity is
-   complete. The uniform third derivatives and Taylor estimates along straight displacement
-   paths are now proved. Extend all concrete coefficient checks to all eight
-   branches. Check
-   the exact multiplier, inverse, Hessian, and curvature certificates. Prove the
-   radius `1/300` and each of the three tubes. The scalar implication already
-   implemented is only their final step.
+3. **Local analytic theorems.** The actual 16-variable constraints, nonlinear
+   energy estimate, all eight coefficient checks, uniform diagonal third
+   derivatives, Taylor estimates and finite branch cover are proved. The radius
+   `1/300` is proved for the chart constraint model. Connect disjoint interiors
+   to its separating-axis hypotheses. Define the anchor-based tube chart, prove
+   its derivative bounds and normal-motion estimates, and prove all three tubes.
 4. **Whole-region labels.** Prove exact recentering from the rational cover to the
    candidate container, including reflections and rotations. Prove uniform
    relative-angle bounds and the critical-vertex interpolation bound. Check each
