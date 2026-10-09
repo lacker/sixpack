@@ -204,3 +204,23 @@ are generic soundness theorems, with concrete production checker acceptances
 still explicit premises. The full graph/search certificates, other local tables,
 case/domain binding, and global tree coverage remain outstanding. No
 unconditional lower-bound theorem is claimed.
+
+## Production leaf case 459
+
+`EndpointLeaf23` kernel-checks all 352 six-axis pair exclusions between the
+16 group-0 regions and 22 group-1 regions of `endpoint_b23_c1_c0`.
+`EndpointLeaf23Domains` binds the result to all 114 exact exported region
+records and the six case-459 domains. `leaf23_no_domain_packing` excludes every
+actual packing represented in those domains, for any container side. The
+argument uses accepted continuous-region geometric certificates directly and
+assumes no saved graph or search success log. Reaching this leaf from the root
+remains an explicit global-tree obligation.
+
+The first domain-binding build failed because simplification left finite-index
+contradictions unresolved. Adding `Fin.ext_iff` corrected those steps. The full
+pair build and corrected domain build passed, with guarded peaks of 1,638.4 MiB
+and 2,662.4 MiB. The default build passed (3,633 jobs; 334.1 MiB peak), and the
+new axiom audit passed (371.5 MiB peak). The complete dependency audit now lists
+1,689 theorem names, with only standard logical axioms. Export provenance and
+scope passed `check_leaf23_export.py`; original archive/file integrity passed.
+The unconditional lower bound and full case/tree coverage remain unproved.

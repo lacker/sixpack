@@ -383,6 +383,28 @@ independent spatial and angular refinement flags. `EndpointRefinementTransition`
 combines both operations into one checked production stage. Concrete production
 deletions, case domains, and child-domain certificates still need acceptance.
 
+## Concrete production leaf closure
+
+`EndpointLeaf23` checks all **352 pair-exclusion certificates** between the
+16 regions in group 0 and the 22 regions in group 1 of production node
+`endpoint_b23_c1_c0`. Each certificate rules out all six directed separating
+edges throughout both continuous placement regions. The compiled proofs combine
+into a theorem excluding disjoint actual triangles represented in these domains.
+No saved graph adjacency or Python search success flag is assumed.
+
+`EndpointLeaf23Domains` supplies all 114 exact node descriptors, group assignments,
+and the six domains for case 459, `[0,1,5,6,13,15]`. Its domain-binding lemmas
+exhaust the first two domains, and `leaf23_no_domain_packing` excludes every
+actual six-triangle packing represented in the complete exported leaf case.
+This closes that concrete leaf, conditional on reaching its domains. It does not
+yet prove the root-to-leaf transfer or the 1,396-case symmetry reduction.
+
+The full pair-certificate build peaked at 1,638.4 MiB under the memory guard;
+the domain-binding proof peaked at 2,662.4 MiB.
+`audit/check_leaf23_export.py` externally compares all exported descriptors and
+domains with the preserved sources; that comparison provides provenance/scope
+rather than Lean geometric proof evidence.
+
 ## Remaining trust boundary
 
 Root intersection coverage and the first child enumeration are now proved.

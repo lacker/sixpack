@@ -190,3 +190,5 @@ import Sixpack.EndpointB02R6Tube3
 import Sixpack.EndpointDomainRestriction
 import Sixpack.RefinementDomainCover
 import Sixpack.EndpointRefinementTransition
+import Sixpack.EndpointLeaf23
+import Sixpack.EndpointLeaf23Domains

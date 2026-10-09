@@ -1,0 +1,71 @@
+{
+  "node": "endpoint_b23_c1_c0",
+  "case_index": 459,
+  "case_groups": [
+    0,
+    1,
+    5,
+    6,
+    13,
+    15
+  ],
+  "records": 114,
+  "domain_sizes": [
+    16,
+    22,
+    22,
+    16,
+    22,
+    16
+  ],
+  "owner_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    24,
+    25,
+    26,
+    27
+  ],
+  "other_indices": [
+    32,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    62,
+    63,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "geometric_pair_certificates": 352,
+  "source_sha256": {
+    "endpoint_b23_c1_c0.json": "01640b216a0a50f64a3d6ad3b30707c58d538b944ca9783ac4f9175c4b7b8a1c",
+    "endpoint_b23_c1_c0_nodes.json": "fa9f8265267bf8d1bf7526440bbd051bfc6cd9448d665375e2eaea22ff9f181f",
+    "endpoint_b23_c1_c0.groups": "c795dfc2bb8edbb86374a349a8e09437113a51941ff001a7eabc133e6be420f5",
+    "spatial_coarse_cases.json": "14d7dae9ba5b132d0c91a2308a4c415f820136fc8375016ddc541132fe3e4d14"
+  },
+  "status": "untrusted export; Lean acceptance separate"
+}
