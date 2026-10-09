@@ -1390,3 +1390,27 @@ The other eleven additional b31 cases, incoming root pruning and the global
 classification remain incomplete. The main-chain continuation and case-970
 geometric table are still running. The global lower bound remains unproved.
 Overall completion remains about 60% (55–65%).
+
+
+## Sixth main-chain geometric pruning step
+
+`b31_step5_pruning_preserves_packing` and `b31_prefix6_preserves_packing`
+are default-imported and fully dependency-audited. The sixth step removes
+26 actual regions using 21 geometric coverage groups. The accepted consecutive
+prefix now covers 712 removed owners and 374 groups. Its geometric table contains
+6,088 blocks / 200,634 ordered pairs in batches 0–398 plus the two original pilots.
+This checkpoint adds 650 blocks in 41 bounded batches.
+
+The default build passes (5,473 jobs, 642 MiB peak physical Lean footprint).
+The complete canonical audit passes: 19,208 listed checks / 19,207 distinct
+declarations use only standard logical axioms. The independent source audit
+reproduces all 7,023 records and the complete proposed 21-step trace: 9,876
+blocks covering 625,585 pairs. Source scope does not certify the remaining
+geometric blocks or pruning steps. Original archive/file integrity passes.
+
+Case 970's first five geometric coverage groups compile; its first complete
+step and chain are still being assembled and are not included in this default
+checkpoint. Its full geometric table and the remaining main-chain steps continue
+checking separately. Incoming root selection, global case classification and
+the end-to-end lower bound remain unproved. Overall completion remains about
+60% (55–65%).
