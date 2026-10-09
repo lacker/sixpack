@@ -571,10 +571,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 252 production batches pass, giving 3,847 accepted
+603 MiB peak. The first 286 production batches pass, giving 4,337 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 252, then prove
+without expanding the default import graph. Continue from batch 286, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -605,7 +605,7 @@ proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
 Final snapshot choices and their actual labels are now bound to the two
 accepted leaf-refinement parent cases. `b31_final_snapshot_no_packing` composes
 this complete domain binding with the accepted refinement and leaf closure.
-Accept remaining geometric blocks from batch 252,
+Accept remaining geometric blocks from batch 286,
 prove every removed owner's complete row coverage against its current blocker
 domain, and assemble geometric pruning with the accepted survivor transitions.
 The full production pruning theorem and root reachability remain open.
@@ -734,3 +734,14 @@ Run after required imports compile, or pass an explicit `--source` containing
 imports of all accepted modules and the exact desired print list. Do not change
 the audit scope during a run. The collector is audit tooling, not a substitute
 for kernel checks of arithmetic certificates or geometric lemmas.
+
+
+The geometric dependencies through batch 285 now all pass compilation and the
+full axiom audit. Accept step-2 groups 223–298, then its complete geometric step
+and prefix 3. The existing pipeline performs these builds serially under the
+guard. A workspace continuation for steps 3–20 is queued behind its success;
+it must be validated as it executes. Each stage builds the preceding prefix,
+checks geometric and owner/blocker coverage, composes the actual snapshot step,
+and runs the shared axiom audit. This does not discharge incoming root coverage
+or the other endpoint branches. After accepted assemblies, expand default
+imports and the canonical audit list, rebuild, scope-audit and publish.

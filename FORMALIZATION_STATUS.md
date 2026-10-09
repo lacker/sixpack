@@ -639,20 +639,20 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 3,847 blocks, covering 153,062 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and 252
+`EndpointB31SpatialAnglePilot` accepts 4,337 blocks, covering 177,006 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 286
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The 252 production batches all pass with peaks below 1,434 MiB; the latest
+The 286 production batches all pass with peaks below 1,434 MiB; the latest
 full default build peaks at 1,639 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
-252 are accepted (batches 0–251). The complete first pruning step is proved
-below; 6,029 of the 9,876 proposed blocks still need acceptance, followed by
+286 are accepted (batches 0–285). The complete first pruning step is proved
+below; 5,539 of the 9,876 proposed blocks still need acceptance, followed by
 checked coverage and composition of the remaining 20 pruning rectangles.
 
 `RectanglePruning` now proves that checked rectangle coverage preserves every
@@ -974,3 +974,29 @@ The existing guarded run continues through batch 285 before the step-2 group
 and assembly pipeline begins. Batches through 251 are the accepted default
 checkpoint; later generated sources are not accepted by this status statement.
 The remaining nineteen pruning steps and global classification are unproved.
+
+
+## Complete geometric inputs for the third b31 step
+
+Batches 252–285 add 490 accepted geometric blocks and 23,944 ordered pairs.
+All 34 builds passed below 1,434 MiB. The complete updated axiom audit passed
+in 81 seconds at 546 MiB: 12,730 listed checks, 12,729 distinct declarations,
+and only the three standard logical axioms. The default build passed (4,819
+jobs, 1,639 MiB). The source auditor matched all 4,337 selected blocks to the
+actual records, parent paths, member functions and certificate bindings. No
+forbidden proof shortcuts were found in the new modules, and original integrity
+still passes.
+
+Every required geometric dependency for step 2 is now compiled and audited.
+Its 76 indexed groups (223–298) are being checked serially, followed by the
+actual snapshot-2-to-3 assembly and prefix-3 composition. Those assemblies are
+not yet accepted. A later serial continuation has been prepared and queued to
+start after that pipeline succeeds; its positive execution remains to be
+validated. It rebuilds and axiom-audits the predecessor prefix, checks missing
+geometric dependencies and all row groups, then compiles and axiom-audits each
+successive step and prefix. It stops at any failed command. Default imports,
+publication and incoming root coverage remain separate obligations.
+
+The accepted default checkpoint ends at batch 285. Two complete pruning steps
+are proved; nineteen steps and the global classification remain unproved. The
+overall estimate remains about 60% (55–65%).
