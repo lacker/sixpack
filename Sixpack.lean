@@ -220,3 +220,7 @@ import Sixpack.EndpointB31SnapshotAssembly
 import Sixpack.EndpointB31SnapshotRefinement
 import Sixpack.IndexedRectangleCoverage
 import Sixpack.EndpointB31IndexedFirstGroup
+import Sixpack.EndpointB31IndexedGroups.Group1
+import Sixpack.EndpointB31IndexedGroups.Group3
+import Sixpack.EndpointB31IndexedGroups.Group5
+import Sixpack.EndpointB31IndexedGroups.Group11

@@ -570,10 +570,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 63 production batches pass, giving 955 accepted
+603 MiB peak. The first 79 production batches pass, giving 1,211 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 63, then prove
+without expanding the default import graph. Continue from batch 79, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -604,7 +604,7 @@ proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
 Final snapshot choices and their actual labels are now bound to the two
 accepted leaf-refinement parent cases. `b31_final_snapshot_no_packing` composes
 this complete domain binding with the accepted refinement and leaf closure.
-Accept remaining geometric blocks from batch 63,
+Accept remaining geometric blocks from batch 79,
 prove every removed owner's complete row coverage against its current blocker
 domain, and assemble geometric pruning with the accepted survivor transitions.
 The full production pruning theorem and root reachability remain open.
@@ -621,6 +621,14 @@ production trace composition remain separate.
 
 `audit/export_b31_indexed_row_groups.py` exports the exhaustive 1,044-group
 plan for all 4,247 owner rows. Its scope checker verifies unique full coverage
-and all 214,380 positional witnesses. Generalize the accepted prototype to
-this plan, batching both sides in small chunks. This plan is untrusted until
-the corresponding Lean acceptance and block bindings compile.
+and all 214,380 positional witnesses. The generalized generator now uses this plan with 32-case chunks on both
+sides and proved owner-pair flattening. Groups 1, 3, 5 and 11 compile with
+geometric bindings, in addition to the group-15 prototype. Continue accepting
+the remaining 1,039 groups and their required geometric batches. The unchecked
+portion of the plan remains untrusted until its Lean acceptance compiles.
+
+Use `audit/check_b31_indexed_group_modules.py --groups ...` for serial
+generation and guarded acceptance. The generator requires compiled geometric
+dependencies and imports only the needed batches, keeping completed groups
+independent of later pilot-table import growth. The source audit checks all
+actual generated group inputs against the exhaustive coverage plan.
