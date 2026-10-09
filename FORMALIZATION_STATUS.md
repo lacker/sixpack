@@ -52,9 +52,15 @@ motion and energy inequalities. Uniform third bounds and Taylor remainders are n
 paths, as is exact three-sample interpolation of their first and second
 derivatives. The sharp bounds cover every retained branch constraint and yield
 weighted remainder bounds for inverse rows and multipliers. These are repeated
-normal-direction derivatives, not full mixed derivative tensors. The motion and
-energy inequalities still need geometric bindings of the sampled matrices and
-checked coefficient enclosures throughout each tube. The 22 excluded
+normal-direction derivatives, not full mixed derivative tensors.
+
+The sampled Jacobians and Hessians are now bound to actual geometric
+derivatives for every real normal displacement. Their five constraint norm
+bounds are checked across all eight branches, reconstructing coefficients in
+Lean and checking the 19 distinct retained constraints. Lean derives uniform
+Jacobian variation, second derivative and origin-Jacobian constraint error
+estimates. The inverse and objective contractions needed for the final motion
+and energy inequalities remain to be checked and assembled. The 22 excluded
 tube separators also remain to be checked in Lean. No full tube theorem is
 claimed from this foundation.
 

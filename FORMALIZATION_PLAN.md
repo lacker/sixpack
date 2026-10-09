@@ -223,8 +223,15 @@ weighted remainder estimates. `TubeAngleInterpolation` proves an identity for
 the entire normal path from three exact cosine/sine samples;
 `TubeSampleDerivatives` differentiates it twice and binds the zero-angle sample
 to the existing geometric velocity and acceleration. These results do not rely
-on Python or C++ sample logs. Computable bindings of the other sampled matrices,
-their coefficient bounds, motion/energy estimates and excluded axes remain.
+on Python or C++ sample logs. The sampled matrix bindings are now proved in
+`TubeSampleJets` and
+`TubeSampleMatrices`, and `TubeCoefficientForms` provides executable sine and
+cosine coefficient matrices. `TubeNormCertificate`, `TubeNormFixture` and
+`TubeNormFamily` reconstruct and check all five constraint norm bounds for all
+eight branches, using only kernel computation. `TubeNormControls` and
+`TubeNormGeometry` derive actual uniform Jacobian variation, second derivative
+and origin-Jacobian constraint error estimates. Inverse/objective contractions,
+final motion/energy estimates and excluded axes remain.
 
 ## Remaining modules, in dependency order
 
@@ -247,8 +254,9 @@ their coefficient bounds, motion/energy estimates and excluded axes remain.
    `1/300` is proved for actual packings in the rotation chart. The anchor-based
    tube chart, normal Jacobian at the origin and exact critical-curve energy are
    proved, together with angle-dependent normal derivative identities and uniform
-   normal Taylor remainder bounds. Bind sampled matrices and their coefficient
-   enclosures to geometry, prove normal
+   normal Taylor remainder bounds. Sampled matrices and the five constraint norm
+   enclosures are now checked and bound to geometry. Check the inverse/objective
+   contractions, prove normal
    motion and energy estimates, check the excluded axes, and prove all three tubes.
 4. **Whole-region labels.** Prove exact recentering from the rational cover to the
    candidate container, including reflections and rotations. Prove uniform

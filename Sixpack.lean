@@ -81,3 +81,12 @@ import Sixpack.TubeTaylor
 import Sixpack.TubeAngleInterpolation
 import Sixpack.TubeSampleDerivatives
 import Sixpack.TubeTaylorAtCurve
+import Sixpack.TubeSampleJets
+import Sixpack.TubeSampleMatrices
+import Sixpack.TubeCoefficientForms
+import Sixpack.TubeNormCertificate
+import Sixpack.TubeNormFixture
+import Sixpack.TubeNormAdditional
+import Sixpack.TubeNormFamily
+import Sixpack.TubeNormControls
+import Sixpack.TubeNormGeometry

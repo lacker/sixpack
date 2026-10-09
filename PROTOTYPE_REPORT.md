@@ -337,7 +337,8 @@ Each retained branch is rigid on the curve with zero normal displacement.
 `TubeEstimates` proves the final contradiction from explicit motion and energy
 estimates. It does not supply those estimates. Angle-dependent normal derivative
 identities and uniform Taylor remainders are now proved, as detailed below.
-Geometric binding of sampled matrices and their coefficient enclosures, the
+Sampled matrices and their five constraint norm bounds are now bound to geometry
+and checked across all eight branches. Inverse/objective contractions, final
 motion/energy estimates and the 22 excluded tube axes remain before any of the
 three full tubes is proved.
 
@@ -356,5 +357,21 @@ derives their Taylor remainders and weighted remainder bounds. It also proves
 three-sample angle interpolation of the full paths and their first and second
 normal derivatives, with the zero sample bound to the existing geometric jets.
 These proofs use no Python/C++ acceptance assumptions. They do not establish
-full mixed derivative bounds or a complete tube theorem. Sampled matrix bindings,
-coefficient checks, motion/energy inequalities and the excluded tube axes remain.
+full mixed derivative bounds or a complete tube theorem. Sampled matrix bindings
+and the five constraint norm bounds are now checked
+for all eight branches. Inverse/objective contractions, final motion/energy
+inequalities and the excluded tube axes remain.
+
+## Sampled tube matrices and checked constraint norms
+
+`TubeSampleJets` proves the first and second normal derivatives directly from
+sampled paths. `TubeSampleMatrices` binds executable matrices to those derivatives
+for arbitrary real normal displacements, explicitly omitting the frozen pivot.
+`TubeCoefficientForms` reconstructs the sine and cosine-defect coefficients.
+The five per-constraint norm bounds from `local_tube_bounds.json` are untrusted
+input: `TubeNormCertificate` recomputes them from the geometric formulas and
+`TubeNormFamily` checks all eight branches in the kernel, reusing the 19 distinct
+constraints. `TubeNormGeometry` derives uniform Jacobian variation and second
+derivative bounds, and combines them with Taylor to bound constraint error about
+the origin Jacobian. No complete tube theorem follows yet: inverse/objective
+contractions, the final estimates and excluded axes remain.
