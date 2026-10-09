@@ -1048,3 +1048,25 @@ distinct declarations. No forbidden proof shortcuts were found, and original
 integrity still passes. This closes the degenerate-side case of the Cartesian
 transport; the global lower bound and the remaining production classification
 are still unproved. The third-step group checks continue separately.
+
+
+## First 32 groups of the third b31 pruning step
+
+Groups 223–254 are now imported by the default build and included in the
+canonical dependency audit. These groups cover 52 removed owners against the
+actual 375 blockers of step 2. All 32 guarded Lean builds passed; their largest
+observed physical footprint was 1,229 MiB. The source-scope auditor checks the
+actual arrays, block factories, positional selectors and geometric bindings
+against the full production plan.
+
+The default build passes (4,853 jobs, 446 MiB). The full shared axiom audit
+passes in 68 seconds at 553 MiB: 12,842 listed checks and 12,841 distinct
+declarations, including the 96 new group theorems, use only standard logical
+axioms. No forbidden proof shortcuts occur in these groups. The archive and
+all 730 original research files remain unchanged.
+
+This checkpoint accepts 255 indexed groups in total, covering 549 removed
+owners across the first three steps. Step 2 still needs its other 44 groups,
+the complete geometric transition and prefix-3 composition. Two complete
+pruning steps are accepted; the global classification and lower bound remain
+unproved. Overall completion is still estimated at about 60% (55–65%).
