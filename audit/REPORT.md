@@ -224,3 +224,29 @@ new axiom audit passed (371.5 MiB peak). The complete dependency audit now lists
 1,689 theorem names, with only standard logical axioms. Export provenance and
 scope passed `check_leaf23_export.py`; original archive/file integrity passed.
 The unconditional lower bound and full case/tree coverage remain unproved.
+
+## Shared projection-envelope block certificates
+
+`RegionBlockCertificate` proves that accepted per-region dual bounds, checked
+common bin identities, and six shared strict gaps certify every pair in a
+Cartesian-product block. `RegionBlockSearch` proves that an untrusted lookup
+which removes edges only inside accepted blocks is conservative for actual
+packings, and connects this adjacency to ordinary and 24-channel covered searches.
+
+The production case-459 rectangle is covered by 32 accepted blocks. Lean checks
+192 shared directed-axis gaps and 1,296 regional projection bounds; the previous
+352 individual pair certificates required 2,112 gaps and 4,224 bounds. All blocks,
+exhaustive pair coverage, the concrete clash search, and the compressed closure
+of the original 114-node domains passed. A forged zero-witness block is rejected,
+and a misaddressed block lookup retains its edge. The new proof assumes neither
+a saved graph adjacency nor an external search success flag.
+
+The first block soundness attempt needed explicit simplification of its bin
+factory equalities. The concrete lookup proof needed explicit Boolean negation
+and simplification of a true conjunction. Corrected builds passed. The full
+32-block run peaked at 739.5 MiB; the default build passed (3,670 jobs;
+332.7 MiB peak). The new axiom audit peaked at 391.2 MiB. The combined audit now
+checks 1,930 theorem names, with only standard logical axioms. Export scope and
+all preserved research-file hashes still pass their separate Python comparisons.
+Larger production block partitions/search certificates and global tree coverage
+remain outstanding; the unconditional lower bound is not yet proved.

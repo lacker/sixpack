@@ -475,3 +475,13 @@ Completion requires a successful build of the target theorem, an axiom audit
 showing only Lean's ordinary logical dependencies, and no hidden classification
 or certificate acceptance hypothesis in its statement. Until then, the full
 Python/C++ replay and the written analytic argument remain separate evidence.
+
+`RegionBlockCertificate` now implements a proved compression scheme for
+orientation-homogeneous region blocks: check each regional dual projection bound
+and six common strict edge gaps, then infer exclusion for their Cartesian
+product. `RegionBlockSearch` supplies conservative guarded lookup adjacency and
+ordinary/covered geometric search soundness. A 32-block production fixture covers
+all 352 exclusions needed for leaf case 459 and closes the original domains.
+The next step is to generate useful block partitions for the larger production
+searches and their deletions; their existence, completeness and acceptance are
+not assumed from the successful small leaf.

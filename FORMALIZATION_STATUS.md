@@ -405,6 +405,35 @@ the domain-binding proof peaked at 2,662.4 MiB.
 domains with the preserved sources; that comparison provides provenance/scope
 rather than Lean geometric proof evidence.
 
+## Shared projection envelopes and compressed search adjacency
+
+`RegionBlockCertificate` checks projection envelopes for blocks with fixed
+orientation bins. Each continuous region gets its own checked dual witnesses;
+the six strict separating-edge gaps are shared across the Cartesian product.
+Its soundness theorem constructs an accepted pair certificate for every member
+pair. Bin identities and resolution bounds are checked, so the compression
+assumes no geometric claim about the exported grouping.
+
+`RegionBlockSearch` guards an untrusted pair-to-block lookup by membership in
+both block domains. An accepted block table makes this computed adjacency
+conservative for actual disjoint triangles. Generic ordinary and 24-channel
+covered searches then give the same geometric exclusion or endpoint-boundary
+conclusion. Missing or misaddressed lookup entries retain their edge.
+
+`EndpointLeaf23Blocks` checks **32 blocks covering all 352 pairs** of the
+case-459 rectangle. It uses 192 directed-axis gap checks and 1,296 regional
+projection-bound checks, versus 2,112 and 4,224 respectively for individual
+pair certificates. The full block build and exhaustive pair coverage passed,
+peaking at 739.5 MiB. This is a demonstrated compression for this leaf; whether
+comparable blocks cover the larger production searches remains to be established.
+
+`EndpointLeaf23BlockSearch` accepts a concrete clash search using the guarded
+lookup, rejects a forged zero-witness block, and confirms that a misaddressed
+lookup retains its edge. `leaf23_compressed_no_domain_packing` closes the original
+114-node leaf domains through the shared block certificates and exact domain
+bindings. The other production searches and global root/case/tree assembly
+remain unverified.
+
 ## Remaining trust boundary
 
 Root intersection coverage and the first child enumeration are now proved.

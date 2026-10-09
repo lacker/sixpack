@@ -192,3 +192,7 @@ import Sixpack.RefinementDomainCover
 import Sixpack.EndpointRefinementTransition
 import Sixpack.EndpointLeaf23
 import Sixpack.EndpointLeaf23Domains
+import Sixpack.RegionBlockCertificate
+import Sixpack.RegionBlockSearch
+import Sixpack.EndpointLeaf23Blocks
+import Sixpack.EndpointLeaf23BlockSearch
