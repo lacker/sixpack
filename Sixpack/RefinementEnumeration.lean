@@ -22,7 +22,28 @@ def checkRefinementEnumeration {P N : ℕ}
       (refinedLabel (parents parent) (space parent) (angle parent) child right)
       (witnesses parent child right) = true)
 
+/-- Partition the production acceptance proof into individual parents. -/
+def checkRefinementParent {P N : ℕ}
+    (parents : Fin P → PlacementLabel) (records : Fin N → PlacementLabel)
+    (space angle : Fin P → Bool)
+    (witnesses : Fin P → Fin 4 → Bool → RootEnumerationWitness N)
+    (parent : Fin P) : Bool :=
+  decide (∀ child right,
+    checkRefinementEntry records
+      (refinedLabel (parents parent) (space parent) (angle parent) child right)
+      (witnesses parent child right) = true)
+
 noncomputable section
+
+theorem checked_refinement_parents_complete {P N : ℕ}
+    (parents : Fin P → PlacementLabel) (records : Fin N → PlacementLabel)
+    (space angle : Fin P → Bool)
+    (witnesses : Fin P → Fin 4 → Bool → RootEnumerationWitness N)
+    (hc : ∀ parent, checkRefinementParent parents records space angle witnesses parent = true) :
+    checkRefinementEnumeration parents records space angle witnesses = true := by
+  simp only [checkRefinementEnumeration,decide_eq_true_eq]
+  intro parent
+  simpa only [checkRefinementParent,decide_eq_true_eq] using hc parent
 
 theorem checked_refinement_entry_point {N : ℕ} (records : Fin N → PlacementLabel)
     (label : PlacementLabel) (witness : RootEnumerationWitness N)

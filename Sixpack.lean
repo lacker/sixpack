@@ -145,3 +145,6 @@ import Sixpack.RegionPairFixture
 import Sixpack.RootEnumeration
 import Sixpack.LabelRefinement
 import Sixpack.RefinementEnumeration
+import Sixpack.DomainRestriction
+import Sixpack.EndpointB00.Batch0
+import Sixpack.RefinementChunks

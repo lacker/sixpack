@@ -115,6 +115,24 @@ enumeration. Production data for all 34,660 retained labels and the omitted
 candidate witnesses have been generated. Serial production row acceptance is
 still running under the memory guard; full production root coverage is pending.
 
+`DomainRestriction` proves soundness of parent deletions justified by search
+refutations with each removed vertex fixed, and transports that result to actual
+represented packings. Production fixed-vertex search certificates have not yet
+been accepted.
+
+For the first production refinement node, `EndpointB00` exports the actual
+2,862 declared parents and 19,710 child records, plus 3,186 empty-child witnesses.
+The first batch (32 parents, eight potential children each) is kernel-checked
+and included in the default build and axiom audit. Acceptance of the remaining
+89 batches and the combined packing-preservation theorem is running serially.
+Even after it passes, preservation is conditional on representation by a
+declared parent: omitted-parent safety and case coverage remain separate gaps.
+`RefinementChunks` proves reusable bounded-batch composition, separating the
+chunk arithmetic from production certificate hypotheses. Its guarded build
+passed with an observed physical footprint of about 275 MiB. An earlier
+preflight with 90 explicit hypotheses exceeded the safe memory budget and was
+stopped; it contributes no proof evidence.
+
 This does not yet prove that the saved polygon vertex lists equal these
 intersections, that no nonempty record is omitted, or that the production
 refinement metadata selects all required children. The row-major `gridIndex`

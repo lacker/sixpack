@@ -14,6 +14,11 @@ import Sixpack
 #print axioms Sixpack.checked_refinement_entry_point
 #print axioms Sixpack.checked_refinement_triangle
 #print axioms Sixpack.checked_refinement_packing
+#print axioms Sixpack.checked_refinement_parents_complete
+#print axioms Sixpack.checked_domain_restriction
+#print axioms Sixpack.checked_region_domain_restriction
+#print axioms Sixpack.b00_refinement_batch0_checked
+#print axioms Sixpack.checked_refinement_chunks_complete
 
 #print axioms Sixpack.root13_nonneg
 #print axioms Sixpack.root13_sq

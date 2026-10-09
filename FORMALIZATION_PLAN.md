@@ -335,6 +335,15 @@ exact empty-region witnesses. Its soundness theorem preserves the represented
 six members of an actual packing. Production child lists and flags still need
 to be supplied and accepted; the generic theorem does not certify that metadata.
 
+`DomainRestriction` now checks search refutations with each deleted vertex
+fixed, proving that retained parent domains preserve every admissible selection
+and every actual represented packing. Production fixed-vertex certificates are
+still needed. `EndpointB00` begins production child acceptance for the first
+refinement node: 2,862 declared parents, 19,710 child records and 3,186 exact
+empty-child witnesses. The first 32-parent batch passes; the remaining batches
+and combined theorem are being checked serially. This acceptance does not prove
+that the declared parent list contains every possible packing selection.
+
 The first monolithic row reduction reached 12 GB physical footprint despite
 `-M4096` and was stopped. Each row now uses 32 separate column checks, and
 `audit/run_lean_memory_guard.py` monitors physical/compressed memory for this
