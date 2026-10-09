@@ -62,3 +62,9 @@ import Sixpack.LocalRadiusTheorem
 import Sixpack.NormalMatrixControls
 import Sixpack.SparseHessianControls
 import Sixpack.TriangleHalfplanes
+import Sixpack.TriangleInteriors
+import Sixpack.TriangleSeparation
+import Sixpack.AffineEndpoints
+import Sixpack.NormalCone
+import Sixpack.SeparatingAxis
+import Sixpack.LocalPackingRadius

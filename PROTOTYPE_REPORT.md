@@ -293,19 +293,38 @@ reject false margins, gradients and radii.
 `local_constraint_radius_rigidity` concludes every displacement coordinate is
 zero from radius `1/300`, boundary feasibility, one feasible separating axis for
 each of five contact pairs, and nonpositive size displacement. No analytic bound
-or certificate acceptance is assumed. Its remaining geometric bridge is the
-necessity of those axes for disjoint triangle interiors. This is a constraint-chart
-radius theorem, not yet the global packing theorem.
+or certificate acceptance is assumed. The geometric bridge described below now
+connects its axes to disjoint triangle interiors. The global packing theorem
+remains unproved.
 
 `TriangleHalfplanes` proves that an arbitrary positively oriented nondegenerate
 triangle's convex hull equals its three supporting half-planes. The converse uses
 explicit nonnegative barycentric coordinates. This is a prerequisite for the
-remaining separating-axis bridge.
+separating-axis bridge.
+
+## Separating-axis necessity and the packing radius theorem
+
+`TriangleInteriors` proves the exact strict-half-plane description of the
+topological interior and that the hull is the closure of its interior.
+`TriangleSeparation` obtains a nonconstant linear separator from mathlib's
+Hahn–Banach theorem and extends its weak inequalities to every vertex.
+`AffineEndpoints` proves a compact feasible-interval endpoint lemma; `NormalCone`
+uses it to preserve the separating gap while moving to an active edge normal.
+`SeparatingAxis` assembles these into necessity of one of the six triangle edge
+axes for any two positively oriented nondegenerate triangles with disjoint
+interiors. Boundary touching is included.
+
+`LocalPackingRadius` proves the rotation chart preserves positive orientation
+and converts the geometric separator to the certificate's finite axis labels.
+`local_packing_radius_rigidity` starts from an actual packing with side
+`optimum+d 15`, whose five core triangles are represented by the chart within
+sup-norm radius `1/300`. Nonpositive size displacement implies `d = 0`.
+There is no axis-feasibility assumption and no imported numerical result.
+The sixth triangle is unrestricted by the chart hypotheses.
 
 ## Next useful milestone
 
-Prove separating-axis necessity and connect actual disjoint triangle interiors to
-the radius theorem. Formalize the three tubes, their recentering maps and chart
+Formalize the three tubes, their recentering maps and chart
 coverage. Extend the search prototype with channel-specific local labels and a
 small genuine triangle-region certificate. Production global coverage and search
 certificates remain necessary for the end-to-end lower bound.

@@ -171,12 +171,27 @@ combines this with the constraint cover. Its theorem
 `local_constraint_radius_rigidity` assumes the radius, boundary feasibility,
 separating-axis feasibility for five contact pairs, and nonpositive size
 displacement; it concludes all coordinates are zero. All analytic estimates
-and concrete certificate acceptances are discharged. It does not yet assume
-only non-overlapping triangle interiors: separating-axis necessity remains.
+and concrete certificate acceptances are discharged.
 
 `TriangleHalfplanes` proves the supporting half-plane description for arbitrary
 positively oriented nondegenerate triangles, using explicit barycentric weights.
-This begins the geometric bridge needed for separating-axis necessity.
+`TriangleInteriors` identifies the interior with strict half-planes, proves the
+centroid is interior and proves the hull is the closure of its interior.
+`TriangleSeparation` applies mathlib's Hahn–Banach theorem to obtain a nonconstant
+weak separator on all vertices, allowing boundary contact. `AffineEndpoints` and
+`NormalCone` move this separator to a feasible endpoint of a vertex's normal
+cone, preserving the separating gap. `SeparatingAxis.ccw_triangles_separating_axis`
+then proves one of the two triangles' six edge axes separates the other triangle.
+All these results cover arbitrary positively oriented nondegenerate triangles.
+
+`LocalPackingRadius.local_packing_radius_rigidity` applies that necessity theorem
+to the five contact pairs and the all-branch radius proof. Its hypotheses are an
+actual `Packing (optimum+d 15) T`, a representation of the five indexed core
+triangles by `localVertexPath`, radius `‖d‖ ≤ 1/300` and `d 15 ≤ 0`.
+It concludes `d = 0`; the sixth triangle is unrestricted by the chart. There are
+no geometric feasibility, analytic bound or certificate-acceptance hypotheses
+standing in for proved results. The chart representation is still an explicit
+local-domain hypothesis; coverage of arbitrary endpoint packings remains.
 
 ## Remaining modules, in dependency order
 
@@ -186,8 +201,8 @@ This begins the geometric bridge needed for separating-axis necessity.
    lengths to congruence with the upright triangle and normalize an arbitrary
    equilateral outer container into this coordinate chart by a Euclidean isometry.
    The triangle supporting half-planes are now proved for positive orientation.
-   Prove the inscribed disk and separating-axis necessity. Extend the current
-   hull lemmas rather than assuming polygon geometry.
+   Prove the inscribed disk. Supporting half-planes, strict interiors and
+   separating-axis necessity are proved for positive orientation.
 2. **Orientation and region cover.** Prove the half-angle chart covers shapes
    modulo 120°, derive the support factor and its monotonicity, prove the common
    inner triangle, and certify closed-cell intersections including lines and
@@ -196,8 +211,7 @@ This begins the geometric bridge needed for separating-axis necessity.
 3. **Local analytic theorems.** The actual 16-variable constraints, nonlinear
    energy estimate, all eight coefficient checks, uniform diagonal third
    derivatives, Taylor estimates and finite branch cover are proved. The radius
-   `1/300` is proved for the chart constraint model. Connect disjoint interiors
-   to its separating-axis hypotheses. Define the anchor-based tube chart, prove
+   `1/300` is proved for actual packings in the rotation chart. Define the anchor-based tube chart, prove
    its derivative bounds and normal-motion estimates, and prove all three tubes.
 4. **Whole-region labels.** Prove exact recentering from the rational cover to the
    candidate container, including reflections and rotations. Prove uniform
