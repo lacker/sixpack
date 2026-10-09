@@ -624,7 +624,7 @@ plan for all 4,247 owner rows. Its scope checker verifies unique full coverage
 and all 214,380 positional witnesses. The generalized generator now uses this plan with 32-case chunks on both
 sides and proved owner-pair flattening. Groups 1, 3, 5 and 11 compile with
 geometric bindings, in addition to the group-15 prototype. Continue accepting
-the remaining 979 groups and their required geometric batches. The unchecked
+the remaining 918 groups and their required geometric batches. The unchecked
 portion of the plan remains untrusted until its Lean acceptance compiles.
 
 Use `audit/check_b31_indexed_group_modules.py --groups ...` for serial
@@ -638,10 +638,9 @@ prefix now compile. The 65 accepted groups cover 115 first-step owner rows.
 The blocker array is
 proved equal to the actual initial snapshot domain, and the partial pruning
 theorem preserves every actual packing choice through those 115 deletions.
-Its owner count and declared-removal bindings are kernel-checked. Complete
-the remaining 113 first-step removals by accepting their geometric dependencies
-and row groups, then extend the same actual-domain binding and pruning assembly
-to the remaining 20 steps. The complete geometric table still continues from
+Its owner count and declared-removal bindings are kernel-checked. The complete
+first step is now accepted by the indexed geometric assembler; extend this
+actual-domain binding and pruning assembly to the remaining 20 steps. The complete geometric table still continues from
 batch 154. The end-to-end root-case classification remains unproved.
 
 The geometric snapshot preservation and chain theorems now compile. Concrete
@@ -658,12 +657,24 @@ existing checked assembly imports. Use `--all-compiled` to extend that selection
 after new group acceptance; the resulting assembly itself must compile, and
 its changed theorem dependencies must be re-audited.
 
-Geometric dependencies for every one of the first step's 126 indexed row
-groups are now accepted through batch 153. Accept the remaining 61 groups,
-which cover 113 owners, then regenerate the full 228-removal assembly and
-run `audit/generate_b31_complete_step0.py`. The bridge generator refuses an
-incomplete selected group list or removal list; its output must compile and
-be axiom-audited. The generated proof is intended to establish exact removal-domain equality
-from the checked subset and cardinality, and compose geometric row exclusion
-with the checked snapshot-0-to-1 survivor transition. The complete bridge has not yet been compiled. Generation alone does
-not establish that transition for actual packings.
+All 126 first-step indexed row groups and their geometric dependencies are
+now accepted. `EndpointB31GeometricSteps.Step0` checks all 228 removed indices
+against the accepted groups, binds all 346 blocker entries to the actual
+snapshot domain, and proves packing preservation from snapshot 0 to snapshot 1.
+The complete module and its six dependencies pass compilation and axiom audit.
+The legacy 115-owner partial assembly remains available.
+
+Use `audit/generate_b31_geometric_steps.py --steps ...` after all row groups for
+those steps compile. `audit/generate_b31_complete_step0.py` is a wrapper for the
+first step. The assembler checks finite owner-index and blocker-index identities
+in 32-entry chunks, then composes actual group exclusions with the checked
+survivor transition. Its source auditor checks every factory, selector and
+geometric proof binding against the declared snapshot scope. Each generated
+module must compile and be axiom-audited; generation alone is not acceptance.
+
+Blocker-domain identities for all 21 steps are now proved independently of
+geometric deletion. Continue with step 1: its 269 owners form 97 groups, its
+blocker domain has 24 choices, and its geometric dependencies extend through
+batch 187. Accept batches 154–187, then all step-1 groups and the indexed
+snapshot-1-to-2 assembly. The remaining 20 steps, incoming root coverage and
+end-to-end root-case classification remain open.

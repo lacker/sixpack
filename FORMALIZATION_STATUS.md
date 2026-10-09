@@ -732,8 +732,8 @@ The complete untrusted indexed-row proposal now contains **1,044 groups**,
 covering all **4,247 removed-owner rows** exactly once. It proposes 37,838 owner
 position and 176,542 blocker position checks. The external scope audit verifies
 every positional equality against the actual production blocks and verifies
-complete owner coverage in all 21 steps. The 640/641 prototype and 64 generalized groups are now accepted by Lean
-with geometric exclusion, covering 115 rows; the remaining 979 groups are
+complete owner coverage in all 21 steps. The 640/641 prototype and 125 generalized groups are now accepted by Lean
+with geometric exclusion, covering all 228 first-step rows; the remaining 918 groups are
 not formal evidence.
 
 `audit/generate_b31_indexed_groups.py` generalizes positional acceptance to
@@ -751,7 +751,7 @@ with the production plan. Full 1,044-group acceptance and trace assembly remain
 open. The sixteen additional certificate batches pass below 1,434 MiB.
 
 The nineteen earlier groups and 41 additional groups all compile under the
-external guard, with peaks below 885 MiB. There are now **65 accepted groups
+external guard, with peaks below 885 MiB. That earlier partial assembly uses **65 accepted groups
 covering 115 rows**. The latest 41 groups pass below 850 MiB.
 `EndpointB31Step0BlockerBinding` checks every scalar entry and proves that
 these groups' blocker function is exactly the actual initial snapshot blocker
@@ -764,8 +764,8 @@ accepted geometric group exclusions against the actual initial blocker domain.
 packing choice survives deletion of those 115 owners from component 0. It uses
 no saved graph, success flag or unchecked row-coverage hypothesis. The partial
 assembly builds at 668 MiB; the latest default build passes at 402 MiB.
-The full first step still needs its other **113 removals**, and all later
-steps and root reachability remain unproved. The source audit compares each
+The complete first step is now proved by the indexed geometric assembly
+described below. All later steps and root reachability remain unproved. The source audit compares each
 actual owner/group binding and the partial-domain definition with the complete
 production plan.
 
@@ -788,12 +788,45 @@ byte for byte; additional groups require an explicit selection or
 
 Batches 111–153 add 628 accepted geometric blocks and pass with peaks below
 1,434 MiB. The default build with all 154 production batches passes at
-716 MiB. These dependencies support every first-step group; the remaining
-61 groups cover 113 owners and still need their own positional and geometric
-acceptance. The complete first-step snapshot bridge is prepared as a guarded
-generator, but no complete 228-removal pruning theorem is yet claimed.
+716 MiB. These dependencies support every first-step group. All 61 further groups,
+covering 113 owners, now pass their positional and geometric checks, with peaks
+below 903 MiB. The complete first-step snapshot bridge is accepted below.
 
 The latest combined axiom audit covers 8,142 listed theorem dependencies,
 including all 1,256 dependencies added by these 43 batches; all use only
 the three standard logical axioms. The preserved archive and all 730 original
 research files pass the integrity check.
+
+## Complete first b31 geometric pruning step
+
+`EndpointB31SnapshotBlockers` proves the actual indexed blocker-domain identity
+for all 21 snapshots and proves that each step acts on two different packing
+pieces. Its source auditor checks each function against the actual snapshot
+selector and the actual old/kept partition node arrays. These identities alone
+do not justify any deletion.
+
+`EndpointB31GeometricSteps.Step0` accepts all 126 first-step row groups and
+kernel-checks all 228 removed-index mappings and 346 blocker-index identities
+in bounded 32-entry chunks. The removed-index mappings land in the actual
+owner functions of accepted geometric groups; the blocker identity binds
+their choices to the actual initial snapshot domain.
+`b31_geometric_step0_rows_exclude` excludes every declared removed owner
+against that domain. `b31_step0_pruning_preserves_packing` composes these
+exclusions with the checked survivor transition and proves that every actual
+packing choice represented in snapshot 0 survives in snapshot 1. There is no
+assumed graph, saved success flag, geometric certificate, or coverage premise.
+
+The first assembly build failed on an argument-order mismatch at the final
+composition call; the explicit argument adapter fixed it. The complete build
+passes in 63 seconds at 2,458 MiB under the 3,072 MiB guard. The default build
+passes at 423 MiB. All six new step dependencies and 183 new group dependencies
+pass the axiom audit; the latest combined list contains 8,353 checks using only
+`propext`, `Classical.choice` and `Quot.sound`. Both generators reproduce the
+accepted sources byte for byte. The original archive and 730 research files
+remain unchanged.
+
+The generic indexed assembler supports the remaining 20 steps, whose rows and
+geometric dependencies still require acceptance. It avoids a large literal
+removed-owner case split or cardinality computation. This proves one complete
+pruning step, not the complete 21-step trace, root reachability, or global lower
+bound. The legacy 115-owner partial theorem remains available as a reference.

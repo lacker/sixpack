@@ -226,3 +226,5 @@ import Sixpack.EndpointB31IndexedGroups.Group5
 import Sixpack.EndpointB31IndexedGroups.Group11
 import Sixpack.EndpointB31Step0PartialPruning
 import Sixpack.GeometricSnapshotPruning
+import Sixpack.EndpointB31SnapshotBlockers
+import Sixpack.EndpointB31GeometricSteps.Step0
