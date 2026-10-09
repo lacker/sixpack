@@ -328,3 +328,5 @@ import Sixpack.EndpointB31Case970Snapshots
 import Sixpack.EndpointB31Case970SnapshotBlockers
 
 import Sixpack.EndpointB31Case970RootEntry
+
+import Sixpack.EndpointB31Case1341RootClosure

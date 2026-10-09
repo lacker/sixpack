@@ -1354,3 +1354,39 @@ roughly 450 MiB. The complete packing exclusion and root composition still
 require successful assembly and dependency audit. Five main-chain pruning steps
 remain accepted; the continuation is active. Global classification and the
 lower bound remain unproved. Overall completion remains about 60% (55–65%).
+
+
+## Complete refined-case packing exclusion for b31 case 1341
+
+`b31_case1341_refined_case_no_packing` is now accepted and default-imported.
+It excludes every actual packing represented in the six actual ordered refined
+case domains. All 540 initial owner selectors, all 117 geometric coverage groups,
+the two actual unchanged blocker domains, and every geometric dependency are
+proved. There is no saved-graph, external checker-success, or assumed coverage
+premise in this theorem. The complete table covers 971 blocks / 88,602 ordered
+pairs. This is the first of the twelve additional b31 refined cases with an
+accepted complete geometric packing exclusion.
+
+`b31_case1341_selected_root_no_packing` is also accepted. It composes the proved
+root-record refinement with this exclusion, using the proved equality of their
+actual refined node domains. It excludes represented actual packings with
+`L ≤ outerBound` in `b31Case1341SelectedRootDomains`. Incoming root clique-support
+pruning into those selected domains remains unproved, so this is not yet a full
+classification of the original ordered root case.
+
+The monolithic assembly failed the memory guard and was never accepted.
+The corrected split assembly passes under the same cap: Data at 798 MiB,
+all 17 owner chunks at at most 465 MiB, and four dispatch chunks at at most
+1,229 MiB. The final assembly passed at 488 MiB; root composition passed at
+421 MiB. The audit harness's missing root-module import was corrected, and the
+resumed workflow passed complete positive execution with Lake rechecking every
+compiled dependency. Its full dependency audit passed in 134 seconds at
+684 MiB. The exact scope matches the expanded canonical list: 17,838 listed
+checks / 17,837 distinct declarations use only standard logical axioms.
+The default build passes (5,409 jobs, 594 MiB), actual source-scope and domain
+binding audits pass, and the archive and all 730 originals remain unchanged.
+
+The other eleven additional b31 cases, incoming root pruning and the global
+classification remain incomplete. The main-chain continuation and case-970
+geometric table are still running. The global lower bound remains unproved.
+Overall completion remains about 60% (55–65%).

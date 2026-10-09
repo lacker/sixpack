@@ -877,3 +877,18 @@ cap. The monolithic assembly failed the memory guard and is not accepted.
 `--reuse-compiled-groups` resumes assembly while the final Lake build rechecks
 all geometric dependencies. Its new chunk constructors and resume workflow
 still require complete positive execution before publication.
+
+
+Case 1341 now has an accepted complete refined-case packing exclusion and an
+accepted composition excluding its selected original root-record domains.
+Both are default-imported and fully dependency-audited. The next obligation for
+this case is sound incoming root clique-support pruning from the full ordered
+root-case domains into `b31Case1341SelectedRootDomains`. Do not treat the selected
+root-domain theorem as an unconditional original-root-case classification.
+
+Use the split closed-case assembly when appropriate: explicit scalar owner
+checks and group dispatch live in separate bounded modules. The resume workflow
+has passed positive execution after rechecking all dependencies with Lake and
+running the corrected full axiom audit. Case 970 and the remaining closed cases
+need their multi-component geometric chains, rather than the one-component
+constructor used for case 1341.
