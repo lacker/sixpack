@@ -59,7 +59,7 @@ derivatives for every real normal displacement. Their five constraint norm
 bounds are checked across all eight branches, reconstructing coefficients in
 Lean and checking the 19 distinct retained constraints. Lean derives uniform
 Jacobian variation, second derivative and origin-Jacobian constraint error
-estimates. The angle-dependent inverse and objective derivative contractions
+estimates. The angle-dependent inverse and objective Hessian contractions
 needed for the final motion and energy inequalities remain to be checked and
 assembled. The 22 excluded tube separators also remain to be checked in Lean. No full tube theorem is
 claimed from this foundation.
@@ -70,8 +70,19 @@ branches in `TubeBaseFixture`: feasible-slack domination by `beta`, the inverse
 curve coefficient `Cz`, and the weighted third constants `Mv` and `Mh`.
 `TubeWeightedExpansion` proves the exact weighted Taylor decomposition and derives
 preliminary motion and energy bounds for actual constraints, with no assumed
-remainder or certificate acceptance. The angle-dependent first- and
+remainder or certificate acceptance. The angle-dependent
 second-derivative contractions still need checking and bounding before these
 estimates imply the full tube theorem.
+
+The angle-dependent gradient contractions are now checked for all eight branches:
+`K1s`, `K1c`, and `Fc` are reconstructed from actual geometric rows. Lean proves
+that all rows outside 9–12 vanish, then contracts only those four rows.
+`TubeEnergySlack` retains the signed sine covector and proves its transformation
+through the verified normal inverse. The ratio `Bg`, curve coupling `bz`, and
+individual absolute slack coefficients are also checked from reconstructed data.
+The actual motion estimate now has only its Hessian contraction left unbounded;
+the signed energy sine term is bounded using feasible constraints, the curve and
+the proved geometric constraint errors. Hessian contractions, the final positive
+inequalities and excluded axes remain before a complete tube theorem follows.
 
 See `FORMALIZATION_PLAN.md` and `PROTOTYPE_REPORT.md` for the precise trust boundary.

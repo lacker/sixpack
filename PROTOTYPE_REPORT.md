@@ -374,13 +374,24 @@ input: `TubeNormCertificate` recomputes them from the geometric formulas and
 constraints. `TubeNormGeometry` derives uniform Jacobian variation and second
 derivative bounds, and combines them with Taylor to bound constraint error about
 the origin Jacobian. No complete tube theorem follows yet: angle-dependent inverse/objective
-contractions, the final estimates and excluded axes remain.
+Hessian contractions, the final estimates and excluded axes remain.
 
 The basic inverse and multiplier contractions are now checked for all eight
 branches in `TubeBaseFixture`: feasible-slack domination by `beta`, the inverse
 curve coefficient `Cz`, and the weighted third constants `Mv` and `Mh`.
 `TubeWeightedExpansion` proves the exact weighted Taylor decomposition and derives
 preliminary motion and energy bounds for actual constraints, with no assumed
-remainder or certificate acceptance. The angle-dependent first- and
+remainder or certificate acceptance. The angle-dependent
 second-derivative contractions still need checking and bounding before these
 estimates imply the full tube theorem.
+
+The angle-dependent gradient contractions are now checked for all eight branches:
+`K1s`, `K1c`, and `Fc` are reconstructed from actual geometric rows. Lean proves
+that all rows outside 9–12 vanish, then contracts only those four rows.
+`TubeEnergySlack` retains the signed sine covector and proves its transformation
+through the verified normal inverse. The ratio `Bg`, curve coupling `bz`, and
+individual absolute slack coefficients are also checked from reconstructed data.
+The actual motion estimate now has only its Hessian contraction left unbounded;
+the signed energy sine term is bounded using feasible constraints, the curve and
+the proved geometric constraint errors. Hessian contractions, the final positive
+inequalities and excluded axes remain before a complete tube theorem follows.

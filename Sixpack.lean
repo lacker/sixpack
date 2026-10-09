@@ -93,3 +93,10 @@ import Sixpack.TubeNormGeometry
 import Sixpack.TubeBaseContractions
 import Sixpack.TubeBaseFixture
 import Sixpack.TubeWeightedExpansion
+import Sixpack.TubeGradientSupport
+import Sixpack.TubeGradientContractions
+import Sixpack.TubeGradientFixture
+import Sixpack.TubeGradientGeometry
+import Sixpack.TubeEnergySlack
+import Sixpack.TubeEnergySlackFixture
+import Sixpack.TubeEnergySlackGeometry

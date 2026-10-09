@@ -59,8 +59,9 @@ The tube anchor chart, normal Jacobian and exact critical-curve energy are now
 proved. Uniform normal Taylor bounds and exact angle interpolation are also proved.
 Sampled matrices and constraint norm bounds are verified for all eight branches.
 Basic inverse and multiplier contractions and preliminary weighted estimates are
-verified. Angle-dependent contractions, full tube theorems and global coverage
-remain.
+verified. Gradient contractions and signed energy slack coefficients are checked
+for all eight branches. Hessian contractions, full tube theorems and global
+coverage remain.
 Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference

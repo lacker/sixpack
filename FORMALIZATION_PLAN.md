@@ -231,16 +231,27 @@ cosine coefficient matrices. `TubeNormCertificate`, `TubeNormFixture` and
 eight branches, using only kernel computation. `TubeNormControls` and
 `TubeNormGeometry` derive actual uniform Jacobian variation, second derivative
 and origin-Jacobian constraint error estimates. Angle-dependent inverse/objective
-contractions, final motion/energy estimates and excluded axes remain.
+Hessian contractions, final motion/energy estimates and excluded axes remain.
 
 The basic inverse and multiplier contractions are now checked for all eight
 branches in `TubeBaseFixture`: feasible-slack domination by `beta`, the inverse
 curve coefficient `Cz`, and the weighted third constants `Mv` and `Mh`.
 `TubeWeightedExpansion` proves the exact weighted Taylor decomposition and derives
 preliminary motion and energy bounds for actual constraints, with no assumed
-remainder or certificate acceptance. The angle-dependent first- and
+remainder or certificate acceptance. The angle-dependent
 second-derivative contractions still need checking and bounding before these
 estimates imply the full tube theorem.
+
+The angle-dependent gradient contractions are now checked for all eight branches:
+`K1s`, `K1c`, and `Fc` are reconstructed from actual geometric rows. Lean proves
+that all rows outside 9–12 vanish, then contracts only those four rows.
+`TubeEnergySlack` retains the signed sine covector and proves its transformation
+through the verified normal inverse. The ratio `Bg`, curve coupling `bz`, and
+individual absolute slack coefficients are also checked from reconstructed data.
+The actual motion estimate now has only its Hessian contraction left unbounded;
+the signed energy sine term is bounded using feasible constraints, the curve and
+the proved geometric constraint errors. Hessian contractions, the final positive
+inequalities and excluded axes remain before a complete tube theorem follows.
 
 ## Remaining modules, in dependency order
 
@@ -265,7 +276,7 @@ estimates imply the full tube theorem.
    proved, together with angle-dependent normal derivative identities and uniform
    normal Taylor remainder bounds. Sampled matrices and the five constraint norm
    enclosures are now checked and bound to geometry. Check the angle-dependent inverse/objective
-   contractions, prove normal
+   Hessian contractions, prove normal
    motion and energy estimates, check the excluded axes, and prove all three tubes.
 4. **Whole-region labels.** Prove exact recentering from the rational cover to the
    candidate container, including reflections and rotations. Prove uniform
