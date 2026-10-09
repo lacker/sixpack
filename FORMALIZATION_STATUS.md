@@ -10,7 +10,7 @@ It is not a schedule forecast.
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors and separating-axis necessity proved; general outer-container isometry normalization remains |
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
-| Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries and root-to-coarse ancestry/injection proved; saved-group bindings and orbit/case reduction remain |
+| Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries, production coarse-cell actions and actual 8,008-pattern coverage proved; saved-group bindings and representative/case reduction remain |
 | Local five-piece nonlinear rigidity | Radius and all three tube rigidity theorems proved; generic region-to-chart and endpoint bridges proved for all four profiles; production-wide certificate acceptance and coverage remain |
 | Sound finite search and certificate machinery | Exact inner geometry, projection/pair-exclusion checker and conditional finite-search bridge proved; production graph certificates, local deletions and tree coverage remain |
 | All concrete triangle-region certificates checked by Lean | Remaining |
@@ -494,3 +494,29 @@ formal reduction to the 1,396 production symmetry representatives and linkage
 to the endpoint tree. The full lower bound remains unproved; the subjective
 completion estimate remains about 55% (50–60%). All row checks used less than
 400 MiB of observed Lean physical footprint.
+
+## Production coarse symmetry and the 8,008-pattern universe
+
+`CoarseSymmetry` proves that all six saved coarse-group permutations send each
+of the sixteen actual continuous closed cells to its declared image. It checks
+permutation injectivity and connects the saved case order to the existing
+geometric inverse-isometry order (the orders differ). Its endpoint theorem
+preserves `Packing optimum` and transforms centered centroid memberships by
+the saved permutation. Translation to the rational outer container commutes
+with each isometry by a proved affine identity.
+
+`CoarsePatterns` defines all six-element subsets of the sixteen groups,
+proves their cardinality is 8,008, and proves every endpoint packing admits an
+injective actual coarse assignment in this exhaustive pattern universe. This
+is geometric coverage, not a statement about only exported sample records.
+The symmetry action on the unordered pattern agrees with its action on the
+actual assignment. The reduction to the 1,396 saved representatives and their
+endpoint-tree domains remains unproved.
+
+All six continuous cell-action checks, assembled endpoint action and pattern
+coverage passed under the external memory guard; the maximum observed Lean
+footprint was 442 MiB. `audit/check_coarse_symmetry_export.py` separately
+compares the exported permutations with the original saved table and checks
+all 96 cell-vertex images using exact integers. The Lean proofs do not assume
+that external comparison. The full lower bound remains unproved; the overall
+planning estimate remains about 55% (50–60%).

@@ -494,3 +494,13 @@ proves continuous coarse membership and an injective six-group choice from
 the accepted root cover. Saved group labels agree in an external comparison;
 formal saved-label binding, coarse symmetry actions, representative coverage
 and linkage to the case tree remain required for the global lower bound.
+
+### Geometric coarse actions and exhaustive six-group patterns
+
+`CoarseSymmetry` now proves all 96 closed-cell images under the six saved case
+permutations, their correspondence to actual container isometries, and their
+action on the centered exact endpoint packing. `CoarsePatterns` proves the
+exhaustive 8,008-pattern universe and actual endpoint-packing coverage of that
+universe. Next, prove finite coverage by the 1,396 production representatives
+and carry transformed assignments, triangle ordering and root domains into
+the endpoint tree. Source group-label binding remains separately required.

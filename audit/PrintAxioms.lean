@@ -2740,3 +2740,21 @@ import Sixpack
 #print axioms Sixpack.endpoint_root_coarse_membership
 #print axioms Sixpack.endpoint_root_coarse_group_injective
 #print axioms Sixpack.endpoint_root_coarse_cover
+
+#print axioms Sixpack.production_coarse_permutation_injective
+#print axioms Sixpack.centroid_uv_case_symmetry
+#print axioms Sixpack.production_coarse_action0
+#print axioms Sixpack.production_coarse_action1
+#print axioms Sixpack.production_coarse_action2
+#print axioms Sixpack.production_coarse_action3
+#print axioms Sixpack.production_coarse_action4
+#print axioms Sixpack.production_coarse_action5
+#print axioms Sixpack.production_coarse_action
+#print axioms Sixpack.center_embed_container_inverse_iso
+#print axioms Sixpack.production_coarse_centroid_action
+#print axioms Sixpack.endpoint_coarse_case_action
+#print axioms Sixpack.coarse_group_pattern_card
+#print axioms Sixpack.coarse_six_pattern_count
+#print axioms Sixpack.coarse_group_pattern_mem
+#print axioms Sixpack.coarse_group_pattern_action
+#print axioms Sixpack.endpoint_coarse_pattern_cover
