@@ -10,7 +10,7 @@ It is not a schedule forecast.
 | Explicit upper-bound packing | Complete in the current scaled-coordinate model |
 | General geometric primitives and normalization | Unit-triangle congruence, either vertex ordering, triangle hulls/interiors and separating-axis necessity proved; general outer-container isometry normalization remains |
 | Continuous orientation coverage | Fundamental half-angle chart, closed angle-bin coverage, centroid domains and uniform common inner triangles proved |
-| Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries proved; coarse group index bindings and orbit/case reduction remain |
+| Continuous spatial coverage and symmetry reduction | Coarse cover and six-centroid injection proved; full production root enumeration and first-node child enumeration accepted; six container symmetries and root-to-coarse ancestry/injection proved; saved-group bindings and orbit/case reduction remain |
 | Local five-piece nonlinear rigidity | Radius and all three tube rigidity theorems proved; generic region-to-chart and endpoint bridges proved for all four profiles; production-wide certificate acceptance and coverage remain |
 | Sound finite search and certificate machinery | Exact inner geometry, projection/pair-exclusion checker and conditional finite-search bridge proved; production graph certificates, local deletions and tree coverage remain |
 | All concrete triangle-region certificates checked by Lean | Remaining |
@@ -474,3 +474,23 @@ external evidence for those parts and is not a Lean proof.
 
 See `FORMALIZATION_PLAN.md`, `PROTOTYPE_REPORT.md` and the axiom audit for the
 precise theorem boundaries.
+
+## Checked root-to-coarse ancestry
+
+`GridAncestry` checks an explicit three-subdivision ancestry witness for each
+of the 1,024 valid grid-32 cells, in 32 serial kernel checks. The universal
+midpoint containment lemma then proves containment in the declared grid-4
+production group, including closed boundaries. `EndpointRootCoarseCover`
+combines this with accepted root enumeration and centroid separation: every
+actual packing at or below `outerBound` has a represented root choice whose
+computed six coarse groups are injective. No finite case-coverage hypothesis
+is assumed in this theorem.
+
+`audit/check_grid_ancestry_export.py` independently compares the exported
+witnesses and production numbering, and finds that all 34,660 saved root group
+labels agree. This source-label comparison is external evidence, not a Lean
+binding of the saved `.groups` file. The 8,008 six-group patterns still need
+formal reduction to the 1,396 production symmetry representatives and linkage
+to the endpoint tree. The full lower bound remains unproved; the subjective
+completion estimate remains about 55% (50–60%). All row checks used less than
+400 MiB of observed Lean physical footprint.

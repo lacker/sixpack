@@ -485,3 +485,12 @@ all 352 exclusions needed for leaf case 459 and closes the original domains.
 The next step is to generate useful block partitions for the larger production
 searches and their deletions; their existence, completeness and acceptance are
 not assumed from the successful small leaf.
+
+### Root ancestry and injective production groups
+
+`GridAncestry` now accepts all 1,024 integer midpoint ancestries from grid 32
+to the production-ordered sixteen grid-4 cells. `EndpointRootCoarseCover`
+proves continuous coarse membership and an injective six-group choice from
+the accepted root cover. Saved group labels agree in an external comparison;
+formal saved-label binding, coarse symmetry actions, representative coverage
+and linkage to the case tree remain required for the global lower bound.

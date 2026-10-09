@@ -200,3 +200,4 @@ import Sixpack.SearchComposition
 import Sixpack.EndpointLeaf31Blocks
 import Sixpack.EndpointLeaf31Search
 import Sixpack.EndpointLeaf31Closure
+import Sixpack.EndpointRootCoarseCover
