@@ -8,9 +8,10 @@ unit equilateral triangles in an equilateral triangle, with candidate side
 research claims a complete computer-assisted proof. The fresh full replay passed
 all 108 graphs and the final tree audit; all rebuilt graph hashes match. The
 written analytic lemmas were audited, with no defect found. The local radius
-analysis has since been formalized for packings in the rotation chart; tube,
-global coverage and production search claims remain outside Lean. Original
-success logs are retained as reference material.
+and tube analyses have since been formalized for packings in explicit rotation
+and anchor charts. Global spatial coverage, region-to-chart bindings and
+production search claims remain outside Lean. Original success logs are retained
+as reference material.
 
 - `six_triangle_packing/`: the 730 original research files, preserved byte for
   byte from the archive. Its historical claims are reference material.
@@ -38,7 +39,7 @@ lake exe cache get Mathlib.Data.Real.Sqrt Mathlib.Tactic \
   Mathlib.Analysis.Calculus.Deriv.Prod Mathlib.Analysis.Calculus.Taylor \
   Mathlib.Analysis.NormedSpace.HahnBanach.Separation
 lake build
-lake env lean audit/PrintAxioms.lean
+lake env lean -M4096 audit/PrintAxioms.lean
 ```
 
 The formal results cover exact construction checks, the scaled metric, conservative
@@ -53,15 +54,17 @@ and radius rigidity are proved. The 43 excluded separators and finite branch
 cover are checked. Separating-axis necessity is proved for arbitrary positively
 oriented nondegenerate triangles with disjoint interiors. The combined radius
 theorem now starts from an actual packing whose five core pieces are in the
-rotation chart, and forces all displacement coordinates to zero. Tube arguments,
-global chart coverage and production search certificates remain.
-The tube anchor chart, normal Jacobian and exact critical-curve energy are now
-proved. Uniform normal Taylor bounds and exact angle interpolation are also proved.
-Sampled matrices and constraint norm bounds are verified for all eight branches.
-Basic inverse and multiplier contractions and preliminary weighted estimates are
-verified. Gradient contractions and signed energy slack coefficients are checked
-for all eight branches. Hessian contractions, full tube theorems and global
-coverage remain.
+rotation chart, and forces all displacement coordinates to zero. The tube results
+below extend this local theorem; global region-to-chart bindings and production
+search certificates remain.
+All three selected tubes now have packing rigidity theorems in the explicit
+anchor chart, including checked derivative contractions, positive gaps, the 22
+excluded axes and finite branch coverage. Unit-triangle congruence, fundamental
+half-angle coverage, closed angle-bin coverage, support/centroid-domain bounds
+and the inscribed-disk centroid-separation bound are also proved. Global spatial
+coverage, region-to-chart bindings, production search certificates and endpoint
+classification remain. Compilation uses a 4 GB Lean memory limit; the large
+Hessian checks run in serial branch modules.
 Consult the plan for exact theorem names and limitations. Passing this build does not establish optimality.
 
 ## Reproduce the original computer checks without modifying the reference

@@ -44,7 +44,7 @@ The following modules now build as part of the default target:
 | `IntervalCertificate` | A rational interval-region compatibility test, its real soundness, closed continuous cover, and a complete certificate proof that three mutually separated unit-interval endpoints cannot lie in `[0,1]` | A one-dimensional example, not any of the 108 triangle graphs |
 | `RadiusRigidity` | The radius contradiction from explicit motion/energy estimates; exact uniform rational gap; actual corner-triangle rigidity under fixed-centroid rotations with nonnegative cosine | The generic criterion is conditional; `EnergyFixture` now proves its analytic hypotheses for branch 0 |
 | `RadiusCertificate` | A dimension-checked rational checker recomputing all component inequalities, `T`, `beta`, `C0`, `eta`, and the decisive gap; accepted arithmetic implies the radius criterion over the reals | The generic checker accepts input bounds; branch 0 geometric bindings are supplied by the later enclosure and energy layers |
-| `RadiusFixture` | Kernel acceptance of all rational radius inequalities for original branch 0 at `1/300`; conditional rigidity from the two analytic estimates; rejection of a truncated input | The later `EnergyFixture` establishes the branch 0 geometric bridge; branch and tube coverage remain |
+| `RadiusFixture` | Kernel acceptance of all rational radius inequalities for original branch 0 at `1/300`; conditional rigidity from the two analytic estimates; rejection of a truncated input | The later all-branch radius and tube layers supply the geometric bindings and chart-local coverage |
 
 The fixture uses `decide +kernel`, not native evaluation as proof evidence.
 See [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md) for measurements and precise scope.
@@ -70,7 +70,7 @@ a bound on the actual directional derivatives.
 The first-order results alone do not establish nonlinear local rigidity. The
 later Taylor and energy layers prove branch 0's actual motion and energy
 estimates and discharge the generic radius criterion's analytic hypotheses.
-Geometric coverage by the eight branches remains.
+The later finite branch layers supply geometric coverage in the local charts.
 
 `lower_bound_from_boundary_classification` is deliberately a **conditional**
 theorem: its containment, translation, and boundary-classification hypotheses are
@@ -97,7 +97,7 @@ linear reconstruction, nonnegative constraints and explicit Taylor errors.
 `MotionFixture` checks branch 0's motion coefficients and specializes that
 estimate to actual geometric constraint values. The later `TaylorFixture`
 removes its Taylor-error hypothesis. The later `EnergyFixture` supplies the energy
-estimate and concludes branch 0 local rigidity. Geometric branch coverage remains.
+estimate and concludes branch 0 local rigidity. The later finite branch layers supply chart-local geometric coverage.
 
 ### Uniform third derivatives and Taylor estimates
 
@@ -212,8 +212,8 @@ retained constraint values on the actual anchor rotation curve.
 multipliers, proves the actual curve energy identity and lower bound, and proves
 rigidity within each retained branch when normal displacement is zero.
 `TubeEstimates` proves the final algebraic contradiction from explicit motion
-and energy inequalities. Derivation of those inequalities throughout each tube
-is still required; no full tube or packing theorem follows from their assumption.
+and energy inequalities. The later radius layers now derive those inequalities from actual geometric
+constraints and instantiate the contradiction in all three selected tubes.
 
 `TubeNormalModel` identifies the actual normal paths with the rotation model.
 `TubeThirdBounds` and `TubeThirdGeometry` prove uniform repeated normal-direction
@@ -230,17 +230,14 @@ cosine coefficient matrices. `TubeNormCertificate`, `TubeNormFixture` and
 `TubeNormFamily` reconstruct and check all five constraint norm bounds for all
 eight branches, using only kernel computation. `TubeNormControls` and
 `TubeNormGeometry` derive actual uniform Jacobian variation, second derivative
-and origin-Jacobian constraint error estimates. Angle-dependent inverse/objective
-Hessian contractions, final motion/energy estimates and excluded axes remain.
+and origin-Jacobian constraint error estimates. The contraction and separator layers below now complete the three local tubes.
 
 The basic inverse and multiplier contractions are now checked for all eight
 branches in `TubeBaseFixture`: feasible-slack domination by `beta`, the inverse
 curve coefficient `Cz`, and the weighted third constants `Mv` and `Mh`.
 `TubeWeightedExpansion` proves the exact weighted Taylor decomposition and derives
 preliminary motion and energy bounds for actual constraints, with no assumed
-remainder or certificate acceptance. The angle-dependent
-second-derivative contractions still need checking and bounding before these
-estimates imply the full tube theorem.
+remainder or certificate acceptance. The later Hessian and radius layers complete these estimates.
 
 The angle-dependent gradient contractions are now checked for all eight branches:
 `K1s`, `K1c`, and `Fc` are reconstructed from actual geometric rows. Lean proves
@@ -248,36 +245,72 @@ that all rows outside 9–12 vanish, then contracts only those four rows.
 `TubeEnergySlack` retains the signed sine covector and proves its transformation
 through the verified normal inverse. The ratio `Bg`, curve coupling `bz`, and
 individual absolute slack coefficients are also checked from reconstructed data.
-The actual motion estimate now has only its Hessian contraction left unbounded;
-the signed energy sine term is bounded using feasible constraints, the curve and
-the proved geometric constraint errors. Hessian contractions, the final positive
-inequalities and excluded axes remain before a complete tube theorem follows.
+The signed energy sine term is bounded using feasible constraints, the curve and
+the proved geometric constraint errors. The Hessian and radius layers now close
+the remaining derivative and strict-gap obligations.
+
+### Complete tube estimates and packing bridge
+
+`TubeSparseHessian` and `TubeHessianSupport` prove the geometric support and
+zero-row guards used by the sparse contraction checker. `TubeHessianContractions`
+binds each weighted matrix to the actual normal second derivative. The individual
+kernel checks in `TubeHessianBranches` are assembled by `TubeHessianFixture` for
+all eight branches. `TubeHessianGeometry` supplies the actual motion and energy
+polynomials, with no assumed derivative bounds.
+
+`TubePolynomialReserve` compresses the Taylor polynomials throughout a normal
+radius. `TubeRadiusMotion` and `TubeRadiusEnergy` derive the radius estimates;
+`TubeRadiusGaps` reconstructs and checks all 24 positive-gap combinations.
+`TubeRetainedRigidity` proves rigidity within every retained branch in each of
+`(A,W) = (1/60,1/300), (1/40,1/500), (1/25,1/2000)`.
+
+`TubeValueForms` binds exact sampled values even for excluded witnesses.
+`TubeSeparatorCertificate` proves negative witness bounds throughout closed
+tubes, and `TubeSeparatorFixture` checks the 22 concrete witnesses and all selected
+radius margins. `TubeAxisCoverage` proves finite coverage; `TubeBranchCoverage`
+selects a retained branch from feasible axes. `TubePackingRigidity` supplies
+`selected_tube_packing_rigidity` for actual `Packing (optimum+w 14) T` with the
+five core pieces in the anchor chart. Together with `w 14 ≤ 0` and the selected
+tube bounds it proves `w = 0 ∧ a = 0`. No analytic or computational acceptance
+hypothesis remains. Global placements are not yet proved to enter these charts.
+
+Project compilation uses `-M4096`. The eight numerical branch modules form a
+serial import chain to prevent simultaneous heavy replay. The Python fixture
+generators only export untrusted bounds and proof statements.
+
+### Continuous orientation and disk foundations
+
+`EquilateralGeometry` derives unit-triangle area, the third vertex and a rotation
+chart from the three side lengths. Vertex reversal preserves hull and centroid,
+so the hull representation handles either ordering. `OrientationCover` uses the
+three cyclic edge directions to put the cosine at least `1/2`, then proves the
+exact half-angle inverse with parameter in `[-1/3,1/3]`.
+
+`OrientationSupport` proves the actual containment margins, the support factor,
+its evenness and monotonicity, and the closed-bin minimum. `OrientationBins`
+proves continuous coverage by all closed rational bins and connects their
+minimum support to actual triangle centroid domains. `InscribedDisk` proves the
+open inscribed disk and the squared centroid separation `1/3` for disjoint unit
+triangles. The spatial region and graph data still need geometric bindings.
 
 ## Remaining modules, in dependency order
 
-1. **Exact algebra and geometric primitives.** Extend the proved rational
-   quadratic-coefficient algebra with division and outward rational enclosures.
-   Connect all three squared unit
-   lengths to congruence with the upright triangle and normalize an arbitrary
-   equilateral outer container into this coordinate chart by a Euclidean isometry.
-   The triangle supporting half-planes are now proved for positive orientation.
-   Prove the inscribed disk. Supporting half-planes, strict interiors and
-   separating-axis necessity are proved for positive orientation.
-2. **Orientation and region cover.** Prove the half-angle chart covers shapes
-   modulo 120°, derive the support factor and its monotonicity, prove the common
-   inner triangle, and certify closed-cell intersections including lines and
-   points. Prove the disk/coarse-cell injection and all six symmetry actions;
-   compute and certify the 8,008-to-1,396 reduction.
-3. **Local analytic theorems.** The actual 16-variable constraints, nonlinear
-   energy estimate, all eight coefficient checks, uniform diagonal third
-   derivatives, Taylor estimates and finite branch cover are proved. The radius
-   `1/300` is proved for actual packings in the rotation chart. The anchor-based
-   tube chart, normal Jacobian at the origin and exact critical-curve energy are
-   proved, together with angle-dependent normal derivative identities and uniform
-   normal Taylor remainder bounds. Sampled matrices and the five constraint norm
-   enclosures are now checked and bound to geometry. Check the angle-dependent inverse/objective
-   Hessian contractions, prove normal
-   motion and energy estimates, check the excluded axes, and prove all three tubes.
+1. **Exact algebra and outer-container normalization.** Extend the proved
+   rational quadratic algebra with division and outward rational enclosures as
+   required by production certificates. Unit-triangle congruence and both vertex
+   orderings are proved. Normalize an arbitrary equilateral outer container by a
+   Euclidean isometry into the current scaled-coordinate model.
+2. **Spatial and region cover.** Fundamental orientation coverage, its closed
+   rational bins, exact support margins and bin minima are proved. Prove the
+   common inner triangle, concrete closed-cell intersections (including lines
+   and points), all spatial refinements and the coarse-cell injection using the
+   proved inscribed-disk separation. Prove all six container symmetry actions and
+   certify the 8,008-to-1,396 reduction.
+3. **Local chart bindings.** The radius and all three tube packing theorems are
+   proved in their explicit rotation and anchor charts, including the eight
+   branches and excluded axes. Prove that each certified whole-region local label
+   enters the corresponding chart and radius; establish its recentering map and
+   conservative relative-angle and anchor-displacement bounds.
 4. **Whole-region labels.** Prove exact recentering from the rational cover to the
    candidate container, including reflections and rotations. Prove uniform
    relative-angle bounds and the critical-vertex interpolation bound. Check each

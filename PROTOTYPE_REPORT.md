@@ -1,8 +1,9 @@
 # Lower-bound feasibility prototypes
 
-The full lower bound and the unrestricted five-piece local rigidity theorem are
-**not yet formalized**. These experiments test a sound certificate route and
-begin the local proof with precisely stated boundaries.
+The full lower bound is **not yet formalized**. Local radius and all three tube
+packing rigidity theorems are now proved in explicit charts. Global spatial
+coverage, region-to-chart bindings and production certificates remain. The early
+experiments below record the route and its precise boundaries.
 
 ## A complete small certificate route
 
@@ -240,8 +241,9 @@ with no Taylor-error hypothesis. `TaylorControls` rejects zero third constants,
 a zero weighted remainder bound and a negative radius.
 
 No original Python/C++ routine is used as evidence for these analytic bounds.
-The full lower bound is still pending tube arguments, the remaining geometric
-bridge and global coverage, and production search certificates.
+The full lower bound still needs global spatial coverage, region-to-chart
+bindings, production search certificates and endpoint classification. The later
+layers below prove the chart-local tube results.
 
 ## Nonlinear energy and branch zero geometric rigidity
 
@@ -338,14 +340,13 @@ Each retained branch is rigid on the curve with zero normal displacement.
 estimates. It does not supply those estimates. Angle-dependent normal derivative
 identities and uniform Taylor remainders are now proved, as detailed below.
 Sampled matrices and their five constraint norm bounds are now bound to geometry
-and checked across all eight branches. Angle-dependent inverse/objective contractions, final
-motion/energy estimates and the 22 excluded tube axes remain before any of the
-three full tubes is proved.
+and checked across all eight branches. The later contraction, radius and separator layers now prove all three tubes
+in their anchor charts; global region-to-chart bindings remain.
 
 ## Next useful milestone
 
-Formalize the three tubes, their recentering maps and chart
-coverage. Extend the search prototype with channel-specific local labels and a
+Bind global placement regions to the proved local charts and their
+recentring maps, and certify the spatial cover. Extend the search prototype with channel-specific local labels and a
 small genuine triangle-region certificate. Production global coverage and search
 certificates remain necessary for the end-to-end lower bound.
 
@@ -359,8 +360,8 @@ normal derivatives, with the zero sample bound to the existing geometric jets.
 These proofs use no Python/C++ acceptance assumptions. They do not establish
 full mixed derivative bounds or a complete tube theorem. Sampled matrix bindings
 and the five constraint norm bounds are now checked
-for all eight branches. Angle-dependent inverse/objective contractions, final motion/energy
-inequalities and the excluded tube axes remain.
+for all eight branches. Those contractions, final inequalities and excluded axes are now checked by
+the later layers.
 
 ## Sampled tube matrices and checked constraint norms
 
@@ -373,17 +374,15 @@ input: `TubeNormCertificate` recomputes them from the geometric formulas and
 `TubeNormFamily` checks all eight branches in the kernel, reusing the 19 distinct
 constraints. `TubeNormGeometry` derives uniform Jacobian variation and second
 derivative bounds, and combines them with Taylor to bound constraint error about
-the origin Jacobian. No complete tube theorem follows yet: angle-dependent inverse/objective
-Hessian contractions, the final estimates and excluded axes remain.
+the origin Jacobian. The later contraction, radius and separator layers now complete the tube
+packing theorems in their explicit charts.
 
 The basic inverse and multiplier contractions are now checked for all eight
 branches in `TubeBaseFixture`: feasible-slack domination by `beta`, the inverse
 curve coefficient `Cz`, and the weighted third constants `Mv` and `Mh`.
 `TubeWeightedExpansion` proves the exact weighted Taylor decomposition and derives
 preliminary motion and energy bounds for actual constraints, with no assumed
-remainder or certificate acceptance. The angle-dependent
-second-derivative contractions still need checking and bounding before these
-estimates imply the full tube theorem.
+remainder or certificate acceptance. The later Hessian and radius layers complete these estimates.
 
 The angle-dependent gradient contractions are now checked for all eight branches:
 `K1s`, `K1c`, and `Fc` are reconstructed from actual geometric rows. Lean proves
@@ -391,7 +390,30 @@ that all rows outside 9–12 vanish, then contracts only those four rows.
 `TubeEnergySlack` retains the signed sine covector and proves its transformation
 through the verified normal inverse. The ratio `Bg`, curve coupling `bz`, and
 individual absolute slack coefficients are also checked from reconstructed data.
-The actual motion estimate now has only its Hessian contraction left unbounded;
-the signed energy sine term is bounded using feasible constraints, the curve and
-the proved geometric constraint errors. Hessian contractions, the final positive
-inequalities and excluded axes remain before a complete tube theorem follows.
+The signed energy sine term is bounded using feasible constraints, the curve and
+the proved geometric constraint errors. The remaining Hessian contractions,
+positive inequalities and excluded axes are now checked.
+
+
+## Three packing tubes and continuous orientation foundations
+
+`selected_tube_packing_rigidity` proves all three selected closed tubes for actual
+packings whose five core pieces are in the explicit anchor chart. It assumes
+neither separating-axis feasibility nor analytic/certificate acceptance. The
+sixth triangle is unrestricted by the chart. Its proof includes all eight
+contracted Hessian checks, all 24 branch/radius strict gaps, 22 excluded witnesses,
+finite axis coverage and the actual packing bridge. See `FORMALIZATION_STATUS.md`
+for exact bounds and limitations.
+
+The initial monolithic Hessian check was stopped for excessive memory use.
+Individual contraction checks now run in a serial chain of eight branch modules,
+with Lean's 4 GB memory limit. This changes how the kernel computation is divided,
+not its trust basis; no native Boolean result is accepted as a proof.
+
+Separate geometric proofs now derive congruence of any unit triangle, cover its
+hull by the fundamental half-angle chart with either vertex ordering, cover every
+real parameter by closed angle bins, and prove their exact support/centroid
+bounds. The inscribed disk implies squared centroid separation at least `1/3`.
+These are foundations for global coverage, not certification of any production
+triangle-region graph. Spatial cells, inner triangles, symmetries, chart bindings,
+production search soundness and endpoint classification remain.
