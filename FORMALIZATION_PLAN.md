@@ -570,10 +570,10 @@ still need their own checks.
 The spatial/angular lookup bottleneck is now reduced: sparse paths use
 bounded 32-entry pages and block members use finite images of indexed arrays.
 The largest block now passes in 59 seconds rather than 560 seconds, with a
-603 MiB peak. The first 47 production batches pass, giving 705 accepted
+603 MiB peak. The first 63 production batches pass, giving 955 accepted
 blocks in total. The remaining table is partitioned into 692 bounded batches;
 `audit/check_b31_spatial_angle_batches.py` generates and checks them serially
-without expanding the default import graph. Continue from batch 47, then prove
+without expanding the default import graph. Continue from batch 63, then prove
 the complete block acceptance and pruning coverage before composing the
 retained-parent reduction with the accepted final refinement and leaf closure.
 Keep all heavy checks serial under the external memory guard.
@@ -604,7 +604,23 @@ proof exceeded the external memory cap; the split assembly peaks at 459 MiB.
 Final snapshot choices and their actual labels are now bound to the two
 accepted leaf-refinement parent cases. `b31_final_snapshot_no_packing` composes
 this complete domain binding with the accepted refinement and leaf closure.
-Accept remaining geometric blocks from batch 47,
+Accept remaining geometric blocks from batch 63,
 prove every removed owner's complete row coverage against its current blocker
 domain, and assemble geometric pruning with the accepted survivor transitions.
 The full production pruning theorem and root reachability remain open.
+
+Use the indexed rectangular-coverage checker for grouped production rows.
+Each group owner names its position in every used block, and every blocker
+names one block and its position on the other side. Checked positional
+equalities imply the existing rectangle-coverage predicate. The complete
+owner-640/641 group now compiles and is bound to accepted geometric blocks,
+using 32-case blocker chunks and an exhaustive index-cover lemma. Export
+the remaining groups with the same positional method, keeping both owner
+and blocker checks in bounded chunks. Geometric block acceptance and full
+production trace composition remain separate.
+
+`audit/export_b31_indexed_row_groups.py` exports the exhaustive 1,044-group
+plan for all 4,247 owner rows. Its scope checker verifies unique full coverage
+and all 214,380 positional witnesses. Generalize the accepted prototype to
+this plan, batching both sides in small chunks. This plan is untrusted until
+the corresponding Lean acceptance and block bindings compile.

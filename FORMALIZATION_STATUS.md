@@ -639,20 +639,20 @@ and midpoint spatial paths, preserving the actual continuous hull chart.
 parent certificates and those paths. `SpatialAngleBlockSearch` and
 `SpatialAngleDomainRestriction` prove the conservative search and production
 parent-deletion bridges. Concrete b31 table and trace acceptance remain. The current
-`EndpointB31SpatialAnglePilot` accepts 705 blocks, covering 69,125 ordered pairs
-from actual b31 records. These comprise the two original pilot blocks and 47
+`EndpointB31SpatialAnglePilot` accepts 955 blocks, covering 77,344 ordered pairs
+from actual b31 records. These comprise the two original pilot blocks and 63
 bounded production batches. The source audit checks the indexed member images,
 every chunk selector and path, and the complete untrusted batch partition.
 
 The largest block covers 46,662 pairs using twelve rational projection bounds
 plus 433 integer ancestry checks. Bounded path lookups and finite-image member
 sets reduce its build from 560 seconds / 1,843 MiB to 59 seconds / 603 MiB.
-The 47 production batches all pass with peaks below 1,434 MiB; the latest
-full default build peaks at 406 MiB. The generator keeps new batches outside the
+The 63 production batches all pass with peaks below 1,434 MiB; the latest
+full default build peaks at 694 MiB. The generator keeps new batches outside the
 import graph until checked, and the runner checks them serially under the
 external guard. There are 692 planned batches in total, of which
-47 are accepted (batches 0–46). No complete b31 pruning or root reachability theorem is
-claimed; 9,171 of the 9,876 proposed blocks still need acceptance, followed by
+63 are accepted (batches 0–62). No complete b31 pruning or root reachability theorem is
+claimed; 8,921 of the 9,876 proposed blocks still need acceptance, followed by
 checked coverage and composition of all 21 pruning rectangles.
 
 `RectanglePruning` now proves that checked rectangle coverage preserves every
@@ -670,7 +670,7 @@ owner 640 and second piece uses any of these blocker choices. The finite row
 build peaked at 644 MiB; the geometric assembly peaked at 389 MiB. This row
 is unconditional apart from its explicit region/domain hypotheses. Full
 21-step coverage and full block acceptance remain open; continue serial block
-acceptance from batch 47.
+acceptance from batch 63.
 
 `RectangleSnapshotPruning` proves actual-packing preservation through checked
 explicit domain snapshots. Each snapshot must contain every choice surviving
@@ -691,7 +691,7 @@ The source audit compares every actual node, witness, lookup and domain in all
 22 snapshots with the production scope. An initial combined transition proof
 was stopped by the external guard at 3,175 MiB; isolated transitions with
 explicit array-function equalities now pass, and the final assembly peaks at
-459 MiB. The latest default build passes at 406 MiB.
+459 MiB. The latest default build passes at 694 MiB.
 
 This completes the snapshot survivor bookkeeping. Geometric deletion for every
 removed owner, full row coverage and complete geometric trace assembly remain
@@ -708,5 +708,30 @@ leaf closure. The bridge build peaked at 459 MiB. Its source audit compares
 all 36 inverse-parent entries and all 7,023 lookup defaults with the preserved
 refinement scope. Reaching this snapshot from the initial domains remains
 unproved: full geometric block acceptance and every removed owner's complete
-row coverage are still required. The thirteen new certificate batches all
-passed; continue with batch 47.
+row coverage are still required. The first 63 certificate batches all pass;
+continue with batch 63.
+
+`IndexedRectangleCoverage` checks direct array-index equality witnesses for
+all group-owner positions in all used blocks and for every blocker position.
+Its soundness theorem produces ordinary rectangle coverage; its exclusion
+theorem requires separate geometric block proofs.
+
+`EndpointB31IndexedFirstGroup` accepts the complete step-0 owner group
+**640/641**, checking 44 owner positions and all 346 blocker positions.
+The indexed blocks are proved equal to the existing accepted geometric block
+member sets, so both owner rows now have continuous geometric exclusion.
+The build took 24 seconds and peaked at 710 MiB, compared with 178 seconds
+for the earlier single-owner finite-set coverage proof. Thirty-two-case chunks
+have a proved complete blocker-index cover. The source audit compares every
+actual factory and positional selector to the production scope. This provides
+a bounded acceptance method for the remaining groups; full row coverage and
+the complete geometric trace remain unproved. The sixteen new certificate
+batches pass with peaks below 1,434 MiB.
+
+The complete untrusted indexed-row proposal now contains **1,044 groups**,
+covering all **4,247 removed-owner rows** exactly once. It proposes 37,838 owner
+position and 176,542 blocker position checks. The external scope audit verifies
+every positional equality against the actual production blocks and verifies
+complete owner coverage in all 21 steps. Only the 640/641 prototype group is
+currently accepted by Lean with geometric exclusion; the remaining group plan
+is not formal evidence.

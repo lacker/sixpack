@@ -218,3 +218,5 @@ import Sixpack.RectangleSnapshotPruning
 import Sixpack.IndexedDomainPartition
 import Sixpack.EndpointB31SnapshotAssembly
 import Sixpack.EndpointB31SnapshotRefinement
+import Sixpack.IndexedRectangleCoverage
+import Sixpack.EndpointB31IndexedFirstGroup
