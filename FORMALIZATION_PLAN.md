@@ -796,3 +796,22 @@ domains. The remaining incoming obligation is to prove that the two relevant
 root cases reach those selected domains by sound geometric clique-support
 pruning. The other twelve b31 cases and all other production branches remain
 independent obligations.
+
+
+Begin the twelve additional b31 case closures with case 1341. Its 32 selected
+geometric blocks and first 116-owner coverage group are now imported and fully
+axiom-audited. The proposed complete table has 971 blocks in 80 bounded batches;
+its full build and audit are running. Coverage has 117 proposed groups covering
+all 540 owners, followed by a one-component packing-exclusion constructor. That
+workflow is queued after table acceptance and has not yet been validated end to
+end. After the refined-case closure, prove ordered root-refinement domain binding
+for case 1341 and incoming root clique-support selection.
+
+Reproduce the additional case proposal with
+`python3 audit/compress_b31_closed_case.py --case 1341`, then
+`python3 audit/export_b31_closed_case_plans.py --case 1341`. Inspect actual scope
+using `audit/check_b31_closed_case_export.py --case 1341` and the corresponding
+indexed-group auditor. These external audits never replace Lean acceptance.
+All twelve externally closed cases have source-audited proposals in the workspace.
+Their 102,887 blocks contain repeated parent-pair certificates; investigate reuse
+before accepting all of them separately. No additional whole case is yet proved.

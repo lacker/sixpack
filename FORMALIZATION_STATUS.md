@@ -1170,3 +1170,40 @@ step-3 geometric dependencies, and its full positive execution remains to be
 validated. The remaining eighteen transitions, incoming selected-root coverage,
 the twelve other b31 cases, global classification and lower bound remain
 unproved. Overall completion remains about 60% (55–65%).
+
+
+## First geometric coverage group for the additional b31 case 1341
+
+Case 1341 has an externally proposed two-step closure of a different ordered
+case. Exact-rational compression produced 971 blocks covering 88,602 pairs.
+The independent source auditor verifies every proposed partition, actual node
+record, integer spatial/angular ancestry path and complete trace scope. These
+checks do not establish geometric acceptance or packing closure.
+
+The default checkpoint accepts batches 0, 3, 5, 30, 32 and 33: 32 geometric
+blocks covering 25,448 pairs. Their first four-block pilot passed at 669 MiB.
+`b31_case1341_row_group0_geometric_exclusion` now proves every one of its
+116 actual owners incompatible with all 162 actual blockers, covering 18,792
+pairs. Its exact positional coverage and geometric bindings are proved, not
+assumed. The coverage group compiled in 63 seconds at 915 MiB.
+
+The default build passes (4,976 jobs, 529 MiB). The full shared dependency
+audit passes in 120 seconds at 568 MiB: 13,118 listed checks and 13,117 distinct
+declarations, including 67 new public dependencies, use only standard logical
+axioms. Actual source and positional audits pass. No forbidden proof shortcuts
+occur in the accepted modules. The archive and all 730 originals are unchanged.
+
+The other eleven externally closed cases also have exact-rational proposals,
+and all twelve source-scope audits passed. Those bulk proposals are workspace
+research inputs and do not count as Lean proof. Proposed duplicate parent-pair
+certificates should be reused where possible before full acceptance.
+
+The complete case-1341 geometric table is checking 80 bounded batches. Its
+117-group positional coverage and an actual-packing closure are queued behind
+that table's successful compilation and dependency audit. The closure constructor
+uses the fact that only component 0 is pruned, with the two blocker domains
+unchanged; it still requires all group exclusions and all 540 initial-owner
+selectors to be proved. Those queued workflows and the full closure are not yet
+accepted. Incoming root selection, the other closed cases, remaining main-chain
+steps, global classification and lower bound remain unproved. Overall completion
+remains about 60% (55–65%).
