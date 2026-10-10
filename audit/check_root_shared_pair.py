@@ -24,17 +24,10 @@ def vec(values):
     return '![' + ','.join(rat(v) for v in values) + ']'
 
 
-def main():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('prefix', type=Path)
-    p.add_argument('--block', type=int, required=True)
-    p.add_argument('--batch', type=int, help='Read the proposed pair from a bounded batch')
-    a = p.parse_args()
-    proposed = json.loads(Path(str(a.prefix) + '.blocks.json').read_text())
-    case = proposed['case']
-    block = proposed['blocks'][a.block]
-    meta = json.loads((ROOT / f'audit/root-case{case}-shared-block{a.block}-export.json').read_text())
-    assert meta['case'] == case and meta['block'] == a.block
+def check_pair(proposed, meta, block_index, batch=None, audit_domains=True):
+    case = proposed["case"]
+    block = proposed["blocks"][block_index]
+    assert meta["case"] == case and meta["block"] == block_index
     parents = [block[side + '_parent'] for side in ('owner', 'other')]
     keys = [tuple(parent[f] for f in FIELDS) for parent in parents]
     reversed_pair = keys[1] < keys[0]
@@ -45,23 +38,24 @@ def main():
     name = 'rootSpatialAnglePair' + digest
     assert meta['digest'] == digest and meta['name'] == name and meta['reversed'] == reversed_pair
     assert meta['axes'] == axes and [d['parent'] for d in meta['domains']] == parents
-    subprocess.run([sys.executable, str(ROOT / 'audit/check_root_factored_domain_pilot.py'),
-                    '--case', str(case), '--block', str(a.block), '--shared'], check=True)
+    if audit_domains:
+        subprocess.run([sys.executable, str(ROOT / 'audit/check_root_factored_domain_pilot.py'),
+                        '--case', str(case), '--block', str(block_index), '--shared'], check=True)
     owner, other = meta['domains']
-    if a.batch is None:
+    if batch is None:
         text = (ROOT / f'Sixpack/RootSpatialAnglePairs/Pair{digest}.lean').read_text()
     else:
-        plan = json.loads((ROOT / f'audit/root-case{case}-shared-batch{a.batch}-export.json').read_text())
-        assert plan['case'] == case and plan['batch'] == a.batch and a.block in plan['indices']
-        assert plan['module'] == f'Sixpack.RootSpatialAnglePairs.RootCase{case}Batch{a.batch}'
-        ref = next(x for x in plan['pairs'] if x['index'] == a.block)
+        plan = json.loads((ROOT / f'audit/root-case{case}-shared-batch{batch}-export.json').read_text())
+        assert plan['case'] == case and plan['batch'] == batch and block_index in plan['indices']
+        assert plan['module'] == f'Sixpack.RootSpatialAnglePairs.RootCase{case}Batch{batch}'
+        ref = next(x for x in plan['pairs'] if x['index'] == block_index)
         assert ref['digest'] == digest and ref['module'] == meta['source_module']
         text = (ROOT / (ref['module'].replace('.', '/') + '.lean')).read_text()
     imports = [line for line in text.splitlines() if line.startswith('import ')]
     expected_imports = [f'import Sixpack.RootSpatialAngleDomains.Domain{d["digest"]}' for d in meta['domains']]
-    if a.batch is not None and ref['module'] == plan['module']:
+    if batch is not None and ref['module'] == plan['module']:
         assert imports == plan['imports'] and all(line in imports for line in expected_imports)
-    elif a.batch is not None and '.RootCase' in ref['module']:
+    elif batch is not None and '.RootCase' in ref['module']:
         import re
         match = re.fullmatch(r'Sixpack.RootSpatialAnglePairs.RootCase(\d+)Batch(\d+)', ref['module'])
         assert match
@@ -81,6 +75,21 @@ def main():
     assert f'(hv : v ∈ {owner["name"]}Members) (hw : w ∈ {other["name"]}Members)' in text
     assert f'{owner["name"]}_checked {other["name"]}_checked {name}_checked v w hv hw T U hT hU' in text
     print(f'PASS: canonical pair {digest}, all six axes and independent domain imports; Lean acceptance remains separate.')
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('prefix', type=Path)
+    p.add_argument('--block', type=int, required=True)
+    p.add_argument('--batch', type=int, help='Read the proposed pair from a bounded batch')
+    a = p.parse_args()
+    proposed = json.loads(Path(str(a.prefix) + '.blocks.json').read_text())
+    case = proposed['case']
+    block = proposed['blocks'][a.block]
+    meta = json.loads((ROOT / f'audit/root-case{case}-shared-block{a.block}-export.json').read_text())
+    assert meta['case'] == case and meta['block'] == a.block
+    check_pair(proposed, meta, a.block, a.batch)
+
 
 
 if __name__ == '__main__':

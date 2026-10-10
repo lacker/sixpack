@@ -1784,3 +1784,185 @@ Publication gate for the complete case-970 selected-root closure passed:
 24,020-declaration audit union `/tmp/sixpack-case970-closure-audit-union-v1.log`,
 and archive/all-730-file integrity check. Incoming initial-root selection and
 the unconditional global lower bound remain unproved.
+
+The bounded finite-data repair has passed the strict-order theorem and its
+single-declaration standard-axiom audit:
+`/tmp/sixpack-root-case715-first-adjacent-axioms-v1.log`. Its combined forward
+proof module exceeded the 3 GiB guard, so the same checks were split into 15
+separate 32-entry modules. Batches 0–2 have passed at 681.1, 961.9 and 1,228.8
+MiB. The remaining forward modules are running serially in
+`/tmp/sixpack-root-case715-first-forward-remaining-v1.log`; reverse coverage has now compiled (538 seconds), while
+the exact owner-union equality and its cardinality remain pending. Initial
+blocker binding has passed batches 0–188 of 271.
+
+`audit/run_root_complete_first_pruning.py` now gates the 198-row verification
+and complete actual-domain first deletion on independently validated geometry
+and blocker-cover audit scopes. It does not treat cached module locations,
+source audits, or proposed row lists as formal acceptance. It has not yet run
+because those complete prerequisite audits are still pending.
+
+The isolated forward-batch-0 axiom audit passed:
+`/tmp/sixpack-root-case715-first-forward0-axioms-v1.log`.
+Reverse-position coverage compiled despite the aggregate run failing on its
+separate over-limit forward module; it is not being restarted. Its scoped
+axiom audit is now running. No geometric deletion is inferred from these
+finite bookkeeping results alone.
+
+The complete first-deletion finite owner bookkeeping for root case 715 is now
+accepted: all 15 forward modules, reverse positions, strict ordering, exact
+198-row union equality and cardinality 459 compiled. The aggregate build
+`/tmp/sixpack-root-case715-first-rows-data-v4.log` peaked at 355.8 MiB. The
+20-declaration scoped audit
+`/tmp/sixpack-root-case715-first-rows-axioms-v1.log` passed with only standard
+logical axioms. This supersedes the earlier pending owner-union status.
+
+All nine proposed root-case survivor partitions have been exported on original
+`Fin 34660` indices, independently replayed and checked against their actual
+Lean data modules. The ten snapshots and nine transition sources also match
+the replay. Serial kernel acceptance is running in
+`/tmp/sixpack-root-case715-partitions-pipeline-v1.log` (run 3713b3a4); no
+geometric deletion or actual initial-domain entry follows from these finite
+bookkeeping checks alone. These modules are not yet default imports.
+
+An exact link from the complete 459-owner row union to partition zero's
+removed set has been proposed in `EndpointRootCase715FirstPartitionBinding`.
+The monolithic reduction hit the physical-memory guard (3,276.8 MiB) and was
+replaced by 15 separate 32-entry checks. Batch zero passed at 362.2 MiB; the
+remaining batches, aggregate equality and scoped axiom audit are running in
+`/tmp/sixpack-root-case715-first-partition-binding-pipeline-v1.log`. This link
+is not yet accepted as a whole. No memory limit was raised.
+
+Actual six-component initial-domain coverage for root case 715 has now been
+proposed in `EndpointRootCase715InitialEntry`. The independent source audit
+compares each domain and inverse selector against all 34,660 original group
+tags, plus all 271 bounded batch statements. Batch zero compiled at 642.5 MiB
+(`/tmp/sixpack-root-case715-initial-entry-batch0-v1.log`); remaining acceptance
+and the actual-domain coverage theorem run serially in
+`/tmp/sixpack-root-case715-initial-entry-pipeline-v1.log`. A separate proposed
+`InitialSnapshotBinding` connects these exact entry domains to trace stage
+zero by definitional equality. Neither the complete entry nor that binding
+is yet accepted; geometric closure of all nine deletions remains separate.
+
+The first-deletion-to-partition binding has now completed successfully:
+all 15 bounded chunks, the aggregate pointwise equality and exact removed-set
+equality compiled. The aggregate peaked at 366.3 MiB; all bounded chunks
+peaked below 750 MiB. The 17-declaration scoped audit
+`/tmp/sixpack-root-case715-first-partition-binding-axioms-v1.log` passed with
+only standard logical axioms, superseding the earlier pending binding status.
+This formally identifies the 198-row owner union with partition zero's removed
+set, but does not itself prove those owners geometrically impossible.
+
+Geometry proposals for all remaining eight deletions are being exported in
+`/tmp/sixpack-root-case715-remaining-geometry-export-v1.log`, using batch
+numbers after 258 and preserving the complete first-deletion manifest.
+`run_root_case715_remaining_geometry.py` supplies independent full-scope source
+checks, serial kernel acceptance and a dependency audit for that remaining
+manifest. It has not been started; the export is still incomplete and the
+first-deletion geometry pipeline is still running.
+
+The complete remaining-row inventory for root case 715 has been exported:
+1,111 rows cover all 3,581 removed owners in deletions 1–8, in addition to
+the 198 rows covering deletion zero's 459 owners. Each proposed owner row
+is checked against every listed containing block and the complete blocker
+union. The unified indexed plan contains all 4,040 step-specific removed
+owners; the preserved partial pilot is reserved at group zero and excluded
+from the complete steps. No remaining row has yet been formally accepted.
+
+The original-root row producer and source checker now support intermediate
+blocker domains. Re-exporting the accepted group-zero pilot preserved its
+Lean source byte-for-byte, and its independent source audit passed. Proposed
+blocker functions for all nine intermediate snapshots also pass the full
+snapshot source audit. `generate_root_closed_case_geometric_steps.py` now
+prepares complete pruning steps only after their row modules are compiled;
+its outputs still need kernel compilation and dependency auditing.
+
+The remaining eight-deletion geometry export has completed successfully:
+all 12,010 block references are proposed in 751 batches (259–1009), preserving
+the first-deletion proposal and its live verification pipeline. Independent
+full-scope source checking is running in
+`/tmp/sixpack-root-case715-remaining-geometry-source-audit-v1.log`; this run
+uses `--source-only` and makes no kernel-acceptance claim.
+
+Original-root complete-step and consecutive-chain source auditors are now
+prepared. The gated `generate_root_case715_closure.py` assembles the actual
+case-715 exclusion and its endpoint-classification branch only after the
+complete nine-step chain and actual initial-snapshot binding are compiled.
+It has not been run; no actual root-case closure or global classification is
+claimed. The lower-bound theorem remains conditional on the full root-case
+classification obligation.
+
+Main branch step six and prefix seven have now compiled; scoped dependency
+audit `/tmp/sixpack-b31-remaining-step6-axioms-02e2e230.log` is running. The
+actual request was preserved at `/tmp/sixpack-b31-step6-audit-request-v1.lean`.
+Default imports remain at prefix six until that audit and the publication
+gates pass. Initial-domain blocker binding for root case 715 has passed
+batches 0–268 of 271; its aggregate and actual partial-pruning proof are
+still pending. Original archive and all 730 research-file hashes still pass.
+
+Independent full-scope source auditing of all 12,010 remaining case-715
+geometry references and 2,908 distinct domains has passed
+(`/tmp/sixpack-root-case715-remaining-geometry-source-audit-v1.log`). This is
+external source audit evidence, not geometric kernel acceptance. A new
+serial domain-foundation run is active in
+`/tmp/sixpack-root-case715-remaining-domain-pipeline-v1.log`; it excludes all
+domains in the live first-deletion scope, preventing overlapping domain
+builds. Its final scoped audit covers only those exclusive domain proofs;
+pair geometry and complete row exclusions remain separate obligations.
+
+All 271 exhaustive initial blocker-binding batches for root case 715 have
+compiled, including final batch 270 at 580.4 MiB. Aggregate coverage, actual
+17-owner partial pruning and their scoped dependency audit remain pending
+in the original run 19789460. No full case closure is inferred.
+
+Actual initial-domain 17-owner partial pruning for root case 715 is now fully
+accepted: aggregate blocker coverage compiled at 515.2 MiB, the actual
+packing-preservation proof at 401.1 MiB, and all 274 scoped public declarations
+passed the standard-axiom audit (407.6 MiB). The candidate default import
+includes `EndpointRootCase715InitialPruning`; its complete build is running.
+The exact 24,406-declaration canonical audit union passes against 15 scoped
+audit logs. Publication is still pending the default build.
+
+Main-branch step six/prefix seven also passed its 1,027-declaration scoped
+audit, at 634.5 MiB. Promotion to the default prefix and its combined
+publication gate are being prepared. This remains seven of 21 main-branch
+pruning steps; incoming root refinement and global classification are not
+proved. Overall effort estimate remains about 40% (uncertainty 25–55%).
+
+The actual-root partial-pruning default build passed: 6,305 jobs, 714.2 MiB
+peak (`/tmp/sixpack-root-case715-partial-default-v1.log`). The candidate
+publication now also imports main-branch prefix seven and all newly audited
+geometry batches 399–462. Exact canonical scope is 25,409 declarations,
+covered by 16 independently validated audit logs
+(`/tmp/sixpack-combined-pruning-audit-union-v1.log`). Combined default build
+`/tmp/sixpack-combined-pruning-default-v1.log` is running; publication remains
+pending that final gate. Only the 475 new Lean files in the default import
+closure are proposed for staging; unverified root-case bulk outputs remain
+outside this publication. Archive/all-730-file integrity still passes.
+
+Pre-publication source-scope check confirms that all 1,389 public theorem
+declarations in the proposed new Lean dependency files occur in the canonical
+25,409-declaration audit request; none is missing from the validated union.
+The combined default build remains live. Earlier slow import loading was
+sampled: Lean was finalizing imported proof objects, with physical footprint
+670.6 MiB and peak 734.6 MiB; it was not restarted. The earlier partial default
+build subsequently completed successfully.
+
+Independent complete-row source audit passed for all 1,309 rows and 4,040
+step-specific removed owners in root case 715. It replays live blocker domains,
+checks exact per-owner block lists, disjoint row coverage and the unified
+indexed plan; it is now required by case-715 geometric-step generation.
+`/tmp/sixpack-root-case715-complete-rows-source-audit-v1.log` records the result.
+All rows fit the producer's existing bounds (maximum 135 blocks and 37 owners
+per row). This audit supplies source-scope evidence only; the geometric row
+proofs and complete actual-root closure still require kernel acceptance.
+
+Combined publication gate passed: 6,430 default-build jobs, 737.8 MiB peak
+(`/tmp/sixpack-combined-pruning-default-v1.log`), exact 25,409-declaration
+standard-axiom union across 16 scoped audits, complete public-theorem coverage
+for all proposed new dependency sources, and unchanged original archive/all
+730 research files. The default now includes main prefix seven (6,496 checked
+geometric blocks covering 526,346 ordered pairs) and case 715's actual-domain
+17-owner partial pruning against all 1,730 initial blockers. Full case 715,
+incoming root refinement, remaining tree/local-label proofs and unconditional
+global classification remain unfinished. Overall estimate: about 40%, with
+uncertainty 25–55%; this checkpoint does not establish the global lower bound.

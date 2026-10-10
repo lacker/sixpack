@@ -101,6 +101,15 @@ evidence; the computational and geometric proofs themselves are kernel-checked
 by the build. Consult the plan for exact theorem names and limitations. Passing
 this build does not establish optimality.
 
+The default proof set includes seven of the main branch's 21 geometric pruning
+steps and an actual-domain partial deletion for root case 715. The latter
+excludes 17 owner records against every one of its 1,730 initial blockers and
+proves that this deletion preserves every represented packing choice. It does
+not close the entire case. Complete initial-root classification and remaining
+tree and local-label proofs are still required for the unconditional lower
+bound. The current effort estimate is about 40%, with substantial uncertainty
+(25–55%); certificate counts are not a measure of remaining proof effort.
+
 ## Reproduce the original computer checks without modifying the reference
 
 Python 3.13, a C++17 compiler, and Boost headers are needed. Run from the repo root:
