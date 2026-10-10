@@ -27877,3 +27877,12 @@ import Sixpack
 #print axioms Sixpack.root_case715_snapshot_components_distinct
 #print axioms Sixpack.root_case715_snapshot_survivor_coverage
 #print axioms Sixpack.root_case715_snapshot_final_empty
+
+#print axioms Sixpack.root_case715_initial_snapshot_component0
+#print axioms Sixpack.root_case715_initial_snapshot_component1
+#print axioms Sixpack.root_case715_initial_snapshot_component2
+#print axioms Sixpack.root_case715_initial_snapshot_component3
+#print axioms Sixpack.root_case715_initial_snapshot_component4
+#print axioms Sixpack.root_case715_initial_snapshot_component5
+#print axioms Sixpack.root_case715_initial_entry_matches_snapshot
+#print axioms Sixpack.root_case715_actual_initial_snapshot_cover

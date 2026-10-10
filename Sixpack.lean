@@ -353,3 +353,4 @@ import Sixpack.EndpointRootCase0Snapshots
 import Sixpack.EndpointRootCase715InitialEntry
 import Sixpack.EndpointRootCase715SnapshotBlockers
 import Sixpack.EndpointRootCase715Snapshots
+import Sixpack.EndpointRootCase715InitialSnapshotBinding

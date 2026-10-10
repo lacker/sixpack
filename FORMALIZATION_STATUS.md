@@ -144,6 +144,27 @@ The expanded canonical audit covers exactly **27,819 declarations** through
 and the archive remain unchanged. The roadmap remains **45%**: no whole
 production graph or actual root classification has yet earned completion credit.
 
+## Actual case-715 entry into the initial survivor snapshot
+
+The actual six-component initial-domain entry is now formally connected to
+stage 0 of the case-715 survivor trace. Six component equalities, their aggregate
+and the membership bridge compiled and passed an exact eight-theorem standard-
+axiom audit. This removes the initial snapshot binding obligation for case 715;
+the geometric deletions and complete actual root closure remain unproved.
+Roadmap completion remains **45%**.
+
+Direct normalization exceeded the 3,072 MiB physical guard and was rejected.
+The accepted proof compares copied node arrays, transports equality through
+selectors and `Finset.image`, and handles each component separately. Its guarded
+peak was 449.1 MiB. No memory limit, theorem hypothesis or axiom policy changed.
+Reproduce serial compilation and the scoped audit with
+`python3 audit/run_root_case715_snapshot_binding.py`.
+
+The canonical audit now covers **27,827 declarations** through 23 independently
+validated scopes, using only standard logical axioms. The default build passed
+(8,135 jobs; guarded physical peak 781.7 MiB). Original research integrity also
+passed: the archive and all 730 files are unchanged.
+
 ## Local packing theorems
 
 `local_packing_radius_rigidity` starts from `Packing (optimum+d 15) T`, with
