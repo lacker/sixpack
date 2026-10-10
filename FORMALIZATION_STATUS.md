@@ -1966,3 +1966,100 @@ geometric blocks covering 526,346 ordered pairs) and case 715's actual-domain
 incoming root refinement, remaining tree/local-label proofs and unconditional
 global classification remain unfinished. Overall estimate: about 40%, with
 uncertainty 25–55%; this checkpoint does not establish the global lower bound.
+
+Published verified checkpoint `e30c3145cf8eb328ff252f4a14ba674aa6fe955b`
+(`origin/main` confirmed equal to HEAD): main seven-step chain, 6,496 geometry
+blocks/526,346 ordered pairs, actual case-715 17-owner partial pruning, and
+25,409-declaration canonical audit scope. The push carried an estimate of
+about 40%; global optimality remains unproved.
+
+`run_root_case715_complete_closure.py` now assembles the full intended
+case-715 proof: prerequisite standard-axiom scope checks for every proposed
+geometric pair, full survivor snapshots and all six actual initial domains;
+independent complete-row and source checks; serial compilation of all 1,309
+rows, nine geometric steps, their consecutive chain and the exact endpoint
+classification branch; and a final scoped dependency audit. It does not
+change default imports or publish. It has not run: complete prerequisite
+audits are still pending in the confirmed live verification pipelines.
+
+Future complete root-case geometric steps now split finite blocker checks,
+removed-owner checks and group exclusions into separate bounded modules,
+with separate aggregate coverage modules and the final packing-preservation
+step. The full closure runner compiles those prerequisites serially and
+includes every public batch helper in its final dependency audit. Scope
+auditing reassembles modules in numeric batch order. An actual previously
+compiled case-970 step was split into 25 modules in a temporary directory;
+every definition, statement and proof body was preserved except changing
+batch visibility from private to public. This is structural generator
+validation, not kernel acceptance of the future original-root step proofs.
+The physical-memory cap remains 3 GiB.
+
+Main step seven and prefix eight have now compiled and passed their exact
+499-declaration axiom audit (`/tmp/sixpack-b31-remaining-step7-axioms-02e2e230.log`).
+They are not yet in the published default closure. The successful audit's
+exact declaration list was preserved in
+`/tmp/sixpack-b31-step7-audit-request-v1.lean`.
+
+`audit/test_root_step_module_split.py` now performs a kernel regression on
+the already verified case-970 step, using fresh names and temporary modules
+outside the repository. It checks exact declaration/proof-body preservation,
+serially compiles all split modules under the existing guard and audits their
+public theorem dependencies. The initial attempt failed on temporary package
+import resolution; the corrected attempt has accepted the data module and
+is still checking the proof modules. This is assembly validation, not a
+case-715 geometric certificate. The splitter now also rejects duplicate
+declarations and stale generated modules instead of silently including them.
+
+The initial six-domain entry pipeline stopped at batch 125: its single
+128-entry proof exceeded the unchanged 3,072 MiB physical guard (3,174.4 MiB
+observed). Batches through 124 passed. The generator now splits batches
+125–270 into four separate 32-entry kernel checks, retaining every original
+128-entry public statement and proving quotient/remainder coverage in Lean.
+The source audit still checks all 34,660 original tags, every domain and
+selector, and now checks the four exact subranges and scans their sources.
+The runner compiles quarters serially and includes their public helpers in
+the final axiom scope. The resumed run is
+`/tmp/sixpack-root-case715-initial-entry-pipeline-v2.log` (run `249ff97d`).
+Batch 125's first quarter passed at 1,126.4 MiB; the generic quarter-to-full
+coverage implication separately passed at 382.6 MiB
+(`/tmp/sixpack-entry-quarter-coverage.log`). Complete entry acceptance and
+its final dependency audit are still pending.
+
+The complete repaired batch 125 has now compiled (392.4 MiB for its aggregate,
+1,126.4 MiB per quarter) and passed the official five-declaration dependency
+audit with only `propext`, `Classical.choice`, and `Quot.sound`
+(`/tmp/sixpack-entry-batch125-axioms.log`). Later batches continue serially.
+
+Publication preparation for main prefix eight: default import updated and
+the canonical audit extended by 467 new declarations. The exact union of
+17 successful scoped audits covers all 25,876 canonical declarations; all
+467 public theorems in the 49 newly required default sources are covered.
+Original archive/all 730 research files still match. The default build gate
+is running (`/tmp/sixpack-prefix8-publication-default-v1.log`); no new commit
+has been published yet. The global lower bound and root classification remain
+unfinished; the overall estimate is still about 40% (uncertainty 25–55%).
+
+The split-assembly regression has now compiled all 25 modules, including its
+final packing-preservation theorem, with observed module peaks below 430 MiB.
+Its final axiom audit is still running. This validates the representative
+assembly in Lean; it does not establish any uncompiled case-715 deletion.
+Initial-entry batch 126 also passed in the new layout (1,228.8 MiB per quarter,
+382.1 MiB aggregate).
+
+The representative split-assembly regression is fully accepted:
+`/tmp/sixpack-step-split-regression-v3.log` reports 25 compiled modules and
+27 public theorem dependency checks, all standard-only. The first audit
+incorrectly requested three private aggregate helper names; its failed log
+was retained. The corrected audit enumerates public declarations from the
+actual split sources, with final-theorem collection traversing private
+dependencies as well. `--resume` reused only byte-identical source modules
+with existing `.olean` files and successful guarded build logs. This closes
+the assembly validation task, not the pending original-root geometry task.
+
+Prefix-eight publication gate passed: 6,478 default-build jobs, 739.8 MiB
+observed peak physical footprint, standard-only exact 25,876-declaration
+audit union, and unchanged original research archive/files. The checkpoint
+includes 49 newly required default Lean sources plus the regression-tested
+split assembly utility. Uncompiled case-715 geometry and initial-entry
+proposals remain outside the default closure. Overall effort estimate:
+about 40%, uncertainty 25–55%; no unconditional lower-bound theorem yet.

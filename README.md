@@ -101,7 +101,7 @@ evidence; the computational and geometric proofs themselves are kernel-checked
 by the build. Consult the plan for exact theorem names and limitations. Passing
 this build does not establish optimality.
 
-The default proof set includes seven of the main branch's 21 geometric pruning
+The default proof set includes eight of the main branch's 21 geometric pruning
 steps and an actual-domain partial deletion for root case 715. The latter
 excludes 17 owner records against every one of its 1,730 initial blockers and
 proves that this deletion preserves every represented packing choice. It does
