@@ -1,6 +1,7 @@
 """Generate bounded row-group proofs using only already compiled geometric blocks."""
 from pathlib import Path
 import argparse, json
+from indexed_group_module_split import emit_group_modules
 
 root = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(); parser.add_argument('--groups', default='1')
@@ -128,6 +129,8 @@ theorem b31_row_group{group_index}_geometric_exclusion (v w : Fin 7023)
 end Sixpack
 '''
     path = folder/f'Group{group_index}.lean'
-    if not path.exists() or path.read_text() != s:
+    if group_index >= 470:
+        emit_group_modules(path, group_index, s)
+    elif not path.exists() or path.read_text() != s:
         path.write_text(s)
     print(f'Exported group {group_index}: {G} owners, {W} blockers, {P} accepted geometric blocks. Lean coverage pending.')

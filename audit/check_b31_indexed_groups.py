@@ -1,6 +1,7 @@
 """Compare every actual generated row-group input with the full coverage plan."""
 from pathlib import Path
 import json, re
+from indexed_group_module_split import read_group_modules
 
 root = Path(__file__).resolve().parents[1]
 plan = json.loads((root/'audit/b31-indexed-row-group-export.json').read_text())['groups']
@@ -11,7 +12,7 @@ for path in sources:
     n = int(path.stem.removeprefix('Group')); row = plan[n]; p = f'b31RowGroup{n}'
     indices = row['block_indices']; P = len(indices); G = len(row['owners'])
     blockers = meta['steps'][row['step']]['others']; W = len(blockers)
-    text = path.read_text()
+    text = read_group_modules(path)
     for local, index in enumerate(indices):
         block = meta['blocks'][index]
         body = text.split(f'def {p}Block{local} : IndexedRectangleBlock 7023 :=\n', 1)[1].split('\n\n', 1)[0]

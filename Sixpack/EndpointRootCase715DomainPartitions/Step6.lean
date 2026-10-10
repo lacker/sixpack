@@ -1,0 +1,55 @@
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch0
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch1
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch2
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch3
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch4
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch5
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch6
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch7
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch8
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch9
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch10
+import Sixpack.EndpointRootCase715DomainPartitions.Step6.Batch11
+
+set_option maxHeartbeats 20000000
+set_option maxRecDepth 100000
+
+namespace Sixpack
+
+private theorem root_case715_partition6_batches (batch : Fin 12) (offset : Fin 32) :
+    indexedDomainPartitionEntry (rootCase715Partition6Old (rootCase715Partition6BatchIndex batch offset))
+      rootCase715Partition6Kept rootCase715Partition6Removed (rootCase715Partition6Witness (rootCase715Partition6BatchIndex batch offset)) = true := by
+  fin_cases batch
+  · exact root_case715_partition6_batch0 offset
+  · exact root_case715_partition6_batch1 offset
+  · exact root_case715_partition6_batch2 offset
+  · exact root_case715_partition6_batch3 offset
+  · exact root_case715_partition6_batch4 offset
+  · exact root_case715_partition6_batch5 offset
+  · exact root_case715_partition6_batch6 offset
+  · exact root_case715_partition6_batch7 offset
+  · exact root_case715_partition6_batch8 offset
+  · exact root_case715_partition6_batch9 offset
+  · exact root_case715_partition6_batch10 offset
+  · exact root_case715_partition6_batch11 offset
+
+theorem root_case715_partition6_accepted :
+    checkIndexedDomainPartition rootCase715Partition6Old rootCase715Partition6Kept rootCase715Partition6Removed
+      rootCase715Partition6Witness = true := by
+  simp only [checkIndexedDomainPartition,decide_eq_true_eq]
+  intro part
+  let batch : Fin 12 := ⟨part.val/32,by have h := part.isLt; omega⟩
+  let offset : Fin 32 := ⟨part.val%32,Nat.mod_lt _ (by decide)⟩
+  have hi : rootCase715Partition6BatchIndex batch offset = part := by
+    apply Fin.ext
+    change (32*(part.val/32)+part.val%32)%363 = part.val
+    rw [Nat.div_add_mod,Nat.mod_eq_of_lt part.isLt]
+  rw [← hi]
+  exact root_case715_partition6_batches batch offset
+
+theorem root_case715_partition6_survivors :
+    (Finset.univ.image rootCase715Partition6Old) \ (Finset.univ.image rootCase715Partition6Removed) ⊆
+      Finset.univ.image rootCase715Partition6Kept :=
+  checked_indexed_domain_partition_survivors _ _ _ _ root_case715_partition6_accepted
+
+end Sixpack

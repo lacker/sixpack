@@ -330,7 +330,7 @@ import Sixpack.EndpointB31Case970SnapshotBlockers
 import Sixpack.EndpointB31Case970RootEntry
 
 import Sixpack.EndpointB31Case1341RootClosure
-import Sixpack.EndpointB31GeometricChains.Prefix8
+import Sixpack.EndpointB31GeometricChains.Prefix9
 import Sixpack.EndpointB31Case970GeometricChains.Prefix1
 import Sixpack.FixedVertexRegionPruning
 import Sixpack.FixedVertexCoveredPruning
@@ -349,3 +349,7 @@ import Sixpack.EndpointB31Case970RootClosure
 import Sixpack.EndpointRootCase715InitialPruning
 
 import Sixpack.EndpointRootCase0Snapshots
+
+import Sixpack.EndpointRootCase715InitialEntry
+import Sixpack.EndpointRootCase715SnapshotBlockers
+import Sixpack.EndpointRootCase715Snapshots

@@ -80,19 +80,19 @@ for step in range(a.start,a.end+1):
     names += [f'Sixpack.b31_step{step}_pruning_preserves_packing',f'Sixpack.b31_prefix{step+1}_preserves_packing']
     names += [f'Sixpack.b31_spatial_angle_block{index}_{suffix}' for batch in batches
               for index in plan['batches'][batch] for suffix in ('accepted','pair_excluded')]
+    names += sorted({f'Sixpack.{name}' for group in ids
+                     for path in (root/f'Sixpack/EndpointB31IndexedGroups/Group{group}').glob('*.lean')
+                     for name in re.findall(r'^theorem (\w+)', path.read_text(), re.M)})
     if step==20:
         names.append('Sixpack.b31_initial_snapshot_no_packing')
-    source = root/f'audit/PrintB31QueuedStep{step}{run_id}.lean'
+    source = Path('/tmp')/f'sixpack-b31-remaining-step{step}-audit-{run_id}.lean'
     source.write_text(f'import Sixpack.EndpointB31GeometricChains.Prefix{step+1}\n'+
                       ''.join(f'#print axioms {name}\n' for name in names))
     log = Path('/tmp')/f'sixpack-b31-remaining-step{step}-axioms-{run_id}.log'
-    try:
-        call([sys.executable,'audit/run_shared_axiom_audit.py','--source',str(source),'--log',str(log)])
-    finally:
-        source.unlink(missing_ok=True)
+    call([sys.executable,'audit/run_shared_axiom_audit.py','--source',str(source),'--log',str(log)])
     for path in [root/f'Sixpack/EndpointB31GeometricSteps/Step{step}.lean',
                  root/f'Sixpack/EndpointB31GeometricChains/Prefix{step+1}.lean']:
         assert not re.search(r'\b(sorry|axiom|native_decide)\b|Lean\.ofReduceBool',path.read_text()),path
-    print(f'Accepted step {step} and prefix {step+1}; axiom log={log}. Default import and publication remain separate.',flush=True)
+    print(f'Accepted step {step} and prefix {step+1}; audit request={source}; axiom log={log}. Default import and publication remain separate.',flush=True)
 call([sys.executable,'audit/check_b31_spatial_angle_export.py'])
 print('Requested geometric steps passed. Incoming root coverage and global classification remain separate.',flush=True)

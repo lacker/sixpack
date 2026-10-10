@@ -11,6 +11,19 @@ run = uuid.uuid4().hex[:8]
 for group in selected:
     subprocess.run([sys.executable, str(root/'audit/generate_b31_indexed_groups.py'),
                     '--groups', str(group)], cwd=root, check=True)
+    folder = root/f'Sixpack/EndpointB31IndexedGroups/Group{group}'
+    if folder.exists():
+        paths = [folder/'Data.lean']
+        for tag in ('Owner', 'Other'):
+            paths += sorted(folder.glob(tag+'Batch*.lean'), key=lambda p: int(p.stem.removeprefix(tag+'Batch')))
+        paths.append(folder/'Coverage.lean')
+        for path in paths:
+            helperlog = Path('/tmp')/f'sixpack-b31-indexed-group{group}-{path.stem}-{run}.log'
+            with helperlog.open('w') as out:
+                subprocess.run([sys.executable, str(root/'audit/run_lean_memory_guard.py'), '--',
+                                'lake', 'build', f'Sixpack.EndpointB31IndexedGroups.Group{group}.{path.stem}'],
+                               cwd=root, env=env, stdout=out, stderr=subprocess.STDOUT, check=True)
+            print(f'group {group} {path.stem}: {helperlog.read_text().splitlines()[-1]}; log={helperlog}', flush=True)
     log = Path('/tmp')/f'sixpack-b31-indexed-group{group}-{run}.log'
     with log.open('w') as out:
         result = subprocess.run([sys.executable, str(root/'audit/run_lean_memory_guard.py'), '--',

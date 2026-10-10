@@ -70,7 +70,7 @@ percentages in checkpoint entries below are superseded planning guesses.
 
 Current concrete milestones: the upper-bound construction is proved; much of
 the analytic and certificate soundness machinery is proved; the published main
-b31 chain has 8 of 21 steps, and the case-970 chain has all 8 of 8 accepted steps and a selected-root closure.
+b31 chain has 9 of 21 steps, and the case-970 chain has all 8 of 8 accepted steps and a selected-root closure.
 These counts describe only those chains, not overall formalization completion.
 The global root-case classification and unconditional lower bound remain unproved.
 
@@ -114,6 +114,35 @@ using `--steps 0,1,2,3,4,5,6,7 --shared-initial-domains`, then regenerate snapsh
 with `generate_root_case_snapshots.py`, both using that same input prefix.
 `run_root_case_partitions.py` recompiles all finite proofs under the memory guard
 and runs their scoped axiom audit. These commands do not certify geometry.
+
+## Ninth pruning prefix and actual case-715 entry
+
+The main b31 chain now has **9 of 21** accepted geometric pruning steps.
+The ninth prefix was kernel-compiled and its exact 595-declaration dependency
+scope audited using only standard logical axioms. Step 8's monolithic assembly
+reached the guard's reported 3,072 MiB boundary; the memory limit was not raised.
+
+Case 715 now has proved entry from every actual initial root-domain component
+into its six finite search domains. All 271 entry batches, the full entry theorem
+and its exact 858-declaration audit passed. Its nine finite partitions, ten
+snapshots, nine survivor transitions, final empty component and nine blocker
+bindings also have compiled proofs and standard-axiom audits. Geometric deletion
+of the full domains and actual case-715 closure remain unproved.
+
+The finite input projection `audit/root-case715-bookkeeping-inputs` is committed
+for reproduction. It includes no geometric deletion certificate. Check it with
+`check_root_case715_initial_entry.py` and `check_root_case_snapshots.py` using
+that prefix. Regenerate all nine partition proposals with
+`generate_root_case_domain_partitions.py --steps 0,1,2,3,4,5,6,7,8`, then run the
+snapshot, blocker and case-715 entry generators using the same prefix.
+Isolated regeneration reproduced 251 partition source/metadata files and all
+857 entry source files byte-for-byte. Compilation remains a separate obligation.
+
+The expanded canonical audit covers exactly **27,819 declarations** through
+22 independently validated scopes. The final default build passed
+(8,127 jobs; guarded physical peak 786.7 MiB). All 730 original research files
+and the archive remain unchanged. The roadmap remains **45%**: no whole
+production graph or actual root classification has yet earned completion credit.
 
 ## Local packing theorems
 
