@@ -54,4 +54,33 @@ must not be credited. The status document's October29 header is stale.
    archive references and explicit incomplete-proof/resume instructions.
 7. Report actual PR/release links, verified recovery evidence and reclaimed space.
 
-No deletion, commit, push, release creation or archive upload has happened yet.
+## Current execution status
+
+Draft PR: https://github.com/lacker/sixpack/pull/1
+Initial source commit49b07f68 is pushed on the checkpoint branch. A draft release
+named `sixpack-pause-2026-11-13` exists; it is not published as a completed backup.
+
+Archive/restore fixtures passed: exact multipart round trip, symlinks and spaces,
+refusal to overwrite different existing files, remote corruption rejection, stale
+verification-receipt removal. A real two-file environment component was uploaded
+and fully read back, with every archived file checked. Its receipts and indexes
+are under `/private/tmp/sixpack-checkpoint-2026-11-13/environment-*`.
+
+The FULL upload was rejected by automatic approval review because this public
+repository destination and the entire sensitive payload were not explicitly
+authorized by the PR request. A specific public-archive/private-storage question
+is pending. DO NOT retry the full upload or publish it by another route before
+explicit authorization arrives. No proof sources, evidence, or accepted artifacts
+have been deleted. No full workspace asset was uploaded.
+
+A second inventory includes `.lake` and `.tools`:687,817 entries,87.4GB logical.
+Together the two inventories describe about436.3GB logical data. Both inventories
+and scanners are in the local scratch directory above. They are not full proof
+verification or permission to delete excluded forests.
+
+IMPORTANT: Before deleting any excluded `build/lib` or import-cache forest,
+account for every accepted artifact referenced by its receipts. Some old build
+outputs may be sole accepted artifacts rather than disposable import links. Only
+remove a forest after canonical-byte equivalence or separate archival of those
+exact referenced artifacts is established. Do not recursively inventory private
+forests to guess. Preserve registries and exact compiler/Std records.

@@ -1,0 +1,33 @@
+{
+  "index_sha256": "80d92e1e02cd5d4bf4ed0d73ddbb269243b40fb50a52926761ceb0f68d3934f7",
+  "verified_entries": 2,
+  "verified_file_bytes": 796,
+  "every_remote_part_read_back": true,
+  "every_archived_file_sha256_checked": true,
+  "source_files_deleted": false,
+  "index": {
+    "format": 1,
+    "name": "checkpoint-environment",
+    "repo": "lacker/sixpack",
+    "tag": "sixpack-pause-2026-11-13",
+    "inventory_sha256": "1dedc742a032488490b412094fab4adf112c581fbcd82d0324133772efc8e7fc",
+    "parts": [
+      {
+        "name": "checkpoint-environment.tar.zst.part0001",
+        "size": 718,
+        "sha256": "3b31a04f6ee1cf3f51bae36ee282adec8aa7526bafcdccbb94f54d756ae82430",
+        "id": 745703805,
+        "url": "https://github.com/lacker/sixpack/releases/download/untagged-976b7b1443d3e9a0e58b/checkpoint-environment.tar.zst.part0001"
+      }
+    ],
+    "file_manifest": {
+      "name": "checkpoint-environment.files.jsonl.gz",
+      "size": 285,
+      "sha256": "04101f113f67696b92951c261264fd8ada480cc93682f41afe28f53096d53130",
+      "id": 745703902,
+      "url": "https://github.com/lacker/sixpack/releases/download/untagged-976b7b1443d3e9a0e58b/checkpoint-environment.files.jsonl.gz"
+    },
+    "source_files_deleted": false
+  },
+  "scope": "Environment metadata and Python requirements only; NOT the proof-workspace backup"
+}

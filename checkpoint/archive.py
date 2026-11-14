@@ -46,6 +46,11 @@ class Remote:
         self.repo, self.tag = args.repo, args.tag
         if self.local:
             self.local.mkdir(parents=True, exist_ok=True)
+        else:
+            # Draft releases are not addressable through the public tag endpoint.
+            raw = subprocess.check_output(['gh', 'release', 'view', self.tag,
+                '--repo', self.repo, '--json', 'apiUrl'])
+            self.release_api = json.loads(raw)['apiUrl']
 
     def download(self, item, sink=None):
         h, count = hashlib.sha256(), 0
@@ -77,7 +82,7 @@ class Remote:
                 shutil.copyfile(path, target)
         else:
             def assets():
-                raw = subprocess.check_output(['gh', 'api', f'repos/{self.repo}/releases/tags/{self.tag}'])
+                raw = subprocess.check_output(['gh', 'api', self.release_api])
                 return json.loads(raw)['assets']
             matches = [a for a in assets() if a['name'] == path.name]
             if not matches:

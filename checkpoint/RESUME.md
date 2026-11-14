@@ -5,7 +5,8 @@ it does **not** claim the packing theorem or case344 is complete.
 
 ## Recovery status
 
-Archive preparation is in progress. Until `archives.json` and matching full
+Archive preparation is in progress. Draft PR: https://github.com/lacker/sixpack/pull/1.
+The full public-archive upload requires the user’s pending explicit approval. Until `archives.json` and matching full
 file-verification receipts are committed here, retain local original evidence.
 Do not treat a draft release or an upload-progress file as a completed backup.
 

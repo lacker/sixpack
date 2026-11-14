@@ -1,0 +1,11 @@
+{
+  "captured_utc": "2026-11-14T00:21:00.455113+00:00",
+  "platform": "macOS-14.7.4-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "original_root": "/Users/lacker/sixpack",
+  "source_commit": "49b07f6842247d533595763a44a4936a6f75de2e",
+  "toolchains": {
+    "4.24.0": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "4.30.0": "Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)"
+  }
+}
