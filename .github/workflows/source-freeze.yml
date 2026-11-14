@@ -1,0 +1,22 @@
+name: Source freeze integrity
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  recovery:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Ensure archive compressor is available
+        run: |
+          if ! command -v zstd >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y zstd
+          fi
+      - name: Test source archive recovery and failure checks
+        run: python3 checkpoint/test_archive.py
+      - name: Check original research inputs
+        run: python3 audit/check_original_integrity.py

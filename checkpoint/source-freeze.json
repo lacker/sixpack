@@ -1,0 +1,198 @@
+{
+  "format": 1,
+  "frozen_date": "2026-11-14",
+  "kind": "source-freeze-not-runtime-snapshot",
+  "repository": "lacker/sixpack-recovery-2026-11-13",
+  "private": true,
+  "release_tag": "source-freeze-2026-11-14",
+  "components": [
+    {
+      "index": {
+        "format": 1,
+        "name": "sixpack-source-freeze-2026-11-14",
+        "repo": "lacker/sixpack-recovery-2026-11-13",
+        "tag": "source-freeze-2026-11-14",
+        "inventory_sha256": "0954f5df329a3698836c93653cce27d273b77a1ca3a12a5a39027cf82b5030af",
+        "parts": [
+          {
+            "name": "sixpack-source-freeze-2026-11-14.tar.zst.part0001",
+            "size": 536870912,
+            "sha256": "b1f5597573d45ea0d765128e1e20f28449bd80b4170d84d8961bdc91a46db771",
+            "id": 748002607,
+            "url": "https://api.github.com/repos/lacker/sixpack-recovery-2026-11-13/releases/assets/748002607"
+          },
+          {
+            "name": "sixpack-source-freeze-2026-11-14.tar.zst.part0002",
+            "size": 51983515,
+            "sha256": "1c776ba2878c23c28544fe07c225d878debdcc074b11b7d6d0bfa5880273ee55",
+            "id": 748005062,
+            "url": "https://api.github.com/repos/lacker/sixpack-recovery-2026-11-13/releases/assets/748005062"
+          }
+        ],
+        "file_manifest": {
+          "name": "sixpack-source-freeze-2026-11-14.files.jsonl.gz",
+          "size": 24366897,
+          "sha256": "efd1ee3863531c2898cc12d1194d365df5ff7d621fb6f8b805a2878f5ceb004c",
+          "id": 748005386,
+          "url": "https://api.github.com/repos/lacker/sixpack-recovery-2026-11-13/releases/assets/748005386"
+        },
+        "source_files_deleted": false
+      },
+      "index_sha256": "35631deba3d55c8c6a7c0d1be44dbd23ea74c86b000f9b1cb51d8f0bbb2b3af6",
+      "verification": {
+        "index_sha256": "35631deba3d55c8c6a7c0d1be44dbd23ea74c86b000f9b1cb51d8f0bbb2b3af6",
+        "verified_entries": 390908,
+        "verified_file_bytes": 27129317988,
+        "every_remote_part_read_back": true,
+        "every_archived_file_sha256_checked": true,
+        "source_files_deleted": false
+      }
+    },
+    {
+      "index": {
+        "format": 1,
+        "name": "sixpack-source-freeze-metadata-2026-11-14",
+        "repo": "lacker/sixpack-recovery-2026-11-13",
+        "tag": "source-freeze-2026-11-14",
+        "inventory_sha256": "9733e62cd1721261fbee3b5a3be0d2166ad879cc1802453cf14eef2c8794a8dc",
+        "parts": [
+          {
+            "name": "sixpack-source-freeze-metadata-2026-11-14.tar.zst.part0001",
+            "size": 25360897,
+            "sha256": "ab7a57304ada307fd66d221d71af892d72360316f7bbda9fac6d63673f26d8cb",
+            "id": 748020390,
+            "url": "https://api.github.com/repos/lacker/sixpack-recovery-2026-11-13/releases/assets/748020390"
+          }
+        ],
+        "file_manifest": {
+          "name": "sixpack-source-freeze-metadata-2026-11-14.files.jsonl.gz",
+          "size": 1637,
+          "sha256": "0af2726a0c80a530b344c4246534aefd3601637153a65abd5a3e25d78a202541",
+          "id": 748020567,
+          "url": "https://api.github.com/repos/lacker/sixpack-recovery-2026-11-13/releases/assets/748020567"
+        },
+        "source_files_deleted": false
+      },
+      "index_sha256": "82d5fef3b446f4d8c49de6d2268564db1812b1a9798cecb64899d980ef993970",
+      "verification": {
+        "index_sha256": "82d5fef3b446f4d8c49de6d2268564db1812b1a9798cecb64899d980ef993970",
+        "verified_entries": 22,
+        "verified_file_bytes": 29011631,
+        "every_remote_part_read_back": true,
+        "every_archived_file_sha256_checked": true,
+        "source_files_deleted": false
+      }
+    }
+  ],
+  "compressed_component_bytes": 614215324,
+  "retained_file_manifest_bytes": 24368534,
+  "historical_status": {
+    "historical_local_cases": 1335,
+    "historical_global_cases": 1332,
+    "remaining_cases": [
+      344,
+      346,
+      347,
+      348,
+      349,
+      350,
+      353,
+      355,
+      356,
+      377,
+      379,
+      388,
+      390,
+      391,
+      422,
+      423,
+      425,
+      426,
+      427,
+      429,
+      430,
+      431,
+      433,
+      434,
+      455,
+      456,
+      459,
+      726,
+      727,
+      755,
+      757,
+      759,
+      763,
+      784,
+      788,
+      792,
+      799,
+      800,
+      801,
+      805,
+      814,
+      815,
+      816,
+      824,
+      845,
+      856,
+      857,
+      858,
+      866,
+      867,
+      868,
+      869,
+      870,
+      874,
+      888,
+      909,
+      1005,
+      1013,
+      1031,
+      1033,
+      1034
+    ],
+    "pending_global_cases": [
+      382,
+      384,
+      387
+    ],
+    "these_are_historical_records_not_a_fresh_build": true,
+    "compiled_artifacts_and_incremental_runtime_are_not_preserved": true,
+    "receipt_summary": {
+      "successful": 93734,
+      "failed": 313
+    }
+  },
+  "retention_check": {
+    "successful_lean430_receipt_source_checks": {
+      "matching_frozen_source": 93734
+    },
+    "nonmatching_examples": {},
+    "legacy_project_artifact_sources": {
+      "artifacts": 114670,
+      "missing_source_count": 2,
+      "examples": [
+        "Sixpack/CoarseCaseReduction/Test.lean",
+        "Sixpack/RootCoarseGroupDomains/Batch248/Chunk3/.accepted-artifact-after1116-v15-Part0.lean"
+      ]
+    },
+    "this_checks_source_retention_not_a_new_Lean_build": true,
+    "legacy_exceptions": {
+      "duplicate_hidden_copy": "The hidden accepted-artifact Part0 copy is byte-identical to canonical Part0.olean, whose source is retained.",
+      "orphan_diagnostic": "CoarseCaseReduction/Test has no source; its tiny compiled artifact and sidecars are retained in the private metadata supplement."
+    }
+  },
+  "local_cleanup": {
+    "state": "pending",
+    "no_source_or_evidence_removed_before_verification": true
+  },
+  "omitted": [
+    "compiled outputs except one tiny orphan diagnostic",
+    "downloaded toolchains/dependencies",
+    "import caches",
+    "derived proposal JSON and exports",
+    "search databases",
+    "exact incremental runtime"
+  ]
+}

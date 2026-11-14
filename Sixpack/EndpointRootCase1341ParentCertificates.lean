@@ -1,0 +1,6 @@
+import Sixpack.EndpointRootCase1341ParentCertificates.C0N200
+import Sixpack.EndpointRootCase1341ParentCertificates.C1N20
+import Sixpack.EndpointRootCase1341ParentCertificates.C2N8
+import Sixpack.EndpointRootCase1341ParentCertificates.C3N20
+import Sixpack.EndpointRootCase1341ParentCertificates.C4N8
+import Sixpack.EndpointRootCase1341ParentCertificates.C5N44

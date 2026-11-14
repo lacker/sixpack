@@ -1,3 +1,11 @@
+The project is source-frozen at the user's14November2026 request. Read
+[checkpoint/SOURCE_FREEZE.md](checkpoint/SOURCE_FREEZE.md) first. Compiled outputs,
+import caches and derived tables are intentionally omitted; source-based rebuilds
+may regenerate them when work is explicitly resumed. Do not automatically restart
+old workers or treat historical receipts as a freshly checked runtime.
+Checkpoint/source-freeze commits and cleanup are explicitly authorized by the
+user; ordinary proof-development restrictions below apply after that operation.
+
 Follow [INCREMENTAL_WORKFLOW.md](INCREMENTAL_WORKFLOW.md) for proof acceptance and
 checkpoint scheduling. This implements the user's explicit 20 October 2026
 request for local case work and occasional expensive combined verification.

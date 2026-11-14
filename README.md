@@ -1,5 +1,11 @@
 # Sixpack
 
+**Frozen on14November2026.** Start with
+[the source-freeze guide](checkpoint/SOURCE_FREEZE.md). The checkpoint preserves
+core code, original inputs and a compact supplementary proof-source library;
+compiled outputs and working caches are intentionally regenerable. The proof is
+unfinished. Do not restart historical job queues automatically.
+
 Independent audit and Lean formalization of a proposed optimal packing of six
 unit equilateral triangles in an equilateral triangle, with candidate side
 `(13 + 3√13)/8`.

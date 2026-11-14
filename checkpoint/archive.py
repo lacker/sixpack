@@ -159,6 +159,7 @@ def backup(args):
                                 reader = HashReader(source)
                                 archive.addfile(info, reader)
                             record['sha256'] = reader.hash.hexdigest()
+                        archive.members.clear()  # Streaming mode must not retain millions of headers.
                         after = path.lstat()
                         if (before.st_ino, before.st_size, before.st_mtime_ns) != (after.st_ino, after.st_size, after.st_mtime_ns):
                             raise RuntimeError('Source changed while reading: ' + name)
@@ -226,6 +227,7 @@ def verify(args):
     destination = Path(args.destination).resolve() if args.command == 'restore' else None
     if destination:
         destination.mkdir(parents=True, exist_ok=True)
+    prefixes = [safe_name(p.rstrip('/')) for p in args.include_prefix]
     metadata = work / index['file_manifest']['name']
     with metadata.open('wb') as target:
         remote.download(index['file_manifest'], target)
@@ -243,17 +245,19 @@ def verify(args):
 
     feeder = threading.Thread(target=feed, daemon=True)
     feeder.start()
-    count = size = 0
+    count = size = restored = 0
     try:
         with gzip.open(metadata, 'rt') as records, tarfile.open(fileobj=zstd.stdout, mode='r|') as archive:
             for info in archive:
+                archive.members.clear()
                 row = json.loads(next(records))
+                selected = not prefixes or any(row['path'] == p or row['path'].startswith(p+'/') for p in prefixes)
                 if safe_name(info.name) != row['path'] or info.mode != row['mode']:
                     raise RuntimeError('Archive entry metadata differs: ' + info.name)
                 if row['kind'] == 'symlink':
                     if not info.issym() or info.linkname != row['target']:
                         raise RuntimeError('Archive symlink differs: ' + info.name)
-                    if destination:
+                    if destination and selected:
                         target = destination / row['path']
                         if not target.parent.resolve().is_relative_to(destination):
                             raise RuntimeError('Restore parent escapes destination')
@@ -268,7 +272,7 @@ def verify(args):
                         raise RuntimeError('Archive file metadata differs: ' + info.name)
                     source = archive.extractfile(info)
                     h = hashlib.sha256()
-                    target = destination / row['path'] if destination else None
+                    target = destination / row['path'] if destination and selected else None
                     pending = None
                     output = None
                     if target:
@@ -297,6 +301,8 @@ def verify(args):
                         os.utime(pending, ns=(row['mtime_ns'], row['mtime_ns']))
                         pending.replace(target)
                 count += 1
+                if destination and selected:
+                    restored += 1
                 if count % 100000 == 0:
                     print('Verified original archived entries', count, flush=True)
             if records.readline():
@@ -314,6 +320,8 @@ def verify(args):
                       every_archived_file_sha256_checked=True, source_files_deleted=False)
         if destination:
             result['restored_destination'] = str(destination)
+            result['restored_entries'] = restored
+            result['selected_prefixes'] = prefixes
         write_json(receipt, result)
         print(json.dumps(result), flush=True)
     finally:
@@ -330,6 +338,8 @@ def main():
     p.add_argument('--name')
     p.add_argument('--index')
     p.add_argument('--destination')
+    p.add_argument('--include-prefix', action='append', default=[],
+                   help='Restore only this file/directory prefix; all archive hashes are still checked')
     p.add_argument('--work', required=True)
     p.add_argument('--repo')
     p.add_argument('--tag')

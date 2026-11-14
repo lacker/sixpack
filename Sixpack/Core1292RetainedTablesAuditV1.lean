@@ -1,0 +1,4 @@
+import Sixpack.Core1292SharedFreshCoverage.DomainEqualities0
+import Sixpack.Core1292SharedFreshCoverage.DomainEqualities1
+import Sixpack.Core1292SharedFreshCoverage.DomainEqualities2
+import Sixpack.Core1292SharedFreshCoverage.DomainEqualities5

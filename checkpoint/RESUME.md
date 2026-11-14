@@ -1,75 +1,50 @@
-# Paused formalization checkpoint
+# Resume a source freeze
 
-The project is paused. This checkpoint preserves partial formalization work;
-it does **not** claim the packing theorem or case344 is complete.
+Start with [SOURCE_FREEZE.md](SOURCE_FREEZE.md). The full-working-state backup
+plan was superseded by the user's source-only freeze request. The proof remains
+unfinished, and no old compiler artifacts or job queues need to be revived.
 
-## Recovery status
+## Read or develop the core
 
-Archive preparation is in progress. Draft PR: https://github.com/lacker/sixpack/pull/1.
-The full archive upload requires the user's pending explicit approval. The
-current destination is the private repository
-https://github.com/lacker/sixpack-recovery-2026-11-13. No full public upload is
-planned. Automatic approval review rejected both full transfers pending explicit
-authorization of the whole payload and destination. Do not retry through another
-route while that approval is absent. Until `archives.json` and matching full
-file-verification receipts are committed here, retain local original evidence.
-Do not treat a draft release or an upload-progress file as a completed backup.
+Clone the checkpoint PR branch. The readable Lean theory, original research
+inputs, dependency locks, and current scope/lessons are in Git. Original inputs
+include all730 research files and the original ZIP. Recreate the pinned Lean/
+mathlib and Python dependencies only when actually needed.
 
-The checkpoint PR will contain the project source changes. Large generated
-certificates, audit records, and compiled project artifacts are stored separately
-as checksummed GitHub release assets, rather than hundreds of thousands of Git
-diff entries. `archive.py` never deletes original workspace files.
+## Recover supplementary proof source
 
-## Verified mathematical state observed on 13 November
+The optional source library is stored in the PRIVATE repository
+`lacker/sixpack-recovery-2026-11-13`, release `source-freeze-2026-11-14`.
+`source-freeze.json` contains full component indexes, stable asset IDs/checksums
+and actual independent verification receipts. The source component is562MiB
+compressed; detailed history/dependency metadata is a separate24MiB component.
+No compiled trees or bulk proposal/export databases are required to store it.
 
-The last recorded case totals are1,335 local /1,332 globally audited, with61
-cases remaining. These totals have not been globally re-audited for this cleanup.
-Case344 remains incomplete: neither full ROOT nor full B12 cut union exists.
+Authenticate `gh` as the repository owner and use system Python3.10+ and `zstd`.
+Extract a component's `index` object from `source-freeze.json` into a temporary
+JSON file, then run:
 
-Background work completed after the old chat handoff:
+```sh
+python3 checkpoint/archive.py restore --index /tmp/source-index.json \
+  --work /tmp/sixpack-restore-checks --destination /tmp/sixpack-historical-source
+```
 
-- Both distant-tail coordinators have completion records.
-- Original ROOT cut101 has full acceptance (179 standard-axiom queries). Its
-  regrouped plan uses19 Lean units instead of37 planned units, with unchanged
-  mathematical obligations and acceptance rules.
-- Original ROOT cut125 has full acceptance (87 standard-axiom queries).
-- Both continuous transitions and all2,712 continuous parent covers are accepted.
-- Image392 has prepared source/compiler work but no acceptance record. Inspect
-  its actual existing receipts before resuming; do not blindly rebuild it.
+To avoid expanding the entire historical library, add one or more prefixes:
 
-All old PID/session notes in `TAKEOVER.md` are historical. Actual process
-inspection found no running proof workers. No proof jobs were started during
-checkpoint preparation, and no accepted Lean units were recompiled.
+```sh
+python3 checkpoint/archive.py restore --index /tmp/source-index.json \
+  --work /tmp/sixpack-restore-checks --destination /tmp/sixpack-selected-source \
+  --include-prefix migration/lean430/Sixpack430/RemainingCases/Case344
+```
 
-## Rules for a future continuation
+Every archive file/hash is checked even for selective restore. Existing different
+files are not overwritten. The supplement restores its small history files and
+one orphan legacy diagnostic, not an operational build environment. Source hashes
+for all93,734 successful historical Lean4.30 compiler receipts match the saved
+source. Historical compiler success alone is not a new full theorem verification.
 
-Read `AGENTS.md`, `INCREMENTAL_WORKFLOW.md`, and the current head of `TAKEOVER.md`.
-Keep local case acceptance separate from global checkpoints. Preserve accepted
-proofs and actual compiler/Std evidence. Do not launch workers merely because
-an old note says they were live, and do not reuse old numeric PIDs.
-
-Most continuation scripts hard-code `/Users/lacker/sixpack`. Restore mathematical
-inputs/artifacts to their original paths before using those scripts. Changing
-pinned Python or Lean source to relocate the workspace changes its recorded
-provenance; it is not a transparent restore.
-
-`archive.py verify` downloads every part, verifies SHA256, decompresses the
-archive and checks every original file's SHA256 and every symlink target.
-`archive.py restore` performs the same checks while restoring files. It refuses
-to overwrite an existing different file or write through an escaping symlink.
-Use a fresh destination and retain its verification receipts.
-
-Tooling requirements: Python3.10 or later, `zstd`, and authenticated `gh` for
-draft/private release assets. The original host was macOS arm64; archived
-toolchain and compiled-proof restoration will preserve that environment.
-
-Full restore commands, component sizes, immutable checksums, archive URLs and
-private-import-cache regeneration details will be finalized after remote
-readback verification. Do not attempt a partial unverified restore yet.
-
-
-The old312MiB standard Python virtual environment was removed after6,632 installed
-file hashes matched package RECORDs. Exact requirements and venv configuration
-were pushed first. No modified packages/custom files were found. Recreate it with
-Python3.13.3 and python-requirements.txt before running old proof scripts. Archive
-tooling uses system Python and does not require the removed venv.
+Use the old scripts as reference material. Their absolute paths, prior input-file
+hashes and no-build acceptance assumptions belong to the discarded runtime.
+Rebuild and recheck selected theorem closures from source, or pursue a better
+method; do not run every experiment or restart the old factory. If Python is
+needed, recreate its environment from python-requirements.txt and python-venv.cfg.
