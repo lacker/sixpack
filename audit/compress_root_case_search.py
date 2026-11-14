@@ -16,25 +16,32 @@ root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('prefix',type=Path)
 parser.add_argument('--output',type=Path,required=True)
+parser.add_argument('--support-prefix', type=Path,
+                    help='Exact case970/1341 nonempty support proposal; never an empty/refutation certificate.')
 args=parser.parse_args()
 prefix=str(args.prefix.resolve())
 certificate=Path(prefix+'.cert.json')
-replay(args.prefix,Path(prefix+'.domains.json'),certificate)
+if args.support_prefix:
+ from check_case970_support_pruning_proposal import replay_support
+ trace=replay_support(args.prefix,args.support_prefix)
+else:
+ replay(args.prefix,Path(prefix+'.domains.json'),certificate)
 records=json.loads(Path(prefix+'_nodes.json').read_text())
 assert all((r['m'],r['K'])==(32,64) for r in records)
-cert=json.loads(certificate.read_text())
 case=json.loads(Path(prefix+'.root-map.json').read_text())['case']
-initial=cert['domains'];current=list(map(set,initial));steps=[];node=cert['root']
-while cert['nodes'][node]['kind']=='split':
- t=cert['nodes'][node];clash=cert['nodes'][t['left']]
- assert clash['kind']=='clash' and t['component']==clash['component'], 'Requires a pure arc trace'
- i,j=t['component'],clash['other'];removed=set(t['subset'])
- assert removed<=current[i] and i!=j
- steps.append(dict(component=i,blocker=j,owners=sorted(removed),others=sorted(current[j])))
- current[i]-=removed;node=t['right']
-last=cert['nodes'][node]
-assert last['kind']=='empty' and not current[last['component']]
-trace=dict(steps=steps,retained=sorted(set.union(*current)),case_domains=initial)
+if not args.support_prefix:
+ cert=json.loads(certificate.read_text())
+ initial=cert['domains'];current=list(map(set,initial));steps=[];node=cert['root']
+ while cert['nodes'][node]['kind']=='split':
+  t=cert['nodes'][node];clash=cert['nodes'][t['left']]
+  assert clash['kind']=='clash' and t['component']==clash['component'], 'Requires a pure arc trace'
+  i,j=t['component'],clash['other'];removed=set(t['subset'])
+  assert removed<=current[i] and i!=j
+  steps.append(dict(component=i,blocker=j,owners=sorted(removed),others=sorted(current[j])))
+  current[i]-=removed;node=t['right']
+ last=cert['nodes'][node]
+ assert last['kind']=='empty' and not current[last['component']]
+ trace=dict(steps=steps,retained=sorted(set.union(*current)),case_domains=initial)
 fields=('m','K','i','j','d','bin')
 key=lambda r:tuple(r[f] for f in fields)
 record=lambda k:dict(zip(fields,k))
@@ -101,5 +108,10 @@ for step,rectangle in enumerate(trace['steps']):
   for s,others in partition(rectangle['others'],4,2):visit(step,r,owners,s,others)
  print('step',step,'pairs',len(rectangle['owners'])*len(rectangle['others']),'blocks',len(blocks)-start,'seconds',round(time.monotonic()-tic,1),flush=True)
 out={'case':case,'status':'untrusted exact-rational export; Lean geometry and root-case acceptance pending','blocks':blocks,'steps':trace['steps'],'retained':trace['retained'],'case_domains':trace['case_domains'],'projection_bounds':12*len(blocks),'pairs':sum(len(b['owners'])*len(b['others']) for b in blocks)}
+if args.support_prefix:
+ import hashlib
+ out.update(scope_kind='support_prefix', support_proposal=str(args.support_prefix),
+            support_proposal_sha256=hashlib.sha256(args.support_prefix.read_bytes()).hexdigest(),
+            actual_root_credit=False)
 args.output.write_text(json.dumps(out,separators=(',',':'))+'\n')
 print('complete',len(blocks),'blocks',out['pairs'],'pairs',round(time.monotonic()-tic,1),'seconds; Lean acceptance pending',flush=True)

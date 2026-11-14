@@ -1,0 +1,8 @@
+{
+  "accepted_union": "audit/continuation-2026-10-16/boundary-aware-unions-v2/checkpoint-after-case393-v5-union-accepted.json",
+  "accepted_union_sha256": "58d2f780c2562a3f88dae1fef3420bd72dca20ac4f70fff0bb0331c3e60262b2",
+  "independent_check": "audit/continuation-2026-10-16/remaining253-module-census-v1/checkpoint-after-case393-independent-completion-v5/exact-union/independently-checked.json",
+  "independent_check_sha256": "e04a05098647120307a1f31dc324b6825cf6f1ef401e511a05130002b490ed5d",
+  "independent_checker": "audit/check_incremental_checkpoint_union_v20.py",
+  "actual_root_credit": 1332
+}

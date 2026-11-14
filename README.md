@@ -1,5 +1,11 @@
 # Sixpack
 
+**Frozen on 14 November 2026.** Start with
+[the source-freeze guide](checkpoint/SOURCE_FREEZE.md). The checkpoint preserves
+core code, original inputs and a compact supplementary proof-source library;
+compiled outputs and working caches are intentionally regenerable. The proof is
+unfinished. Do not restart historical job queues automatically.
+
 Independent audit and Lean formalization of a proposed optimal packing of six
 unit equilateral triangles in an equilateral triangle, with candidate side
 `(13 + 3√13)/8`.
@@ -24,11 +30,19 @@ logs are retained as reference material.
   milestone status.
 - [FORMALIZATION_PLAN.md](FORMALIZATION_PLAN.md): theorem boundaries, current
   formal status, and remaining work.
+- [FORMALIZATION_STRATEGY.md](FORMALIZATION_STRATEGY.md): measured bottlenecks,
+  core-family reuse, and the proposed checked-trace architecture, with credit
+  to ofitzharding's 17-square formalization.
 - [audit/REPORT.md](audit/REPORT.md): audit findings and replay status.
 - [PROTOTYPE_REPORT.md](PROTOTYPE_REPORT.md): lower-bound certificate experiments
   and local-proof progress, including their remaining hypotheses.
 
 ## Lean
+
+The commands below describe the historical build. Recover any needed supplementary
+source first, then rebuild selected theorem dependencies as explained in
+[the recovery guide](checkpoint/RESUME.md). The freeze does not retain a ready-made
+compiled environment.
 
 Lean and mathlib are pinned to `v4.24.0`; `lake-manifest.json` pins the dependency
 commits. With that toolchain available:
@@ -101,14 +115,15 @@ evidence; the computational and geometric proofs themselves are kernel-checked
 by the build. Consult the plan for exact theorem names and limitations. Passing
 this build does not establish optimality.
 
-The default proof set includes eight of the main branch's 21 geometric pruning
+The default proof set includes nine of the main branch's 21 geometric pruning
 steps and an actual-domain partial deletion for root case 715. The latter
 excludes 17 owner records against every one of its 1,730 initial blockers and
 proves that this deletion preserves every represented packing choice. It does
 not close the entire case. Complete initial-root classification and remaining
 tree and local-label proofs are still required for the unconditional lower
-bound. The current effort estimate is about 40%, with substantial uncertainty
-(25–55%); certificate counts are not a measure of remaining proof effort.
+bound. Overall remaining proof effort is currently unknown. Progress is tracked by
+verified stages and scoped subproof counts in `FORMALIZATION_STATUS.md`; the
+former aggregate percentage is retired.
 
 ## Reproduce the original computer checks without modifying the reference
 

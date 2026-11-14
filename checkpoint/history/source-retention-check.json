@@ -1,0 +1,19 @@
+{
+  "successful_lean430_receipt_source_checks": {
+    "matching_frozen_source": 93734
+  },
+  "nonmatching_examples": {},
+  "legacy_project_artifact_sources": {
+    "artifacts": 114670,
+    "missing_source_count": 2,
+    "examples": [
+      "Sixpack/CoarseCaseReduction/Test.lean",
+      "Sixpack/RootCoarseGroupDomains/Batch248/Chunk3/.accepted-artifact-after1116-v15-Part0.lean"
+    ]
+  },
+  "this_checks_source_retention_not_a_new_Lean_build": true,
+  "legacy_exceptions": {
+    "duplicate_hidden_copy": "The hidden accepted-artifact Part0 copy is byte-identical to canonical Part0.olean, whose source is retained.",
+    "orphan_diagnostic": "CoarseCaseReduction/Test has no source; its tiny compiled artifact and sidecars are retained in the private metadata supplement."
+  }
+}

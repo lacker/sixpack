@@ -1,0 +1,9 @@
+import Sixpack.RootCaseCompletionV1
+import Sixpack.Core027Symmetry428V1.OriginalCase
+
+namespace Sixpack.BoundaryOnlyContractPilotV1
+
+theorem root_case428_endpoint_boundary : Sixpack.RootCaseCompletionV1.BoundaryAt 428 :=
+  Sixpack.Core027Symmetry428V1.root_case428_endpoint_boundary
+
+end Sixpack.BoundaryOnlyContractPilotV1

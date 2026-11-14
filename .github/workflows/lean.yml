@@ -1,7 +1,6 @@
-name: Lean proofs
+name: Lean proofs (manual during source freeze)
 on:
-  push:
-  pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:

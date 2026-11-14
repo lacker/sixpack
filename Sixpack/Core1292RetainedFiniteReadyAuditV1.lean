@@ -1,0 +1,3 @@
+import Sixpack.Core1292SharedFreshCoverage.Geometry.BindingsReady0
+import Sixpack.Core1292SharedFreshCoverage.Geometry.BindingsReady3
+import Sixpack.Core1292SharedFreshCoverage.Geometry.BindingsReady4

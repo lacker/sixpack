@@ -13,10 +13,8 @@ from generate_root_shared_pair import propose_pair
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def export_batch(meta, indices, batch, records):
-    assert 1 <= len(indices) <= 16 and len(set(indices)) == len(indices)
-    assert all(0 <= i < len(meta["blocks"]) for i in indices) and batch >= 0
-    module = f'Sixpack.RootSpatialAnglePairs.RootCase{meta["case"]}Batch{batch}'
+def load_source_index():
+    """Inventory source locations only; every reused body is checked below."""
     registry_path = ROOT / 'audit/root-shared-pair-source-index.json'
     registry = json.loads(registry_path.read_text()) if registry_path.exists() else {}
     # This indexes source locations, never mathematical success. A future
@@ -26,6 +24,15 @@ def export_batch(meta, indices, batch, records):
         for digest in re.findall(r'^def rootSpatialAnglePair([0-9a-f]{16})Certificate', path.read_text(), re.M):
             if digest not in registry:
                 registry[digest] = target
+    return registry
+
+
+def export_batch(meta, indices, batch, records, source_index=None):
+    assert 1 <= len(indices) <= 16 and len(set(indices)) == len(indices)
+    assert all(0 <= i < len(meta["blocks"]) for i in indices) and batch >= 0
+    module = f'Sixpack.RootSpatialAnglePairs.RootCase{meta["case"]}Batch{batch}'
+    registry_path = ROOT / 'audit/root-shared-pair-source-index.json'
+    registry = load_source_index() if source_index is None else source_index
     imports, bodies, geometries, exports = set(), [], {}, []
     for index in indices:
         text, export = propose_pair(meta['blocks'][index], meta['case'], index, records)

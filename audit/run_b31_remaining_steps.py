@@ -10,6 +10,7 @@ root = Path(__file__).resolve().parents[1]
 p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--start', type=int, required=True)
 p.add_argument('--end', type=int, default=20)
+p.add_argument('--reuse-compiled-groups', action='store_true', help='Recheck previously compiled full groups with Lake while keeping the complete stage audit.')
 a = p.parse_args()
 assert 1 <= a.start <= a.end <= 20
 plan = json.loads((root/'audit/b31-spatial-angle-batch-plan.json').read_text())
@@ -65,10 +66,23 @@ for step in range(a.start,a.end+1):
             call([sys.executable,'audit/check_b31_spatial_angle_batches.py','--start',str(batch),'--count','1'])
             new_batches.append(batch)
     # Every group build also makes Lake recheck all its geometric dependencies.
-    call([sys.executable,'audit/check_b31_indexed_group_modules.py','--groups',','.join(map(str,ids))])
+    group_command = [sys.executable,'audit/check_b31_indexed_group_modules.py','--groups',','.join(map(str,ids))]
+    if a.reuse_compiled_groups:
+        group_command.append('--reuse-compiled-groups')
+    call(group_command)
     call([sys.executable,'audit/check_b31_indexed_groups.py'])
     call([sys.executable,'audit/generate_b31_geometric_steps.py','--steps',str(step)])
     call([sys.executable,'audit/check_b31_geometric_steps.py'])
+    step_folder = root/f'Sixpack/EndpointB31GeometricSteps/Step{step}'
+    if step_folder.is_dir():
+        build(f'Sixpack.EndpointB31GeometricSteps.Step{step}.Data')
+        for tag in ('Blocker', 'Owner', 'Groups'):
+            paths = sorted(step_folder.glob(tag+'Batch*.lean'),
+                           key=lambda path: int(path.stem.removeprefix(tag+'Batch')))
+            for path in paths:
+                build(f'Sixpack.EndpointB31GeometricSteps.Step{step}.{path.stem}')
+            if tag != 'Groups':
+                build(f'Sixpack.EndpointB31GeometricSteps.Step{step}.{tag}Coverage')
     build(f'Sixpack.EndpointB31GeometricSteps.Step{step}')
     call([sys.executable,'audit/generate_b31_geometric_chain.py','--count',str(step+1)])
     call([sys.executable,'audit/check_b31_geometric_chain.py'])
@@ -83,6 +97,8 @@ for step in range(a.start,a.end+1):
     names += sorted({f'Sixpack.{name}' for group in ids
                      for path in (root/f'Sixpack/EndpointB31IndexedGroups/Group{group}').glob('*.lean')
                      for name in re.findall(r'^theorem (\w+)', path.read_text(), re.M)})
+    names += sorted({f'Sixpack.{name}' for path in step_folder.glob('*.lean')
+                     for name in re.findall(r'^theorem (\w+)', path.read_text(), re.M)})
     if step==20:
         names.append('Sixpack.b31_initial_snapshot_no_packing')
     source = Path('/tmp')/f'sixpack-b31-remaining-step{step}-audit-{run_id}.lean'
@@ -90,8 +106,11 @@ for step in range(a.start,a.end+1):
                       ''.join(f'#print axioms {name}\n' for name in names))
     log = Path('/tmp')/f'sixpack-b31-remaining-step{step}-axioms-{run_id}.log'
     call([sys.executable,'audit/run_shared_axiom_audit.py','--source',str(source),'--log',str(log)])
+    call([sys.executable,'audit/check_b31_stage_audit_scope.py','--step',str(step),
+          '--request',str(source),'--log',str(log)])
     for path in [root/f'Sixpack/EndpointB31GeometricSteps/Step{step}.lean',
-                 root/f'Sixpack/EndpointB31GeometricChains/Prefix{step+1}.lean']:
+                 root/f'Sixpack/EndpointB31GeometricChains/Prefix{step+1}.lean',
+                 *step_folder.glob('*.lean')]:
         assert not re.search(r'\b(sorry|axiom|native_decide)\b|Lean\.ofReduceBool',path.read_text()),path
     print(f'Accepted step {step} and prefix {step+1}; audit request={source}; axiom log={log}. Default import and publication remain separate.',flush=True)
 call([sys.executable,'audit/check_b31_spatial_angle_export.py'])

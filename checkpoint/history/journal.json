@@ -1,0 +1,1586 @@
+{
+  "batches": [
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-73b5a010d28d7e259272.json",
+      "sha256": "9be59389fdf85de1b3e8f51a9f2941003d0ef7b64cfca4d86d064de79e86643a",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-73b5a010d28d7e259272-independently-checked.json",
+      "cases": [
+        1365,
+        1371,
+        1372
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f553528de1f9967aa0d3.json",
+      "sha256": "fa6a9ac32427503318a19afcc28bbc9aeff82c9227b3b277fb80326fa6a7d811",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f553528de1f9967aa0d3-independently-checked.json",
+      "cases": [
+        1323
+      ],
+      "retained_lake_import_context_check": {
+        "path": "audit/continuation-2026-10-16/case1323-complete-local-provenance-v1/independently-checked.json",
+        "sha256": "8ccc30c00e9d8a82aa7fd6a1f9dbc20e062b96a1bfc955dfd0fe6cc5434e6365"
+      }
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f41ba38b1d42b19ed346.json",
+      "sha256": "f13ca7ecf382bdefc0a73f242af195f4ed1ce96b35267087df3b4de52e957536",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f41ba38b1d42b19ed346-independently-checked.json",
+      "cases": [
+        480,
+        588,
+        598,
+        599,
+        600,
+        601,
+        602,
+        674
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d21614ab31be7e8f2f2b.json",
+      "sha256": "bc169723f139fdd7cc59f57b3ea97635d0f0c12f0e5ef185bf682a15e10bfb1a",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d21614ab31be7e8f2f2b-independently-checked.json",
+      "cases": [
+        1312
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-3efa87fb494e3199bd81.json",
+      "sha256": "50064e293008feecf45a48e5d1a40dfed336027a53fb996a170c747f1d984a58",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-3efa87fb494e3199bd81-independently-checked.json",
+      "cases": [
+        1289
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cd6daeec4e49cf676acd.json",
+      "sha256": "7849019957b9601a3411e94ebb3ea7c23aa66c7f8f940334102c824f9d98c816",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cd6daeec4e49cf676acd-independently-checked.json",
+      "cases": [
+        412
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-656b22699eecf879b0b1.json",
+      "sha256": "75d1fa4edab6821970ab8af249e9ef85cd4bcbf08c74cce04943ad8debf557b5",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-656b22699eecf879b0b1-independently-checked.json",
+      "cases": [
+        847
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c1c57b31aa7001524234.json",
+      "sha256": "537a82c63f8ab5920b82d79105c729db9d0528c17874bc4956dcb82b35c75b69",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c1c57b31aa7001524234-independently-checked.json",
+      "cases": [
+        1027
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9ad6931739e601c06411.json",
+      "sha256": "f0292a4bf3d017ad8e905bb48caeafd1fe2eeb5f033df15b1712839ccddfbd62",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9ad6931739e601c06411-independently-checked.json",
+      "cases": [
+        1277
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a588a922817ca0240af7.json",
+      "sha256": "62c9cde53451485d1fb8433716063303779f5c25944b598058168f8e123d23ba",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a588a922817ca0240af7-independently-checked.json",
+      "cases": [
+        1278
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-639994caa7e900a4224a.json",
+      "sha256": "5fc28cb2a9aa319e9e3d4e07f280db31efad771aa0c86273dcee08726294172b",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-639994caa7e900a4224a-independently-checked.json",
+      "cases": [
+        1082
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e332338047839d0e0cfc.json",
+      "sha256": "22348b35651d3923b78a85a666aedeab2d8089d3bc038b7594e848844fc1f2d2",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e332338047839d0e0cfc-independently-checked.json",
+      "cases": [
+        1354
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-66d73ee607d1d02e34b4.json",
+      "sha256": "9a4edf8d980128c19a22bfec3ea031e56bd904789f958711455f93666b44feb4",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-66d73ee607d1d02e34b4-independently-checked.json",
+      "cases": [
+        1071
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-515a21b2eaf378aece61.json",
+      "sha256": "0bee4afbc6aec2fa84aa277dd83322e082545d31dbf241628684e938b905ad56",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-515a21b2eaf378aece61-independently-checked.json",
+      "cases": [
+        1279
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5c7322a3afac2dd487d2.json",
+      "sha256": "e3cc124a41b00ed04e0f6d47d8129930cbeed85bfb9284a440c2350157644d6a",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5c7322a3afac2dd487d2-independently-checked.json",
+      "cases": [
+        1070
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-54030219f74b2a61c93a.json",
+      "sha256": "4da7cc74b495901d47e92ba5027688899f2ccfe4f9b9981da2206b4c01821f24",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-54030219f74b2a61c93a-independently-checked.json",
+      "cases": [
+        1280
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9d0405225babd1ce5057.json",
+      "sha256": "fd05136cc9e29c4aefdf76319b35344b26123dfd13c21db11746207ef130bc70",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9d0405225babd1ce5057-independently-checked.json",
+      "cases": [
+        1302
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8f828785d0ac12b62e6a.json",
+      "sha256": "a2b7c35f8682bd8f44f49d38053a2eeb2c3fd8a4b00df641537dc28c84a75a59",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8f828785d0ac12b62e6a-independently-checked.json",
+      "cases": [
+        1059
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0dc3d3f0e32839e1b223.json",
+      "sha256": "08a323df611b22106b44f0be8972b543fee68f486854bcc86121f422494655f2",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0dc3d3f0e32839e1b223-independently-checked.json",
+      "cases": [
+        1017
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-55f0a9e9d5bfb0891bcd.json",
+      "sha256": "815cbee35a90ed1efcfcab3ef7df310e3c0abb61ad1f20a467824de8edff62aa",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-55f0a9e9d5bfb0891bcd-independently-checked.json",
+      "cases": [
+        1288
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-95b9eff9ee70c7f23165.json",
+      "sha256": "d81347254ef8526e13576d1c1c9a0e8571dc36363666f98a5a99a4393b4e3027",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-95b9eff9ee70c7f23165-independently-checked.json",
+      "cases": [
+        398
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-aff9df3d909e64bcb2bf.json",
+      "sha256": "5c8b83d3e6f72913676aa8ac935391a156933e14fd5f07173173484482a3b447",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-aff9df3d909e64bcb2bf-independently-checked.json",
+      "cases": [
+        830
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-15be40a8e545865254df.json",
+      "sha256": "0e560fcb7b02c1a42739e3a2ce05a521749581b04ca6042ccbb445c6c48e5a1b",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-15be40a8e545865254df-independently-checked.json",
+      "cases": [
+        831
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-74665430140c7115b346.json",
+      "sha256": "82ed3e633ae94ee39a5409d978dc2424e62117330eef45d27300f7e7ce0ea72f",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-74665430140c7115b346-independently-checked.json",
+      "cases": [
+        833
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d0f271d3152ad0fe463c.json",
+      "sha256": "30784fe241eea75d2260aabe9171cb93ac480903beab5cf227601b03994aa886",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d0f271d3152ad0fe463c-independently-checked.json",
+      "cases": [
+        924
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-09b34526c8d04aa3cc3e.json",
+      "sha256": "ece5e3c1b84bef70de4aeaf11a38bc2ae94a0437cc990cbdbe5133812fdce612",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-09b34526c8d04aa3cc3e-independently-checked.json",
+      "cases": [
+        990
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-27cdeca9dd085d0e2f5c.json",
+      "sha256": "a847569cf3b6f8425f0742f5bf7c5846935811753154a2f80d0b59531cd8d012",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-27cdeca9dd085d0e2f5c-independently-checked.json",
+      "cases": [
+        1276
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-63e0ab4518887a6e5115.json",
+      "sha256": "c7da1b98303e7da3f4fcf332d93967dab9cb40bf6c50fcd2a5ee6147f9c1dbd8",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-63e0ab4518887a6e5115-independently-checked.json",
+      "cases": [
+        881
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0e3f73a7ab04e9a7b829.json",
+      "sha256": "43874428bcaaa77ce7c79f819c47a7444e60b44e0276dfb1673d155beaadf76a",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0e3f73a7ab04e9a7b829-independently-checked.json",
+      "cases": [
+        973
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-973d69161cb7e245b838.json",
+      "sha256": "9c6b545a132753af661aa13a23f18172b90f11f993da2df5f0490c0f6e4e527d",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-973d69161cb7e245b838-independently-checked.json",
+      "cases": [
+        993
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8b968bd02345cc797ad3.json",
+      "sha256": "2b1de56957d6bfcbe7000a86bf9e3054d9eabe3dd8952d2a507df6ebd8ae8778",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8b968bd02345cc797ad3-independently-checked.json",
+      "cases": [
+        782
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c31a47da036c0c0ee358.json",
+      "sha256": "0f135aca2845f31aac14babaffb66428a92a8893a12d2e73f2ac7b7e8729c8a7",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c31a47da036c0c0ee358-independently-checked.json",
+      "cases": [
+        817
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-713a396fd3ed4456d5b1.json",
+      "sha256": "7bce28155065d02a45f4b143da5ccbf825aa310880a085b63f2a89c909cba0bf",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-713a396fd3ed4456d5b1-independently-checked.json",
+      "cases": [
+        762
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6a5a2039a97f8daed17b.json",
+      "sha256": "ca1ddfb5c49d4a195f06441193256b2ebd8d07377eef39263c5614fa9439ae86",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6a5a2039a97f8daed17b-independently-checked.json",
+      "cases": [
+        786
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-47c0361a7edb8384c26e.json",
+      "sha256": "8f120fe866794e4c851d4fddb17d6d2679485a2b09e2bcbe4695b27adc54e6a8",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-47c0361a7edb8384c26e-independently-checked.json",
+      "cases": [
+        965
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-71703b9f87d77bb07b40.json",
+      "sha256": "f8fff424fb4877613e536b2b01e75426df2238c1600a12070a0a3c0147f643f4",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-71703b9f87d77bb07b40-independently-checked.json",
+      "cases": [
+        969
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-49b27ea7d22cb6b06b28.json",
+      "sha256": "401d380b68f39116d14006f85c7438b4f6b1b34e5054ffc4b56316767902e151",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-49b27ea7d22cb6b06b28-independently-checked.json",
+      "cases": [
+        964
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-69d040c6755f57aaec32.json",
+      "sha256": "3aad6a8f18116f2f34e770afae7fa4e7cf8427cd48e9fc2a1ebe1840fe3adb38",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-69d040c6755f57aaec32-independently-checked.json",
+      "cases": [
+        989
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-99fac1407997892fc9f1.json",
+      "sha256": "22d5e9445f72895f3ceb27f5bafaf55127b431406fc24d8563cc08efe710a5f4",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-99fac1407997892fc9f1-independently-checked.json",
+      "cases": [
+        1391
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cf3412ad70d51e6b13bd.json",
+      "sha256": "829014153d091924e00c6c792f4d9b092e821ca0f1b92f7e84b92d5b8b42caac",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cf3412ad70d51e6b13bd-independently-checked.json",
+      "cases": [
+        967
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-741ff70a0b4059737fc0.json",
+      "sha256": "bbe5d937c297fa7149daa569b8aaaac9c3be1f5f08bf7d35f71747c5b014703e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-741ff70a0b4059737fc0-independently-checked.json",
+      "cases": [
+        991
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-aaefd82456665ed69b9b.json",
+      "sha256": "2937107f15174429a00241f7d9c91441a6aa73f99ac5a71efa1581471115652a",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-aaefd82456665ed69b9b-independently-checked.json",
+      "cases": [
+        1321
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-40ebce4d41330d866611.json",
+      "sha256": "5a73eb675a1f38f5d0e7bfb56abc0045d33eaab361727824e2be2cc2086ba21e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-40ebce4d41330d866611-independently-checked.json",
+      "cases": [
+        1336
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-474d61e9228d981b00c8.json",
+      "sha256": "17783fed03065663d3da90f23d6524eb18c5ca81d3b9146d8ab288d0519c38b8",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-474d61e9228d981b00c8-independently-checked.json",
+      "cases": [
+        1040
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-1301eb410a9b8edfa836.json",
+      "sha256": "4862af71212336c02950f63e32da03cdb5f45f2dd04b7a761c1b7ddc56de8bdc",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-1301eb410a9b8edfa836-independently-checked.json",
+      "cases": [
+        718
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-be2396df70b1c9fc0bb8.json",
+      "sha256": "53d45f729552abc867921863779a385eb740b9f8fcd71039b2ae453d1a004d75",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-be2396df70b1c9fc0bb8-independently-checked.json",
+      "cases": [
+        752
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b14332b266d18318b19d.json",
+      "sha256": "81e335e3f05f2869b84502740ff78810e9b080ff763e33d52dba2661ece4d993",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b14332b266d18318b19d-independently-checked.json",
+      "cases": [
+        756
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-54741f601b0b114ae976.json",
+      "sha256": "399493641fa89d9e771da9598530b135cf14d8476ff4048e7daad5a92f005a4b",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-54741f601b0b114ae976-independently-checked.json",
+      "cases": [
+        761
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-996c933cc75799f4242a.json",
+      "sha256": "e0661961a2af379d0a108c1ed5780a2f89ad6bc32c1db36c9c415b5fff16d6fe",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-996c933cc75799f4242a-independently-checked.json",
+      "cases": [
+        861
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b8a6f6b89fb1e750b74d.json",
+      "sha256": "d8d59676e9995e3e859be4c58d37020bc7e249ea77a2a13e31c3b74987be6ab0",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b8a6f6b89fb1e750b74d-independently-checked.json",
+      "cases": [
+        906
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9070e84f3867be0fd4f8.json",
+      "sha256": "2272386a3a384a9c398a93d30f224d29fff3074b05e80cfb5d1456a09b73b672",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9070e84f3867be0fd4f8-independently-checked.json",
+      "cases": [
+        982
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cd6cd6df60463ddc46af.json",
+      "sha256": "56ad72539ef57aa6002c2a0052929e5a04f9c0a33b6ad74a2b07298f6ac1650d",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cd6cd6df60463ddc46af-independently-checked.json",
+      "cases": [
+        1077
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6b8a2c9db9d53df7f0e4.json",
+      "sha256": "4751daf0a0a8bd41c136ba29980871dc288b6a9a046fc4dfaaeff080a2d23f75",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6b8a2c9db9d53df7f0e4-independently-checked.json",
+      "cases": [
+        783
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8bb457b96780de5c1d79.json",
+      "sha256": "3afee894930b11518ce3dd655d0639c5a63fed2392e87c15dcbb97c359515b1b",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8bb457b96780de5c1d79-independently-checked.json",
+      "cases": [
+        409
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a1be920c97c62e0a2331.json",
+      "sha256": "9388f9a51d9e3301e41f94a35aa8f113623bbe2a0e6c116b7881a435a146e4d5",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a1be920c97c62e0a2331-independently-checked.json",
+      "cases": [
+        754
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-94ec548c7475582e26ab.json",
+      "sha256": "b46c8bcc34156f1046dc0724c2c589d7a4cbc775a49b7ba7a955d3dbb1a9caea",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-94ec548c7475582e26ab-independently-checked.json",
+      "cases": [
+        717
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-853790a8b91df3b0ba9f.json",
+      "sha256": "38ca6740dded35f65835d6343d44d28993dc39c851903098b061d4d356553899",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-853790a8b91df3b0ba9f-independently-checked.json",
+      "cases": [
+        719
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f1949eb940ab969b1f1d.json",
+      "sha256": "593be1c8d9dcca100809d0731c94cf62d62112d7ee326ab262e192be631e8f97",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f1949eb940ab969b1f1d-independently-checked.json",
+      "cases": [
+        403
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cd0d5c60bae06b7da919.json",
+      "sha256": "9e53bac7346b2dc1a96ddae227a64be264a6292ddeaa1dd71839652f5cbf62d0",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cd0d5c60bae06b7da919-independently-checked.json",
+      "cases": [
+        720
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8d951d3ef6925ad26736.json",
+      "sha256": "84c9f8904e9491ac8ede46459db15da690a748c088b921dceacf5879815a8dfa",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8d951d3ef6925ad26736-independently-checked.json",
+      "cases": [
+        855
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-3d66c4577b4982927074.json",
+      "sha256": "44c12f2ae1711ea56f70899d8f552cc592dc1cd16b03bfb5cb5fdef549ed976b",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-3d66c4577b4982927074-independently-checked.json",
+      "cases": [
+        416
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ca70a7bc524f31cbe595.json",
+      "sha256": "aa7d62919be5a9087e124797e77c98d51b34fa7b8da415ba31662ad83433c554",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ca70a7bc524f31cbe595-independently-checked.json",
+      "cases": [
+        795
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f635fdc02a66cb8e7de2.json",
+      "sha256": "e11559aec1b3162c3175c6cd080e2203003ca706454f88bd557fd3427119ed7b",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f635fdc02a66cb8e7de2-independently-checked.json",
+      "cases": [
+        796
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fdcc9af907e471f22e18.json",
+      "sha256": "446ef4cef41f5f45a8628ce78a0d136d0e9cbd014446fb0ec109c8365284c5ea",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fdcc9af907e471f22e18-independently-checked.json",
+      "cases": [
+        797
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-15e36df8bd4a5f68ecfc.json",
+      "sha256": "d2d204f2a9b5566bdc689398909567fe612fc240d440363ac5062fba7b512e8d",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-15e36df8bd4a5f68ecfc-independently-checked.json",
+      "cases": [
+        853
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-114e1680b092d2de342a.json",
+      "sha256": "752dcf6c8ac67a3e13e7448208d15ca711577ba422a0488375cc2ec3b1c1c576",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-114e1680b092d2de342a-independently-checked.json",
+      "cases": [
+        854
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c24ce3cea116deb09b9d.json",
+      "sha256": "290ed556f181ee86c1555017f5cbdb2a3747b812c6c68b1255011b6fb4817fca",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c24ce3cea116deb09b9d-independently-checked.json",
+      "cases": [
+        442
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-46008f87cc7db3af7025.json",
+      "sha256": "f7ff8fb429f6fec41e6321fb6433826c1cf5944bf7c0690a611280ce1a427a9c",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-46008f87cc7db3af7025-independently-checked.json",
+      "cases": [
+        925
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-17943278a7c93be1c657.json",
+      "sha256": "ea97b8530f803db4841e50ea732e3c4284fed09c146d52f67cf43d79d3936582",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-17943278a7c93be1c657-independently-checked.json",
+      "cases": [
+        823
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5775a578aa31d8791217.json",
+      "sha256": "3829f3ed1a70f99a939da5e47a5011f7d78b24993d03f18f4b88ab45ae88b48e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5775a578aa31d8791217-independently-checked.json",
+      "cases": [
+        822
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6491b414ad5f18a409fc.json",
+      "sha256": "3b6917540d29214e5d063eeb27e790b4ed2daa63b60bb9727621e7136f5d3f05",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6491b414ad5f18a409fc-independently-checked.json",
+      "cases": [
+        775
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f6047c50d78abcd81713.json",
+      "sha256": "ccd53776b39c272baa2217e9451695ec2b9f1d71e2ecfcfac2071e20be7483ee",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f6047c50d78abcd81713-independently-checked.json",
+      "cases": [
+        882
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ea76b07b9b1552c488e0.json",
+      "sha256": "2aeb131b5e629284f18c97555b055f2246ed5e54e1eb3e777adb96f6212da37d",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ea76b07b9b1552c488e0-independently-checked.json",
+      "cases": [
+        725
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-184f147f8027e7d46086.json",
+      "sha256": "fef9a8544b0ccd4753b3ade41127e6efb760d064a373267fcb19f60f382deb4c",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-184f147f8027e7d46086-independently-checked.json",
+      "cases": [
+        873
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0b545254b85e6bd3d200.json",
+      "sha256": "7bbfa756f5722fb6603fbca54522560500dd05ff09f14337e15a57e7372f4bc1",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0b545254b85e6bd3d200-independently-checked.json",
+      "cases": [
+        774
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f4ec1e383f77c50a3f89.json",
+      "sha256": "c9c81f3ccfaa0aca46e756dcc2dfbf18d8c865973657ae1776ff91f15e49bba6",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f4ec1e383f77c50a3f89-independently-checked.json",
+      "cases": [
+        835
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-7d717e192bad1a65b714.json",
+      "sha256": "b17473c7339ce03079484a5d6a2be6fb1a949689f036eccab02dccc106f43bc5",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-7d717e192bad1a65b714-independently-checked.json",
+      "cases": [
+        880
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d05c39696f9028af97f6.json",
+      "sha256": "79ef3dfd04cea95685fede36a4e63287bd996e98b65d74b585f610229bd53fbe",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d05c39696f9028af97f6-independently-checked.json",
+      "cases": [
+        836
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cfc87ce5f1588ce1bbff.json",
+      "sha256": "ecc480542d35ee3214521673713c185f65eeb2bff13428bbd99c7277d3e4c5ef",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cfc87ce5f1588ce1bbff-independently-checked.json",
+      "cases": [
+        872
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c308479cbd56d24f9720.json",
+      "sha256": "cf51f698cfa5e76e920cb7dc46cb7248c0143b54ae1483bd8488ca9690667ad0",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c308479cbd56d24f9720-independently-checked.json",
+      "cases": [
+        879
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0ede478faaefce4e9396.json",
+      "sha256": "5978e3c27bc7a86db0619d9187e25e40b920fb55c10b81a66cbcfbe903a846e2",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0ede478faaefce4e9396-independently-checked.json",
+      "cases": [
+        905
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-65e82090273870cddba7.json",
+      "sha256": "72a7d47d59a618806a3250f645d8be82b77841168c0a3b6a40d0e6d899f52604",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-65e82090273870cddba7-independently-checked.json",
+      "cases": [
+        884
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-80c30a2ca0fe6cc9c46e.json",
+      "sha256": "59741fa8ef85760d3fae52b81f1d9c6d4497172785a1f8a0f561196900efcf43",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-80c30a2ca0fe6cc9c46e-independently-checked.json",
+      "cases": [
+        777
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-57ed170ac466ac9372a9.json",
+      "sha256": "7f64cd5e46e04254e0f38b70d93827a81413d93f176fdfb1fe4a0b577efa886f",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-57ed170ac466ac9372a9-independently-checked.json",
+      "cases": [
+        838
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-1e7ab382703a0f933aa7.json",
+      "sha256": "6123cea3d70d74b46cd962626e505a6864766cab9cd099f8c076e4bf2790a2af",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-1e7ab382703a0f933aa7-independently-checked.json",
+      "cases": [
+        802
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0018312a9e3c72774c99.json",
+      "sha256": "5ea7f3621c182c025aede994e47f6d19d9f5f5c92b0a5d389396120f0a511098",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0018312a9e3c72774c99-independently-checked.json",
+      "cases": [
+        864
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-dcc071d647a61cb8ffa4.json",
+      "sha256": "915d2fa233cc59480f5384b00df5f35b07807434acaee91c2378df71587fc231",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-dcc071d647a61cb8ffa4-independently-checked.json",
+      "cases": [
+        337
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-21c7db0e5c2bd76080b1.json",
+      "sha256": "c7aae3204519a3506f386c58b7d5ee18d6ebc9d11ed027889688be552bfdb834",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-21c7db0e5c2bd76080b1-independently-checked.json",
+      "cases": [
+        862
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-24590c6c4e9903951b7d.json",
+      "sha256": "e25e2aef898fa76796c7e28091e4ee3e8424252f3eb809ed6996aa406b7c1a5e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-24590c6c4e9903951b7d-independently-checked.json",
+      "cases": [
+        863
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a21fb9e71ea929f93e90.json",
+      "sha256": "728a0f8014b6069f6a750e2b875897e39c787ba50239550a35f0b749137f0e7d",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a21fb9e71ea929f93e90-independently-checked.json",
+      "cases": [
+        477
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-69ef6527b412abdc22eb.json",
+      "sha256": "c5f874b31e3be766d117204d1b3329564a090e6900d68b3a995d1e4020973d33",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-69ef6527b412abdc22eb-independently-checked.json",
+      "cases": [
+        441
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6dea21ff7f3b750f20eb.json",
+      "sha256": "8f12cb77fc5e23d8c64b9f749897ae4c42c0b800862547129b91d85663b2bb23",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6dea21ff7f3b750f20eb-independently-checked.json",
+      "cases": [
+        478
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ad0e4092cc92f9a96b95.json",
+      "sha256": "9b412b3e31f505a4e3994dc79af8a81e777326a3d1eadd180e950688f317f19c",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ad0e4092cc92f9a96b95-independently-checked.json",
+      "cases": [
+        418
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-087a0d75a973e3c0682f.json",
+      "sha256": "b8c2962814c3ee12eb1b2834b92d433f9415ff31d3df774992f9f848410fef62",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-087a0d75a973e3c0682f-independently-checked.json",
+      "cases": [
+        446
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-4c8c1a07855b05b508dc.json",
+      "sha256": "7d07823533011ad24bc2094f85d7c055dbf26ace5d2138940a6ba9d0c0aea745",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-4c8c1a07855b05b508dc-independently-checked.json",
+      "cases": [
+        457
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-72d8ac88e4b96b644516.json",
+      "sha256": "e34022d90a5d8d70420c40422b35c77f74c1c3ce03d46f0d2e3b65eb7ec2e1d0",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-72d8ac88e4b96b644516-independently-checked.json",
+      "cases": [
+        467
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6a4a8fae1ce82283ab35.json",
+      "sha256": "7f888523350b6e8a63fb5fa7eea9cdc68e13329e93e0b374b426ab5de49d9f2f",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6a4a8fae1ce82283ab35-independently-checked.json",
+      "cases": [
+        458
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ae263f4afbf5eb236889.json",
+      "sha256": "cae8255a3076857bbb2dc1a04da7c5aaf0912d2d2cb25f6001a2416e0cd1cc4e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ae263f4afbf5eb236889-independently-checked.json",
+      "cases": [
+        300
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f5f7c8927b537e3bd40d.json",
+      "sha256": "7da1e00149cb20b6f6fa7e1ea0424e21fd2c5973b6ae0ffd5c6f4c802b2766e2",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f5f7c8927b537e3bd40d-independently-checked.json",
+      "cases": [
+        445
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-086ab2af53e6b29f42a5.json",
+      "sha256": "09706e99c056b2c54b94df14c714f0c53af466f40c934b559d40235bcc43cd97",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-086ab2af53e6b29f42a5-independently-checked.json",
+      "cases": [
+        440
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-89e6f06c217301a6465a.json",
+      "sha256": "6271274423788af84a299400892b48cfdf5b5a58e4a5fa8dd4f55997a3edc3ca",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-89e6f06c217301a6465a-independently-checked.json",
+      "cases": [
+        417
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8e98d1bc829465c12106.json",
+      "sha256": "8c969dc789e12f21572f8706450b3ed0325439c24121f032234e81b884d42a5c",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8e98d1bc829465c12106-independently-checked.json",
+      "cases": [
+        419
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-335e620510ab3a9b49eb.json",
+      "sha256": "ef3087002a79bc5c34390f396750466a2bb00d3e7768c4e14a81cc241ad09bea",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-335e620510ab3a9b49eb-independently-checked.json",
+      "cases": [
+        331
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-bc906f70f985742c6612.json",
+      "sha256": "ed8175fb0fc471fb70b1b8b3424fdc37241d59c4b8483c72caf3bb2714f18b9d",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-bc906f70f985742c6612-independently-checked.json",
+      "cases": [
+        721
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-16e5d19b1ba953921cac.json",
+      "sha256": "71d90586a20c8191a28ebcbfc2c8220c72e333114db175d46ff3d4b6ae5c1a4c",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-16e5d19b1ba953921cac-independently-checked.json",
+      "cases": [
+        804
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-430015af475a5f6d6855.json",
+      "sha256": "40968f37538c76a71237abdf52e29d187b58c243af6cc2e2e93f6295e4102b0e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-430015af475a5f6d6855-independently-checked.json",
+      "cases": [
+        1051
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-113104392c3ea69b738f.json",
+      "sha256": "4764584dcf8232660eb3d4e9608fc1eab75d3c77d81c8a85f2ce5ce9f64ddf40",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-113104392c3ea69b738f-independently-checked.json",
+      "cases": [
+        1274
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e69c145f81d1349bca08.json",
+      "sha256": "acf43d6a69c78424ebf6d6d35215ffcb14e238210c06d2a9f50b194ea2a4702c",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e69c145f81d1349bca08-independently-checked.json",
+      "cases": [
+        1004
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a71f0c96aff2e5d97bd0.json",
+      "sha256": "6903eb75b68cb681e6eade1b9ad099c776c2ada9c0348da861657ae5d227d2af",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a71f0c96aff2e5d97bd0-independently-checked.json",
+      "cases": [
+        1320
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-88df983404e1f1103d49.json",
+      "sha256": "50790400e0dbc466e1346497ea19a17ccf4f46b958d15e67f29510ac2c666fa0",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-88df983404e1f1103d49-independently-checked.json",
+      "cases": [
+        1052
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-2ec3a81050c176d030f7.json",
+      "sha256": "75ef73ba52e1a7c024ddb90094208a13d38b20373983d085a33c862d351aaa9e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-2ec3a81050c176d030f7-independently-checked.json",
+      "cases": [
+        380
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fe28d60bc908f0236d37.json",
+      "sha256": "739d63b07b06a7b0163ae72995d908126d1e250554756304a91193c0383b269b",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fe28d60bc908f0236d37-independently-checked.json",
+      "cases": [
+        359
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d2558c7325d08a104bc0.json",
+      "sha256": "27e793fd6efffae67f7c0feb45ebfadd1570b2951b145a9e6bdbd0229232676c",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d2558c7325d08a104bc0-independently-checked.json",
+      "cases": [
+        1006
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ab09aec76539195de43c.json",
+      "sha256": "c4f61dfdbdafefb6a3cbc957f6d44a5e7b19a44822891c2ab09dd6da0c2d3e98",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ab09aec76539195de43c-independently-checked.json",
+      "cases": [
+        1024
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c9ad34e29a4e7b36126c.json",
+      "sha256": "b91552484465d189e19e1acbac95c193b7d991b184f10a44fc8f51b185014cc1",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c9ad34e29a4e7b36126c-independently-checked.json",
+      "cases": [
+        1275
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-46f324c115f5a9442ed8.json",
+      "sha256": "5b2fe355950a139a33e85a19376acf733e9d2c66d2e8134542333e9e228c152a",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-46f324c115f5a9442ed8-independently-checked.json",
+      "cases": [
+        928
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b0808c567033f38c2c17.json",
+      "sha256": "dded6c1d55bc1b9dbb17c3e60aa2310cb2605b3ed14d6dc29b11bf0d8dc3fb29",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b0808c567033f38c2c17-independently-checked.json",
+      "cases": [
+        966
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-306f4fb0a821690043e7.json",
+      "sha256": "6e358bd271d8d17563c067e2943640d02a235b84a144da57202fec57431b3eb9",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-306f4fb0a821690043e7-independently-checked.json",
+      "cases": [
+        1008
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-7f49cd14df60372bc30a.json",
+      "sha256": "821f7494d744a9c8c5cabe2ac4dab24b17032a31cde2bf8c31d557cfe288489e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-7f49cd14df60372bc30a-independently-checked.json",
+      "cases": [
+        978
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f8ca5a63185066238dc9.json",
+      "sha256": "b9b00c25a255e0d9405a207bd620e2e54bee3c501ca8a12b6929982b32e248a9",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f8ca5a63185066238dc9-independently-checked.json",
+      "cases": [
+        970
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b248d16d38063d8f53ce.json",
+      "sha256": "b923c9754a22cb39eb6edc2a00aac08356e2f5e0ddeb058a727cffb4f7eb85aa",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b248d16d38063d8f53ce-independently-checked.json",
+      "cases": [
+        1025
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-297d5da5bffd56e148d4.json",
+      "sha256": "2bc41d86d62ef47108021d373439504ebbfd07f1e4dabc8da7562b48d2fb59a2",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-297d5da5bffd56e148d4-independently-checked.json",
+      "cases": [
+        818
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e01e4d83892de52efb66.json",
+      "sha256": "1207eca22428e5ceb2b6a2536f34ea7e95d084428421f8d3df674553f283fc47",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e01e4d83892de52efb66-independently-checked.json",
+      "cases": [
+        972
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-66240048b048291647b9.json",
+      "sha256": "9fe93a1c443fb8874723f429af2479726977cf11acbc5b01fb82fc7cbb9d9827",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-66240048b048291647b9-independently-checked.json",
+      "cases": [
+        328
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-02ebcc089bcc2f0839a0.json",
+      "sha256": "6ad8604c0cd4e52769f38375b0f96ebd3289a73380d879dcd54f46d57c21f0f2",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-02ebcc089bcc2f0839a0-independently-checked.json",
+      "cases": [
+        929
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-371a301a569779abc1cb.json",
+      "sha256": "062f81f550de283bd0272d882d8a67993a07bf6e5009245e233786a5e09f46fd",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-371a301a569779abc1cb-independently-checked.json",
+      "cases": [
+        341
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-24e0e61dfa3f21daaaec.json",
+      "sha256": "28a97defce08c94ffad57ea95223f9368ad08d79ccf57a802cb0ca2e425b27ec",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-24e0e61dfa3f21daaaec-independently-checked.json",
+      "cases": [
+        305
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-1026a727bb3f636038b7.json",
+      "sha256": "c160bb20a998172c41b6a03fc0f83070fb207f48c0aae566e1a73ded94b56802",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-1026a727bb3f636038b7-independently-checked.json",
+      "cases": [
+        315
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9826a258f252e3eac9a0.json",
+      "sha256": "641a77858e575cad87f31dfa4bab0a0875f1bf6144ed6a39266e5fae49937da9",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9826a258f252e3eac9a0-independently-checked.json",
+      "cases": [
+        369
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-18a13b28e097944b2782.json",
+      "sha256": "dadc1340ad0d88791f3248f1d838a8f11c641a6ec09b260dba72feef040fc10c",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-18a13b28e097944b2782-independently-checked.json",
+      "cases": [
+        753
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-246c71191ec9d3060137.json",
+      "sha256": "1e861227a596f8cee18866385d905e32cfc7920914f182476cef3bb7bdf9501f",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-246c71191ec9d3060137-independently-checked.json",
+      "cases": [
+        319
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-170bed5e74b149af1748.json",
+      "sha256": "4ae9408f9a5fa0aad9aae73c437bd2008b417b4e2e79e3f8d5677ce7846d6cff",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-170bed5e74b149af1748-independently-checked.json",
+      "cases": [
+        381
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-188719b880e6889885f1.json",
+      "sha256": "339a17aeb58e67b7e396d4d402c2ac6ed38cd1e1a5eff13c57ee5a73ea9622b2",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-188719b880e6889885f1-independently-checked.json",
+      "cases": [
+        378
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-25e614030316e1e3dc59.json",
+      "sha256": "02cea3f37d6d859cffcc83c05968c6ba2a96ff78dd5b17b026a6f6936100791b",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-25e614030316e1e3dc59-independently-checked.json",
+      "cases": [
+        401
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-3d365b35de0664d2e8dc.json",
+      "sha256": "b1c334c0de4d81a13400239f80deaca55efffa38fe71df954d7499d14d12e706",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-3d365b35de0664d2e8dc-independently-checked.json",
+      "cases": [
+        449
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5396e729b98550d679cb.json",
+      "sha256": "8616c602a42059829460085d347244caed6cc164e2a33450632b5f62055c7cab",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5396e729b98550d679cb-independently-checked.json",
+      "cases": [
+        908
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a6362c42b224a7bb2141.json",
+      "sha256": "159c5ceb2a99e5e4f21f3537e177c6b02adfb4f599f905e81ac31f019a26c96f",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a6362c42b224a7bb2141-independently-checked.json",
+      "cases": [
+        907
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-1d0c97dd95dcdd8b925a.json",
+      "sha256": "8c21a9c0e92baae72e5d058e192f51e973627fdb2a7d7e77cb5341b54a2695a4",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-1d0c97dd95dcdd8b925a-independently-checked.json",
+      "cases": [
+        1341
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a3a57ec8e9defde09114.json",
+      "sha256": "b0563a649adbb12fadacfc8bddfde1068268ff962cfebcf115d37e640678bae4",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a3a57ec8e9defde09114-independently-checked.json",
+      "cases": [
+        410
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d5ebceeaee3192d74ff2.json",
+      "sha256": "c51d551bcdabab6da93e83cbb0b0c3b5bc8272c8b1fbb6a18834d09b172619eb",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d5ebceeaee3192d74ff2-independently-checked.json",
+      "cases": [
+        399
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cd4a297be29369e889b5.json",
+      "sha256": "39eadb58201a00fc65fb0ec1e443db789a1cbc6428b466ab90f5ce03f8c67b18",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cd4a297be29369e889b5-independently-checked.json",
+      "cases": [
+        402
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-163776e681875f931b22.json",
+      "sha256": "7928ef4a48072f04b066b9db0ca47da25645777636da290fa9b5493c94ffb4b7",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-163776e681875f931b22-independently-checked.json",
+      "cases": [
+        404
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9676d1dcdc1735e1bfef.json",
+      "sha256": "da33e1443f67e4bce085c4f974d1c1cf345a3216b1e3666e37dd1c0bde95af7d",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-9676d1dcdc1735e1bfef-independently-checked.json",
+      "cases": [
+        411
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-3cddc30e873f487d3a3f.json",
+      "sha256": "d9a4352710a794cb14746446c971550adafdc55db04f63c8c91af80e1a9154b9",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-3cddc30e873f487d3a3f-independently-checked.json",
+      "cases": [
+        413
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-7bee767bf1ec95c92e4d.json",
+      "sha256": "6055d18e1f0605d41d643b4d93137dbb9195c67bca0d6743937876d8b963f16c",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-7bee767bf1ec95c92e4d-independently-checked.json",
+      "cases": [
+        414
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d64825c16bc0507c66f3.json",
+      "sha256": "97c0c9760b07637820acf9a6fcc283ad89fc12830feed750c133cd8dc526c9bb",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d64825c16bc0507c66f3-independently-checked.json",
+      "cases": [
+        386
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fc473cd9dfc6108ea9c7.json",
+      "sha256": "b3802a3ecaabfd8a7b4f462c1bece615f093bba2fd560796e2219a540f30b683",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fc473cd9dfc6108ea9c7-independently-checked.json",
+      "cases": [
+        843
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-439fcc0e6bb01cd71d85.json",
+      "sha256": "611e1615519c1d76867232a04f28f673f3bcd24f0d45986f611003feb2e661a1",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-439fcc0e6bb01cd71d85-independently-checked.json",
+      "cases": [
+        885
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d794bf10ba9b58110f0b.json",
+      "sha256": "c5fffe5e4b667d35f1a40a6e9270f2d7f4f9de7d2bd4e3321c30d1da06464fd0",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-d794bf10ba9b58110f0b-independently-checked.json",
+      "cases": [
+        849
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fb1f36c09c195b0941aa.json",
+      "sha256": "786ebc91d8dea56eefb1874d2e9e61d5ba1ec40884e1ddf76f52a8502b05a1d0",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fb1f36c09c195b0941aa-independently-checked.json",
+      "cases": [
+        820
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-87372695fc708119c1ae.json",
+      "sha256": "3ae73c347a2d3d96029f3794cda434cb1eabcfe464c9504d5b064097afa8ff7a",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-87372695fc708119c1ae-independently-checked.json",
+      "cases": [
+        325
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-2848bf2d8dc75aa2ad4c.json",
+      "sha256": "e6d3b5f9158b44065bf46909c339383194b56de74420b4bea39600b6c26a38c6",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-2848bf2d8dc75aa2ad4c-independently-checked.json",
+      "cases": [
+        351
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-65380fb3dd87995755f2.json",
+      "sha256": "b3c2cc9378c2455da491abb429162b7397238d57dd3c88949969fe5e6dd6dafc",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-65380fb3dd87995755f2-independently-checked.json",
+      "cases": [
+        968
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6f8018475156eb168ca9.json",
+      "sha256": "fcebfc3980fd9ba4e88b5654dfced97562049b92deb251f3c6ce31ec443d3bbc",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-6f8018475156eb168ca9-independently-checked.json",
+      "cases": [
+        354
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-4329800345d34a9a4c88.json",
+      "sha256": "f40f5f3dca1c0b21c055a5bd5dbe960d81e654af078aef51170cd1a76a3721d7",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-4329800345d34a9a4c88-independently-checked.json",
+      "cases": [
+        447
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0bd73f212adcc0cabebc.json",
+      "sha256": "2577d813046277a8ad2b76cf55d01bc567efba1c94c9854f75eb43f90b953841",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0bd73f212adcc0cabebc-independently-checked.json",
+      "cases": [
+        432
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ff14faf4e9df078c0de8.json",
+      "sha256": "97f94e44b2d45e806dfc4498a88e3120f9aa49fb8685f51f433bad83959db791",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ff14faf4e9df078c0de8-independently-checked.json",
+      "cases": [
+        443
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c36d4cc5ed36570f7df3.json",
+      "sha256": "fa11b032482f884209ddfa9559268c29ef72f6dc3269e6232fb487a08af517bd",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-c36d4cc5ed36570f7df3-independently-checked.json",
+      "cases": [
+        453
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-2fe6bdb8577c1c182143.json",
+      "sha256": "339c75a9defc2108c94b151a8922e5ceb5a1a204196d3fd8ae3431a73b63cdd3",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-2fe6bdb8577c1c182143-independently-checked.json",
+      "cases": [
+        844
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-314f84a2302ded388ddd.json",
+      "sha256": "25db06f86b8197feb8641c5d8d141d23112906cb1471df7083188691500cb849",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-314f84a2302ded388ddd-independently-checked.json",
+      "cases": [
+        332
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b79ca5cd45763ae1e701.json",
+      "sha256": "dc2f1a9a6487c1dee06371883318eec4f60d276b36539eed81c68c55b9855824",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b79ca5cd45763ae1e701-independently-checked.json",
+      "cases": [
+        448
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0ef0bc4db927ea6eff8b.json",
+      "sha256": "224035c9a9b5a54c2f2b4ad61c40a2057767307d53185c0cf0486a13adba8c28",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0ef0bc4db927ea6eff8b-independently-checked.json",
+      "cases": [
+        1003
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-60327fd3be5d9c514c5d.json",
+      "sha256": "7299145888ec64d08b8a9c0fd00cbae807f0423a7c272006ad2b175cf30fa4eb",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-60327fd3be5d9c514c5d-independently-checked.json",
+      "cases": [
+        813
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5f18ea27af342e613aac.json",
+      "sha256": "41d2cf2b447a3c7e3646a45ba522f2aa3a932b340ace8aba446db2a2789cdf13",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5f18ea27af342e613aac-independently-checked.json",
+      "cases": [
+        865
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0eabf677c3b145dd45c3.json",
+      "sha256": "f589c9c9f80e6430ee2af432f456a787aa0df6a030185ecc3142f1d58af2d946",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-0eabf677c3b145dd45c3-independently-checked.json",
+      "cases": [
+        892
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e6dd5c80a2df9bcadbe1.json",
+      "sha256": "2de6b4f9b75df35c92e116dcd3d899d6cde38b3ea8ca47d01791864c1909f633",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e6dd5c80a2df9bcadbe1-independently-checked.json",
+      "cases": [
+        450
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-eb5744b723ccd4770b12.json",
+      "sha256": "0849afffbefdd4413e2665d5eb9ab46ac08d928a0c67d9b424c3e7c696fb3d81",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-eb5744b723ccd4770b12-independently-checked.json",
+      "cases": [
+        299
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e5331abcda7833890842.json",
+      "sha256": "a766794542f3fd4210761efe9673677cdafa6779fc03a341810fff69dccb9486",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e5331abcda7833890842-independently-checked.json",
+      "cases": [
+        420
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-86ec09bace35e25c0560.json",
+      "sha256": "b54304ac7798c8690b04548272aac290798d4f76a9784d0348b38fe4ff946720",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-86ec09bace35e25c0560-independently-checked.json",
+      "cases": [
+        886
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fd1e7f53174ab9b13291.json",
+      "sha256": "393f6f6867d5db3ce7dbc72861ce15aedaa2291e8ec8c35aa516ba3613bde397",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fd1e7f53174ab9b13291-independently-checked.json",
+      "cases": [
+        360
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cda89198700bca14391c.json",
+      "sha256": "58f02cd37ef291d94ac96903255e612e567c26ac046162097b8bb69924266557",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-cda89198700bca14391c-independently-checked.json",
+      "cases": [
+        307
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-953f026aca44d94b841c.json",
+      "sha256": "f4632c0112b92ea2988353c6d485a22521d5eb78f6e85d7353e87457176c184e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-953f026aca44d94b841c-independently-checked.json",
+      "cases": [
+        376
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ad5354fc59543d7ee94d.json",
+      "sha256": "c60ba0709ae723468e1f5d2553cfa63dd32f0e9b7a123c02f090d0a1b49e84c4",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ad5354fc59543d7ee94d-independently-checked.json",
+      "cases": [
+        333
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ccc1be5763f2b1aa7191.json",
+      "sha256": "81eb910e00026475526fe221c3aac64dd75f72e0533c4c58e56aabed9d9ccc8e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ccc1be5763f2b1aa7191-independently-checked.json",
+      "cases": [
+        424
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-eeb44bdeede81ca5c3ac.json",
+      "sha256": "d82c48143c1b7af61529734d035f5f37cf358b5d702651033b95dd1e99333dad",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-eeb44bdeede81ca5c3ac-independently-checked.json",
+      "cases": [
+        308
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b8691638157d76266c85.json",
+      "sha256": "3a74ff5b4d9356a0245376608e3e82a68d894dddff01e4920d067b9ddd030520",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-b8691638157d76266c85-independently-checked.json",
+      "cases": [
+        481
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f3a5f8033f3ecbb12f13.json",
+      "sha256": "c8d6036bfc38559df31761efb5f97abafc0e866e36982a9f5ad038d704008f31",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f3a5f8033f3ecbb12f13-independently-checked.json",
+      "cases": [
+        309
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a90ea484e50cb94591b5.json",
+      "sha256": "05c1b36282cc3d9c59b8f90e146097bf4daada925066759eb3879e11bd8668ce",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-a90ea484e50cb94591b5-independently-checked.json",
+      "cases": [
+        301
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-23ad8e2e1514f8f574c7.json",
+      "sha256": "f2353672094bbafbe05ed656f68908760aa0489a4a7b4fa12c01bfa668d912a2",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-23ad8e2e1514f8f574c7-independently-checked.json",
+      "cases": [
+        302
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-19c5d703826dd600c648.json",
+      "sha256": "5456d3188fe13970a4585e490352f7c3e5e351922092f62cf427c409f8ba4d90",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-19c5d703826dd600c648-independently-checked.json",
+      "cases": [
+        303
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-73d3637c5f2f78933e7f.json",
+      "sha256": "8d139d0d0ddc5f591b2a87623a0cd8984332af3159b39c0b9bf96d18081b06f0",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-73d3637c5f2f78933e7f-independently-checked.json",
+      "cases": [
+        317
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fc254ae3943ab2733939.json",
+      "sha256": "e2fa24040e508aa5b8151ab578cd4b365008c3cc5f167d8b7f6fe88b07007939",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-fc254ae3943ab2733939-independently-checked.json",
+      "cases": [
+        318
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-062fb8d60532edfd5646.json",
+      "sha256": "1b987d60ad277a3c6e0b8088dd81987169da01a2269b500c27474c1c317c34e0",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-062fb8d60532edfd5646-independently-checked.json",
+      "cases": [
+        320
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f487601320cbd670be5d.json",
+      "sha256": "1a2e29ab0629af95ea12d42ac76966b73c7f899de7de02490d249f1b95572683",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f487601320cbd670be5d-independently-checked.json",
+      "cases": [
+        334
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-610fd089db83c1df37bd.json",
+      "sha256": "7c21f5bfbabe6b68d4218f10295fca21ef6c39939123fd92c0af9ef504b7a564",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-610fd089db83c1df37bd-independently-checked.json",
+      "cases": [
+        335
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8bd05e208f2feb04f74b.json",
+      "sha256": "2af816c694032a76eaddd638d2fc44479fd07c01915590ca09100758b7748116",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-8bd05e208f2feb04f74b-independently-checked.json",
+      "cases": [
+        329
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-36e608f748709e5fe35d.json",
+      "sha256": "efdac06f8dd373ce57ba7c02043a88ccc810df525e549a327753801901c09ab3",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-36e608f748709e5fe35d-independently-checked.json",
+      "cases": [
+        327
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e8cde464e0c49c8aa995.json",
+      "sha256": "bdf6453e9f495a3c5f1116d20557246a79f56f35dbe76b0a5dd8b66e7b43c03b",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e8cde464e0c49c8aa995-independently-checked.json",
+      "cases": [
+        330
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f1a7a21bffa5b224036d.json",
+      "sha256": "fac316030f67cbb17a31811eb80daeb93dcb3ac91c981459cc0b20e0637c73cd",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-f1a7a21bffa5b224036d-independently-checked.json",
+      "cases": [
+        326
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ab89e356322d6c092f0c.json",
+      "sha256": "59c2de1b4e2c0f352be30259d5076dfbee079fde7ceb4387c2bce28de64d46e3",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ab89e356322d6c092f0c-independently-checked.json",
+      "cases": [
+        345
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-789f24ef45e769b47f3b.json",
+      "sha256": "9404efbf637961acf6f70f7f66530dd601a97d050af668afdc3a1f855930de5d",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-789f24ef45e769b47f3b-independently-checked.json",
+      "cases": [
+        343
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e4690fbb5a4a9f50c3f7.json",
+      "sha256": "b830bef44227ba70eab06f995f29a8cf0bad410f99ced5c9931a38204c9e2e20",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e4690fbb5a4a9f50c3f7-independently-checked.json",
+      "cases": [
+        352
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-00cf0b599bd7628656ef.json",
+      "sha256": "f0590fd2529c0b17047a7d3890b8e78c7ebb8134b097a027056ffbe623804586",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-00cf0b599bd7628656ef-independently-checked.json",
+      "cases": [
+        393
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e4a9a7a1bb70387cdee0.json",
+      "sha256": "69db38530748ab8e6976a49b0b6f00f2169a13f8d58c156212f16ed5a2e8998e",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-e4a9a7a1bb70387cdee0-independently-checked.json",
+      "cases": [
+        387
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ef67f36e921710a8375d.json",
+      "sha256": "cf8cdcf9334c2b7e6e558d3f5dd8084b7453db9b32bbb86a2907578b3deee4b2",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-ef67f36e921710a8375d-independently-checked.json",
+      "cases": [
+        382
+      ]
+    },
+    {
+      "receipt": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5d5bc08395449c832e3a.json",
+      "sha256": "f80ad05e24cf9c0e89b95353a1f2ec186103818ea81ba827c261f08717ba8b0d",
+      "independent_check": "audit/continuation-2026-10-16/incremental-case-workflow-v1/batches/batch-5d5bc08395449c832e3a-independently-checked.json",
+      "cases": [
+        384
+      ]
+    }
+  ],
+  "foundation_sha256": "8e04c9cb80eb1aed50551d0cda23d746637fe9b23375a1833d9c64f61b15af67"
+}

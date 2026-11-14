@@ -1,6 +1,19 @@
 .venv/
 .tools/
 .lake/
+# Compiled migration artifacts belong in recovery archives, not source commits.
+migration/lean430/.build/
+# Detailed historical records are in the verified private source-freeze supplement.
+checkpoint/history/lean430-receipts.jsonl.gz
+checkpoint/toolchains/mathlib430-cache-install-history.json
+# Generated export data stays local until a recovery archive is verified.
+audit/root-case*-shared-block*-export.json
+audit/root-case*-shared-batch*-export.json
+audit/root-case*-initial-row*-export.json
+# Private compiled caches; keep sibling compiled.json receipts and logs visible.
+audit/**/build/lib/
+# Shared import links are reproducible; their registry and proof receipts stay visible.
+audit/**/exact-artifact-import-cache-v*/cohort-*/lib/
 audit/replay/
 audit/controls/
 __pycache__/

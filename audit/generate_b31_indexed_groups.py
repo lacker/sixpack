@@ -130,7 +130,8 @@ end Sixpack
 '''
     path = folder/f'Group{group_index}.lean'
     if group_index >= 470:
-        emit_group_modules(path, group_index, s)
+        emit_group_modules(path, group_index, s,
+                           other_checks_per_module=8 if row['step'] == 13 else 1)
     elif not path.exists() or path.read_text() != s:
         path.write_text(s)
     print(f'Exported group {group_index}: {G} owners, {W} blockers, {P} accepted geometric blocks. Lean coverage pending.')

@@ -1,0 +1,12 @@
+{
+  "format": "incremental-case-policy-v1",
+  "new_cases_per_global_checkpoint": 25,
+  "final_global_checkpoint_required": true,
+  "full_global_audit_per_case": false,
+  "import_only_wrapper_compilation": false,
+  "new_case_kernel_and_full_standard_axiom_checks_required": true,
+  "original_case_contracts_required": true,
+  "globally_audited_counter_requires_independent_union_publication": true,
+  "maximum_actual_lean_processes": 4,
+  "physical_hard_cap_mib": 3072
+}
