@@ -14,7 +14,8 @@ with tempfile.TemporaryDirectory(prefix='sixpack-archive-test-',dir='/private/tm
   assert(p.returncode==0)==ok,(p.returncode,p.stdout[-1500:],p.stderr[-1500:]);return p
  run('backup','--root',str(root),'--inventory',str(inv),'--name','fixture','--part-mib','1','--reserve-mib','0')
  index=b/'work/fixture.index.json';d=json.loads(index.read_text());assert len(d['parts'])>=3
+ original_index=index.read_bytes();index.unlink();run('backup','--root',str(root),'--inventory',str(inv),'--name','fixture','--part-mib','1','--reserve-mib','0');assert index.read_bytes()==original_index
  run('verify','--index',str(index));dest=b/'restored';run('restore','--index',str(index),'--destination',str(dest));assert(dest/'space name.bin').read_bytes()==(root/'space name.bin').read_bytes();assert os.readlink(dest/'alias')=='notes.txt'
  (dest/'notes.txt').write_text('different user file');run('restore','--index',str(index),'--destination',str(dest),ok=False);assert(dest/'notes.txt').read_text()=='different user file'
  part=b/'remote'/d['parts'][-1]['name'];data=part.read_bytes();part.write_bytes(data[:-1]+bytes([data[-1]^1]));run('verify','--index',str(index),ok=False);assert not(b/'work/fixture.verified.json').exists()
- print('PASS: multipart round trip, exact symlink/space-name restore, overwrite refusal, remote corruption rejection, stale verification receipt removed')
+ print('PASS: multipart round trip and deterministic retry, exact symlink/space-name restore, overwrite refusal, remote corruption rejection, stale verification receipt removed')

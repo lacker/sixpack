@@ -1,0 +1,15 @@
+{
+  "packages_with_records": 18,
+  "hashed_files_checked": 6632,
+  "mismatches": [],
+  "unrecognized_files": [],
+  "reproducible_environment_only": true,
+  "requirements_sha256": "fcd669fce1b3716cdc8b63f2c91d800342659600f6a99a1322e7c1f3cc9d6a1d",
+  "venv_config_sha256": "10504f46a320b5cb1e6e5b4c77820b4428089353a6393eb59f1e856f1e7bea13",
+  "deleted": true,
+  "generated_gitignore_sha256": "36692e1840f82f75adce103fd03e65b1eaa35f798c885b3b545e3abc14ffcbf0",
+  "cleanup_authorization": "User requested reproducible-work cleanup; this is a standard venv with upstream RECORD hashes and pinned requirements/config already pushed to the checkpoint PR.",
+  "free_before_bytes": 18833154048,
+  "free_after_bytes": 19163992064,
+  "reclaimed_bytes": 330838016
+}

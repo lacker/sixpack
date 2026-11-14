@@ -7,6 +7,7 @@ Source files are never removed by this program. Local-remote mode is for tests.
 import argparse
 import gzip
 import hashlib
+import io
 import json
 import os
 import shutil
@@ -47,6 +48,13 @@ class Remote:
         if self.local:
             self.local.mkdir(parents=True, exist_ok=True)
         else:
+            if not self.repo or not self.tag:
+                raise ValueError('Specify the backup repository and release tag explicitly')
+            if args.command == 'backup':
+                visibility = json.loads(subprocess.check_output(
+                    ['gh', 'repo', 'view', self.repo, '--json', 'isPrivate']))
+                if not visibility['isPrivate'] and not args.allow_public:
+                    raise ValueError('Public archive upload requires explicit --allow-public')
             # Draft releases are not addressable through the public tag endpoint.
             raw = subprocess.check_output(['gh', 'release', 'view', self.tag,
                 '--repo', self.repo, '--json', 'apiUrl'])
@@ -121,7 +129,10 @@ def backup(args):
 
     def produce():
         try:
-            with gzip.open(args.inventory, 'rt') as inventory, gzip.open(metadata, 'wt', compresslevel=1) as records:
+            # Stable gzip headers allow a safe retry to reuse existing assets.
+            with gzip.open(args.inventory, 'rt') as inventory, metadata.open('wb') as raw_records, \
+                    gzip.GzipFile(filename='', mode='wb', fileobj=raw_records, compresslevel=1, mtime=0) as packed_records, \
+                    io.TextIOWrapper(packed_records, encoding='utf-8') as records:
                 with tarfile.open(fileobj=zstd.stdin, mode='w|', format=tarfile.PAX_FORMAT) as archive:
                     for line in inventory:
                         row = json.loads(line)
@@ -206,6 +217,8 @@ def verify(args):
     index_path, work = Path(args.index), Path(args.work)
     work.mkdir(parents=True, exist_ok=True)
     index = json.loads(index_path.read_text())
+    args.repo = args.repo or index['repo']
+    args.tag = args.tag or index['tag']
     remote = Remote(args)
     receipt = work / (index['name'] + '.verified.json')
     receipt.unlink(missing_ok=True)
@@ -317,8 +330,9 @@ def main():
     p.add_argument('--index')
     p.add_argument('--destination')
     p.add_argument('--work', required=True)
-    p.add_argument('--repo', default='lacker/sixpack')
-    p.add_argument('--tag', default='sixpack-pause-2026-11-13')
+    p.add_argument('--repo')
+    p.add_argument('--tag')
+    p.add_argument('--allow-public', action='store_true')
     p.add_argument('--local-remote')
     p.add_argument('--part-mib', type=int, default=512)
     p.add_argument('--reserve-mib', type=int, default=512)

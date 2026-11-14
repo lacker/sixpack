@@ -84,3 +84,28 @@ outputs may be sole accepted artifacts rather than disposable import links. Only
 remove a forest after canonical-byte equivalence or separate archival of those
 exact referenced artifacts is established. Do not recursively inventory private
 forests to guess. Preserve registries and exact compiler/Std records.
+
+
+## Private destination and remaining approval gate
+
+Private repository: https://github.com/lacker/sixpack-recovery-2026-11-13.
+Verified private;default branch master;draft tag sixpack-pause-2026-11-13.
+Automatic approval review ALSO rejected the FULL PRIVATE upload because the user
+has not explicitly authorized the entire payload to that new repository. The NEW
+full-private-backup approval question supersedes earlier public-upload questions.
+No full upload ran. Do not retry or use another route before explicit approval.
+
+The archive tool requires an explicit repository/tag and refuses public uploads
+unless --allow-public is explicitly set. Deterministic gzip metadata permits
+safe retries without overwriting different remote assets; the retry fixture
+passed along with multipart restore/corruption/overwrite/symlink controls.
+
+Completed safe cleanup:18 package RECORDs/6,632 hashes verified the standard venv;
+exact package requirements and config pushed first. Removed only that environment,
+reclaiming315.5MiB. No proof/certificate/accepted artifact/compiler or Std evidence
+was deleted. python-env-cleanup.json retains the checks and free-space delta.
+The migration .build directory is now ignored but remains on disk.
+
+Root docs/.gitignore have changed since the initial inventory. Before an approved
+backup, use refreshed workspace-backup-inputs.jsonl.gz, restricted to root-doc/
+config refresh; immutable mathematical inputs retain their original stat guards.

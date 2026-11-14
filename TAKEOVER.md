@@ -1,3 +1,34 @@
+# Paused cleanup checkpoint — 13 November 2026
+
+User requested resumable PR and off-machine cleanup. Draft PR:
+https://github.com/lacker/sixpack/pull/1,branch codex/pause-checkpoint-2026-11-13.
+User authorizes checkpoint staging/commits; normal proof restrictions resume
+afterward. Mathematical work paused;no proof/Lean workers found. Never restart
+old PIDs from historical notes below.
+
+Full public upload rejected by automatic approval review. A safer PRIVATE repo
+was created:lacker/sixpack-recovery-2026-11-13 (verified private,default master,
+draft tag sixpack-pause-2026-11-13). Full PRIVATE upload also rejected pending
+explicit trusted-user approval for the whole payload/destination. NEW private-
+backup question supersedes earlier public questions. No full archive uploaded;
+do not retry or route around the approval gate.
+
+Accepted proofs/certificates/artifacts/evidence remain local. Only verified
+standard Python venv removed after6,632 package hashes and exact requirements/
+config pushed;315.5MiB reclaimed. Old proof scripts need recreated .venv;archive
+tools use system Python. Migration .build is ignored,not deleted. The small
+verified environment metadata archive is NOT a proof-workspace backup.
+
+Inventories in /private/tmp/sixpack-checkpoint-2026-11-13 describe2,333,576 primary
+entries/~348.8GB logical plus687,817 tool/build entries/~87.4GB. Full offload,
+verification and bulk cleanup remain pending. Read checkpoint/PLAN.md/RESUME.md.
+Excluded private library forests need artifact-accounting BEFORE removal; some
+could contain sole accepted outputs. Do not recursively scan them to guess.
+
+Later accepted results:both distant tails complete,ROOTcuts101/125 accepted
+(179/87Std),wholeROOT/B12 unions absent,IMAGE392 unaccepted. Old status headers,
+PIDs and percentages below are historical. Do not credit whole344.
+
 # Paused at user request — 13 November 2026
 
 User requested a pause and a review of the enormous diff. Goal is absent; no new

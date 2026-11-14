@@ -6,7 +6,12 @@ it does **not** claim the packing theorem or case344 is complete.
 ## Recovery status
 
 Archive preparation is in progress. Draft PR: https://github.com/lacker/sixpack/pull/1.
-The full public-archive upload requires the user’s pending explicit approval. Until `archives.json` and matching full
+The full archive upload requires the user's pending explicit approval. The
+current destination is the private repository
+https://github.com/lacker/sixpack-recovery-2026-11-13. No full public upload is
+planned. Automatic approval review rejected both full transfers pending explicit
+authorization of the whole payload and destination. Do not retry through another
+route while that approval is absent. Until `archives.json` and matching full
 file-verification receipts are committed here, retain local original evidence.
 Do not treat a draft release or an upload-progress file as a completed backup.
 
@@ -61,3 +66,10 @@ toolchain and compiled-proof restoration will preserve that environment.
 Full restore commands, component sizes, immutable checksums, archive URLs and
 private-import-cache regeneration details will be finalized after remote
 readback verification. Do not attempt a partial unverified restore yet.
+
+
+The old312MiB standard Python virtual environment was removed after6,632 installed
+file hashes matched package RECORDs. Exact requirements and venv configuration
+were pushed first. No modified packages/custom files were found. Recreate it with
+Python3.13.3 and python-requirements.txt before running old proof scripts. Archive
+tooling uses system Python and does not require the removed venv.

@@ -1,6 +1,8 @@
 .venv/
 .tools/
 .lake/
+# Compiled migration artifacts belong in recovery archives, not source commits.
+migration/lean430/.build/
 # Private compiled caches; keep sibling compiled.json receipts and logs visible.
 audit/**/build/lib/
 # Shared import links are reproducible; their registry and proof receipts stay visible.
