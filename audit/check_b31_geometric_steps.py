@@ -1,6 +1,7 @@
 """Check complete step sources against actual partition and row-group scope."""
 from pathlib import Path
 import json, re
+from root_step_module_split import read_step_modules
 
 root = Path(__file__).resolve().parents[1]
 groups = json.loads((root/'audit/b31-indexed-row-group-export.json').read_text())['groups']
@@ -11,7 +12,7 @@ assert sources, 'No complete geometric step sources have been generated.'
 for path in sources:
     step = int(path.stem.removeprefix('Step'))
     ids = [i for i, group in enumerate(groups) if group['step'] == step]
-    text = path.read_text()
+    text = read_step_modules(path) if path.with_suffix('').is_dir() else path.read_text()
     p = f'b31GeometricStep{step}'
     P, R, W = len(ids), len(partitions[step]['removed']), len(trace[step]['others'])
     imports = list(map(int, re.findall(r'^import Sixpack.EndpointB31IndexedGroups.Group(\d+)$', text, re.M)))

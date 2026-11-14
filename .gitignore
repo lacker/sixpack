@@ -1,6 +1,10 @@
 .venv/
 .tools/
 .lake/
+# Private compiled caches; keep sibling compiled.json receipts and logs visible.
+audit/**/build/lib/
+# Shared import links are reproducible; their registry and proof receipts stay visible.
+audit/**/exact-artifact-import-cache-v*/cohort-*/lib/
 audit/replay/
 audit/controls/
 __pycache__/

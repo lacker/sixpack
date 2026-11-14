@@ -5,6 +5,7 @@ no saved graph, success flag, or assumed coverage supplies the geometric proof.
 """
 from pathlib import Path
 import argparse, json
+from root_step_module_split import emit_named_step_modules
 
 root = Path(__file__).resolve().parents[1]
 groups = json.loads((root/'audit/b31-indexed-row-group-export.json').read_text())['groups']
@@ -189,6 +190,8 @@ end Sixpack
     folder = root/'Sixpack/EndpointB31GeometricSteps'
     folder.mkdir(exist_ok=True)
     target = folder/f'Step{step}.lean'
-    if not target.exists() or target.read_text() != text:
+    if step >= 9:
+        emit_named_step_modules(root, f'Sixpack.EndpointB31GeometricSteps.Step{step}', t, text)
+    elif not target.exists() or target.read_text() != text:
         target.write_text(text)
     print(f'Prepared step {step}: {R} removed indices, {W} blocker indices, {P} geometric groups; Lean acceptance pending.')

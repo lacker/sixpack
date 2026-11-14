@@ -24,13 +24,17 @@ helper = (root/'audit/SharedAxiomAudit.lean').read_text()
 header = '\n'.join('import '+module for module in imports)+'\n'
 body = helper.replace('import Lean\n', '')
 job = root/'audit'/f'SharedAxiomRun{uuid.uuid4().hex}.lean'
-job.write_text('import Lean\n'+header+body+'\n#audit_axioms ['+','.join(names)+']\n')
+# The style linter recursively walks the large command syntax after the official
+# collector finishes; 28,739 names triggered its interpreter-stack abort. This
+# option affects only that lint pass, not kernel checking or axiom collection.
+job.write_text('import Lean\n'+header+'\nset_option linter.unnecessarySeqFocus false\n'+
+               body+'\n#audit_axioms ['+','.join(names)+']\n')
 env = dict(os.environ)
 env['PATH'] = str(root/'.tools/lean-4.24.0-darwin_aarch64/bin')+os.pathsep+env.get('PATH','')
 try:
     with args.log.open('w') as out:
         result = subprocess.run([sys.executable, str(root/'audit/run_lean_memory_guard.py'),
-                                 '--', 'lake', 'env', 'lean', str(job)], cwd=root,
+                                 '--', 'lake', 'env', 'lean', '-M4096', str(job)], cwd=root,
                                 env=env, stdout=out, stderr=subprocess.STDOUT)
     if result.returncode == 0:
         check(args.log.read_text(), names)

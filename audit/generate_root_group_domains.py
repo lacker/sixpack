@@ -70,11 +70,47 @@ for batch in range(271):
     subfolder = folder/f'Batch{batch}'
     subfolder.mkdir(exist_ok=True)
     for chunk in range(4):
-        text = 'import Sixpack.RootCoarseGroupDomains.Data\n'+header
-        text += f'''theorem root_coarse_group_lookup_batch{batch}_chunk{chunk} (offset : Fin 32) :
-    RootCoarseGroupLookupChecked (rootCoarseGroupLookupNode {batch} ⟨32*{chunk}+offset.val,by omega⟩) := by
+        if batch >= 100:
+            parts = subfolder/f'Chunk{chunk}'
+            parts.mkdir(exist_ok=True)
+            for part in range(4):
+                small = 'import Sixpack.RootCoarseGroupDomains.Data\n'+header
+                small += f'''theorem root_coarse_group_lookup_batch{batch}_chunk{chunk}_part{part} (offset : Fin 8) :
+    RootCoarseGroupLookupChecked (rootCoarseGroupLookupNode {batch} ⟨32*{chunk}+8*{part}+offset.val,by omega⟩) := by
   revert offset
   decide +kernel
+
+end Sixpack
+'''
+                write(parts/f'Part{part}.lean', small)
+            text = ''.join(f'import Sixpack.RootCoarseGroupDomains.Batch{batch}.Chunk{chunk}.Part{part}\n' for part in range(4))+header
+        else:
+            text = 'import Sixpack.RootCoarseGroupDomains.Data\n'+header
+        text += f'''theorem root_coarse_group_lookup_batch{batch}_chunk{chunk} (offset : Fin 32) :
+    RootCoarseGroupLookupChecked (rootCoarseGroupLookupNode {batch} ⟨32*{chunk}+offset.val,by omega⟩) := by
+'''
+        if batch < 100:
+            text += '''  revert offset
+  decide +kernel
+
+end Sixpack
+'''
+        else:
+            text += f'''  have hsub : ∀ (part : Fin 4) (entry : Fin 8),
+      RootCoarseGroupLookupChecked (rootCoarseGroupLookupNode {batch} ⟨32*{chunk}+8*part.val+entry.val,by omega⟩) := by
+    intro part entry
+    fin_cases part
+'''
+            text += ''.join(f'    · exact root_coarse_group_lookup_batch{batch}_chunk{chunk}_part{part} entry\n' for part in range(4))
+            text += f'''  let part : Fin 4 := ⟨offset.val/8,by omega⟩
+  let entry : Fin 8 := ⟨offset.val%8,Nat.mod_lt _ (by decide)⟩
+  have hi : (⟨32*{chunk}+8*part.val+entry.val,by omega⟩ : Fin 128) = ⟨32*{chunk}+offset.val,by omega⟩ := by
+    apply Fin.ext
+    change 32*{chunk}+8*(offset.val/8)+offset.val%8 = 32*{chunk}+offset.val
+    omega
+  have h := hsub part entry
+  rw [hi] at h
+  exact h
 
 end Sixpack
 '''

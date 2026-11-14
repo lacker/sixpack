@@ -4,6 +4,7 @@ This checks source bindings, not Lean acceptance or completeness of root cases.
 """
 from pathlib import Path
 import argparse, json, re
+from indexed_group_module_split import read_group_modules
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
@@ -11,6 +12,8 @@ def main():
     p.add_argument('prefix',type=Path)
     p.add_argument('--plan',type=Path,required=True)
     p.add_argument('--group',type=int,default=0)
+    p.add_argument('--source',type=Path,
+                   help='Alternate split-module target for a coverage-layout pilot')
     a=p.parse_args()
     raw=json.loads(Path(str(a.prefix)+'.blocks.json').read_text())
     plan=json.loads(a.plan.read_text())
@@ -26,13 +29,13 @@ def main():
     mapping=json.loads(Path(str(a.prefix)+'.root-map.json').read_text())['original_root_ids']
     row=json.loads((ROOT/f'audit/root-case{case}-initial-row{a.group}-export.json').read_text())
     assert plan['case']==case and plan['step']==row['step']
-    step=row['step'];assert 0<=step<9
-    first_alias=step==0 and a.group>0
+    step=row['step'];assert 0<=step<len(raw['steps'])
+    first_alias=case==715 and step==0 and a.group>0
     assert row['block_indices']==plan['indices'] and row['owners']==plan['owners']
     assert row['blockers']==plan['blockers']==[mapping[v] for v in raw['steps'][step]['others']]
     assert len(set(row['owners']))==len(row['owners']) and set(row['owners']) <= {mapping[v] for v in raw['steps'][step]['owners']}
     assert len(set(row['block_indices']))==len(row['block_indices'])
-    text=(ROOT/f'Sixpack/EndpointRootCase{case}IndexedGroups/Group{a.group}.lean').read_text()
+    text=read_group_modules(a.source or ROOT/f'Sixpack/EndpointRootCase{case}IndexedGroups/Group{a.group}.lean')
     assert not re.search(r'\b(sorry|native_decide)\b|Lean\.ofReduceBool|^\s*axiom\b',text,re.M)
     domains=[]
     for local,index in enumerate(row['block_indices']):
@@ -72,7 +75,13 @@ def main():
     for page in range((len(row['blockers'])+31)//32):
         vals=row['blockers'][page*32:(page+1)*32]
         assert f'def {blockers_prefix}BlockerNodePage{page} : Array (Fin 34660) := #['+','.join(map(str,vals))+']' in blockers_text
-        entries=[f'⟨{b},⟨{pos},by decide⟩⟩' for b,pos in row['blocker_positions'][page*32:(page+1)*32]]
+        raw = f'def {prefix}OtherPage0 : Array (Fin {len(row["block_indices"])} × ℕ) :=' in text
+        entries=[f'⟨{b},{pos}⟩' if raw else f'⟨{b},⟨{pos},by decide⟩⟩'
+                 for b,pos in row['blocker_positions'][page*32:(page+1)*32]]
+        if raw:
+            assert f'def {prefix}OtherPage{page} : Array (Fin {len(row["block_indices"])} × ℕ) :=' in text
+            assert f'Nat.mod_lt _ ({prefix}_other_positive entry.1)' in text
+            assert f'entry.2 % ({prefix}Blocks entry.1).otherSize' in text
         assert '#['+','.join(entries)+']' in text
     print(f'PASS: {len(row["owners"])} actual owners, all {len(row["blockers"])} snapshot blockers, every domain position and geometric direction. Lean acceptance separate.')
 

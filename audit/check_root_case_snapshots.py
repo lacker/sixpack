@@ -33,8 +33,14 @@ for component, domain in enumerate(actual):
         assert steps[first]['old'] == domain
         current.append(f'Finset.univ.image {prefix}Partition{first}Old')
     else:
-        assert f'def {prefix}Unpruned{component}Nodes : Array (Fin 34660) := #['+','.join(map(str,domain))+']' in text
-        assert f'def {prefix}Unpruned{component} (part : Fin {len(domain)}) : Fin 34660 :=\n  {prefix}Unpruned{component}Nodes.getD part.val 0' in text
+        shared = f'def {prefix}Unpruned{component} (part : Fin {len(domain)}) : Fin 34660 :=\n  rootCoarseGroupNode {mapping["coarse_groups"][component]} part'
+        if shared in text:
+            tags = list(map(int, (root/'six_triangle_packing/endpoint_root.groups').read_text().split()))
+            assert domain == [v for v, tag in enumerate(tags) if tag == mapping['coarse_groups'][component]]
+            assert 'import Sixpack.RootCoarseGroupDomains.Data' in text
+        else:
+            assert f'def {prefix}Unpruned{component}Nodes : Array (Fin 34660) := #['+','.join(map(str,domain))+']' in text
+            assert f'def {prefix}Unpruned{component} (part : Fin {len(domain)}) : Fin 34660 :=\n  {prefix}Unpruned{component}Nodes.getD part.val 0' in text
         current.append(f'Finset.univ.image {prefix}Unpruned{component}')
 snapshots = [list(current)]
 for i,(step,trace) in enumerate(zip(steps,meta['steps'])):
@@ -46,7 +52,22 @@ for i,(step,trace) in enumerate(zip(steps,meta['steps'])):
     actual[c] = step['kept']
     current[c] = f'Finset.univ.image {prefix}Partition{i}Kept'
     snapshots.append(list(current))
-assert actual == export['final_domains'] and any(not ds for ds in actual)
+assert actual == export['final_domains']
+kind = meta.get('scope_kind', 'closure')
+assert kind in ('closure', 'support_prefix')
+if kind == 'closure':
+    assert any(not ds for ds in actual)
+else:
+    import hashlib
+    from check_case970_support_pruning_proposal import replay_support
+    proposal = Path(meta['support_proposal'])
+    assert hashlib.sha256(proposal.read_bytes()).hexdigest() == meta['support_proposal_sha256']
+    trace = replay_support(args.prefix, proposal)
+    assert case in (970, 1341) and all(actual) and not meta['actual_root_credit']
+    # meta has already been mapped to original IDs above.
+    assert meta['case_domains'] == [[ids[v] for v in ds] for ds in trace['case_domains']]
+    assert meta['steps'] == [{**step, 'owners': [ids[v] for v in step['owners']],
+                             'others': [ids[v] for v in step['others']]} for step in trace['steps']]
 for tag,key in [('Component','component'),('Blocker','blocker')]:
     body = text.split(f'def {prefix}Snapshot{tag} (step : Fin {count}) : Fin 6 :=\n',1)[1].split('\n\n',1)[0]
     assert body == '  match step.val with\n'+''.join(f'  | {i} => {step[key]}\n' for i,step in enumerate(steps))+'  | _ => 0'
@@ -67,11 +88,16 @@ for i,step in enumerate(steps):
     previous = snapshots[i][step['component']].removeprefix('Finset.univ.image ')
     assert f'have hOld : {previous} = {prefix}Partition{i}Old := by rfl' in local
 assembly = (root/f'Sixpack/EndpointRootCase{case}Snapshots.lean').read_text()
-empty = next(c for c,ds in enumerate(actual) if not ds)
-assert f'''theorem root_case{case}_snapshot_final_empty :
+if kind == 'closure':
+    empty = next(c for c,ds in enumerate(actual) if not ds)
+    assert f'''theorem root_case{case}_snapshot_final_empty :
     {prefix}SnapshotDomains {count} {empty} = ∅ := by decide +kernel''' in assembly
+    final_description = 'empty final component'
+else:
+    assert f'root_case{case}_snapshot_final_empty' not in assembly
+    final_description = 'nonempty support prefix (no root-closure theorem)'
 assert all(f'exact root_case{case}_snapshot_transition{i} component' in assembly for i in range(count))
-print(f'PASS: case {case}, all {count+1} actual snapshots, {count} survivor transitions, blockers and empty final component match independently replayed trace scope.')
+print(f'PASS: case {case}, all {count+1} actual snapshots, {count} survivor transitions, blockers and {final_description} match independently replayed trace scope.')
 print('Lean compilation and geometric deletion remain separate obligations.')
 
 blockers = root/f'Sixpack/EndpointRootCase{case}SnapshotBlockers.lean'

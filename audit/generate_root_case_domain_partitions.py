@@ -20,6 +20,17 @@ if args.output_root:
     (root/'audit').mkdir(exist_ok=True)
 meta = json.loads(Path(str(args.prefix)+'.blocks.json').read_text())
 case = meta['case']
+kind = meta.get('scope_kind', 'closure')
+assert kind in ('closure', 'support_prefix')
+if kind == 'support_prefix':
+    import hashlib
+    from check_case970_support_pruning_proposal import replay_support
+    proposal = Path(meta['support_proposal'])
+    assert hashlib.sha256(proposal.read_bytes()).hexdigest() == meta['support_proposal_sha256']
+    trace = replay_support(args.prefix, proposal)
+    assert case in (970, 1341) and not meta['actual_root_credit']
+    assert meta['steps'] == trace['steps'] and meta['case_domains'] == trace['case_domains']
+    assert meta['retained'] == trace['retained']
 mapping = json.loads(Path(str(args.prefix)+'.root-map.json').read_text())
 assert mapping['case'] == case
 ids = mapping['original_root_ids']
@@ -150,5 +161,10 @@ end Sixpack
 assert set().union(*domains) == set(meta['retained'])
 (root / f'audit/root-case{case}-domain-partition-export.json').write_text(
     json.dumps(dict(steps=exports, final_domains=list(map(sorted, domains))), indent=2)+'\n')
-assert any(not domain for domain in domains), 'A closed case must have an empty final component.'
-print(f'Case {case}: exported {len(exports)} proposed partitions, including an empty final component; {len(selected)} selected Lean modules. Geometric exclusion remains separate.')
+if kind == 'closure':
+    assert any(not domain for domain in domains), 'A closed case must have an empty final component.'
+    final_description = 'including an empty final component'
+else:
+    assert all(domains)
+    final_description = 'retaining the complete nonempty support prefix'
+print(f'Case {case}: exported {len(exports)} proposed partitions, {final_description}; {len(selected)} selected Lean modules. Geometric exclusion remains separate.')

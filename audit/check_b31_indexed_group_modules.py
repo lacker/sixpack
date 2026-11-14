@@ -4,7 +4,9 @@ import argparse, os, subprocess, sys, uuid
 
 root = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(); parser.add_argument('--groups', required=True)
-selected = list(map(int, parser.parse_args().groups.split(',')))
+parser.add_argument('--reuse-compiled-groups', action='store_true', help='Recheck existing full groups with Lake without separately invoking cached helpers.')
+args = parser.parse_args()
+selected = list(map(int, args.groups.split(',')))
 env = dict(os.environ)
 env['PATH'] = str(root/'.tools/lean-4.24.0-darwin_aarch64/bin')+os.pathsep+env.get('PATH','')
 run = uuid.uuid4().hex[:8]
@@ -12,7 +14,8 @@ for group in selected:
     subprocess.run([sys.executable, str(root/'audit/generate_b31_indexed_groups.py'),
                     '--groups', str(group)], cwd=root, check=True)
     folder = root/f'Sixpack/EndpointB31IndexedGroups/Group{group}'
-    if folder.exists():
+    compiled = root/f'.lake/build/lib/lean/Sixpack/EndpointB31IndexedGroups/Group{group}.olean'
+    if folder.exists() and not (args.reuse_compiled_groups and compiled.is_file()):
         paths = [folder/'Data.lean']
         for tag in ('Owner', 'Other'):
             paths += sorted(folder.glob(tag+'Batch*.lean'), key=lambda p: int(p.stem.removeprefix(tag+'Batch')))

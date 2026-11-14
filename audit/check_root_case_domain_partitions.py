@@ -40,7 +40,24 @@ for i, (step, actual) in enumerate(zip(production['steps'], export['steps'])):
         assert kind in ('kept', 'removed') and 0 <= index < len(target) and node == target[index]
     domains[c] = set(kept)
 assert export['final_domains'] == list(map(sorted, domains))
-assert set().union(*domains) == set(production['retained']) and any(not domain for domain in domains)
+assert set().union(*domains) == set(production['retained'])
+kind = production.get('scope_kind', 'closure')
+assert kind in ('closure', 'support_prefix')
+if kind == 'closure':
+    assert any(not domain for domain in domains)
+    final_description = 'end with an empty component'
+else:
+    import hashlib
+    from check_case970_support_pruning_proposal import replay_support
+    proposal = Path(production['support_proposal'])
+    assert hashlib.sha256(proposal.read_bytes()).hexdigest() == production['support_proposal_sha256']
+    trace = replay_support(args.prefix, proposal)
+    assert case in (970, 1341) and all(domains) and not production['actual_root_credit']
+    assert production['case_domains'] == [[ids[v] for v in ds] for ds in trace['case_domains']]
+    assert production['steps'] == [{**step, 'owners': [ids[v] for v in step['owners']],
+                                   'others': [ids[v] for v in step['others']]} for step in trace['steps']]
+    assert production['retained'] == [ids[v] for v in trace['retained']]
+    final_description = 'retain the exact nonempty support prefix'
 
 def check_pages(text, name, typ, expected, fallback):
     pattern = rf'def {name}Page(\d+) : Array \({re.escape(typ)}\) := #\[([^\]]+)\]'
@@ -83,5 +100,5 @@ for path in sources:
     check_pages(text, prefix+'WitnessNode', typ, entries, '.inl 0' if data['kept'] else '.inr 0')
     assert f'def {prefix}Witness (part : Fin {len(data["old"])}) : {typ} :=\n  {prefix}WitnessNode part.val\n' in text
 assert sources
-print(f'PASS: case {case}, all {len(export["steps"])} proposed partitions conserve survivors and end with an empty component; {len(sources)} actual Lean data modules match every node, witness and lookup.')
+print(f'PASS: case {case}, all {len(export["steps"])} proposed partitions conserve survivors and {final_description}; {len(sources)} actual Lean data modules match every node, witness and lookup.')
 print('Partition compilation does not prove geometric exclusions or packing impossibility.')
