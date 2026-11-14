@@ -3,6 +3,10 @@
 .lake/
 # Compiled migration artifacts belong in recovery archives, not source commits.
 migration/lean430/.build/
+# Generated export data stays local until a recovery archive is verified.
+audit/root-case*-shared-block*-export.json
+audit/root-case*-shared-batch*-export.json
+audit/root-case*-initial-row*-export.json
 # Private compiled caches; keep sibling compiled.json receipts and logs visible.
 audit/**/build/lib/
 # Shared import links are reproducible; their registry and proof receipts stay visible.

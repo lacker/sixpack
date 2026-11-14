@@ -109,3 +109,10 @@ The migration .build directory is now ignored but remains on disk.
 Root docs/.gitignore have changed since the initial inventory. Before an approved
 backup, use refreshed workspace-backup-inputs.jsonl.gz, restricted to root-doc/
 config refresh; immutable mathematical inputs retain their original stat guards.
+
+
+Three large legacy generated-export families are now ignored in Git (shared-block,
+shared-batch,initial-row JSON exports), in addition to migration build outputs.
+They remain on disk, unmodified, pending approved verified archival; this only
+reduces diff/UI noise. Previously tracked files remain tracked. No accepted
+source/certificate/evidence was deleted by these ignore rules.
