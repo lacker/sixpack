@@ -18,5 +18,7 @@ jobs:
           fi
       - name: Test source archive recovery and failure checks
         run: python3 checkpoint/test_archive.py
+      - name: Test tracked and changed source protection during cleanup
+        run: python3 checkpoint/test_prune.py
       - name: Check original research inputs
         run: python3 audit/check_original_integrity.py
