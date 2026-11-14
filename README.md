@@ -39,6 +39,11 @@ logs are retained as reference material.
 
 ## Lean
 
+The commands below describe the historical build. Recover any needed supplementary
+source first, then rebuild selected theorem dependencies as explained in
+[the recovery guide](checkpoint/RESUME.md). The freeze does not retain a ready-made
+compiled environment.
+
 Lean and mathlib are pinned to `v4.24.0`; `lake-manifest.json` pins the dependency
 commits. With that toolchain available:
 

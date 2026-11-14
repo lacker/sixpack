@@ -1,0 +1,68 @@
+{
+  "counts": {
+    "derived_trees_removed": 8515,
+    "untracked_files_or_links_removed": 1951929,
+    "tracked_files_preserved": 5935,
+    "empty_directories_removed": 70058
+  },
+  "free_before_bytes": 18656817152,
+  "free_after_bytes": 277273018368,
+  "seconds": 1531.5683951377869,
+  "source_freeze_index": "/Users/lacker/sixpack/checkpoint/source-freeze.json",
+  "initial_conservatively_preserved_outputs": [
+    {
+      "path": "audit/continuation-2026-10-16/shared-import-metadata-frontend-v2/FrontendDriver.c",
+      "reason": "source absent from frozen manifest"
+    },
+    {
+      "path": "audit/continuation-2026-10-16/shared-import-metadata-frontend-v4/FrontendDriver.c",
+      "reason": "source absent from frozen manifest"
+    },
+    {
+      "path": "audit/continuation-2026-10-16/shared-import-metadata-frontend-v3/FrontendDriver.c",
+      "reason": "source absent from frozen manifest"
+    },
+    {
+      "path": "audit/continuation-2026-10-16/nonleaking-frontend-preflight-v1/FrontendDriver.c",
+      "reason": "source absent from frozen manifest"
+    }
+  ],
+  "preserved_output_resolution": [
+    {
+      "path": "audit/continuation-2026-10-16/shared-import-metadata-frontend-v2/FrontendDriver.c",
+      "bytes": 201989,
+      "sha256": "97173adace454e44afa68dd5e6d131fdf2025926c18b15ce63e8de2bca455b56",
+      "disposition": "removed regenerable Lean-generated C output",
+      "retained_lean_source": "audit/continuation-2026-10-16/shared-import-metadata-frontend-v2/FrontendDriver.lean",
+      "retained_source_sha256": "ebe32f38d7c1c0aab96fca9de12f738ba659bc725f131e78bd7f9220fc866b1f"
+    },
+    {
+      "path": "audit/continuation-2026-10-16/shared-import-metadata-frontend-v4/FrontendDriver.c",
+      "bytes": 222368,
+      "sha256": "57e4dda31d82d5fb286d0dbcce9b9bb671bcc6f41ebde4a7e522360ce7464800",
+      "disposition": "removed regenerable Lean-generated C output",
+      "retained_lean_source": "audit/continuation-2026-10-16/shared-import-metadata-frontend-v4/FrontendDriver.lean",
+      "retained_source_sha256": "581bec54987a050510e69756682c01c647829b231cf288325a44d448432d5c1f"
+    },
+    {
+      "path": "audit/continuation-2026-10-16/shared-import-metadata-frontend-v3/FrontendDriver.c",
+      "bytes": 221203,
+      "sha256": "9376da85fa716f52beb2e41fea9d3c732d97374eac45679c4ce7ecadbd42290b",
+      "disposition": "removed regenerable Lean-generated C output",
+      "retained_lean_source": "audit/continuation-2026-10-16/shared-import-metadata-frontend-v3/FrontendDriver.lean",
+      "retained_source_sha256": "7d3cac18deda95e3b8cbdab75a13fe4d71ad8ac17709b4e12a66e3d2b206356d"
+    },
+    {
+      "path": "audit/continuation-2026-10-16/nonleaking-frontend-preflight-v1/FrontendDriver.c",
+      "bytes": 30703,
+      "sha256": "ec2d94475c62ee00537dec5baad02b7038859af8efc77d87d5a5fb79d2bb9b5d",
+      "disposition": "removed regenerable Lean-generated C output",
+      "retained_lean_source": "audit/continuation-2026-10-16/nonleaking-frontend-preflight-v1/FrontendDriver.lean",
+      "retained_source_sha256": "5fe0ace80af3964069ab725baf467246dfdb0e89d9abe76823559413bdbf679e"
+    }
+  ],
+  "remaining_unbacked_source": [],
+  "free_after_final_output_cleanup_bytes": 277270282240,
+  "workspace_size_after_cleanup": "436 MiB (du -sh, including .git)",
+  "state": "complete"
+}

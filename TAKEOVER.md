@@ -1,21 +1,31 @@
-# Source-frozen project —14November2026
+# Project frozen — 14 November 2026
 
-Read checkpoint/SOURCE_FREEZE.md and checkpoint/RESUME.md first.
-User requested a compact SOURCE freeze for a future better strategy, not the old
-436GB runtime backup. Compiled artifacts/caches/derived tables can be regenerated.
-No mathematical jobs should run automatically. Historical PIDs are obsolete.
+Read [the source-freeze guide](checkpoint/SOURCE_FREEZE.md) and
+[recovery instructions](checkpoint/RESUME.md) first. The user requested a compact
+source freeze for a future better strategy. No mathematical jobs are running;
+historical PIDs and queues are obsolete. Do not restart the old proof factory.
 
-PR https://github.com/lacker/sixpack/pull/1,branch codex/pause-checkpoint-2026-11-13.
-Private recovery repo lacker/sixpack-recovery-2026-11-13 is explicitly approved;
-tag source-freeze-2026-11-14 contains verified compact sources and history.
-source-freeze.json has exact indexes/checksums/verification. No full-workspace
-upload happened. Core code/original inputs/remaining-case record stay in Git.
+Checkpoint PR: https://github.com/lacker/sixpack/pull/1
+Branch: codex/pause-checkpoint-2026-11-13.
 
-Recorded status:1335local/1332global/61remaining;case344open. Cuts101/125 and both
-continuous transitions completed. These are historical results,not a fresh build.
-Future work may rebuild chosen source closures or use another proof strategy;
-do not blindly restart the old incremental factory or require its old artifacts.
+Core code and original inputs are in Git. The explicitly approved private
+repository `lacker/sixpack-recovery-2026-11-13`, release `source-freeze-2026-11-14`,
+holds approximately 609 MiB of supplementary source, history and checksums.
+Every archived entry was independently verified before local cleanup. Exact
+indexes and receipts are in `checkpoint/source-freeze.json`. No full-workspace
+backup was uploaded; the old 348/436 GB plans were superseded.
 
-Cleanup completion/space measurements are recorded in source-freeze.json and
-checkpoint/PLAN.md. The complete older handoff history is preserved in Git at
-commit13dd30fc:TAKEOVER.md; do not load its million-byte job diary by default.
+Cleanup is complete. The project occupies about 436 MiB including Git; available
+disk space increased by about 241 GiB, to 258 GiB at completion. Compiled outputs,
+import forests, downloaded tools and generated runtime data were intentionally
+removed. No unbacked source remains. See `checkpoint/history/source-freeze-cleanup.json`.
+Future selected source verification may rebuild dependencies and proof modules.
+
+Historical status: 1,335 locally accepted / 1,332 globally audited original cases,
+61 remaining; case 344 remains open. Cuts 101/125 and both continuous refinement
+transitions completed. These are recorded past results, not a fresh build or a
+completed global theorem. Read the source-freeze guide's lessons before resuming.
+
+The full older handoff diary is preserved in Git at commit `13dd30fc:TAKEOVER.md`;
+do not load its million-byte job history by default. No compiler units were
+recompiled during the freeze. Lightweight recovery/integrity checks pass.

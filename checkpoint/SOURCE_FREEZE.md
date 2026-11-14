@@ -97,3 +97,10 @@ before local cleanup began. Recovery commands are in `RESUME.md`.
 The complete private release occupies about **609 MiB**, including per-file
 checksum manifests. The optional source library expands to about 25 GiB, mostly
 generated Lean certificate text; selective recovery avoids expanding it all.
+
+## Local cleanup result
+
+Cleanup is complete. The project directory is approximately 436 MiB including
+Git, and the Mac had 258 GiB free at completion: about 241 GiB more available
+space than before cleanup. No unbacked source remains. The exact removal report
+is `history/source-freeze-cleanup.json`. No mathematical workers are running.

@@ -1,35 +1,38 @@
-# Compact source freeze — current operation
+# Compact source freeze — completed
 
-The user's14November request supersedes the436GB runtime-backup plan: retain
-source and irreplaceable mathematical work; regenerate outputs/caches later.
-Private repository approval is explicit. No full-workspace upload was performed.
+The 14 November 2026 request superseded the 436 GB runtime-backup plan: retain
+source and useful mathematical history, then regenerate outputs and caches later.
+The private recovery repository is explicitly approved. No full-workspace upload
+was performed. Mathematical work is paused; do not restart old worker queues.
 
-Draft PR: https://github.com/lacker/sixpack/pull/1
-Branch: codex/pause-checkpoint-2026-11-13. Checkpoint commits/cleanup authorized.
+PR: https://github.com/lacker/sixpack/pull/1
+Branch: codex/pause-checkpoint-2026-11-13.
 
 Completed:
-- Core readable Lean sources selected for Git (427new files/~30MiB).
-- All project Lean/Python source and development notes retained in a562MiB
-  private source asset, plus selected actual axiom-audit logs.
-- Independently verified390,908 retained entries,27,129,317,988original file bytes.
-- Compact history/dependency supplement independently verified22files/29,011,631
-  original bytes; includes the only tiny legacy diagnostic without source.
-- All93,734successful Lean4.30 receipt source hashes match the saved source.
-- Older114,670project artifacts have sources except one byte-identical hidden
-  duplicate and one diagnostic (preserved in the supplement).
-- Actual source/recovery indexes and receipts are in source-freeze.json.
-- Original730research files/ZIP remain in Git. No Lean units rebuilt.
+- Core readable Lean source, generators and original research inputs committed.
+- Optional source library and compact historical supplement published privately
+  as `source-freeze-2026-11-14`: about 609 MiB including checksum manifests.
+- Independent remote readback and SHA-256 checks passed for all 390,908 source/
+  audit entries and 22 metadata entries before local cleanup began.
+- All 93,734 successful Lean 4.30 receipt source hashes match retained source.
+- All 730 original research files and the original ZIP remain unchanged in Git.
+- Old compiled outputs, dependency/toolchain downloads, import caches, temporary
+  search/export tables and local supplementary-source copies removed.
+- Removed 8,515 derived trees and 1,951,929 untracked files/links. Four additional
+  generated C outputs were identified and removed after confirming their Lean
+  sources are retained. No unbacked source remains.
+- Project directory reduced to about 436 MiB including Git. Available space
+  increased by approximately 241 GiB, to 258 GiB at completion.
+- Archive recovery/corruption and cleanup preservation fixtures pass. Lightweight
+  source-freeze CI passes. No accepted Lean units were recompiled.
 
-Remaining:
-1. Commit/push the readable core and public compact metadata/configuration.
-2. Publish the verified PRIVATE source release; update PR to source-freeze scope.
-3. Preview and remove known-workdir untracked/ignored outputs and optional
-   historical-source copies, retaining all tracked files and the verified source
-   assets. This intentionally discards regenerable compiled/proposal/runtime data.
-4. Measure reclaimed disk, check the final clean tree, finalize/push freeze docs.
+Exact release indexes/checksums and independent verification receipts are in
+`source-freeze.json`; actual cleanup results are in
+`history/source-freeze-cleanup.json`. Recovery instructions and the one-command
+selective restore tool are in `RESUME.md` and `restore.py`.
 
-Never retry the obsolete full436GB backup. Detailed historical receipts and
-library-cache history belong to the private supplement, not the public PR.
-The prior incremental artifact-preservation/no-recompilation policy is superseded
-for this source freeze; future source verification will regenerate build outputs.
-Mathematical work remains paused. Do not restart worker PIDs or old queues.
+The theorem remains unfinished: historical journal totals are 1,335 local /
+1,332 globally audited cases, with 61 remaining. Future work should reconsider
+the strategy, recover only useful source, and run fresh checks for chosen theorem
+dependencies. The former no-recompilation/artifact-preservation policy applied to
+active incremental development; this freeze intentionally permits regeneration.

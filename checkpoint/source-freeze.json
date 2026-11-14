@@ -184,8 +184,14 @@
     }
   },
   "local_cleanup": {
-    "state": "pending",
-    "no_source_or_evidence_removed_before_verification": true
+    "state": "complete",
+    "report": "checkpoint/history/source-freeze-cleanup.json",
+    "no_source_or_evidence_removed_before_verification": true,
+    "free_before_bytes": 18656817152,
+    "free_after_bytes": 277270282240,
+    "available_space_increase_gib": 240.85,
+    "workspace_size_after_cleanup": "436 MiB (du -sh, including .git)",
+    "unbacked_source_remaining": 0
   },
   "omitted": [
     "compiled outputs except one tiny orphan diagnostic",
