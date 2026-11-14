@@ -57,7 +57,7 @@ def prune(root, scopes, tracked, retained):
             if path.is_symlink():
                 same=row['kind']=='symlink'and os.readlink(path)==row.get('target')
             else:
-                s=path.stat();same=(s.st_size,s.st_mtime_ns)==(row['size'],row['mtime_ns'])
+                s=path.stat();same=row['kind']=='file'and(s.st_size,s.st_mtime_ns)==(row['size'],row['mtime_ns'])
                 if not same:same=row['kind']=='file'and digest(path)==row['sha256']
             if not same:
                 kept.append(dict(path=rel,reason='source changed after freeze'));return
@@ -96,7 +96,9 @@ def main():
     with gzip.open(args.source_manifest,'rt')as f:
         for line in f:
             row=json.loads(line)
-            if Path(row['path']).suffix in CODE:retained[row['path']]=row
+            if Path(row['path']).suffix in CODE:
+                retained[row['path']]=dict(kind='file'if row['kind']=='file'else'symlink',
+                    size=row['size'],mtime_ns=row['mtime_ns'],sha256=row.get('sha256'),target=row.get('target'))
     scopes=['.lake','.tools','audit','migration','Sixpack',
             'checkpoint/history/lean430-receipts.jsonl.gz',
             'checkpoint/toolchains/mathlib430-cache-install-history.json']
