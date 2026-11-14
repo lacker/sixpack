@@ -101,7 +101,8 @@ class Remote:
             a = matches[0]
             if a['size'] != item['size'] or (a.get('digest') and a['digest'] != 'sha256:' + item['sha256']):
                 raise RuntimeError('Existing asset differs; refusing overwrite: ' + path.name)
-            item.update(id=a['id'], url=a['browser_download_url'])
+            # API asset IDs/URLs survive publication of a draft release.
+            item.update(id=a['id'], url=a['url'])
         self.download(item)
         return item
 
