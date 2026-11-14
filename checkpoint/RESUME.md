@@ -20,22 +20,25 @@ and actual independent verification receipts. The source component is562MiB
 compressed; detailed history/dependency metadata is a separate24MiB component.
 No compiled trees or bulk proposal/export databases are required to store it.
 
-Authenticate `gh` as the repository owner and use system Python3.10+ and `zstd`.
-Extract a component's `index` object from `source-freeze.json` into a temporary
-JSON file, then run:
+Authenticate `gh` as the repository owner and use system Python 3.10+ and `zstd`.
+The recovery command selects the verified release index automatically:
 
 ```sh
-python3 checkpoint/archive.py restore --index /tmp/source-index.json \
-  --work /tmp/sixpack-restore-checks --destination /tmp/sixpack-historical-source
+python3 checkpoint/restore.py --work /tmp/sixpack-restore-checks \
+  --destination /tmp/sixpack-historical-source
 ```
 
 To avoid expanding the entire historical library, add one or more prefixes:
 
 ```sh
-python3 checkpoint/archive.py restore --index /tmp/source-index.json \
-  --work /tmp/sixpack-restore-checks --destination /tmp/sixpack-selected-source \
+python3 checkpoint/restore.py --work /tmp/sixpack-restore-checks \
+  --destination /tmp/sixpack-selected-source \
   --include-prefix migration/lean430/Sixpack430/RemainingCases/Case344
 ```
+
+Add `--component metadata` to recover the small historical supplement instead.
+`--work` keeps the exact index and fresh verification receipt. The underlying
+`archive.py` also supports direct `--index` recovery for manual use.
 
 Every archive file/hash is checked even for selective restore. Existing different
 files are not overwritten. The supplement restores its small history files and

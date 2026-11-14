@@ -1,6 +1,6 @@
 # Sixpack
 
-**Frozen on14November2026.** Start with
+**Frozen on 14 November 2026.** Start with
 [the source-freeze guide](checkpoint/SOURCE_FREEZE.md). The checkpoint preserves
 core code, original inputs and a compact supplementary proof-source library;
 compiled outputs and working caches are intentionally regenerable. The proof is

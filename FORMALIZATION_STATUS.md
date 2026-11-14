@@ -1,3 +1,12 @@
+# Frozen source checkpoint —14November2026
+
+The project is paused. The journal records 1,335 local / 1,332 global cases,
+with 61 remaining. These are historical results, not a fresh build. Case 344 is
+incomplete. Start
+with checkpoint/SOURCE_FREEZE.md and checkpoint/history/recorded-status.json.
+Compiled artifacts and derived runtime data are intentionally regenerable.
+The older milestone diary below is retained as historical reference.
+
 Current status (29 October 2026): **1305 locally verified original cases /1282
 globally audited cases**, leaving91of1396. There are23 pending local cases;
 the next25-case combined checkpoint is due at1307local.

@@ -90,6 +90,10 @@ scripts unchanged can require intentionally discarded intermediate data or the
 original `/Users/lacker/sixpack` path. Reading/reusing the Lean source or pursuing
 a new strategy does not require recreating that runtime.
 
-Archive checksums, actual compressed size, source-hash cross-checks and recovery
-commands are recorded in `source-freeze.json` when remote verification completes.
-Local source or evidence is removed only after its retained freeze is verified.
+Archive checksums, actual compressed size and source-hash cross-checks are
+recorded in `source-freeze.json`. Remote readback verified every archived file
+before local cleanup began. Recovery commands are in `RESUME.md`.
+
+The complete private release occupies about **609 MiB**, including per-file
+checksum manifests. The optional source library expands to about 25 GiB, mostly
+generated Lean certificate text; selective recovery avoids expanding it all.
